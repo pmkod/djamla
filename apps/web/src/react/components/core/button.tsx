@@ -1,6 +1,6 @@
 "use client";
 
-import * as React from "react";
+import { ComponentPropsWithRef, forwardRef } from "react";
 import { ark } from "@ark-ui/react";
 import { IconLoader2 } from "@tabler/icons-react";
 import { cva, type VariantProps } from "class-variance-authority";
@@ -85,12 +85,12 @@ const buttonVariants = cva(
 );
 
 export interface ButtonProps
-  extends React.ComponentPropsWithRef<typeof ark.button>,
+  extends ComponentPropsWithRef<typeof ark.button>,
     VariantProps<typeof buttonVariants> {
   isLoading?: boolean;
 }
 
-const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   (
     {
       className,
@@ -109,8 +109,8 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         className={buttonVariants({
           variant,
           size,
-          className,
           colorScheme,
+          className,
         })}
         disabled={disabled || isLoading || false}
         ref={ref}
@@ -126,6 +126,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     );
   }
 );
+
 Button.displayName = "Button";
 
 export { Button, buttonVariants };

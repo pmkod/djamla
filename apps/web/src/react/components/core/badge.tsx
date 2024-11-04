@@ -1,24 +1,99 @@
 "use client";
 
-import * as React from "react";
+import { forwardRef } from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 
 const badgeVariants = cva(
-  "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",
+  "inline-flex items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",
   {
     variants: {
       variant: {
-        default:
-          "border-transparent bg-primary text-primary-foreground hover:bg-primary/80",
-        secondary:
-          "border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80",
-        destructive:
-          "border-transparent bg-destructive text-destructive-foreground hover:bg-destructive/80",
-        outline: "text-foreground",
+        solid: "text-white",
+        outline: "bg-transparent border border-gray-300",
+        soft: "",
+        plain: "bg-transparent",
+      },
+
+      colorScheme: {
+        primary: "",
+        black: "",
+        red: "",
+      },
+
+      size: {
+        sm: "px-1.5 py-px text-[10px] font-medium",
+        md: "px-2.5 py-0.5 text-xs font-medium",
+        lg: "px-3 py-0.5 text-sm font-semibold",
       },
     },
+    compoundVariants: [
+      {
+        variant: "solid",
+        colorScheme: "primary",
+        className: "bg-indigo-500",
+      },
+      {
+        variant: "outline",
+        colorScheme: "primary",
+        className: "text-indigo-500",
+      },
+      {
+        variant: "soft",
+        colorScheme: "primary",
+        className: "bg-indigo-100 text-indigo-500",
+      },
+      {
+        variant: "plain",
+        colorScheme: "primary",
+        className: "text-indigo-500",
+      },
+      //
+      {
+        variant: "solid",
+        colorScheme: "red",
+        className: "bg-red-500",
+      },
+      {
+        variant: "outline",
+        colorScheme: "red",
+        className: "text-red-600",
+      },
+      {
+        variant: "soft",
+        colorScheme: "red",
+        className: "bg-red-100 text-red-600",
+      },
+      {
+        variant: "plain",
+        colorScheme: "red",
+        className: "text-red-600",
+      },
+      //
+      {
+        variant: "solid",
+        colorScheme: "black",
+        className: "bg-neutral-900 hover:bg-neutral-950",
+      },
+      {
+        variant: "outline",
+        colorScheme: "black",
+        className: " text-neutral-900",
+      },
+      {
+        variant: "soft",
+        colorScheme: "black",
+        className: "bg-neutral-100 text-neutral-900",
+      },
+      {
+        variant: "plain",
+        colorScheme: "black",
+        className: "text-neutral-900",
+      },
+    ],
     defaultVariants: {
-      variant: "default",
+      variant: "solid",
+      colorScheme: "primary",
+      size: "md",
     },
   }
 );
@@ -27,8 +102,16 @@ export interface BadgeProps
   extends React.HTMLAttributes<HTMLDivElement>,
     VariantProps<typeof badgeVariants> {}
 
-function Badge({ className, variant, ...props }: BadgeProps) {
-  return <div className={badgeVariants({ variant })} {...props} />;
-}
+const Badge = forwardRef<HTMLDivElement, BadgeProps>(
+  ({ className, variant, colorScheme, size, ...props }, ref) => {
+    return (
+      <div
+        ref={ref}
+        className={badgeVariants({ variant, className, colorScheme, size })}
+        {...props}
+      />
+    );
+  }
+);
 
 export { Badge, badgeVariants };
