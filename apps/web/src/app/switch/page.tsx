@@ -7,7 +7,7 @@ const SwitchPage = () => {
       <div className="pt-20 px-8 flex items-start gap-10 flex-wrap">
         <Switch size="sm" />
         <Switch />
-        <Switch size="lg" />
+        <Switch size="lg"></Switch>
       </div>
     </div>
   );
