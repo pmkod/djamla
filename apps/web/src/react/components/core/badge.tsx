@@ -47,7 +47,6 @@ const badgeVariants = cva(
         colorScheme: "primary",
         className: "text-indigo-500",
       },
-      //
       {
         variant: "solid",
         colorScheme: "red",
@@ -68,11 +67,10 @@ const badgeVariants = cva(
         colorScheme: "red",
         className: "text-red-600",
       },
-      //
       {
         variant: "solid",
         colorScheme: "black",
-        className: "bg-neutral-900 hover:bg-neutral-950",
+        className: "bg-neutral-900",
       },
       {
         variant: "outline",
@@ -107,7 +105,7 @@ const Badge = forwardRef<HTMLDivElement, BadgeProps>(
     return (
       <div
         ref={ref}
-        className={badgeVariants({ variant, className, colorScheme, size })}
+        className={badgeVariants({ variant, colorScheme, size, className })}
         {...props}
       />
     );
