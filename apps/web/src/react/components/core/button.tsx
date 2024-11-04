@@ -5,7 +5,7 @@ import { ark } from "@ark-ui/react";
 import { IconLoader2 } from "@tabler/icons-react";
 import { cva, type VariantProps } from "class-variance-authority";
 
-const buttonVariants = cva(
+const buttonStyle = cva(
   "relative inline-flex items-center overflow-hidden justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none",
   {
     variants: {
@@ -86,7 +86,7 @@ const buttonVariants = cva(
 
 export interface ButtonProps
   extends ComponentPropsWithRef<typeof ark.button>,
-    VariantProps<typeof buttonVariants> {
+    VariantProps<typeof buttonStyle> {
   isLoading?: boolean;
 }
 
@@ -106,7 +106,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   ) => {
     return (
       <ark.button
-        className={buttonVariants({
+        className={buttonStyle({
           variant,
           size,
           colorScheme,
@@ -129,4 +129,4 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 
 Button.displayName = "Button";
 
-export { Button, buttonVariants };
+export { Button, buttonStyle };

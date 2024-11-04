@@ -3,7 +3,7 @@ import { ComponentPropsWithRef, forwardRef, HTMLAttributes } from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 import { ark } from "@ark-ui/react";
 
-const alertVariants = cva("relative flex gap-3 w-full rounded px-4 py-3", {
+const alertStyle = cva("relative flex gap-3 w-full rounded px-4 py-3", {
   variants: {
     variant: {
       solid: "text-white",
@@ -109,12 +109,12 @@ const alertVariants = cva("relative flex gap-3 w-full rounded px-4 py-3", {
 
 const Alert = forwardRef<
   HTMLDivElement,
-  HTMLAttributes<HTMLDivElement> & VariantProps<typeof alertVariants>
+  HTMLAttributes<HTMLDivElement> & VariantProps<typeof alertStyle>
 >(({ className, variant, colorScheme, ...props }, ref) => (
   <div
     ref={ref}
     role="alert"
-    className={alertVariants({ variant, colorScheme, className })}
+    className={alertStyle({ variant, colorScheme, className })}
     {...props}
   />
 ));

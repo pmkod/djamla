@@ -1,24 +1,32 @@
 "use client";
 
-import * as React from "react";
+import { ComponentPropsWithoutRef, ElementRef, forwardRef } from "react";
 import { Switch as SwitchPrimitives } from "@ark-ui/react";
+import { cva, VariantProps } from "class-variance-authority";
 
-const Switch = React.forwardRef<
-  React.ElementRef<typeof SwitchPrimitives.Root>,
-  React.ComponentPropsWithoutRef<typeof SwitchPrimitives.Root>
->(({ className, ...props }, ref) => (
+const switchStyle = cva("w-20 h-10 bg-blue-100", {
+  variants: {
+    size: {
+      sm: "",
+      md: "",
+      lg: "",
+    },
+  },
+});
+
+const Switch = forwardRef<
+  ElementRef<typeof SwitchPrimitives.Root> & VariantProps<typeof switchStyle>,
+  ComponentPropsWithoutRef<typeof SwitchPrimitives.Root> &
+    VariantProps<typeof switchStyle>
+>(({ className, size, ...props }, ref) => (
   <SwitchPrimitives.Root
-    className={
-      "peer inline-flex h-6 w-11 shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=unchecked]:bg-input"
-    }
+    className={switchStyle({ size, className })}
     {...props}
     ref={ref}
   >
-    <SwitchPrimitives.Thumb
-      className={
-        "pointer-events-none block h-5 w-5 rounded-full bg-background shadow-lg ring-0 transition-transform data-[state=checked]:translate-x-5 data-[state=unchecked]:translate-x-0"
-      }
-    />
+    <SwitchPrimitives.Control className="rounded-full w-1/2 h-8 border bg-rose-200">
+      <SwitchPrimitives.Thumb className="w-8 h-8 bg-blue-500" />
+    </SwitchPrimitives.Control>
   </SwitchPrimitives.Root>
 ));
 Switch.displayName = SwitchPrimitives.Root.displayName;
