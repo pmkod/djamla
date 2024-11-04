@@ -1,9 +1,7 @@
-import { Button } from "../react/components/core/button";
-
-export default function Home() {
+export default function HomePage() {
   return (
     <div>
-      <Button variant="outline">Download</Button>
+      <div className="p-8"></div>
     </div>
   );
 }

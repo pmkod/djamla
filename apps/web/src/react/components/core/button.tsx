@@ -1,48 +1,128 @@
+"use client";
+
 import * as React from "react";
 import { ark } from "@ark-ui/react";
+import { IconLoader2 } from "@tabler/icons-react";
 import { cva, type VariantProps } from "class-variance-authority";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  "relative inline-flex items-center overflow-hidden justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none",
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90",
-        destructive:
-          "bg-destructive text-destructive-foreground hover:bg-destructive/90",
-        outline:
-          "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
-        secondary:
-          "bg-secondary text-secondary-foreground hover:bg-secondary/80",
-        ghost: "hover:bg-accent hover:text-accent-foreground",
-        link: "text-primary underline-offset-4 hover:underline",
+        solid: "text-white",
+        outline: "bg-transparent hover:bg-gray-100 border border-gray-300",
+        ghost: "bg-transparent hover:bg-gray-100",
+      },
+      colorScheme: {
+        primary: "",
+        black: "",
+        red: "",
       },
       size: {
-        default: "h-10 px-4 py-2",
-        sm: "h-9 rounded-md px-3",
-        lg: "h-11 rounded-md px-8",
-        icon: "h-10 w-10",
+        xs: "h-7 rounded-sm px-1.5",
+        sm: "h-9 rounded-sm px-3",
+        md: "h-10 px-4 rounded",
+        lg: "h-11 rounded px-5",
+        xl: "h-12 rounded px-8",
       },
     },
+    compoundVariants: [
+      {
+        variant: "solid",
+        colorScheme: "primary",
+        className: "bg-indigo-500 hover:bg-indigo-600",
+      },
+      {
+        variant: "outline",
+        colorScheme: "primary",
+        className: "text-indigo-500",
+      },
+      {
+        variant: "ghost",
+        colorScheme: "primary",
+        className: "text-indigo-500",
+      },
+      //
+      {
+        variant: "solid",
+        colorScheme: "red",
+        className: "bg-red-500 hover:bg-red-600",
+      },
+      {
+        variant: "outline",
+        colorScheme: "red",
+        className: "text-red-600",
+      },
+      {
+        variant: "ghost",
+        colorScheme: "red",
+        className: "text-red-600",
+      },
+      //
+      {
+        variant: "solid",
+        colorScheme: "black",
+        className: "bg-neutral-900 hover:bg-neutral-950",
+      },
+      {
+        variant: "outline",
+        colorScheme: "black",
+        className: " text-neutral-900",
+      },
+      {
+        variant: "ghost",
+        colorScheme: "black",
+        className: "text-neutral-900",
+      },
+    ],
     defaultVariants: {
-      variant: "default",
-      size: "default",
+      variant: "solid",
+      size: "md",
+      colorScheme: "primary",
     },
   }
 );
 
 export interface ButtonProps
   extends React.ComponentPropsWithRef<typeof ark.button>,
-    VariantProps<typeof buttonVariants> {}
+    VariantProps<typeof buttonVariants> {
+  isLoading?: boolean;
+}
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant, size, ...props }, ref) => {
+  (
+    {
+      className,
+      variant,
+      size,
+      colorScheme,
+      children,
+      isLoading,
+      disabled,
+      ...props
+    },
+    ref
+  ) => {
     return (
       <ark.button
-        className={buttonVariants({ variant, size, className })}
+        className={buttonVariants({
+          variant,
+          size,
+          className,
+          colorScheme,
+        })}
+        disabled={disabled || isLoading || false}
         ref={ref}
         {...props}
-      />
+      >
+        {children}
+        {isLoading && (
+          <div className="absolute inset-0 flex items-center justify-center bg-inherit">
+            <IconLoader2 className="h-1/2 aspect-square animate-spin" />
+          </div>
+        )}
+      </ark.button>
     );
   }
 );
