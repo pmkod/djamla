@@ -38,7 +38,7 @@ const AvatarImage = forwardRef<
 >(({ className, ...props }, ref) => (
   <AvatarPrimitives.Image
     ref={ref}
-    className={"aspect-square h-full w-full"}
+    className={"aspect-square h-full w-full " + className}
     {...props}
   />
 ));
@@ -51,7 +51,8 @@ const AvatarFallback = forwardRef<
   <AvatarPrimitives.Fallback
     ref={ref}
     className={
-      "flex h-full w-full items-center justify-center rounded-full bg-neutral-200 text-[length:inherit] font-normal text-neutral-400"
+      "flex h-full w-full items-center justify-center rounded-full bg-neutral-200 text-[length:inherit] font-normal text-neutral-400 " +
+      className
     }
     {...props}
   />
