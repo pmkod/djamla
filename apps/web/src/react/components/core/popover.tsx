@@ -25,7 +25,8 @@ const PopoverContent = forwardRef<
       <PopoverPrimitives.Content
         ref={ref}
         className={
-          "z-50 block w-72 rounded border border-gray-300 bg-white px-4 py-3 shadow-sm outline-none transition-all data-[state=open]:visible data-[state=closed]:invisible data-[state=closed]:scale-95 data-[state=open]:scale-100 data-[state=closed]:opacity-0 data-[state=open]:opacity-100"
+          "z-50 block w-72 rounded border border-gray-300 bg-white px-4 py-3 shadow-sm outline-none transition-all duration-200 data-[state=open]:visible data-[state=closed]:invisible data-[state=closed]:scale-95 data-[state=open]:scale-100 data-[state=closed]:opacity-0 data-[state=open]:opacity-100 " +
+          className
         }
         {...props}
       >
