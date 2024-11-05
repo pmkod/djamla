@@ -11,8 +11,9 @@ const buttonStyle = cva(
     variants: {
       variant: {
         solid: "text-white",
-        outline: "bg-transparent hover:bg-gray-100 border border-gray-300",
-        ghost: "bg-transparent hover:bg-gray-100",
+        outline:
+          "bg-transparent hover:bg-neutral-100 border border-neutral-300",
+        ghost: "bg-transparent hover:bg-neutral-100",
       },
       colorScheme: {
         primary: "",

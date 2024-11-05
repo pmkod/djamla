@@ -9,7 +9,7 @@ const badgeStyle = cva(
     variants: {
       variant: {
         solid: "text-white",
-        outline: "bg-transparent border border-gray-300",
+        outline: "bg-transparent border border-neutral-300",
         soft: "",
         plain: "bg-transparent",
       },

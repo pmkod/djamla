@@ -2,7 +2,7 @@ import { cva, VariantProps } from "class-variance-authority";
 import React, { forwardRef, HtmlHTMLAttributes } from "react";
 
 const kbdStyle = cva(
-  "inline-flex items-center whitespace-pre rounded border border-b-2 border-gray-300 bg-gray-50 font-medium",
+  "inline-flex items-center whitespace-pre rounded border border-b-2 border-neutral-300 bg-neutral-50 font-medium",
   {
     variants: {
       size: {

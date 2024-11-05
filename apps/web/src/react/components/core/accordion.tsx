@@ -28,7 +28,7 @@ const AccordionItemSummary = forwardRef<
 >(({ className, children, ...props }, ref) => (
   <AccordionPrimitives.ItemTrigger
     ref={ref}
-    className="inline-flex w-full items-center justify-between px-4 py-2.5 font-medium transition-all hover:bg-gray-100 disabled:opacity-40 disabled:hover:bg-transparent [&[data-state=open]>svg]:rotate-180"
+    className="inline-flex w-full items-center justify-between px-4 py-2.5 font-medium transition-all hover:bg-neutral-100 disabled:opacity-40 disabled:hover:bg-transparent [&[data-state=open]>svg]:rotate-180"
     {...props}
   >
     {children}

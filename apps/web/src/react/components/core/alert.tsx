@@ -9,7 +9,7 @@ const alertStyle = cva(
     variants: {
       variant: {
         solid: "text-white",
-        outline: "border border-gray-300",
+        outline: "border border-neutral-300",
         soft: "",
         plain: "",
       },

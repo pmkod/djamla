@@ -3,7 +3,7 @@ import { Switch as SwitchPrimitives } from "@ark-ui/react";
 import { cva, VariantProps } from "class-variance-authority";
 
 const switchControlStyle = cva(
-  "inline-flex aspect-[2/1] cursor-pointer items-center rounded-full bg-gray-300 p-1 data-[disabled]:cursor-default data-[disabled]:opacity-50",
+  "inline-flex aspect-[2/1] cursor-pointer items-center rounded-full bg-neutral-300 p-1 data-[disabled]:cursor-default data-[disabled]:opacity-50",
   {
     variants: {
       size: {
@@ -15,7 +15,7 @@ const switchControlStyle = cva(
 
       colorScheme: {
         primary: "data-[state=checked]:bg-indigo-500",
-        black: "data-[state=checked]:bg-gray-800",
+        black: "data-[state=checked]:bg-neutral-800",
       },
     },
     defaultVariants: {
