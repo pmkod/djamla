@@ -6,11 +6,11 @@ import { cva, VariantProps } from "class-variance-authority";
 import { IconButton } from "./icon-button";
 import { IconX } from "@tabler/icons-react";
 
-export const Modal = DialogPrimitives.Root;
+const Modal = DialogPrimitives.Root;
 
-export const ModalTrigger = DialogPrimitives.Trigger;
+const ModalTrigger = DialogPrimitives.Trigger;
 
-export const ModalHeader = ({
+const ModalHeader = ({
   className,
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) => (
@@ -22,7 +22,7 @@ export const ModalHeader = ({
 
 ModalHeader.displayName = "ModalHeader";
 
-export const ModalTitle = React.forwardRef<
+const ModalTitle = React.forwardRef<
   React.ElementRef<typeof DialogPrimitives.Title>,
   React.ComponentPropsWithoutRef<typeof DialogPrimitives.Title>
 >(({ className, ...props }, ref) => (
@@ -35,7 +35,7 @@ export const ModalTitle = React.forwardRef<
 
 ModalTitle.displayName = "ModalTitle";
 
-export const ModalBody = React.forwardRef<
+const ModalBody = React.forwardRef<
   HTMLDivElement,
   InputHTMLAttributes<HTMLInputElement>
 >(({ className, children, ...props }, ref) => (
@@ -47,7 +47,7 @@ export const ModalBody = React.forwardRef<
 ModalBody.displayName = "ModalBody";
 
 const modalContentStyle = cva(
-  "duration-400 fixed z-50 flex max-h-screen w-full flex-col border bg-white shadow-md transition-all data-[state=closed]:invisible data-[state=closed]:opacity-0 data-[state=open]:opacity-100",
+  "duration-400 fixed z-50 flex w-full flex-col border bg-white shadow-md transition-all data-[state=closed]:invisible data-[state=closed]:opacity-0 data-[state=open]:opacity-100",
   {
     variants: {
       size: {
@@ -56,7 +56,11 @@ const modalContentStyle = cva(
         md: "left-1/2 top-[50%] max-h-[70vh] max-w-md -translate-x-1/2 -translate-y-[60%] sm:rounded-md",
         lg: "left-1/2 top-[50%] max-h-[70vh] max-w-lg -translate-x-1/2 -translate-y-[60%] sm:rounded-md",
         xl: "left-1/2 top-[50%] max-h-[70vh] max-w-xl -translate-x-1/2 -translate-y-[60%] sm:rounded-md",
-        fullscreen: "inset-0 h-screen w-screen rounded-none",
+        "2xl":
+          "left-1/2 top-[50%] max-h-[70vh] max-w-2xl -translate-x-1/2 -translate-y-[60%] sm:rounded-md",
+        "3xl":
+          "left-1/2 top-[50%] max-h-[70vh] max-w-3xl -translate-x-1/2 -translate-y-[60%] sm:rounded-md",
+        fullscreen: "inset-0 h-screen w-screen max-h-screen rounded-none",
       },
     },
     defaultVariants: {
@@ -67,7 +71,7 @@ const modalContentStyle = cva(
 
 interface ModalContentProps extends VariantProps<typeof modalContentStyle> {}
 
-export const ModalContent = React.forwardRef<
+const ModalContent = React.forwardRef<
   React.ElementRef<typeof DialogPrimitives.Content> & ModalContentProps,
   React.ComponentPropsWithoutRef<typeof DialogPrimitives.Content> &
     ModalContentProps
@@ -86,7 +90,7 @@ export const ModalContent = React.forwardRef<
 
 ModalContent.displayName = "ModalContent";
 
-export const ModalFooter = ({
+const ModalFooter = ({
   className,
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) => (
@@ -95,15 +99,25 @@ export const ModalFooter = ({
 
 ModalFooter.displayName = "ModalFooter";
 
-export const ModalCloseButton = React.forwardRef<
-  HTMLButtonElement,
-  ButtonProps
->(({ children, ...props }, ref) => (
-  <DialogPrimitives.CloseTrigger ref={ref} asChild>
-    <IconButton variant="plain" colorScheme="black" size="sm" {...props}>
-      {children || <IconX className="h-5 w-5" />}
-    </IconButton>
-  </DialogPrimitives.CloseTrigger>
-));
+const ModalCloseButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
+  ({ children, ...props }, ref) => (
+    <DialogPrimitives.CloseTrigger ref={ref} asChild>
+      <IconButton variant="plain" colorScheme="black" size="sm" {...props}>
+        {children || <IconX className="h-5 w-5" />}
+      </IconButton>
+    </DialogPrimitives.CloseTrigger>
+  )
+);
 
 ModalCloseButton.displayName = "ModalCloseButton";
+
+export {
+  Modal,
+  ModalTrigger,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  ModalBody,
+  ModalCloseButton,
+  ModalTitle,
+};
