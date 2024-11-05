@@ -26,6 +26,9 @@ const buttonStyle = cva(
         lg: "h-11 rounded px-5",
         xl: "h-12 rounded px-8",
       },
+      fullWidth: {
+        true: "w-full",
+      },
     },
     compoundVariants: [
       {
@@ -100,6 +103,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       children,
       isLoading,
       disabled,
+      fullWidth,
       ...props
     },
     ref
@@ -111,6 +115,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           size,
           colorScheme,
           className,
+          fullWidth,
         })}
         disabled={disabled || isLoading || false}
         ref={ref}
