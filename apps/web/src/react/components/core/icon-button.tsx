@@ -10,8 +10,9 @@ const iconButtonStyle = cva(
     variants: {
       variant: {
         solid: "text-[#ffffff]",
-        outline: "border border-gray-300 bg-transparent hover:bg-gray-100",
-        ghost: "bg-transparent hover:bg-gray-100",
+        outline:
+          "border border-neutral-300 bg-transparent hover:bg-neutral-100",
+        ghost: "bg-transparent hover:bg-neutral-100",
         plain: "",
       },
       colorScheme: {
@@ -72,27 +73,27 @@ const iconButtonStyle = cva(
       {
         variant: "plain",
         colorScheme: "red",
-        className: "text-red-500 hover:bg-gray-100",
+        className: "text-red-500 hover:bg-neutral-100",
       },
       {
         variant: "solid",
         colorScheme: "black",
-        className: "bg-gray-800 hover:bg-gray-900",
+        className: "bg-neutral-800 hover:bg-neutral-900",
       },
       {
         variant: "outline",
         colorScheme: "black",
-        className: "text-gray-900",
+        className: "text-neutral-900",
       },
       {
         variant: "ghost",
         colorScheme: "black",
-        className: "text-gray-900",
+        className: "text-neutral-900",
       },
       {
         variant: "plain",
         colorScheme: "black",
-        className: "text-gray-900 hover:bg-gray-100",
+        className: "text-neutral-900 hover:bg-neutral-100",
       },
     ],
     defaultVariants: {

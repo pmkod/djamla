@@ -71,7 +71,7 @@ export const DrawerContent = React.forwardRef<
 >(({ className, side, ...props }, ref) => (
   <>
     <Portal>
-      <DialogPrimitives.Backdrop className="pointer-events-none fixed inset-0 z-50 block bg-gray-900 transition-all duration-500 data-[state=open]:visible data-[state=closed]:invisible data-[state=closed]:bg-opacity-0 data-[state=open]:bg-opacity-50" />
+      <DialogPrimitives.Backdrop className="pointer-events-none fixed inset-0 z-50 block bg-neutral-900 transition-all duration-500 data-[state=open]:visible data-[state=closed]:invisible data-[state=closed]:bg-opacity-0 data-[state=open]:bg-opacity-50" />
       <DialogPrimitives.Positioner>
         <DialogPrimitives.Content
           ref={ref}
