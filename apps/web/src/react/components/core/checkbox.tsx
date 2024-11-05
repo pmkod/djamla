@@ -28,7 +28,7 @@ const checkboxControlStyle = cva(
   }
 );
 
-export const Checkbox = forwardRef<
+const Checkbox = forwardRef<
   React.ElementRef<typeof CheckboxPrimitives.Root> &
     VariantProps<typeof checkboxControlStyle>,
   React.ComponentPropsWithoutRef<typeof CheckboxPrimitives.Root> &
@@ -53,3 +53,5 @@ export const Checkbox = forwardRef<
 });
 
 Checkbox.displayName = "Checkbox";
+
+export { Checkbox };

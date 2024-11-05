@@ -1,7 +1,7 @@
 import { cva, VariantProps } from "class-variance-authority";
 import React, { forwardRef, HtmlHTMLAttributes } from "react";
 
-export const kbdStyle = cva(
+const kbdStyle = cva(
   "inline-flex items-center whitespace-pre rounded border border-b-2 border-gray-300 bg-gray-50 font-medium",
   {
     variants: {
@@ -17,14 +17,14 @@ export const kbdStyle = cva(
   }
 );
 
-export interface KbdProps
+interface KbdProps
   extends Omit<
       React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement>,
       "size"
     >,
     VariantProps<typeof kbdStyle> {}
 
-export const Kbd = forwardRef<HTMLElement, KbdProps>(
+const Kbd = forwardRef<HTMLElement, KbdProps>(
   ({ size, children, ...props }, ref) => {
     return (
       <kbd ref={ref} className={kbdStyle({ size })} {...props}>
@@ -36,20 +36,23 @@ export const Kbd = forwardRef<HTMLElement, KbdProps>(
 
 Kbd.displayName = "Kbd";
 
-export const KbdGroup = forwardRef<
-  HTMLDivElement,
-  HtmlHTMLAttributes<HTMLDivElement>
->(({ children, ...props }, ref) => {
-  return (
-    <div className="flex items-start gap-x-2 leading-none" ref={ref} {...props}>
-      {children}
-    </div>
-  );
-});
+const KbdGroup = forwardRef<HTMLDivElement, HtmlHTMLAttributes<HTMLDivElement>>(
+  ({ children, ...props }, ref) => {
+    return (
+      <div
+        className="flex items-start gap-x-2 leading-none"
+        ref={ref}
+        {...props}
+      >
+        {children}
+      </div>
+    );
+  }
+);
 
 KbdGroup.displayName = "KbdGroup";
 
-export const KbdSeparator = forwardRef<
+const KbdSeparator = forwardRef<
   HTMLDivElement,
   HtmlHTMLAttributes<HTMLDivElement>
 >(({ children, ...props }, ref) => {
@@ -61,3 +64,5 @@ export const KbdSeparator = forwardRef<
 });
 
 KbdSeparator.displayName = "KbdSeparator";
+
+export { KbdGroup, Kbd, KbdSeparator };

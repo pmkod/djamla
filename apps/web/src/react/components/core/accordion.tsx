@@ -4,7 +4,7 @@ import { Accordion as AccordionPrimitives } from "@ark-ui/react";
 import { IconChevronDown } from "@tabler/icons-react";
 import { forwardRef } from "react";
 
-export const Accordion = forwardRef<
+const Accordion = forwardRef<
   React.ElementRef<typeof AccordionPrimitives.Root>,
   React.ComponentPropsWithoutRef<typeof AccordionPrimitives.Root>
 >(({ className, ...props }, ref) => (
@@ -13,7 +13,7 @@ export const Accordion = forwardRef<
 
 Accordion.displayName = "Accordion";
 
-export const AccordionItem = forwardRef<
+const AccordionItem = forwardRef<
   React.ElementRef<typeof AccordionPrimitives.Item>,
   React.ComponentPropsWithoutRef<typeof AccordionPrimitives.Item>
 >(({ className, ...props }, ref) => (
@@ -22,7 +22,7 @@ export const AccordionItem = forwardRef<
 
 AccordionItem.displayName = "AccordionItem";
 
-export const AccordionItemSummary = forwardRef<
+const AccordionItemSummary = forwardRef<
   React.ElementRef<typeof AccordionPrimitives.ItemTrigger>,
   React.ComponentPropsWithoutRef<typeof AccordionPrimitives.ItemTrigger>
 >(({ className, children, ...props }, ref) => (
@@ -40,7 +40,7 @@ export const AccordionItemSummary = forwardRef<
 
 AccordionItemSummary.displayName = "AccordionItemSummary";
 
-export const AccordionItemDetails = forwardRef<
+const AccordionItemDetails = forwardRef<
   React.ElementRef<typeof AccordionPrimitives.ItemContent>,
   React.ComponentPropsWithoutRef<typeof AccordionPrimitives.ItemContent>
 >(({ className, children, ...props }, ref) => (
@@ -56,3 +56,5 @@ export const AccordionItemDetails = forwardRef<
 ));
 
 AccordionItemDetails.displayName = "AccordionItemDetails";
+
+export { Accordion, AccordionItem, AccordionItemSummary, AccordionItemDetails };

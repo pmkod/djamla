@@ -84,7 +84,7 @@ const buttonStyle = cva(
   }
 );
 
-export interface ButtonProps
+interface ButtonProps
   extends ComponentPropsWithRef<typeof ark.button>,
     VariantProps<typeof buttonStyle> {
   isLoading?: boolean;
