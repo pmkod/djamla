@@ -4,7 +4,7 @@ import { Progress as ProgressPrimitives } from "@ark-ui/react";
 import { cva, VariantProps } from "class-variance-authority";
 
 const linearProgressStyle = cva(
-  "w-full overflow-hidden rounded-full bg-gray-200",
+  "w-full overflow-hidden rounded-full bg-neutral-200",
   {
     variants: {
       size: {
