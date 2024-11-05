@@ -33,17 +33,18 @@ export const Checkbox = forwardRef<
     VariantProps<typeof checkboxControlStyle>,
   React.ComponentPropsWithoutRef<typeof CheckboxPrimitives.Root> &
     VariantProps<typeof checkboxControlStyle>
->(({ size, colorScheme, ...props }, ref) => {
+>(({ size, colorScheme, className, ...props }, ref) => {
   return (
     <CheckboxPrimitives.Root ref={ref} {...props}>
       <CheckboxPrimitives.Control
         className={checkboxControlStyle({
           size,
           colorScheme,
+          className,
         })}
       >
         <CheckboxPrimitives.Indicator className="p-0.5">
-          <IconCheck stroke={3} className="h-full w-full" />
+          <IconCheck className="h-full w-full" />
         </CheckboxPrimitives.Indicator>
       </CheckboxPrimitives.Control>
       <CheckboxPrimitives.HiddenInput />
