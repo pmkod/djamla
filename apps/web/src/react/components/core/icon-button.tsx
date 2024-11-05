@@ -20,11 +20,11 @@ const iconButtonStyle = cva(
         black: "",
       },
       size: {
-        xs: "h-7",
-        sm: "h-8",
-        md: "h-9",
-        lg: "h-10",
-        xl: "h-11",
+        xs: "h-8",
+        sm: "h-9",
+        md: "h-10",
+        lg: "h-11",
+        xl: "h-12",
       },
       disabled: {
         true: "opacity-50",

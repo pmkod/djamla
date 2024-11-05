@@ -90,7 +90,7 @@ export const DrawerCloseButton = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof DialogPrimitives.CloseTrigger>
 >(({ className, ...props }, ref) => (
   <DialogPrimitives.CloseTrigger ref={ref} asChild {...props}>
-    <IconButton size="sm" variant="outlined" colorScheme="black">
+    <IconButton size="sm" variant="outline" colorScheme="black">
       <IconX className="h-4 w-4" />
     </IconButton>
   </DialogPrimitives.CloseTrigger>
