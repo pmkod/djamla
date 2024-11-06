@@ -42,7 +42,7 @@ const MenuItem = forwardRef<
   return (
     <MenuPrimitives.Item
       ref={ref}
-      className="flex h-8 cursor-pointer items-center gap-x-2.5 rounded-sm px-2 text-sm font-medium transition-colors hover:bg-gray-100"
+      className="flex h-8 cursor-pointer items-center gap-x-2.5 rounded-sm px-2 text-sm font-medium transition-colors hover:bg-neutral-100"
       {...props}
     >
       {children}
@@ -59,7 +59,7 @@ const MenuTriggerItem = forwardRef<
   return (
     <MenuPrimitives.TriggerItem
       ref={ref}
-      className="flex h-8 cursor-pointer items-center gap-x-2.5 rounded-sm px-2 text-sm font-medium transition-colors hover:bg-gray-100"
+      className="flex h-8 cursor-pointer items-center gap-x-2.5 rounded-sm px-2 text-sm font-medium transition-colors hover:bg-neutral-100"
       {...props}
     >
       {children}
@@ -79,7 +79,7 @@ const MenuContent = forwardRef<
       <MenuPrimitives.Positioner>
         <MenuPrimitives.Content
           ref={ref}
-          className="w-max min-w-36 overflow-hidden rounded border border-gray-200 bg-white p-1 text-gray-500 shadow-md outline-none data-[placement]:right-0"
+          className="w-max min-w-36 overflow-hidden rounded border border-neutral-200 bg-white p-1 text-neutral-500 shadow-md outline-none data-[placement]:right-0"
           {...props}
         >
           {children}
@@ -107,7 +107,7 @@ const MenuGroupLabel = forwardRef<
   return (
     <MenuPrimitives.ItemGroupLabel
       ref={ref}
-      className="mb-1 mt-2 px-2 text-xs font-medium text-gray-500"
+      className="mb-1 mt-2 px-2 text-xs font-medium text-neutral-500"
       {...props}
     />
   );
@@ -122,7 +122,7 @@ const MenuSeparator = forwardRef<
   return (
     <MenuPrimitives.Separator
       ref={ref}
-      className="my-1 h-px scale-x-125 bg-gray-400"
+      className="my-1 h-px scale-x-125 bg-neutral-400"
       {...props}
     />
   );

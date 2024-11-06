@@ -21,7 +21,7 @@ const ContextMenuPage = () => {
       <div className="p-20">
         <Menu>
           <ContextMenuTrigger asChild>
-            <div className="flex h-52 w-96 items-center justify-center rounded border border-dashed border-gray-400">
+            <div className="flex h-52 w-96 items-center justify-center rounded border border-dashed border-neutral-400">
               Right click here
             </div>
           </ContextMenuTrigger>
