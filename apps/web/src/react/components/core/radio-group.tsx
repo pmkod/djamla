@@ -41,7 +41,7 @@ const radioGroupItemStyle = cva(
         xl: "w-6",
       },
       checked: {
-        true: "border-blue-400",
+        true: "border-indigo-400",
       },
     },
   }
