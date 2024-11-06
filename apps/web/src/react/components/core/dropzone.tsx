@@ -13,7 +13,7 @@ const Dropzone = forwardRef<
       className="relative aspect-video w-full"
       {...props}
     >
-      <FileUploadPrimitives.Dropzone className="mb-4 flex h-full w-full flex-col items-center justify-center gap-y-4 rounded border border-gray-300 pb-5">
+      <FileUploadPrimitives.Dropzone className="mb-4 flex h-full w-full flex-col items-center justify-center gap-y-4 rounded-sm border border-gray-300 pb-5">
         {children}
       </FileUploadPrimitives.Dropzone>
       <FileUploadPrimitives.HiddenInput className="" />
@@ -25,7 +25,7 @@ const Dropzone = forwardRef<
               <FileUploadPrimitives.Item
                 key={file.name}
                 file={file}
-                className="flex items-center gap-x-4 rounded border border-gray-300 p-4"
+                className="flex items-center gap-x-4 rounded-sm border border-gray-300 p-4"
               >
                 {file.type.startsWith("image") ? (
                   <FileUploadPrimitives.ItemPreview type="image/*" className="">
