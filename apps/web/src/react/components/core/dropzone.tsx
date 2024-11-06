@@ -13,7 +13,7 @@ const Dropzone = forwardRef<
       className="relative aspect-video w-full"
       {...props}
     >
-      <FileUploadPrimitives.Dropzone className="mb-4 flex h-full w-full flex-col items-center justify-center gap-y-4 rounded-sm border border-gray-300 pb-5">
+      <FileUploadPrimitives.Dropzone className="mb-4 flex h-full w-full flex-col items-center justify-center gap-y-4 rounded-sm border border-neutral-300 pb-5">
         {children}
       </FileUploadPrimitives.Dropzone>
       <FileUploadPrimitives.HiddenInput className="" />
@@ -25,7 +25,7 @@ const Dropzone = forwardRef<
               <FileUploadPrimitives.Item
                 key={file.name}
                 file={file}
-                className="flex items-center gap-x-4 rounded-sm border border-gray-300 p-4"
+                className="flex items-center gap-x-4 rounded-sm border border-neutral-300 p-4"
               >
                 {file.type.startsWith("image") ? (
                   <FileUploadPrimitives.ItemPreview type="image/*" className="">
@@ -34,18 +34,18 @@ const Dropzone = forwardRef<
                 ) : (
                   <FileUploadPrimitives.ItemPreview
                     type=".*"
-                    className="flex h-12 w-12 items-center justify-center rounded border border-gray-300 bg-gray-200 text-sm font-semibold uppercase text-gray-500"
+                    className="flex h-12 w-12 items-center justify-center rounded border border-neutral-300 bg-neutral-200 text-sm font-semibold uppercase text-neutral-500"
                   >
                     {file.name.split(".").pop()}
                   </FileUploadPrimitives.ItemPreview>
                 )}
 
                 <div className="flex flex-1 flex-col">
-                  <FileUploadPrimitives.ItemName className="text-sm font-medium text-gray-800" />
-                  <FileUploadPrimitives.ItemSizeText className="text-sm text-gray-500" />
+                  <FileUploadPrimitives.ItemName className="text-sm font-medium text-neutral-800" />
+                  <FileUploadPrimitives.ItemSizeText className="text-sm text-neutral-500" />
                 </div>
-                <FileUploadPrimitives.ItemDeleteTrigger className="rounded border border-gray-300 p-1.5 transition-colors hover:bg-gray-200">
-                  <IconTrash className="h-4 w-4 text-gray-600" />
+                <FileUploadPrimitives.ItemDeleteTrigger className="rounded border border-neutral-300 p-1.5 transition-colors hover:bg-neutral-200">
+                  <IconTrash className="h-4 w-4 text-neutral-600" />
                 </FileUploadPrimitives.ItemDeleteTrigger>
               </FileUploadPrimitives.Item>
             ))
@@ -63,7 +63,7 @@ const DropzoneText = forwardRef<
   React.HTMLAttributes<HTMLDivElement>
 >(({ children, ...props }, ref) => {
   return (
-    <div ref={ref} className="text-sm text-gray-600" {...props}>
+    <div ref={ref} className="text-sm text-neutral-600" {...props}>
       {children}
     </div>
   );

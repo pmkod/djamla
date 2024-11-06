@@ -6,13 +6,13 @@ import { forwardRef } from "react";
 import { ToggleGroup } from "./toggle-group";
 
 const toggleItemStyle = cva(
-  "focus-visible:ring-ring inline-flex items-center justify-center text-sm font-medium transition-colors first:rounded-l last:rounded-r hover:bg-gray-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-gray-200 data-[state=off]:hover:bg-gray-50",
+  "focus-visible:ring-ring inline-flex items-center justify-center text-sm font-medium transition-colors first:rounded-l last:rounded-r hover:bg-neutral-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-neutral-200 data-[state=off]:hover:bg-neutral-50",
   {
     variants: {
       variant: {
         plain: "bg-transparent",
         outline:
-          "border-y border-l border-gray-300 bg-transparent last:border-r hover:bg-gray-300",
+          "border-y border-l border-neutral-300 bg-transparent last:border-r hover:bg-neutral-300",
       },
       size: {
         xs: "h-7 min-w-7",
@@ -38,7 +38,7 @@ const Toggle = forwardRef<
   <ToggleGroup>
     <ToggleGroupPrimitives.Item
       ref={ref}
-      className={toggleItemStyle({ variant, size })}
+      className={toggleItemStyle({ variant, size, className })}
       {...props}
     >
       {children}
