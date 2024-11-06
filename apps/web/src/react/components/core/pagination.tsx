@@ -4,7 +4,7 @@ import { Pagination as PaginationPrimitives } from "@ark-ui/react";
 import { IconChevronLeft, IconChevronRight } from "@tabler/icons-react";
 
 const basePaginationButtonClassName =
-  "size-9 aspect-square flex items-center justify-center rounded hover:bg-gray-100 data-[disabled]:hover:bg-transparent transition-colors";
+  "size-9 aspect-square flex items-center justify-center rounded-sm hover:bg-gray-100 data-[disabled]:hover:bg-transparent transition-colors";
 
 const Pagination = forwardRef<
   React.ElementRef<typeof PaginationPrimitives.Root>,
