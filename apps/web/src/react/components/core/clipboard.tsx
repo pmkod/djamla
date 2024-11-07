@@ -5,7 +5,7 @@ import { IconButton } from "./icon-button";
 import { cva, VariantProps } from "class-variance-authority";
 
 const clipboardInputStyle = cva(
-  "w-full rounded-sm border border-gray-300 pl-3 text-gray-500",
+  "w-full rounded-sm border border-neutral-300 pl-3 text-neutral-500",
   {
     variants: {
       size: {

@@ -1,6 +1,6 @@
 "use client";
 import React, { forwardRef } from "react";
-import { Portal, Select as SelectPrimitives } from "@ark-ui/react";
+import { Select as SelectPrimitives } from "@ark-ui/react";
 import { cva, VariantProps } from "class-variance-authority";
 import { IconCheck, IconChevronDown } from "@tabler/icons-react";
 
@@ -76,7 +76,7 @@ const SelectItemGroupLabel = forwardRef<
   React.ComponentPropsWithoutRef<typeof SelectPrimitives.ItemGroupLabel>
 >((props, ref) => (
   <SelectPrimitives.ItemGroupLabel
-    className="text-sm text-gray-500"
+    className="text-sm text-neutral-500"
     ref={ref}
     {...props}
   />

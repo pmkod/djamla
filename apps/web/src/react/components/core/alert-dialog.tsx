@@ -91,7 +91,12 @@ const AlertDialogCancel = React.forwardRef<
   React.ElementRef<typeof DialogPrimitives.CloseTrigger>,
   React.ComponentPropsWithoutRef<typeof DialogPrimitives.CloseTrigger>
 >(({ className, children, ...props }, ref) => (
-  <DialogPrimitives.CloseTrigger asChild ref={ref} {...props}>
+  <DialogPrimitives.CloseTrigger
+    asChild
+    ref={ref}
+    className={className}
+    {...props}
+  >
     <Button variant="outline">{children}</Button>
   </DialogPrimitives.CloseTrigger>
 ));
