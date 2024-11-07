@@ -27,7 +27,7 @@ const toastStyle = cva(
     variants: {
       type: {
         success: "bg-green-500 text-white",
-        info: "border border-neutral-200 bg-white",
+        info: "border border-base-200 bg-white",
         error: "bg-red-600 text-white",
       },
     },

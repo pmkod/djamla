@@ -6,7 +6,7 @@ import { forwardRef } from "react";
 
 const defaultOrientation = "horizontal";
 
-const sliderTrackStyle = cva("overflow-hidden rounded-full bg-neutral-200", {
+const sliderTrackStyle = cva("overflow-hidden rounded-full bg-base-200", {
   variants: {
     size: {
       sm: "",
@@ -71,7 +71,7 @@ const sliderTrackStyle = cva("overflow-hidden rounded-full bg-neutral-200", {
   },
 });
 
-const sliderRangeStyle = cva("bg-indigo-500", {
+const sliderRangeStyle = cva("bg-primary-500", {
   variants: {
     orientation: {
       vertical: "w-full",
@@ -85,7 +85,7 @@ const sliderRangeStyle = cva("bg-indigo-500", {
 });
 
 const sliderThumbStyle = cva(
-  "cursor-pointer rounded-full border-[3px] border-indigo-400 bg-white transition-colors hover:bg-neutral-100 disabled:pointer-events-none disabled:opacity-50",
+  "cursor-pointer rounded-full border-[3px] border-primary-400 bg-white transition-colors hover:bg-base-100 disabled:pointer-events-none disabled:opacity-50",
   {
     variants: {
       orientation: {

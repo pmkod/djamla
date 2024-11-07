@@ -11,7 +11,7 @@ const SliderPage = () => {
 
           <Slider size="lg" />
 
-          <div className="size-52 bg-neutral-100">
+          <div className="size-52 bg-base-100">
             <Slider orientation="vertical" size="xl" />
           </div>
         </div>

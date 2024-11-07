@@ -13,9 +13,9 @@ const loaderStyle = cva(
       },
 
       colorScheme: {
-        primary: "border-indigo-600",
+        primary: "border-primary-600",
         red: "border-red-600",
-        black: "border-neutral-900",
+        black: "border-base-900",
         green: "border-green-500",
       },
     },

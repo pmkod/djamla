@@ -1,7 +1,7 @@
 import { cva, VariantProps } from "class-variance-authority";
 import { forwardRef } from "react";
 
-const skeletonStyle = cva("animate-pulse bg-neutral-200", {
+const skeletonStyle = cva("animate-pulse bg-base-200", {
   variants: {
     rounded: {
       xs: "rounded-sm",

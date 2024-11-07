@@ -4,18 +4,18 @@ import { cva, VariantProps } from "class-variance-authority";
 import { forwardRef } from "react";
 
 export const inputStyle = cva(
-  "w-full rounded-sm px-2.5 text-neutral-800 outline-none focus:border-indigo-500 disabled:cursor-not-allowed disabled:opacity-50 data-[invalid]:border-red-500",
+  "w-full  px-2.5 text-base-800 outline-none focus:border-primary-500 disabled:cursor-not-allowed disabled:opacity-50 data-[invalid]:border-red-500",
   {
     variants: {
       variant: {
-        outline: "border border-neutral-400 bg-transparent",
-        ghost: "border border-neutral-200 bg-neutral-100",
+        outline: "border border-base-400 bg-transparent",
+        ghost: "border border-base-200 bg-base-100",
         plain: "bg-transparent",
       },
       size: {
-        sm: "h-9 text-xs",
-        md: "h-10 text-sm",
-        lg: "h-11",
+        sm: "h-9 text-xs rounded-sm",
+        md: "h-10 text-sm rounded-[3px]",
+        lg: "h-11 rounded",
       },
       colorScheme: {
         red: "",

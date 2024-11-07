@@ -4,7 +4,7 @@ import { cva, VariantProps } from "class-variance-authority";
 import { IconCheck } from "@tabler/icons-react";
 
 const checkboxControlStyle = cva(
-  "inline-flex cursor-pointer rounded-sm border data-[disabled]:pointer-events-none data-[state=unchecked]:border-neutral-400 data-[disabled]:opacity-50 data-[state=unchecked]:hover:bg-neutral-100",
+  "inline-flex cursor-pointer rounded-sm border data-[disabled]:pointer-events-none data-[state=unchecked]:border-base-400 data-[disabled]:opacity-50 data-[state=unchecked]:hover:bg-base-100",
   {
     variants: {
       size: {
@@ -15,9 +15,9 @@ const checkboxControlStyle = cva(
       },
       colorScheme: {
         primary:
-          "text-white data-[state=checked]:border-indigo-500 data-[state=checked]:bg-indigo-500",
+          "text-white data-[state=checked]:border-primary-500 data-[state=checked]:bg-primary-500",
         black:
-          "text-white data-[state=checked]:border-neutral-800 data-[state=checked]:bg-neutral-800",
+          "text-white data-[state=checked]:border-base-800 data-[state=checked]:bg-base-800",
       },
     },
 

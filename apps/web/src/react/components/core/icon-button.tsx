@@ -5,11 +5,11 @@ import { cva, VariantProps } from "class-variance-authority";
 import React, { ComponentPropsWithoutRef, forwardRef } from "react";
 
 const iconButtonStyle = cva(
-  "relative ring-offset-background focus-visible:ring-ring inline-flex aspect-square items-center justify-center whitespace-nowrap rounded-sm disabled:opacity-50 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none",
+  "relative ring-offset-background focus-visible:ring-ring inline-flex aspect-square items-center justify-center whitespace-nowrap disabled:opacity-50 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none",
   {
     variants: {
       variant: {
-        solid: "text-[#ffffff]",
+        solid: "",
         outline:
           "border border-neutral-300 bg-transparent hover:bg-neutral-100",
         ghost: "bg-transparent hover:bg-neutral-100",
@@ -21,11 +21,11 @@ const iconButtonStyle = cva(
         black: "",
       },
       size: {
-        xs: "h-8",
-        sm: "h-9",
-        md: "h-10",
-        lg: "h-11",
-        xl: "h-12",
+        xs: "h-8 rounded-sm",
+        sm: "h-9 rounded-sm",
+        md: "h-10 rounded-[3px]",
+        lg: "h-11 rounded",
+        xl: "h-12 rounded",
       },
       disabled: {
         true: "opacity-50",
@@ -38,27 +38,27 @@ const iconButtonStyle = cva(
       {
         variant: "solid",
         colorScheme: "primary",
-        className: "bg-indigo-500 hover:bg-indigo-600",
+        className: "bg-primary-500 hover:bg-primary-600 text-white",
       },
       {
         variant: "outline",
         colorScheme: "primary",
-        className: "text-indigo-500",
+        className: "text-primary-500",
       },
       {
         variant: "ghost",
         colorScheme: "primary",
-        className: "text-indigo-600",
+        className: "text-primary-600",
       },
       {
         variant: "plain",
         colorScheme: "primary",
-        className: "text-indigo-700",
+        className: "text-primary-700",
       },
       {
         variant: "solid",
         colorScheme: "red",
-        className: "bg-red-500 hover:bg-red-600",
+        className: "bg-red-500 hover:bg-red-600 text-white",
       },
       {
         variant: "outline",
@@ -78,7 +78,7 @@ const iconButtonStyle = cva(
       {
         variant: "solid",
         colorScheme: "black",
-        className: "bg-neutral-800 hover:bg-neutral-900",
+        className: "bg-neutral-800 hover:bg-neutral-900 text-base-0",
       },
       {
         variant: "outline",

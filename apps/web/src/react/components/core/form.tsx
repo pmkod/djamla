@@ -142,7 +142,7 @@ const FormFieldHelperText = forwardRef<
     <p
       ref={ref}
       id={formDescriptionId}
-      className={"text-sm leading-[1] text-neutral-500 " + className}
+      className={"text-sm leading-[1] text-base-500 " + className}
       {...props}
     />
   );

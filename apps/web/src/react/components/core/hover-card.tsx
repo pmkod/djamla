@@ -16,7 +16,7 @@ const HoverCardContent = forwardRef<
       <HoverCardPrimitives.Content
         ref={ref}
         className={
-          "z-50 w-max rounded-sm border border-neutral-200 bg-white p-4 text-neutral-800 shadow-md outline-none data-[state=open]:visible data-[state=closed]:invisible data-[state=open]:opacity-100 data-[state=closed]:opacity-50 data-[state=open]:scale-100 data-[state=closed]:scale-50 transition-all ease-in duration-500 " +
+          "z-50 w-max rounded-sm border border-base-200 bg-white p-4 text-base-800 shadow-md outline-none data-[state=open]:visible data-[state=closed]:invisible data-[state=open]:opacity-100 data-[state=closed]:opacity-50 data-[state=open]:scale-100 data-[state=closed]:scale-50 transition-all ease-in duration-500 " +
           className
         }
         {...props}

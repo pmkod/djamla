@@ -18,7 +18,7 @@ const PinInput = forwardRef<
             <PinInputPrimitives.Input
               key={index}
               index={index}
-              className="h-16 w-12 rounded border border-neutral-300 text-center text-xl outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 placeholder:focus:opacity-0 data-[disabled]:opacity-50"
+              className="h-16 w-12 rounded border border-base-300 text-center text-xl outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 placeholder:focus:opacity-0 data-[disabled]:opacity-50"
               placeholder="_"
             />
           ))}

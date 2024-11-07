@@ -31,7 +31,7 @@ const RadioGroup = forwardRef<
 RadioGroup.displayName = "RadioGroup";
 
 const radioGroupItemStyle = cva(
-  "aspect-square rounded-full border border-neutral-400 p-0.5 transition-colors hover:bg-neutral-100",
+  "aspect-square rounded-full border border-base-400 p-0.5 transition-colors hover:bg-base-100",
   {
     variants: {
       size: {
@@ -41,7 +41,7 @@ const radioGroupItemStyle = cva(
         xl: "w-6",
       },
       checked: {
-        true: "border-indigo-400",
+        true: "border-primary-400",
       },
     },
   }

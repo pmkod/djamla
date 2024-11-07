@@ -7,17 +7,17 @@ const SignaturePad = forwardRef<
 >((props, ref) => {
   return (
     <SignaturePadPrimitives.Root
-      className="h-full w-full rounded border border-neutral-200 bg-neutral-50"
+      className="h-full w-full rounded border border-base-200 bg-base-50"
       ref={ref}
       drawing={{ size: 2, simulatePressure: true }}
       {...props}
     >
       <SignaturePadPrimitives.Control className="relative h-full w-full">
-        <SignaturePadPrimitives.ClearTrigger className="absolute right-3 top-3 rounded border border-neutral-300 px-2 pb-1 pt-0.5 text-xs transition-colors hover:bg-neutral-100">
+        <SignaturePadPrimitives.ClearTrigger className="absolute right-3 top-3 rounded border border-base-300 px-2 pb-1 pt-0.5 text-xs transition-colors hover:bg-base-100">
           Clear
         </SignaturePadPrimitives.ClearTrigger>
         <SignaturePadPrimitives.Segment className="h-full w-full" />
-        <SignaturePadPrimitives.Guide className="absolute bottom-4 left-5 right-4 h-px border-b border-dashed border-b-neutral-400" />
+        <SignaturePadPrimitives.Guide className="absolute bottom-4 left-5 right-4 h-px border-b border-dashed border-b-base-400" />
       </SignaturePadPrimitives.Control>
     </SignaturePadPrimitives.Root>
   );

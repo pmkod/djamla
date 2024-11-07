@@ -5,7 +5,7 @@ const Card = forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
     <div
       ref={ref}
       className={
-        "rounded border border-neutral-300 bg-white text-neutral-800 shadow-sm " +
+        "rounded border border-base-300 bg-white text-base-800 shadow-sm " +
         className
       }
       {...props}
@@ -42,11 +42,7 @@ const CardDescription = forwardRef<
   HTMLDivElement,
   HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
-  <div
-    ref={ref}
-    className={"text-sm text-neutral-500 " + className}
-    {...props}
-  />
+  <div ref={ref} className={"text-sm text-base-500 " + className} {...props} />
 ));
 CardDescription.displayName = "CardDescription";
 

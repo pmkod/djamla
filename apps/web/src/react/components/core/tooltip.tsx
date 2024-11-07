@@ -25,7 +25,7 @@ const TooltipContent = forwardRef<
   <TooltipPrimitives.Positioner>
     <TooltipPrimitives.Content
       ref={ref}
-      className="z-50 block max-w-52 overflow-hidden rounded border border-neutral-900 bg-neutral-900 px-3 py-1.5 text-sm font-medium text-white shadow-md transition-all duration-200 data-[state=closed]:opacity-0 data-[state=open]:opacity-100"
+      className="z-50 block max-w-52 overflow-hidden rounded border border-base-900 bg-base-900 px-3 py-1.5 text-sm font-medium text-white shadow-md transition-all duration-200 data-[state=closed]:opacity-0 data-[state=open]:opacity-100"
       {...props}
     />
   </TooltipPrimitives.Positioner>

@@ -4,7 +4,7 @@ import { Progress as ProgressPrimitives } from "@ark-ui/react";
 import { cva, VariantProps } from "class-variance-authority";
 
 const linearProgressStyle = cva(
-  "w-full overflow-hidden rounded-full bg-neutral-200",
+  "w-full overflow-hidden rounded-full bg-base-200",
   {
     variants: {
       size: {
@@ -31,7 +31,7 @@ const LinearProgress = forwardRef<
     <ProgressPrimitives.Track className={linearProgressStyle({ size })}>
       <ProgressPrimitives.Range
         className={
-          "duration-400 h-[inherit] w-[inherit] bg-indigo-500 transition-all ease-linear " +
+          "duration-400 h-[inherit] w-[inherit] bg-primary-500 transition-all ease-linear " +
           className
         }
       />

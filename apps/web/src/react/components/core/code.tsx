@@ -6,8 +6,8 @@ export const codeStyle = cva(
   {
     variants: {
       variant: {
-        outline: "border border-neutral-300 bg-neutral-100",
-        ghost: "bg-neutral-100",
+        outline: "border border-base-300 bg-base-100",
+        ghost: "bg-base-100",
       },
       size: {
         sm: "px-0.5 text-xs",

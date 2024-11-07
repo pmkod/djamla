@@ -14,7 +14,7 @@ const ratingStarStyle = cva("cursor-pointer outline-none transition-colors", {
     },
     highlighted: {
       true: "opacity-100 fill-amber-400",
-      false: "fill-neutral-200",
+      false: "fill-base-200",
     },
   },
   defaultVariants: {

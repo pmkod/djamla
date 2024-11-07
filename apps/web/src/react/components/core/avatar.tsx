@@ -1,5 +1,4 @@
 "use client";
-
 import { ComponentPropsWithoutRef, ElementRef, forwardRef } from "react";
 import { Avatar as AvatarPrimitives } from "@ark-ui/react";
 import { cva, VariantProps } from "class-variance-authority";
@@ -51,7 +50,7 @@ const AvatarFallback = forwardRef<
   <AvatarPrimitives.Fallback
     ref={ref}
     className={
-      "flex h-full w-full items-center justify-center rounded-full bg-neutral-200 text-[length:inherit] font-normal text-neutral-400 " +
+      "flex h-full w-full items-center justify-center rounded-full bg-base-200 text-[length:inherit] font-normal text-base-400 " +
       className
     }
     {...props}

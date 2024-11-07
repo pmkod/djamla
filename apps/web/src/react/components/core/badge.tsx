@@ -9,7 +9,7 @@ const badgeStyle = cva(
     variants: {
       variant: {
         solid: "text-white",
-        outline: "bg-transparent border border-neutral-300",
+        outline: "bg-transparent border border-base-300",
         soft: "",
         plain: "bg-transparent",
       },
@@ -30,22 +30,22 @@ const badgeStyle = cva(
       {
         variant: "solid",
         colorScheme: "primary",
-        className: "bg-indigo-500",
+        className: "bg-primary-500",
       },
       {
         variant: "outline",
         colorScheme: "primary",
-        className: "text-indigo-500",
+        className: "text-primary-500",
       },
       {
         variant: "soft",
         colorScheme: "primary",
-        className: "bg-indigo-100 text-indigo-500",
+        className: "bg-primary-100 text-primary-500",
       },
       {
         variant: "plain",
         colorScheme: "primary",
-        className: "text-indigo-500",
+        className: "text-primary-500",
       },
       {
         variant: "solid",

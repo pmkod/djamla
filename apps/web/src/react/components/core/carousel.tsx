@@ -14,7 +14,7 @@ const Carousel = forwardRef<
   return (
     <CarouselPrimitives.Root
       ref={ref}
-      className="relative h-full w-full max-w-full overflow-hidden bg-neutral-200"
+      className="relative h-full w-full max-w-full overflow-hidden bg-base-200"
       {...props}
     ></CarouselPrimitives.Root>
   );
@@ -23,7 +23,7 @@ const Carousel = forwardRef<
 Carousel.displayName = "Carousel";
 
 const carouselTriggerStyle = cva(
-  "absolute top-1/2 z-40 bg-white flex aspect-square -translate-y-1/2 transform cursor-pointer items-center justify-center rounded-full text-neutral-500 shadow transition-colors hover:bg-neutral-100",
+  "absolute top-1/2 z-40 bg-white flex aspect-square -translate-y-1/2 transform cursor-pointer items-center justify-center rounded-full text-base-500 shadow transition-colors hover:bg-base-100",
   {
     variants: {
       position: {
@@ -118,13 +118,13 @@ const CarouselIndicatorGroup = forwardRef<
   return (
     <CarouselPrimitives.IndicatorGroup
       ref={ref}
-      className="absolute bottom-2 left-1/2 z-50 flex h-max w-max -translate-x-1/2 transform gap-x-1 rounded-full bg-neutral-800 p-1.5"
+      className="absolute bottom-2 left-1/2 z-50 flex h-max w-max -translate-x-1/2 transform gap-x-1 rounded-full bg-base-800 p-1.5"
       {...props}
     >
       {Array.from(Array(itemCount).keys()).map((_, index) => (
         <CarouselPrimitives.Indicator
           index={index}
-          className="h-2 w-2 rounded-full bg-neutral-600 data-[current]:bg-neutral-200"
+          className="h-2 w-2 rounded-full bg-base-600 data-[current]:bg-base-200"
         />
       ))}
       {children}

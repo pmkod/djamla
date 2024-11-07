@@ -6,13 +6,13 @@ import { forwardRef } from "react";
 import { ToggleGroup } from "./toggle-group";
 
 const toggleItemStyle = cva(
-  "focus-visible:ring-ring inline-flex items-center justify-center text-sm font-medium transition-colors first:rounded-l last:rounded-r hover:bg-neutral-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-neutral-200 data-[state=off]:hover:bg-neutral-50",
+  "focus-visible:ring-ring inline-flex items-center justify-center text-sm font-medium transition-colors first:rounded-l last:rounded-r hover:bg-base-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-base-200 data-[state=off]:hover:bg-base-50",
   {
     variants: {
       variant: {
         plain: "bg-transparent",
         outline:
-          "border-y border-l border-neutral-300 bg-transparent last:border-r hover:bg-neutral-300",
+          "border-y border-l border-base-300 bg-transparent last:border-r hover:bg-base-300",
       },
       size: {
         xs: "h-7 min-w-7",

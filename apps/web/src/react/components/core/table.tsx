@@ -33,7 +33,7 @@ const TableFooter = forwardRef<
   <tfoot
     ref={ref}
     className={
-      "border-t bg-neutral-200 pointer-events-none font-medium [&>tr]:last:border-b-0"
+      "border-t bg-base-200 pointer-events-none font-medium [&>tr]:last:border-b-0"
     }
     {...props}
   />
@@ -47,7 +47,7 @@ const TableRow = forwardRef<
   <tr
     ref={ref}
     className={
-      "border-b transition-colors hover:bg-neutral-100 data-[state=selected]:bg-neutral-100"
+      "border-b transition-colors hover:bg-base-100 data-[state=selected]:bg-base-100"
     }
     {...props}
   />
@@ -61,7 +61,7 @@ const TableHead = forwardRef<
   <th
     ref={ref}
     className={
-      "h-12 px-4 text-left align-middle font-medium text-neutral-700 [&:has([role=checkbox])]:pr-0"
+      "h-12 px-4 text-left align-middle font-medium text-base-700 [&:has([role=checkbox])]:pr-0"
     }
     {...props}
   />
