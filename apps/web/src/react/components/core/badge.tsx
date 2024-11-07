@@ -70,22 +70,22 @@ const badgeStyle = cva(
       {
         variant: "solid",
         colorScheme: "black",
-        className: "bg-neutral-900",
+        className: "bg-base-900",
       },
       {
         variant: "outline",
         colorScheme: "black",
-        className: " text-neutral-900",
+        className: " text-base-900",
       },
       {
         variant: "soft",
         colorScheme: "black",
-        className: "bg-neutral-100 text-neutral-900",
+        className: "bg-base-100 text-base-900",
       },
       {
         variant: "plain",
         colorScheme: "black",
-        className: "text-neutral-900",
+        className: "text-base-900",
       },
     ],
     defaultVariants: {

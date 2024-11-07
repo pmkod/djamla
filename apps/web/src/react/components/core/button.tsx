@@ -66,17 +66,17 @@ const buttonStyle = cva(
       {
         variant: "solid",
         colorScheme: "black",
-        className: "bg-neutral-900 hover:bg-neutral-950 text-base-0",
+        className: "bg-base-900 hover:bg-base-950 text-base-0",
       },
       {
         variant: "outline",
         colorScheme: "black",
-        className: " text-neutral-900",
+        className: " text-base-900",
       },
       {
         variant: "ghost",
         colorScheme: "black",
-        className: "text-neutral-900",
+        className: "text-base-900",
       },
     ],
     defaultVariants: {

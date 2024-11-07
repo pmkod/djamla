@@ -85,22 +85,22 @@ const alertStyle = cva(
       {
         variant: "solid",
         colorScheme: "black",
-        className: "bg-neutral-900",
+        className: "bg-base-900",
       },
       {
         variant: "outline",
         colorScheme: "black",
-        className: " text-neutral-900",
+        className: " text-base-900",
       },
       {
         variant: "soft",
         colorScheme: "black",
-        className: "bg-neutral-200 text-neutral-900",
+        className: "bg-base-200 text-base-900",
       },
       {
         variant: "plain",
         colorScheme: "black",
-        className: "text-neutral-900",
+        className: "text-base-900",
       },
     ],
     defaultVariants: {

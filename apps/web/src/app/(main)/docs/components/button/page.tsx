@@ -1,41 +1,54 @@
 "use client";
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@/react/components/core/avatar";
 // import { ComponentShowRoom } from "@/components/core/component-show-room";
 import { Button } from "@/react/components/core/button";
 import React from "react";
 
 const ButtonPage = () => {
   const switchToLightMode = () => {
-    document.body.classList.remove("dark");
-    document.body.classList.add("light");
+    document.body.classList.value = "bg-base-0 light";
   };
   const switchToDarkMode = () => {
-    document.body.classList.remove("light");
-    document.body.classList.add("dark");
+    document.body.classList.value = "bg-base-0 dark";
   };
-  return (
-    <div className="p-20 space-x-10">
-      {/* <ComponentShowRoom
-        defaultVariant="filled"
-        variants={["filled", "outlined", "soft", "plain"]}
-        sizes={["xs", "sm", "md", "lg", "xl"]}
-        defaultSize="md"
-        colorSchemes={["primary", "red", "black"]}
-        defaultColorScheme="primary"
-        fullWidth={false}
-        loading={false}
-        disabled={false}
-      >
-      </ComponentShowRoom> */}
-      <Button variant="solid" size="md" onClick={switchToLightMode}>
-        Light
-      </Button>
-      <Button variant="solid" size="xs" onClick={switchToDarkMode}>
-        Dark
-      </Button>
 
-      <Button variant="solid" colorScheme="black">
-        Download
-      </Button>
+  return (
+    <div>
+      <div className="p-20 space-x-10 space-y-10">
+        <Button variant="solid" onClick={switchToLightMode}>
+          Light
+        </Button>
+        <Button variant="outline" onClick={switchToDarkMode}>
+          Dark
+        </Button>
+        <Avatar size="xs">
+          <AvatarImage />
+          <AvatarFallback>AB</AvatarFallback>
+        </Avatar>
+
+        <Button variant="solid" colorScheme="black">
+          Download
+        </Button>
+      </div>
+
+      <div className="mt-20 flex flex-wrap">
+        <div className="size-20 bg-base-0"></div>
+        <div className="size-20 bg-base-50"></div>
+        <div className="size-20 bg-base-100"></div>
+        <div className="size-20 bg-base-200"></div>
+        <div className="size-20 bg-base-300"></div>
+        <div className="size-20 bg-base-400"></div>
+        <div className="size-20 bg-base-500"></div>
+        <div className="size-20 bg-base-600"></div>
+        <div className="size-20 bg-base-700"></div>
+        <div className="size-20 bg-base-800"></div>
+        <div className="size-20 bg-base-900"></div>
+        <div className="size-20 bg-base-1000"></div>
+      </div>
     </div>
   );
 };
