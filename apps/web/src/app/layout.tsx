@@ -16,7 +16,7 @@ const figtree = Figtree({
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html lang="en" className={figtree.className}>
-      <body className="bg-base-0 dark">{children}</body>
+      <body className="bg-base-0">{children}</body>
     </html>
   );
 }

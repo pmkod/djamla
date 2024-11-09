@@ -10,7 +10,7 @@ const DocsLayout = ({ children }: PropsWithChildren) => {
           <Sidebar />
         </div>
         <div className="flex-1 pt-4">{children}</div>
-        <div className="hidden xl:block w-64"></div>
+        <div className="hidden xl:block w-52"></div>
       </div>
     </Container>
   );
