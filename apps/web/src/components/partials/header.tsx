@@ -11,7 +11,6 @@ import { headerLinks } from "@/constants/header-constants";
 import { Sidebar } from "./sidebar";
 import { usePathname } from "next/navigation";
 import { Input } from "@/react/components/core/input";
-import { Button } from "@/react/components/core/button";
 
 export const Header = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -96,10 +95,6 @@ const Drawer = ({ open, setOpen }: DrawerProps) => {
             <Link href="/" onClick={hideDrawer}>
               <Logo />
             </Link>
-
-            <Button size="sm" variant="outline" onClick={hideDrawer}>
-              Fermer
-            </Button>
           </div>
 
           <div className="flex-1 overflow-auto pt-2">

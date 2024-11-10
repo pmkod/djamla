@@ -9,7 +9,7 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "../../react/components/core/alert-dialog";
-import { Button } from "../../react/components/core/button";
+import { Button } from "../../../../../components/react/src/core/button";
 
 const AlertDialogPage = () => {
   return (

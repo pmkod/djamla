@@ -1,7 +1,7 @@
 import React from "react";
 import { Container } from "../core/container";
 import Link from "next/link";
-import { Button } from "@/react/components/core/button";
+import { Button } from "@repo/react-ui";
 
 export const HeroSection = () => {
   return (

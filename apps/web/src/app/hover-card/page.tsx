@@ -5,7 +5,7 @@ import {
   HoverCardContent,
   HoverCardTrigger,
 } from "../../react/components/core/hover-card";
-import { Button } from "../../react/components/core/button";
+import { Button } from "../../../../../components/react/src/core/button";
 import {
   Avatar,
   AvatarFallback,

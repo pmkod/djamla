@@ -9,7 +9,7 @@ import {
   PopoverTitle,
   PopoverTrigger,
 } from "../../react/components/core/popover";
-import { Button } from "../../react/components/core/button";
+import { Button } from "../../../../../components/react/src/core/button";
 
 const PopoverPage = () => {
   return (

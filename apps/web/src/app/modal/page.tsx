@@ -8,7 +8,7 @@ import {
   ModalTitle,
   ModalTrigger,
 } from "../../react/components/core/modal";
-import { Button } from "../../react/components/core/button";
+import { Button } from "../../../../../components/react/src/core/button";
 
 const ModalPage = () => {
   return (

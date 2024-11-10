@@ -1,8 +1,7 @@
 import { Metadata } from "next";
 import { Figtree } from "next/font/google";
-
 import { PropsWithChildren } from "react";
-import "./globals.css";
+import "@repo/tailwind-config/globals.css";
 
 export const metadata: Metadata = {
   title: "Create Next App",

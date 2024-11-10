@@ -4,7 +4,7 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "../../react/components/core/tooltip";
-import { Button } from "../../react/components/core/button";
+import { Button } from "../../../../../components/react/src/core/button";
 
 const TooltipPage = () => {
   return (

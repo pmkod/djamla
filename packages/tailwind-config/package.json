@@ -1,0 +1,12 @@
+{
+  "name": "@repo/tailwind-config",
+  "version": "1.0.0",
+  "description": "",
+  "exports": {
+    ".": "./tailwind.config.ts",
+    "./globals.css": "./globals.css"
+  },
+  "devDependencies": {
+    "@repo/typescript-config": "workspace:*"
+  }
+}

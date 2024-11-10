@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Button } from "../../react/components/core/button";
+import { Button } from "../../../../../components/react/src/core/button";
 import { Toast, toast } from "../../react/components/core/toast";
 
 const ToastPage = () => {

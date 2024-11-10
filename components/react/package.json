@@ -1,0 +1,31 @@
+{
+  "name": "@repo/react-ui",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "exports": {
+    ".": {
+      "default": "./src/index.ts"
+    }
+  },
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@ark-ui/react": "^4.2.0",
+    "@tabler/icons-react": "^3.21.0",
+    "class-variance-authority": "^0.7.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "@repo/typescript-config": "workspace:*",
+    "@types/node": "^20",
+    "@types/react": "^18.3.6",
+    "@types/react-dom": "^18.3.0"
+  }
+}

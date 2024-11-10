@@ -13,7 +13,7 @@ import {
   FormFieldErrorMessage,
 } from "../../react/components/core/form";
 import { Input } from "../../react/components/core/input";
-import { Button } from "../../react/components/core/button";
+import { Button } from "../../../../../components/react/src/core/button";
 
 const loginFormSchema = z.object({
   email: z.string().email(),

@@ -7,7 +7,7 @@ import {
   CardHeader,
   CardTitle,
 } from "../../react/components/core/card";
-import { Button } from "../../react/components/core/button";
+import { Button } from "../../../../../components/react/src/core/button";
 
 const CardPage = () => {
   return (

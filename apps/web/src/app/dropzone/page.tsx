@@ -5,7 +5,7 @@ import {
   DropzoneText,
   DropzoneTrigger,
 } from "../../react/components/core/dropzone";
-import { Button } from "../../react/components/core/button";
+import { Button } from "../../../../../components/react/src/core/button";
 
 const DropzonePage = () => {
   return (

@@ -1,7 +1,7 @@
 "use client";
 import React, { InputHTMLAttributes } from "react";
 import { Dialog as DialogPrimitives, Portal } from "@ark-ui/react";
-import { ButtonProps } from "./button";
+import { ButtonProps } from "../../../../../../components/react/src/core/button";
 import { cva, VariantProps } from "class-variance-authority";
 import { IconButton } from "./icon-button";
 import { IconX } from "@tabler/icons-react";

@@ -1,25 +1,25 @@
-/** @type {import('tailwindcss').Config} */
+import type { Config } from "tailwindcss";
 
-function withOpacity(variableName) {
-  return ({ opacityValue }) => {
+function withOpacity(variableName: string): any {
+  return ({ opacityValue }: { opacityValue: string }) => {
     if (opacityValue !== undefined) {
-      return `rgb(var(${variableName}) / ${opacityValue})`
+      return `rgb(var(${variableName}) / ${opacityValue})`;
     }
-    return `rgb(var(${variableName}))`
-  }
+    return `rgb(var(${variableName}))`;
+  };
 }
 
-module.exports = {
+const config: Omit<Config, "content"> = {
   content: [
-    "./src/**/*.{js,ts,jsx,tsx,mdx}",
+    "../../components/react/src/**/*.{js,ts,jsx,tsx,mdx}",
+    "../../apps/web/src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    
     extend: {
       colors: {
         base: {
-          0:  withOpacity("--color-base-0"),
-          50:  withOpacity("--color-base-50"),
+          0: withOpacity("--color-base-0"),
+          50: withOpacity("--color-base-50"),
           100: withOpacity("--color-base-100"),
           200: withOpacity("--color-base-200"),
           300: withOpacity("--color-base-300"),
@@ -49,5 +49,6 @@ module.exports = {
     },
   },
   plugins: [],
-}
+};
 
+export default config;

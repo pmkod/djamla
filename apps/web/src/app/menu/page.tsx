@@ -16,7 +16,7 @@ import {
   MenuTriggerItem,
   SubMenu,
 } from "../../react/components/core/menu";
-import { Button } from "../../react/components/core/button";
+import { Button } from "../../../../../components/react/src/core/button";
 
 const MenuPage = () => {
   return (

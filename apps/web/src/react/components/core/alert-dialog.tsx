@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import { Dialog as DialogPrimitives, Portal } from "@ark-ui/react";
-import { Button } from "./button";
+import { Button } from "../../../../../../components/react/src/core/button";
 
 const AlertDialog = DialogPrimitives.Root;
 
