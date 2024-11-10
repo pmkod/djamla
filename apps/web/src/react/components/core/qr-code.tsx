@@ -25,7 +25,7 @@ const QrCodeOverlay = forwardRef<
     <QrCodePrimitives.Overlay
       ref={ref}
       {...props}
-      className="w-10 rounded-full border-4 border-[#ffffff]"
+      className="w-10 rounded-full border-4 border-white"
     />
   );
 });

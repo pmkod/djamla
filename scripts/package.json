@@ -6,8 +6,8 @@
   "main": "./src/index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "generate:components:codes": "",
-    "dev": "tsx watch ./src/index.ts"
+    "generate:components:codes": "tsx ./src/generate-components-code-files.ts",
+    "dev": ""
   },
   "keywords": [],
   "author": "",

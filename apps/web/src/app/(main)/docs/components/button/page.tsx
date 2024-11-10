@@ -2,7 +2,7 @@
 import { ComponentPreview } from "@/components/core/component-preview";
 import { DocTitle } from "@/components/core/doc-title";
 import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
-import { Button, buttonCode } from "@repo/react-ui";
+import { Button, buttonCode, buttonExampleCode } from "@repo/react-ui";
 import React from "react";
 
 const ButtonPage = () => {
@@ -22,7 +22,9 @@ const ButtonPage = () => {
       <DocTitle level="two">Installation</DocTitle>
       <SyntaxHighlighter language="typescript">{buttonCode}</SyntaxHighlighter>
       <DocTitle level="two">Example</DocTitle>
-      <SyntaxHighlighter language="typescript">{buttonCode}</SyntaxHighlighter>
+      <SyntaxHighlighter language="typescript">
+        {buttonExampleCode}
+      </SyntaxHighlighter>
     </>
   );
 };
