@@ -5,7 +5,7 @@ import { PropsWithChildren, ReactNode } from "react";
 
 export const Sidebar = () => {
   return (
-    <div className="space-y-5">
+    <div className="space-y-10">
       <SidebarGroup>
         <SidebarGroupTitle>Getting started</SidebarGroupTitle>
         <SidebarGroupContent>
@@ -119,10 +119,8 @@ const SidebarLink = ({ children, path }: SidebarLinkProps) => {
   return (
     <Link
       href={path}
-      className={`block cursor-pointer text-base-600 border-b transition-colors ${
-        isCurrentPath
-          ? "border-b-primary-400 text-primary-500 font-semibold"
-          : "border-b-transparent hover:border-b-base-300 hover:text-base-900"
+      className={`block py-px cursor-pointer text-base-600 transition-colors ${
+        isCurrentPath ? "text-primary-500 font-semibold" : "hover:text-base-900"
       }`}
     >
       {children}

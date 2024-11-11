@@ -3,13 +3,13 @@ import React, { Dispatch, useCallback, useEffect, useState } from "react";
 import { Logo } from "../core/logo";
 import Link from "next/link";
 import { Container } from "../core/container";
-import { IconMenu2 } from "@tabler/icons-react";
+import { IconMenu2, IconX } from "@tabler/icons-react";
 import { GithubIcon } from "../icons/github-icon";
-// import { Input } from "@djamla/react";
 import { headerLinks } from "@/constants/header-constants";
-// import { Button } from "@djamla/react";
 import { Sidebar } from "./sidebar";
 import { usePathname } from "next/navigation";
+import { Searcher } from "../searcher";
+import { ThemeSwitch } from "../theme-switch";
 
 export const Header = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -22,19 +22,15 @@ export const Header = () => {
         <Container>
           <div className="flex justify-between items-center h-14">
             <div className="flex items-center">
-              <div className="lg:hidden mr-2">
-                <button className="py-2 pr-2" onClick={openDrawer}>
-                  <IconMenu2 />
-                </button>
-              </div>
-              <div className="mr-10">
-                <Link href="/">
-                  <Logo />
-                </Link>
-              </div>
+              <button className="py-2 pr-2 lg:hidden mr-2" onClick={openDrawer}>
+                <IconMenu2 className="text-base-800" />
+              </button>
+              <Link href="/">
+                <Logo />
+              </Link>
             </div>
 
-            <div className="flex justify-end items-center flex-1">
+            <div className="flex justify-end items-center flex-1 ml-5">
               <div className="hidden lg:flex items-center gap-x-1">
                 {headerLinks.map(({ path, label }, index) => (
                   <Link
@@ -46,8 +42,11 @@ export const Header = () => {
                   </Link>
                 ))}
               </div>
-              <div className="mr-5 sm:ml-5 flex-1 sm:flex-none sm:w-96">
-                erjmgne etngmt merenj
+              <div className="mr-3 sm:ml-5 flex-1 sm:flex-none sm:w-96">
+                <Searcher />
+              </div>
+              <div className="mr-2">
+                <ThemeSwitch />
               </div>
               <div>
                 <Link
@@ -55,7 +54,7 @@ export const Header = () => {
                   target="_blank"
                   rel="noreferrer noopener"
                 >
-                  <GithubIcon />
+                  <GithubIcon className="text-base-800" />
                 </Link>
               </div>
             </div>
@@ -84,13 +83,19 @@ const Drawer = ({ open, setOpen }: DrawerProps) => {
   }, [pathname, hideDrawer]);
   return (
     <div
-      className={`fixed z-40 inset-0 bg-white ${
+      className={`fixed z-40 inset-0 bg-base-0 ${
         open ? "visible" : "invisible"
       }`}
     >
       <Container>
         <div className="flex flex-col h-screen">
-          <div className="flex items-center justify-between h-14">
+          <div className="flex items-center h-14">
+            <button
+              className="py-2 pr-2 mr-2 text-base-800"
+              onClick={hideDrawer}
+            >
+              <IconX />
+            </button>
             <Link href="/" onClick={hideDrawer}>
               <Logo />
             </Link>

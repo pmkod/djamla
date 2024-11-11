@@ -7,7 +7,7 @@ export const Footer = () => {
   return (
     <footer className="bg-base-100 border-t border-t-base-300">
       <Container>
-        <div className="pt-10 pb-12">
+        <div className="pt-8 pb-12">
           <div className="mb-4">
             <Logo />
           </div>
