@@ -7,7 +7,7 @@ const MainLayout = ({ children }: PropsWithChildren) => {
     <>
       <Header />
       {children}
-      <div className="mt-20">
+      <div className="">
         <Footer />
       </div>
     </>

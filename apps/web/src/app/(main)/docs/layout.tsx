@@ -6,7 +6,7 @@ const DocsLayout = ({ children }: PropsWithChildren) => {
   return (
     <Container>
       <div className="flex gap-x-20">
-        <div className="hidden lg:block w-52 pt-4">
+        <div className="sticky top-14 hidden lg:block w-52 pt-4 h-[calc(100vh-56px)] overflow-auto">
           <Sidebar />
         </div>
         <div className="flex-1 pt-4">{children}</div>

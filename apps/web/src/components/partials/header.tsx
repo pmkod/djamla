@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Container } from "../core/container";
 import { IconMenu2, IconX } from "@tabler/icons-react";
 import { GithubIcon } from "../icons/github-icon";
-import { headerLinks } from "@/constants/header-constants";
+import { headerLinks } from "@/constants/links";
 import { Sidebar } from "./sidebar";
 import { usePathname } from "next/navigation";
 import { Searcher } from "../searcher";
