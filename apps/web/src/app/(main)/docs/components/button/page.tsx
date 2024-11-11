@@ -1,14 +1,22 @@
 "use client";
 import { ComponentPreview } from "@/components/core/component-preview";
-import { DocTitle } from "@/components/core/doc-title";
+import { DocText } from "@/components/core/doc-text";
 import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
-import { Button, buttonCode, buttonExampleCode } from "@repo/react-ui";
+import {
+  Button,
+  buttonCode,
+  ButtonExample,
+  buttonExampleCode,
+} from "@repo/react-ui";
 import React from "react";
 
 const ButtonPage = () => {
   return (
     <>
-      <DocTitle>Button</DocTitle>
+      <DocText>Button</DocText>
+      <DocText level="paragraph">
+        An interactive element designed to trigger actions.
+      </DocText>
       <ComponentPreview
         defaultVariant="solid"
         variants={["solid", "outline", "ghost"]}
@@ -19,9 +27,12 @@ const ButtonPage = () => {
       >
         <Button>Button</Button>
       </ComponentPreview>
-      <DocTitle level="two">Installation</DocTitle>
+      <DocText level="titleTwo">Installation</DocText>
       <SyntaxHighlighter language="typescript">{buttonCode}</SyntaxHighlighter>
-      <DocTitle level="two">Example</DocTitle>
+      <DocText level="titleTwo">Example</DocText>
+      <ComponentPreview>
+        <ButtonExample />
+      </ComponentPreview>
       <SyntaxHighlighter language="typescript">
         {buttonExampleCode}
       </SyntaxHighlighter>

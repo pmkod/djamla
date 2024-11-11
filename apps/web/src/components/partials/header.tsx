@@ -10,7 +10,6 @@ import { headerLinks } from "@/constants/header-constants";
 // import { Button } from "@djamla/react";
 import { Sidebar } from "./sidebar";
 import { usePathname } from "next/navigation";
-import { Input } from "@/react/components/core/input";
 
 export const Header = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -48,7 +47,7 @@ export const Header = () => {
                 ))}
               </div>
               <div className="mr-5 sm:ml-5 flex-1 sm:flex-none sm:w-96">
-                <Input size="sm" placeholder="Search" />
+                erjmgne etngmt merenj
               </div>
               <div>
                 <Link

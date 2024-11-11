@@ -1,6 +1,6 @@
 import { IconCheck, IconClipboard } from "@tabler/icons-react";
 import { useDidUpdate, useElementSize, useTimeout } from "@mantine/hooks";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import ReactSyntaxHighlighter from "react-syntax-highlighter";
 import { androidstudio } from "react-syntax-highlighter/dist/esm/styles/hljs";
 
@@ -14,7 +14,7 @@ const SyntaxHighlighter = ({ children, language }: SyntaxHighlighterProps) => {
   const maxHeight = 400;
   const [copied, setCopied] = useState(false);
 
-  const { start, clear } = useTimeout(() => {
+  const { start } = useTimeout(() => {
     console.log("Aa");
     setCopied(false);
   }, 1000);

@@ -6,12 +6,8 @@ import React, {
   ReactNode,
   useState,
 } from "react";
-// import { ToggleGroup, ToggleItem } from "@djamla/react/src/core/toggle-group";
 import { IconCheck } from "@tabler/icons-react";
-import { ToggleGroup } from "@/react/components/core/toggle-group";
-import { Toggle } from "@/react/components/core/toggle";
-import { Switch } from "@/react/components/core/switch";
-// import { Switch } from "@djamla/react/src/core/switch";
+import { ToggleGroup, Toggle, Switch } from "@repo/react-ui";
 
 type Size = "xs" | "sm" | "md" | "lg" | "xl";
 type Variant = "solid" | "outline" | "soft" | "plain" | "ghost";

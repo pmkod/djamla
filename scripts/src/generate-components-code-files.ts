@@ -59,7 +59,7 @@ for (const uiDirPath of allUiLibDirPaths) {
 
         writeFileSync(
           componentCodeFilePath,
-          `export const ${toCamelCase(path.parse(componentFileName).name)}Code = \`${componentFileBuffer}\``
+          `export const ${toCamelCase(path.parse(componentFileName).name)}Code = \`${componentFileBuffer.toString().replaceAll("`", "\\`").replaceAll("$", "\\$")}\``
         );
       }
     }
