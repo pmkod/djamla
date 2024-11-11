@@ -39,7 +39,7 @@ const ModalBody = React.forwardRef<
   HTMLDivElement,
   InputHTMLAttributes<HTMLInputElement>
 >(({ className, children, ...props }, ref) => (
-  <div ref={ref} className="flex-1 overflow-auto px-4" {...props}>
+  <div ref={ref} className="flex-1 overflow-auto px-2" {...props}>
     {children}
   </div>
 ));

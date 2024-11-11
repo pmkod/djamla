@@ -1,3 +1,4 @@
+"use client";
 import { useState } from "react";
 import { SignaturePadDrawEndDetails } from "@ark-ui/react";
 import { SignaturePad } from "../core/signature-pad";
