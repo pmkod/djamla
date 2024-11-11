@@ -3,34 +3,29 @@ import React from "react";
 import { ComponentPreview } from "@/components/core/component-preview";
 import { DocText } from "@/components/core/doc-text";
 import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
-import {
-  Badge,
-  badgeCode,
-  BadgeExample,
-  badgeExampleCode,
-} from "@repo/react-ui";
+import { tabsCode, TabsExample, tabsExampleCode } from "@repo/react-ui";
 
-const BadgePage = () => {
+const TabsPage = () => {
   return (
     <>
-      <DocText>Badge</DocText>
+      <DocText>Tabs</DocText>
       <DocText level="paragraph">
-        A small indicator for status or labels.
+        A set of panels with tabbed navigation.
       </DocText>
       <ComponentPreview>
-        <Badge>Hello</Badge>
+        <TabsExample />
       </ComponentPreview>
       <DocText level="titleTwo">Installation</DocText>
-      <SyntaxHighlighter language="typescript">{badgeCode}</SyntaxHighlighter>
+      <SyntaxHighlighter language="typescript">{tabsCode}</SyntaxHighlighter>
       <DocText level="titleTwo">Example</DocText>
       <ComponentPreview>
-        <BadgeExample />
+        <TabsExample />
       </ComponentPreview>
       <SyntaxHighlighter language="typescript">
-        {badgeExampleCode}
+        {tabsExampleCode}
       </SyntaxHighlighter>
     </>
   );
 };
 
-export default BadgePage;
+export default TabsPage;

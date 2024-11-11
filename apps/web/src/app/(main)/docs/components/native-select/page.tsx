@@ -3,34 +3,29 @@ import React from "react";
 import { ComponentPreview } from "@/components/core/component-preview";
 import { DocText } from "@/components/core/doc-text";
 import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
-import {
-  Badge,
-  badgeCode,
-  BadgeExample,
-  badgeExampleCode,
-} from "@repo/react-ui";
+import { modalCode, ModalExample, modalExampleCode } from "@repo/react-ui";
 
-const BadgePage = () => {
+const ModalPage = () => {
   return (
     <>
-      <DocText>Badge</DocText>
+      <DocText>Modal</DocText>
       <DocText level="paragraph">
-        A small indicator for status or labels.
+        An overlay dialog for focused content.
       </DocText>
       <ComponentPreview>
-        <Badge>Hello</Badge>
+        <ModalExample />
       </ComponentPreview>
       <DocText level="titleTwo">Installation</DocText>
-      <SyntaxHighlighter language="typescript">{badgeCode}</SyntaxHighlighter>
+      <SyntaxHighlighter language="typescript">{modalCode}</SyntaxHighlighter>
       <DocText level="titleTwo">Example</DocText>
       <ComponentPreview>
-        <BadgeExample />
+        <ModalExample />
       </ComponentPreview>
       <SyntaxHighlighter language="typescript">
-        {badgeExampleCode}
+        {modalExampleCode}
       </SyntaxHighlighter>
     </>
   );
 };
 
-export default BadgePage;
+export default ModalPage;

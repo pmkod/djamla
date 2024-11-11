@@ -3,34 +3,29 @@ import React from "react";
 import { ComponentPreview } from "@/components/core/component-preview";
 import { DocText } from "@/components/core/doc-text";
 import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
-import {
-  Badge,
-  badgeCode,
-  BadgeExample,
-  badgeExampleCode,
-} from "@repo/react-ui";
+import { selectCode, SelectExample, selectExampleCode } from "@repo/react-ui";
 
-const BadgePage = () => {
+const SelectPage = () => {
   return (
     <>
-      <DocText>Badge</DocText>
+      <DocText>Select</DocText>
       <DocText level="paragraph">
-        A small indicator for status or labels.
+        A customizable dropdown selection control.
       </DocText>
       <ComponentPreview>
-        <Badge>Hello</Badge>
+        <SelectExample />
       </ComponentPreview>
       <DocText level="titleTwo">Installation</DocText>
-      <SyntaxHighlighter language="typescript">{badgeCode}</SyntaxHighlighter>
+      <SyntaxHighlighter language="typescript">{selectCode}</SyntaxHighlighter>
       <DocText level="titleTwo">Example</DocText>
       <ComponentPreview>
-        <BadgeExample />
+        <SelectExample />
       </ComponentPreview>
       <SyntaxHighlighter language="typescript">
-        {badgeExampleCode}
+        {selectExampleCode}
       </SyntaxHighlighter>
     </>
   );
 };
 
-export default BadgePage;
+export default SelectPage;

@@ -4,33 +4,32 @@ import { ComponentPreview } from "@/components/core/component-preview";
 import { DocText } from "@/components/core/doc-text";
 import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
 import {
-  Badge,
-  badgeCode,
-  BadgeExample,
-  badgeExampleCode,
+  textareaCode,
+  TextareaExample,
+  textareaExampleCode,
 } from "@repo/react-ui";
 
-const BadgePage = () => {
+const TextareaPage = () => {
   return (
     <>
-      <DocText>Badge</DocText>
-      <DocText level="paragraph">
-        A small indicator for status or labels.
-      </DocText>
+      <DocText>Textarea</DocText>
+      <DocText level="paragraph">A multiline text input field.</DocText>
       <ComponentPreview>
-        <Badge>Hello</Badge>
+        <TextareaExample />
       </ComponentPreview>
       <DocText level="titleTwo">Installation</DocText>
-      <SyntaxHighlighter language="typescript">{badgeCode}</SyntaxHighlighter>
+      <SyntaxHighlighter language="typescript">
+        {textareaCode}
+      </SyntaxHighlighter>
       <DocText level="titleTwo">Example</DocText>
       <ComponentPreview>
-        <BadgeExample />
+        <TextareaExample />
       </ComponentPreview>
       <SyntaxHighlighter language="typescript">
-        {badgeExampleCode}
+        {textareaExampleCode}
       </SyntaxHighlighter>
     </>
   );
 };
 
-export default BadgePage;
+export default TextareaPage;

@@ -3,34 +3,29 @@ import React from "react";
 import { ComponentPreview } from "@/components/core/component-preview";
 import { DocText } from "@/components/core/doc-text";
 import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
-import {
-  Badge,
-  badgeCode,
-  BadgeExample,
-  badgeExampleCode,
-} from "@repo/react-ui";
+import { codeCode, CodeExample, codeExampleCode } from "@repo/react-ui";
 
-const BadgePage = () => {
+const CodePage = () => {
   return (
     <>
-      <DocText>Badge</DocText>
+      <DocText>Code</DocText>
       <DocText level="paragraph">
-        A small indicator for status or labels.
+        A container for displaying formatted code snippets.
       </DocText>
       <ComponentPreview>
-        <Badge>Hello</Badge>
+        <CodeExample />
       </ComponentPreview>
       <DocText level="titleTwo">Installation</DocText>
-      <SyntaxHighlighter language="typescript">{badgeCode}</SyntaxHighlighter>
+      <SyntaxHighlighter language="typescript">{codeCode}</SyntaxHighlighter>
       <DocText level="titleTwo">Example</DocText>
       <ComponentPreview>
-        <BadgeExample />
+        <CodeExample />
       </ComponentPreview>
       <SyntaxHighlighter language="typescript">
-        {badgeExampleCode}
+        {codeExampleCode}
       </SyntaxHighlighter>
     </>
   );
 };
 
-export default BadgePage;
+export default CodePage;

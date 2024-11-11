@@ -3,34 +3,27 @@ import React from "react";
 import { ComponentPreview } from "@/components/core/component-preview";
 import { DocText } from "@/components/core/doc-text";
 import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
-import {
-  Badge,
-  badgeCode,
-  BadgeExample,
-  badgeExampleCode,
-} from "@repo/react-ui";
+import { toastCode, ToastExample, toastExampleCode } from "@repo/react-ui";
 
-const BadgePage = () => {
+const ToastPage = () => {
   return (
     <>
-      <DocText>Badge</DocText>
-      <DocText level="paragraph">
-        A small indicator for status or labels.
-      </DocText>
+      <DocText>Toast</DocText>
+      <DocText level="paragraph">A temporary notification message.</DocText>
       <ComponentPreview>
-        <Badge>Hello</Badge>
+        <ToastExample />
       </ComponentPreview>
       <DocText level="titleTwo">Installation</DocText>
-      <SyntaxHighlighter language="typescript">{badgeCode}</SyntaxHighlighter>
+      <SyntaxHighlighter language="typescript">{toastCode}</SyntaxHighlighter>
       <DocText level="titleTwo">Example</DocText>
       <ComponentPreview>
-        <BadgeExample />
+        <ToastExample />
       </ComponentPreview>
       <SyntaxHighlighter language="typescript">
-        {badgeExampleCode}
+        {toastExampleCode}
       </SyntaxHighlighter>
     </>
   );
 };
 
-export default BadgePage;
+export default ToastPage;

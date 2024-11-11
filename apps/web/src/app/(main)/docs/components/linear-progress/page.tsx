@@ -4,33 +4,34 @@ import { ComponentPreview } from "@/components/core/component-preview";
 import { DocText } from "@/components/core/doc-text";
 import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
 import {
-  Badge,
-  badgeCode,
-  BadgeExample,
-  badgeExampleCode,
+  linearProgressCode,
+  LinearProgressExample,
+  linearProgressExampleCode,
 } from "@repo/react-ui";
 
-const BadgePage = () => {
+const LinearProgressPage = () => {
   return (
     <>
-      <DocText>Badge</DocText>
+      <DocText>Linear Progress</DocText>
       <DocText level="paragraph">
-        A small indicator for status or labels.
+        A bar indicating process completion status.
       </DocText>
       <ComponentPreview>
-        <Badge>Hello</Badge>
+        <LinearProgressExample />
       </ComponentPreview>
       <DocText level="titleTwo">Installation</DocText>
-      <SyntaxHighlighter language="typescript">{badgeCode}</SyntaxHighlighter>
+      <SyntaxHighlighter language="typescript">
+        {linearProgressCode}
+      </SyntaxHighlighter>
       <DocText level="titleTwo">Example</DocText>
       <ComponentPreview>
-        <BadgeExample />
+        <LinearProgressExample />
       </ComponentPreview>
       <SyntaxHighlighter language="typescript">
-        {badgeExampleCode}
+        {linearProgressExampleCode}
       </SyntaxHighlighter>
     </>
   );
 };
 
-export default BadgePage;
+export default LinearProgressPage;

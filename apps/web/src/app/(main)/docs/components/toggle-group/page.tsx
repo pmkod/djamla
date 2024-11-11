@@ -4,33 +4,32 @@ import { ComponentPreview } from "@/components/core/component-preview";
 import { DocText } from "@/components/core/doc-text";
 import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
 import {
-  Badge,
-  badgeCode,
-  BadgeExample,
-  badgeExampleCode,
+  toggleGroupCode,
+  ToggleGroupExample,
+  toggleGroupExampleCode,
 } from "@repo/react-ui";
 
-const BadgePage = () => {
+const ToggleGroupPage = () => {
   return (
     <>
-      <DocText>Badge</DocText>
-      <DocText level="paragraph">
-        A small indicator for status or labels.
-      </DocText>
+      <DocText>Toggle Group</DocText>
+      <DocText level="paragraph">A set of connected toggle controls.</DocText>
       <ComponentPreview>
-        <Badge>Hello</Badge>
+        <ToggleGroupExample />
       </ComponentPreview>
       <DocText level="titleTwo">Installation</DocText>
-      <SyntaxHighlighter language="typescript">{badgeCode}</SyntaxHighlighter>
+      <SyntaxHighlighter language="typescript">
+        {toggleGroupCode}
+      </SyntaxHighlighter>
       <DocText level="titleTwo">Example</DocText>
       <ComponentPreview>
-        <BadgeExample />
+        <ToggleGroupExample />
       </ComponentPreview>
       <SyntaxHighlighter language="typescript">
-        {badgeExampleCode}
+        {toggleGroupExampleCode}
       </SyntaxHighlighter>
     </>
   );
 };
 
-export default BadgePage;
+export default ToggleGroupPage;

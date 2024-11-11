@@ -4,33 +4,32 @@ import { ComponentPreview } from "@/components/core/component-preview";
 import { DocText } from "@/components/core/doc-text";
 import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
 import {
-  Badge,
-  badgeCode,
-  BadgeExample,
-  badgeExampleCode,
+  radioGroupCode,
+  RadioGroupExample,
+  radioGroupExampleCode,
 } from "@repo/react-ui";
 
-const BadgePage = () => {
+const RadioGroupPage = () => {
   return (
     <>
-      <DocText>Badge</DocText>
-      <DocText level="paragraph">
-        A small indicator for status or labels.
-      </DocText>
+      <DocText>Radio Group</DocText>
+      <DocText level="paragraph">A set of mutually exclusive options.</DocText>
       <ComponentPreview>
-        <Badge>Hello</Badge>
+        <RadioGroupExample />
       </ComponentPreview>
       <DocText level="titleTwo">Installation</DocText>
-      <SyntaxHighlighter language="typescript">{badgeCode}</SyntaxHighlighter>
+      <SyntaxHighlighter language="typescript">
+        {radioGroupCode}
+      </SyntaxHighlighter>
       <DocText level="titleTwo">Example</DocText>
       <ComponentPreview>
-        <BadgeExample />
+        <RadioGroupExample />
       </ComponentPreview>
       <SyntaxHighlighter language="typescript">
-        {badgeExampleCode}
+        {radioGroupExampleCode}
       </SyntaxHighlighter>
     </>
   );
 };
 
-export default BadgePage;
+export default RadioGroupPage;

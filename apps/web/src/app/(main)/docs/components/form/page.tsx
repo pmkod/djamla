@@ -3,34 +3,29 @@ import React from "react";
 import { ComponentPreview } from "@/components/core/component-preview";
 import { DocText } from "@/components/core/doc-text";
 import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
-import {
-  Badge,
-  badgeCode,
-  BadgeExample,
-  badgeExampleCode,
-} from "@repo/react-ui";
+import { formCode, FormExample, formExampleCode } from "@repo/react-ui";
 
-const BadgePage = () => {
+const FormPage = () => {
   return (
     <>
-      <DocText>Badge</DocText>
+      <DocText>Form</DocText>
       <DocText level="paragraph">
-        A small indicator for status or labels.
+        A container for collecting and validating user input.
       </DocText>
       <ComponentPreview>
-        <Badge>Hello</Badge>
+        <FormExample />
       </ComponentPreview>
       <DocText level="titleTwo">Installation</DocText>
-      <SyntaxHighlighter language="typescript">{badgeCode}</SyntaxHighlighter>
+      <SyntaxHighlighter language="typescript">{formCode}</SyntaxHighlighter>
       <DocText level="titleTwo">Example</DocText>
       <ComponentPreview>
-        <BadgeExample />
+        <FormExample />
       </ComponentPreview>
       <SyntaxHighlighter language="typescript">
-        {badgeExampleCode}
+        {formExampleCode}
       </SyntaxHighlighter>
     </>
   );
 };
 
-export default BadgePage;
+export default FormPage;

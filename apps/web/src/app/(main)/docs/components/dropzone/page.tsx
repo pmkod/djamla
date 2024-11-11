@@ -4,33 +4,34 @@ import { ComponentPreview } from "@/components/core/component-preview";
 import { DocText } from "@/components/core/doc-text";
 import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
 import {
-  Badge,
-  badgeCode,
-  BadgeExample,
-  badgeExampleCode,
+  dropzoneCode,
+  DropzoneExample,
+  dropzoneExampleCode,
 } from "@repo/react-ui";
 
-const BadgePage = () => {
+const DropzonePage = () => {
   return (
     <>
-      <DocText>Badge</DocText>
+      <DocText>Dropzone</DocText>
       <DocText level="paragraph">
-        A small indicator for status or labels.
+        An area that accepts file drops and uploads.
       </DocText>
       <ComponentPreview>
-        <Badge>Hello</Badge>
+        <DropzoneExample />
       </ComponentPreview>
       <DocText level="titleTwo">Installation</DocText>
-      <SyntaxHighlighter language="typescript">{badgeCode}</SyntaxHighlighter>
+      <SyntaxHighlighter language="typescript">
+        {dropzoneCode}
+      </SyntaxHighlighter>
       <DocText level="titleTwo">Example</DocText>
       <ComponentPreview>
-        <BadgeExample />
+        <DropzoneExample />
       </ComponentPreview>
       <SyntaxHighlighter language="typescript">
-        {badgeExampleCode}
+        {dropzoneExampleCode}
       </SyntaxHighlighter>
     </>
   );
 };
 
-export default BadgePage;
+export default DropzonePage;

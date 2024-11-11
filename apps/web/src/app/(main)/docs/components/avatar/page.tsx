@@ -3,34 +3,29 @@ import React from "react";
 import { ComponentPreview } from "@/components/core/component-preview";
 import { DocText } from "@/components/core/doc-text";
 import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
-import {
-  Badge,
-  badgeCode,
-  BadgeExample,
-  badgeExampleCode,
-} from "@repo/react-ui";
+import { avatarCode, AvatarExample, avatarExampleCode } from "@repo/react-ui";
 
-const BadgePage = () => {
+const AvatarPage = () => {
   return (
     <>
-      <DocText>Badge</DocText>
+      <DocText>Avatar</DocText>
       <DocText level="paragraph">
-        A small indicator for status or labels.
+        A visual representation of a user or entity.
       </DocText>
       <ComponentPreview>
-        <Badge>Hello</Badge>
+        <AvatarExample />
       </ComponentPreview>
       <DocText level="titleTwo">Installation</DocText>
-      <SyntaxHighlighter language="typescript">{badgeCode}</SyntaxHighlighter>
+      <SyntaxHighlighter language="typescript">{avatarCode}</SyntaxHighlighter>
       <DocText level="titleTwo">Example</DocText>
       <ComponentPreview>
-        <BadgeExample />
+        <AvatarExample />
       </ComponentPreview>
       <SyntaxHighlighter language="typescript">
-        {badgeExampleCode}
+        {avatarExampleCode}
       </SyntaxHighlighter>
     </>
   );
 };
 
-export default BadgePage;
+export default AvatarPage;

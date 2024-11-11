@@ -4,33 +4,34 @@ import { ComponentPreview } from "@/components/core/component-preview";
 import { DocText } from "@/components/core/doc-text";
 import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
 import {
-  Badge,
-  badgeCode,
-  BadgeExample,
-  badgeExampleCode,
+  paginationCode,
+  PaginationExample,
+  paginationExampleCode,
 } from "@repo/react-ui";
 
-const BadgePage = () => {
+const PaginationPage = () => {
   return (
     <>
-      <DocText>Badge</DocText>
+      <DocText>Pagination</DocText>
       <DocText level="paragraph">
-        A small indicator for status or labels.
+        A control for navigating through pages.
       </DocText>
       <ComponentPreview>
-        <Badge>Hello</Badge>
+        <PaginationExample />
       </ComponentPreview>
       <DocText level="titleTwo">Installation</DocText>
-      <SyntaxHighlighter language="typescript">{badgeCode}</SyntaxHighlighter>
+      <SyntaxHighlighter language="typescript">
+        {paginationCode}
+      </SyntaxHighlighter>
       <DocText level="titleTwo">Example</DocText>
       <ComponentPreview>
-        <BadgeExample />
+        <PaginationExample />
       </ComponentPreview>
       <SyntaxHighlighter language="typescript">
-        {badgeExampleCode}
+        {paginationExampleCode}
       </SyntaxHighlighter>
     </>
   );
 };
 
-export default BadgePage;
+export default PaginationPage;

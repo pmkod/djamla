@@ -4,33 +4,34 @@ import { ComponentPreview } from "@/components/core/component-preview";
 import { DocText } from "@/components/core/doc-text";
 import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
 import {
-  Badge,
-  badgeCode,
-  BadgeExample,
-  badgeExampleCode,
+  carouselCode,
+  CarouselExample,
+  carouselExampleCode,
 } from "@repo/react-ui";
 
-const BadgePage = () => {
+const CarouselPage = () => {
   return (
     <>
-      <DocText>Badge</DocText>
+      <DocText>Carousel</DocText>
       <DocText level="paragraph">
-        A small indicator for status or labels.
+        A slideshow component for cycling through content.
       </DocText>
       <ComponentPreview>
-        <Badge>Hello</Badge>
+        <CarouselExample />
       </ComponentPreview>
       <DocText level="titleTwo">Installation</DocText>
-      <SyntaxHighlighter language="typescript">{badgeCode}</SyntaxHighlighter>
+      <SyntaxHighlighter language="typescript">
+        {carouselCode}
+      </SyntaxHighlighter>
       <DocText level="titleTwo">Example</DocText>
       <ComponentPreview>
-        <BadgeExample />
+        <CarouselExample />
       </ComponentPreview>
       <SyntaxHighlighter language="typescript">
-        {badgeExampleCode}
+        {carouselExampleCode}
       </SyntaxHighlighter>
     </>
   );
 };
 
-export default BadgePage;
+export default CarouselPage;

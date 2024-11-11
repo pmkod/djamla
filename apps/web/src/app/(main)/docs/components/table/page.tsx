@@ -3,34 +3,29 @@ import React from "react";
 import { ComponentPreview } from "@/components/core/component-preview";
 import { DocText } from "@/components/core/doc-text";
 import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
-import {
-  Badge,
-  badgeCode,
-  BadgeExample,
-  badgeExampleCode,
-} from "@repo/react-ui";
+import { tableCode, TableExample, tableExampleCode } from "@repo/react-ui";
 
-const BadgePage = () => {
+const TablePage = () => {
   return (
     <>
-      <DocText>Badge</DocText>
+      <DocText>Table</DocText>
       <DocText level="paragraph">
-        A small indicator for status or labels.
+        A grid for displaying structured data.
       </DocText>
       <ComponentPreview>
-        <Badge>Hello</Badge>
+        <TableExample />
       </ComponentPreview>
       <DocText level="titleTwo">Installation</DocText>
-      <SyntaxHighlighter language="typescript">{badgeCode}</SyntaxHighlighter>
+      <SyntaxHighlighter language="typescript">{tableCode}</SyntaxHighlighter>
       <DocText level="titleTwo">Example</DocText>
       <ComponentPreview>
-        <BadgeExample />
+        <TableExample />
       </ComponentPreview>
       <SyntaxHighlighter language="typescript">
-        {badgeExampleCode}
+        {tableExampleCode}
       </SyntaxHighlighter>
     </>
   );
 };
 
-export default BadgePage;
+export default TablePage;

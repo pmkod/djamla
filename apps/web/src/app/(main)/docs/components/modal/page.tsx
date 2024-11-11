@@ -4,33 +4,34 @@ import { ComponentPreview } from "@/components/core/component-preview";
 import { DocText } from "@/components/core/doc-text";
 import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
 import {
-  Badge,
-  badgeCode,
-  BadgeExample,
-  badgeExampleCode,
+  nativeSelectCode,
+  NativeSelectExample,
+  nativeSelectExampleCode,
 } from "@repo/react-ui";
 
-const BadgePage = () => {
+const NativeSelectPage = () => {
   return (
     <>
-      <DocText>Badge</DocText>
+      <DocText>Native Select</DocText>
       <DocText level="paragraph">
-        A small indicator for status or labels.
+        A platform-native dropdown selection control.{" "}
       </DocText>
       <ComponentPreview>
-        <Badge>Hello</Badge>
+        <NativeSelectExample />
       </ComponentPreview>
       <DocText level="titleTwo">Installation</DocText>
-      <SyntaxHighlighter language="typescript">{badgeCode}</SyntaxHighlighter>
+      <SyntaxHighlighter language="typescript">
+        {nativeSelectCode}
+      </SyntaxHighlighter>
       <DocText level="titleTwo">Example</DocText>
       <ComponentPreview>
-        <BadgeExample />
+        <NativeSelectExample />
       </ComponentPreview>
       <SyntaxHighlighter language="typescript">
-        {badgeExampleCode}
+        {nativeSelectExampleCode}
       </SyntaxHighlighter>
     </>
   );
 };
 
-export default BadgePage;
+export default NativeSelectPage;

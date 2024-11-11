@@ -3,34 +3,29 @@ import React from "react";
 import { ComponentPreview } from "@/components/core/component-preview";
 import { DocText } from "@/components/core/doc-text";
 import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
-import {
-  Badge,
-  badgeCode,
-  BadgeExample,
-  badgeExampleCode,
-} from "@repo/react-ui";
+import { toggleCode, ToggleExample, toggleExampleCode } from "@repo/react-ui";
 
-const BadgePage = () => {
+const TogglePage = () => {
   return (
     <>
-      <DocText>Badge</DocText>
+      <DocText>Toggle</DocText>
       <DocText level="paragraph">
-        A small indicator for status or labels.
+        A button that switches between states.
       </DocText>
       <ComponentPreview>
-        <Badge>Hello</Badge>
+        <ToggleExample />
       </ComponentPreview>
       <DocText level="titleTwo">Installation</DocText>
-      <SyntaxHighlighter language="typescript">{badgeCode}</SyntaxHighlighter>
+      <SyntaxHighlighter language="typescript">{toggleCode}</SyntaxHighlighter>
       <DocText level="titleTwo">Example</DocText>
       <ComponentPreview>
-        <BadgeExample />
+        <ToggleExample />
       </ComponentPreview>
       <SyntaxHighlighter language="typescript">
-        {badgeExampleCode}
+        {toggleExampleCode}
       </SyntaxHighlighter>
     </>
   );
 };
 
-export default BadgePage;
+export default TogglePage;

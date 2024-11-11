@@ -4,33 +4,34 @@ import { ComponentPreview } from "@/components/core/component-preview";
 import { DocText } from "@/components/core/doc-text";
 import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
 import {
-  Badge,
-  badgeCode,
-  BadgeExample,
-  badgeExampleCode,
+  collapsibleCode,
+  CollapsibleExample,
+  collapsibleExampleCode,
 } from "@repo/react-ui";
 
-const BadgePage = () => {
+const CollapsiblePage = () => {
   return (
     <>
-      <DocText>Badge</DocText>
+      <DocText>Collapsible</DocText>
       <DocText level="paragraph">
-        A small indicator for status or labels.
+        An expandable container that shows or hides content.
       </DocText>
       <ComponentPreview>
-        <Badge>Hello</Badge>
+        <CollapsibleExample />
       </ComponentPreview>
       <DocText level="titleTwo">Installation</DocText>
-      <SyntaxHighlighter language="typescript">{badgeCode}</SyntaxHighlighter>
+      <SyntaxHighlighter language="typescript">
+        {collapsibleCode}
+      </SyntaxHighlighter>
       <DocText level="titleTwo">Example</DocText>
       <ComponentPreview>
-        <BadgeExample />
+        <CollapsibleExample />
       </ComponentPreview>
       <SyntaxHighlighter language="typescript">
-        {badgeExampleCode}
+        {collapsibleExampleCode}
       </SyntaxHighlighter>
     </>
   );
 };
 
-export default BadgePage;
+export default CollapsiblePage;

@@ -4,33 +4,34 @@ import { ComponentPreview } from "@/components/core/component-preview";
 import { DocText } from "@/components/core/doc-text";
 import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
 import {
-  Badge,
-  badgeCode,
-  BadgeExample,
-  badgeExampleCode,
+  alertDialogCode,
+  AlertDialogExample,
+  alertDialogExampleCode,
 } from "@repo/react-ui";
 
-const BadgePage = () => {
+const AlertDialogPage = () => {
   return (
     <>
-      <DocText>Badge</DocText>
+      <DocText>Alert Dialog</DocText>
       <DocText level="paragraph">
-        A small indicator for status or labels.
+        An interruptive modal that requires user response.
       </DocText>
       <ComponentPreview>
-        <Badge>Hello</Badge>
+        <AlertDialogExample />
       </ComponentPreview>
       <DocText level="titleTwo">Installation</DocText>
-      <SyntaxHighlighter language="typescript">{badgeCode}</SyntaxHighlighter>
+      <SyntaxHighlighter language="typescript">
+        {alertDialogCode}
+      </SyntaxHighlighter>
       <DocText level="titleTwo">Example</DocText>
       <ComponentPreview>
-        <BadgeExample />
+        <AlertDialogExample />
       </ComponentPreview>
       <SyntaxHighlighter language="typescript">
-        {badgeExampleCode}
+        {alertDialogExampleCode}
       </SyntaxHighlighter>
     </>
   );
 };
 
-export default BadgePage;
+export default AlertDialogPage;

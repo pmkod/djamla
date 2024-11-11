@@ -4,33 +4,32 @@ import { ComponentPreview } from "@/components/core/component-preview";
 import { DocText } from "@/components/core/doc-text";
 import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
 import {
-  Badge,
-  badgeCode,
-  BadgeExample,
-  badgeExampleCode,
+  tooltipCode,
+  TooltipExample,
+  tooltipExampleCode,
 } from "@repo/react-ui";
 
-const BadgePage = () => {
+const TooltipPage = () => {
   return (
     <>
-      <DocText>Badge</DocText>
+      <DocText>Tooltip</DocText>
       <DocText level="paragraph">
-        A small indicator for status or labels.
+        A floating label for additional information.
       </DocText>
       <ComponentPreview>
-        <Badge>Hello</Badge>
+        <TooltipExample />
       </ComponentPreview>
       <DocText level="titleTwo">Installation</DocText>
-      <SyntaxHighlighter language="typescript">{badgeCode}</SyntaxHighlighter>
+      <SyntaxHighlighter language="typescript">{tooltipCode}</SyntaxHighlighter>
       <DocText level="titleTwo">Example</DocText>
       <ComponentPreview>
-        <BadgeExample />
+        <TooltipExample />
       </ComponentPreview>
       <SyntaxHighlighter language="typescript">
-        {badgeExampleCode}
+        {tooltipExampleCode}
       </SyntaxHighlighter>
     </>
   );
 };
 
-export default BadgePage;
+export default TooltipPage;
