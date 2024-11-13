@@ -55,8 +55,11 @@ const ThemeSwitch = () => {
   };
 
   useEffect(() => {
-    document.documentElement.classList.remove(lightThemeName, darkThemeName);
-    document.documentElement.classList.add(theme);
+    if (theme === lightThemeName) {
+      document.documentElement.classList.remove(darkThemeName);
+    } else {
+      document.documentElement.classList.add(darkThemeName);
+    }
   }, [theme]);
 
   return (
