@@ -23,3 +23,7 @@ export const sidebarGettingStartedLinks = [
     label: "Dark mode",
   },
 ];
+
+export const authorGithubProfileLink = "https://github.com/pmkod";
+
+export const githupRepoLink = "https://github.com/pmkod/djamla";
