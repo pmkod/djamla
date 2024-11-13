@@ -54,10 +54,11 @@ export const Searcher = () => {
   return (
     <Modal open={open} onOpenChange={({ open }) => setOpen(open)}>
       <ModalTrigger asChild>
-        <div className="h-9 flex justify-between items-center pl-3 pr-1.5 bg-base-100 hover:bg-base-200 transition-colors border border-base-300 rounded cursor-pointer">
+        <div className="h-9 flex justify-between items-center pl-3 pr-1.5 bg-base-100 hover:bg-base-200 transition-colors border border-base-300 rounded-sm cursor-pointer">
           <div className="text-sm font-medium text-base-400">Search</div>
-
-          <Kbd size="md">Ctrl + k</Kbd>
+          <div className="hidden sm:block">
+            <Kbd size="md">Ctrl + k</Kbd>
+          </div>
         </div>
       </ModalTrigger>
       <ModalContent size="lg">

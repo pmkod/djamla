@@ -7,6 +7,7 @@ const docTextStyle = cva(undefined, {
       titleOne: "text-4xl font-bold mb-7",
       titleTwo: "text-2xl font-semibold mb-5 mt-10",
       paragraph: "text-xl text-base-500",
+      paragraphTwo: "text-lg text-base-500",
     },
   },
   defaultVariants: {
