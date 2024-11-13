@@ -47,7 +47,7 @@ const Tab = React.forwardRef<
     <TabsPrimitive.Trigger
       ref={ref}
       className={
-        "inline-flex flex-shrink-0 h-full items-center justify-center overflow-visible whitespace-nowrap px-3 text-sm font-medium transition-all hover:bg-base-200 disabled:pointer-events-none disabled:opacity-50 " +
+        "inline-flex flex-shrink-0 text-base-700 h-full items-center justify-center overflow-visible whitespace-nowrap px-3 text-sm font-medium transition-all hover:bg-base-200 disabled:pointer-events-none disabled:opacity-50 " +
         className
       }
       {...props}

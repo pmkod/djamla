@@ -1,5 +1,5 @@
 import { coreComponents } from "@/constants/components";
-import { headerLinks } from "@/constants/links";
+import { headerLinks, sidebarGettingStartedLinks } from "@/constants/links";
 import { useDidUpdate, useWindowEvent } from "@mantine/hooks";
 import {
   Input,
@@ -16,7 +16,6 @@ import React, {
   ChangeEventHandler,
   PropsWithChildren,
   ReactNode,
-  useEffect,
   useState,
 } from "react";
 
@@ -120,7 +119,7 @@ export const Searcher = () => {
 };
 
 const useSearch = (q: string) => {
-  const allLinks = [...headerLinks];
+  const allLinks = [...sidebarGettingStartedLinks, ...headerLinks];
 
   if (!q) {
     return {

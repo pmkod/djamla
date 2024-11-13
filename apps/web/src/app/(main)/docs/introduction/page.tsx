@@ -1,5 +1,5 @@
 import Link from "next/link";
-import React, { ReactNode } from "react";
+import React from "react";
 import { DocText } from "@/components/core/doc-text";
 import {
   Accordion,
@@ -7,24 +7,7 @@ import {
   AccordionItemDetails,
   AccordionItemSummary,
 } from "@repo/react-ui";
-
-interface MyLinkProps {
-  children: ReactNode;
-  href: string;
-}
-
-const MyLink = ({ href, children }: MyLinkProps) => {
-  return (
-    <Link
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="border-b border-base-500"
-    >
-      {children}
-    </Link>
-  );
-};
+import { ExternalLink } from "@/components/core/externaly-link";
 
 const IntroductionPage = () => {
   return (
@@ -32,7 +15,7 @@ const IntroductionPage = () => {
       <DocText level="titleOne">Introduction</DocText>
       <DocText level="paragraphTwo">
         A collection of highly customizable UI components built on&nbsp;
-        <MyLink href="https://ark-ui.com">@ark-ui/react</MyLink>
+        <ExternalLink href="https://ark-ui.com">@ark-ui/react</ExternalLink>
         &nbsp; and&nbsp;
         <Link href="https://tailwindcss.com">Tailwindcss</Link>. Elevate your
         React applications with our components. Zero-styling constraints, full
@@ -44,20 +27,24 @@ const IntroductionPage = () => {
       <DocText level="titleTwo">Remerciements</DocText>
       <ul className="list-disc list-inside pl-10 space-y-2">
         <li>
-          <MyLink href="https://tailwindcss.com">Tailwind CSS&nbsp;</MyLink>
+          <ExternalLink href="https://tailwindcss.com">
+            Tailwind CSS&nbsp;
+          </ExternalLink>
           for the utility-first CSS framework.
         </li>
         <li>
-          <MyLink href="https://ark-ui.com">Ark UI</MyLink>&nbsp;for the
-          accessible, unstyled components.
+          <ExternalLink href="https://ark-ui.com">Ark UI</ExternalLink>&nbsp;for
+          the accessible, unstyled components.
         </li>
         <li>
-          <MyLink href="https://ui.shadcn.com/">Shadcn ui</MyLink> for inspiring
-          this library and its form and table components.
+          <ExternalLink href="https://ui.shadcn.com/">Shadcn ui</ExternalLink>{" "}
+          for inspiring this library and its form and table components.
         </li>
         <li>
-          <MyLink href="https://ui.shadcn.com/">React Hook Form</MyLink> for
-          powering our form validation.
+          <ExternalLink href="https://ui.shadcn.com/">
+            React Hook Form
+          </ExternalLink>{" "}
+          for powering our form validation.
         </li>
       </ul>
       <DocText level="titleTwo">FAQ</DocText>

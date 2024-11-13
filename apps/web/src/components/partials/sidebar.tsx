@@ -1,5 +1,6 @@
 "use client";
 import { coreComponents } from "@/constants/components";
+import { sidebarGettingStartedLinks } from "@/constants/links";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { PropsWithChildren, ReactNode } from "react";
@@ -10,9 +11,11 @@ export const Sidebar = () => {
       <SidebarGroup>
         <SidebarGroupTitle>Getting started</SidebarGroupTitle>
         <SidebarGroupContent>
-          <SidebarLink path="#">Introduction</SidebarLink>
-          <SidebarLink path="#">Installation</SidebarLink>
-          <SidebarLink path="#">Dark mode</SidebarLink>
+          {sidebarGettingStartedLinks.map(({ path, label }, index) => (
+            <SidebarLink key={index} path={path}>
+              {label}
+            </SidebarLink>
+          ))}
         </SidebarGroupContent>
       </SidebarGroup>
 

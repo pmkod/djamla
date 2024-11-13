@@ -1,12 +1,13 @@
+"use client";
+import React, { useState } from "react";
 import { IconCheck, IconClipboard } from "@tabler/icons-react";
 import { useDidUpdate, useElementSize, useTimeout } from "@mantine/hooks";
-import React, { useState } from "react";
 import ReactSyntaxHighlighter from "react-syntax-highlighter";
 import { androidstudio } from "react-syntax-highlighter/dist/esm/styles/hljs";
 
 interface SyntaxHighlighterProps {
   children: string;
-  language: "typescript";
+  language?: "typescript";
 }
 
 const SyntaxHighlighter = ({ children, language }: SyntaxHighlighterProps) => {
