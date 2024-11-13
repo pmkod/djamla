@@ -7,7 +7,7 @@ import { androidstudio } from "react-syntax-highlighter/dist/esm/styles/hljs";
 
 interface SyntaxHighlighterProps {
   children: string;
-  language?: "typescript";
+  language?: "typescript" | "css";
 }
 
 const SyntaxHighlighter = ({ children, language }: SyntaxHighlighterProps) => {
