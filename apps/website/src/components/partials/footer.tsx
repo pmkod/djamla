@@ -1,7 +1,6 @@
 import React from "react";
 import { Container } from "../core/container";
 import { Logo } from "../core/logo";
-import Link from "next/link";
 import { ExternalLink } from "../core/externaly-link";
 import { authorGithubProfileLink, githupRepoLink } from "@/constants/links";
 

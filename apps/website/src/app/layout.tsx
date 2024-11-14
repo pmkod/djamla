@@ -10,6 +10,7 @@ export const metadata: Metadata = {
 
 const figtree = Figtree({
   weight: ["400", "500", "600", "700"],
+  subsets: ["latin"],
 });
 
 export default function RootLayout({ children }: PropsWithChildren) {

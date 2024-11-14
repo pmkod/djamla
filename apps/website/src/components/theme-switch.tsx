@@ -1,3 +1,4 @@
+"use client";
 import React, { useEffect } from "react";
 import { useLocalStorage } from "@mantine/hooks";
 import { IconButton } from "@repo/react-ui";
@@ -11,7 +12,7 @@ const darkThemeName = "dark";
 const ThemeSwitch = () => {
   const [theme, setTheme] = useLocalStorage({
     key: themeKey,
-    defaultValue: localStorage.getItem(themeKey) || "",
+    defaultValue: lightThemeName,
     getInitialValueInEffect: false,
   });
 

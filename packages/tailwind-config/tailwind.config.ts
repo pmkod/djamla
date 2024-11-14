@@ -12,7 +12,7 @@ function withOpacity(variableName: string): any {
 const config: Omit<Config, "content"> = {
   content: [
     "../../components/react/src/**/*.{js,ts,jsx,tsx,mdx}",
-    "../../apps/web/src/**/*.{js,ts,jsx,tsx,mdx}",
+    "../../apps/website/src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
