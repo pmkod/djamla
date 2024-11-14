@@ -4,12 +4,12 @@ import { cva, VariantProps } from "class-variance-authority";
 import { forwardRef } from "react";
 
 const selectStyle = cva(
-  "w-full cursor-pointer rounded-sm px-2.5 text-base-800 focus:border-primary-500 disabled:cursor-not-allowed disabled:opacity-50 data-[invalid]:border-red-500",
+  "w-full cursor-pointer rounded-sm px-2.5 text-base-800 focus:border-primary-500 disabled:cursor-not-allowed disabled:opacity-50 data-[invalid]:border-red-500 [&>option]:bg-base-0",
   {
     variants: {
       variant: {
-        outlined: "border border-base-400 bg-transparent",
-        ghost: "border border-base-200 bg-base-100",
+        outline: "border border-base-400 bg-transparent",
+        soft: "bg-base-100",
         plain: "bg-transparent",
       },
       size: {
@@ -17,12 +17,9 @@ const selectStyle = cva(
         md: "h-10 text-sm",
         lg: "h-11",
       },
-      colorScheme: {
-        red: "",
-      },
     },
     defaultVariants: {
-      variant: "outlined",
+      variant: "outline",
       size: "md",
     },
   }

@@ -6,7 +6,7 @@ const QrCode = forwardRef<
   React.ComponentPropsWithoutRef<typeof QrCodePrimitives.Root>
 >(({ children, ...props }, ref) => {
   return (
-    <QrCodePrimitives.Root ref={ref} {...props}>
+    <QrCodePrimitives.Root ref={ref} className="fill-base-900" {...props}>
       <QrCodePrimitives.Frame>
         <QrCodePrimitives.Pattern />
       </QrCodePrimitives.Frame>

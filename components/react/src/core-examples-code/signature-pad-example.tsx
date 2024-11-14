@@ -1,4 +1,5 @@
-export const signaturePadExampleCode = `import { useState } from "react";
+export const signaturePadExampleCode = `"use client";
+import { useState } from "react";
 import { SignaturePadDrawEndDetails } from "@ark-ui/react";
 import { SignaturePad } from "../core/signature-pad";
 
@@ -6,7 +7,7 @@ export const SignaturePadExample = () => {
   const [signature, setSignature] = useState("");
 
   const handleDrawEnd = (details: SignaturePadDrawEndDetails) => {
-    details.getDataUrl("image/png").then((url) => setSignature(url));
+    details.getDataUrl("image/svg+xml").then((url) => setSignature(url));
   };
   return (
     <div>

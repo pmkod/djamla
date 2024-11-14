@@ -123,6 +123,7 @@ const CarouselIndicatorGroup = forwardRef<
     >
       {Array.from(Array(itemCount).keys()).map((_, index) => (
         <CarouselPrimitives.Indicator
+          key={index}
           index={index}
           className="h-2 w-2 rounded-full bg-base-600 data-[current]:bg-base-200"
         />

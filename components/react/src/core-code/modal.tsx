@@ -39,7 +39,7 @@ const ModalBody = React.forwardRef<
   HTMLDivElement,
   InputHTMLAttributes<HTMLInputElement>
 >(({ className, children, ...props }, ref) => (
-  <div ref={ref} className="flex-1 overflow-auto px-4" {...props}>
+  <div ref={ref} className="flex-1 overflow-auto px-2" {...props}>
     {children}
   </div>
 ));
@@ -47,19 +47,19 @@ const ModalBody = React.forwardRef<
 ModalBody.displayName = "ModalBody";
 
 const modalContentStyle = cva(
-  "duration-400 fixed z-50 flex w-full flex-col border bg-white shadow-md transition-all data-[state=closed]:invisible data-[state=closed]:opacity-0 data-[state=open]:opacity-100",
+  "duration-400 fixed z-50 flex w-full bg-base-0 flex-col shadow-md transition-all data-[state=closed]:invisible data-[state=closed]:opacity-0 data-[state=open]:opacity-100",
   {
     variants: {
       size: {
-        xs: "left-1/2 top-[50%] max-h-[70vh] max-w-xs -translate-x-1/2 -translate-y-[60%] sm:rounded-md",
-        sm: "left-1/2 top-[50%] max-h-[70vh] max-w-sm -translate-x-1/2 -translate-y-[60%] sm:rounded-md",
-        md: "left-1/2 top-[50%] max-h-[70vh] max-w-md -translate-x-1/2 -translate-y-[60%] sm:rounded-md",
-        lg: "left-1/2 top-[50%] max-h-[70vh] max-w-lg -translate-x-1/2 -translate-y-[60%] sm:rounded-md",
-        xl: "left-1/2 top-[50%] max-h-[70vh] max-w-xl -translate-x-1/2 -translate-y-[60%] sm:rounded-md",
+        xs: "left-1/2 top-[50%] max-h-[70vh] max-w-xs -translate-x-1/2 -translate-y-[60%] sm:rounded",
+        sm: "left-1/2 top-[50%] max-h-[70vh] max-w-sm -translate-x-1/2 -translate-y-[60%] sm:rounded",
+        md: "left-1/2 top-[50%] max-h-[70vh] max-w-md -translate-x-1/2 -translate-y-[60%] sm:rounded",
+        lg: "left-1/2 top-[50%] max-h-[70vh] max-w-lg -translate-x-1/2 -translate-y-[60%] sm:rounded",
+        xl: "left-1/2 top-[50%] max-h-[70vh] max-w-xl -translate-x-1/2 -translate-y-[60%] sm:rounded",
         "2xl":
-          "left-1/2 top-[50%] max-h-[70vh] max-w-2xl -translate-x-1/2 -translate-y-[60%] sm:rounded-md",
+          "left-1/2 top-[50%] max-h-[70vh] max-w-2xl -translate-x-1/2 -translate-y-[60%] sm:rounded",
         "3xl":
-          "left-1/2 top-[50%] max-h-[70vh] max-w-3xl -translate-x-1/2 -translate-y-[60%] sm:rounded-md",
+          "left-1/2 top-[50%] max-h-[70vh] max-w-3xl -translate-x-1/2 -translate-y-[60%] sm:rounded",
         fullscreen: "inset-0 h-screen w-screen max-h-screen rounded-none",
       },
     },

@@ -17,7 +17,7 @@ const AccordionItem = forwardRef<
   React.ElementRef<typeof AccordionPrimitives.Item>,
   React.ComponentPropsWithoutRef<typeof AccordionPrimitives.Item>
 >(({ className, ...props }, ref) => (
-  <AccordionPrimitives.Item ref={ref} className={"border-b"} {...props} />
+  <AccordionPrimitives.Item ref={ref} className="border-b" {...props} />
 ));
 
 AccordionItem.displayName = "AccordionItem";
@@ -28,7 +28,7 @@ const AccordionItemSummary = forwardRef<
 >(({ className, children, ...props }, ref) => (
   <AccordionPrimitives.ItemTrigger
     ref={ref}
-    className="inline-flex w-full items-center justify-between px-4 py-2.5 font-medium transition-all hover:bg-base-100 disabled:opacity-40 disabled:hover:bg-transparent [&[data-state=open]>svg]:rotate-180"
+    className="inline-flex w-full items-center justify-between text-base-800 px-4 py-2.5 font-medium transition-all hover:bg-base-100 disabled:opacity-40 disabled:hover:bg-transparent [&[data-state=open]>svg]:rotate-180"
     {...props}
   >
     {children}
@@ -46,7 +46,7 @@ const AccordionItemDetails = forwardRef<
 >(({ className, children, ...props }, ref) => (
   <AccordionPrimitives.ItemContent
     ref={ref}
-    className="grid overflow-hidden text-sm transition-all duration-300 ease-in-out data-[state=closed]:grid-rows-[0fr] data-[state=open]:grid-rows-[1fr]"
+    className="grid overflow-hidden text-sm transition-all text-base-500 duration-300 ease-in-out data-[state=closed]:grid-rows-[0fr] data-[state=open]:grid-rows-[1fr]"
     {...props}
   >
     <div className="overflow-hidden">

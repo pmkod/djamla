@@ -21,15 +21,18 @@ const Dropzone = forwardRef<
       <FileUploadPrimitives.ItemGroup className="relative space-y-2">
         <FileUploadPrimitives.Context>
           {({ acceptedFiles }) =>
-            acceptedFiles.map((file) => (
+            acceptedFiles.map((file, index) => (
               <FileUploadPrimitives.Item
-                key={file.name}
+                key={index}
                 file={file}
                 className="flex items-center gap-x-4 rounded-sm border border-base-300 p-4"
               >
                 {file.type.startsWith("image") ? (
                   <FileUploadPrimitives.ItemPreview type="image/*" className="">
-                    <FileUploadPrimitives.ItemPreviewImage className="h-12 w-12 object-contain object-center" />
+                    <FileUploadPrimitives.ItemPreviewImage
+                      src={URL.createObjectURL(file)}
+                      className="h-12 w-12 object-contain object-center"
+                    />
                   </FileUploadPrimitives.ItemPreview>
                 ) : (
                   <FileUploadPrimitives.ItemPreview
@@ -63,7 +66,7 @@ const DropzoneText = forwardRef<
   React.HTMLAttributes<HTMLDivElement>
 >(({ children, ...props }, ref) => {
   return (
-    <div ref={ref} className="text-sm text-base-600" {...props}>
+    <div ref={ref} className="text-lg text-base-600" {...props}>
       {children}
     </div>
   );
