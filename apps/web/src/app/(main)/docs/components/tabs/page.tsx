@@ -3,7 +3,15 @@ import React from "react";
 import { ComponentPreview } from "@/components/core/component-preview";
 import { DocText } from "@/components/core/doc-text";
 import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
-import { tabsCode, TabsExample, tabsExampleCode } from "@repo/react-ui";
+import {
+  Tab,
+  TabContent,
+  TabList,
+  Tabs,
+  tabsCode,
+  TabsExample,
+  tabsExampleCode,
+} from "@repo/react-ui";
 
 const TabsPage = () => {
   return (
@@ -13,7 +21,24 @@ const TabsPage = () => {
         A set of panels with tabbed navigation.
       </DocText>
       <ComponentPreview>
-        <TabsExample />
+        <div className="w-full">
+          <Tabs defaultValue="account">
+            <TabList size="sm">
+              <Tab value="account">Account</Tab>
+              <Tab value="settings">Settings</Tab>
+            </TabList>
+            <TabContent value="account">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
+              quos iure maxime ullam nobis non doloremque laudantium, deleniti
+              dolores ad!
+            </TabContent>
+            <TabContent value="settings">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam
+              nam nobis asperiores tempora eaque assumenda. Officiis cum ipsam
+              quia dignissimos?
+            </TabContent>
+          </Tabs>
+        </div>
       </ComponentPreview>
       <DocText level="titleTwo">Installation</DocText>
       <SyntaxHighlighter language="typescript">{tabsCode}</SyntaxHighlighter>

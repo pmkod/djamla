@@ -3,7 +3,12 @@ import React from "react";
 import { ComponentPreview } from "@/components/core/component-preview";
 import { DocText } from "@/components/core/doc-text";
 import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
-import { inputCode, InputExample, inputExampleCode } from "@repo/react-ui";
+import {
+  Input,
+  inputCode,
+  InputExample,
+  inputExampleCode,
+} from "@repo/react-ui";
 
 const InputPage = () => {
   return (
@@ -12,8 +17,13 @@ const InputPage = () => {
       <DocText level="paragraph">
         A field for accepting user text input.
       </DocText>
-      <ComponentPreview>
-        <InputExample />
+      <ComponentPreview
+        defaultVariant="outline"
+        variants={["outline", "soft", "plain"]}
+        defaultSize="md"
+        sizes={["sm", "md", "lg"]}
+      >
+        <Input placeholder="Type here" />
       </ComponentPreview>
       <DocText level="titleTwo">Installation</DocText>
       <SyntaxHighlighter language="typescript">{inputCode}</SyntaxHighlighter>

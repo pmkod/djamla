@@ -4,6 +4,7 @@ import { ComponentPreview } from "@/components/core/component-preview";
 import { DocText } from "@/components/core/doc-text";
 import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
 import {
+  Checkbox,
   checkboxCode,
   CheckboxExample,
   checkboxExampleCode,
@@ -16,8 +17,13 @@ const CheckboxPage = () => {
       <DocText level="paragraph">
         A slideshow component for cycling through content.
       </DocText>
-      <ComponentPreview>
-        <CheckboxExample />
+      <ComponentPreview
+        defaultSize="md"
+        sizes={["sm", "md", "lg", "xl"]}
+        defaultColorScheme="primary"
+        colorSchemes={["primary", "black"]}
+      >
+        <Checkbox defaultChecked />
       </ComponentPreview>
       <DocText level="titleTwo">Installation</DocText>
       <SyntaxHighlighter language="typescript">

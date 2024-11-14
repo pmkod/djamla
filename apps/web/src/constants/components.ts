@@ -96,11 +96,11 @@ export const coreComponents = [
     keywords: [],
   },
   { path: "/docs/components/kbd", label: "Kbd", keywords: ["Keywords", "Key"] },
-  {
-    path: "/docs/components/linear-progress",
-    label: "Linear progress",
-    keywords: ["Progress", "Bar"],
-  },
+  // {
+  //   path: "/docs/components/linear-progress",
+  //   label: "Linear progress",
+  //   keywords: ["Progress", "Bar"],
+  // },
   {
     path: "/docs/components/loader",
     label: "Loader",
@@ -201,9 +201,9 @@ export const coreComponents = [
     label: "Tooltip",
     keywords: ["Hint"],
   },
-  {
-    path: "/docs/components/tree-view",
-    label: "Tree View",
-    keywords: ["TreeMenu", "Hierarchy"],
-  },
+  // {
+  //   path: "/docs/components/tree-view",
+  //   label: "Tree View",
+  //   keywords: ["TreeMenu", "Hierarchy"],
+  // },
 ];

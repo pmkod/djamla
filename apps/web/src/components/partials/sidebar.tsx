@@ -7,7 +7,7 @@ import { PropsWithChildren, ReactNode } from "react";
 
 export const Sidebar = () => {
   return (
-    <div className="space-y-10">
+    <div className="space-y-10 pb-32">
       <SidebarGroup>
         <SidebarGroupTitle>Getting started</SidebarGroupTitle>
         <SidebarGroupContent>

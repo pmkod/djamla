@@ -1,6 +1,9 @@
 "use client";
 import React, { forwardRef } from "react";
-import { Select as SelectPrimitives } from "@ark-ui/react";
+import {
+  Select as SelectPrimitives,
+  createListCollection,
+} from "@ark-ui/react";
 import { cva, VariantProps } from "class-variance-authority";
 import { IconCheck, IconChevronDown } from "@tabler/icons-react";
 
@@ -34,7 +37,7 @@ const Select = forwardRef<
       className="relative z-20 w-full"
       {...props}
     >
-      <SelectPrimitives.Control className="hover:bg-base-100 transition-colors">
+      <SelectPrimitives.Control className="text-base-900 hover:bg-base-100 transition-colors">
         <SelectPrimitives.Trigger
           className={selectStyle({
             size,
@@ -47,7 +50,7 @@ const Select = forwardRef<
         </SelectPrimitives.Trigger>
       </SelectPrimitives.Control>
       <SelectPrimitives.Positioner className="absolute left-0 right-0 z-40">
-        <SelectPrimitives.Content className="w-full rounded-sm border border-base-300 bg-white data-[state=open]:visible data-[state=closed]:invisible data-[state=open]:scale-100 data-[state=closed]:scale-50 data-[state=open]:opacity-100 data-[state=closed]:opacity-0 transition-all duration-300">
+        <SelectPrimitives.Content className="w-full rounded-sm border border-base-300 bg-base-0 data-[state=open]:visible data-[state=closed]:invisible data-[state=open]:scale-100 data-[state=closed]:scale-50 data-[state=open]:opacity-100 data-[state=closed]:opacity-0 transition-all duration-300">
           {children}
         </SelectPrimitives.Content>
       </SelectPrimitives.Positioner>
@@ -102,4 +105,10 @@ const SelectItem = forwardRef<
 
 SelectItem.displayName = "SelectItem";
 
-export { Select, SelectItem, SelectItemGroup, SelectItemGroupLabel };
+export {
+  Select,
+  SelectItem,
+  SelectItemGroup,
+  SelectItemGroupLabel,
+  createListCollection,
+};

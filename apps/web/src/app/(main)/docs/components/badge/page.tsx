@@ -17,7 +17,14 @@ const BadgePage = () => {
       <DocText level="paragraph">
         A small indicator for status or labels.
       </DocText>
-      <ComponentPreview>
+      <ComponentPreview
+        defaultVariant="solid"
+        variants={["solid", "outline", "soft", "plain"]}
+        defaultSize="md"
+        sizes={["sm", "md", "lg"]}
+        defaultColorScheme="primary"
+        colorSchemes={["primary", "black", "red"]}
+      >
         <Badge>Hello</Badge>
       </ComponentPreview>
       <DocText level="titleTwo">Installation</DocText>

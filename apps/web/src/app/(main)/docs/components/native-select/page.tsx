@@ -3,29 +3,46 @@ import React from "react";
 import { ComponentPreview } from "@/components/core/component-preview";
 import { DocText } from "@/components/core/doc-text";
 import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
-import { modalCode, ModalExample, modalExampleCode } from "@repo/react-ui";
+import {
+  NativeSelect,
+  nativeSelectCode,
+  NativeSelectExample,
+  nativeSelectExampleCode,
+} from "@repo/react-ui";
 
-const ModalPage = () => {
+const NativeSelectPage = () => {
   return (
     <>
-      <DocText>Modal</DocText>
+      <DocText>Native Select</DocText>
       <DocText level="paragraph">
-        An overlay dialog for focused content.
+        A platform-native dropdown selection control.{" "}
       </DocText>
-      <ComponentPreview>
-        <ModalExample />
+      <ComponentPreview
+        defaultVariant="outline"
+        variants={["outline", "soft", "plain"]}
+        defaultSize="md"
+        sizes={["sm", "md", "lg"]}
+      >
+        <NativeSelect size="lg">
+          <option value="1">Item 1</option>
+          <option value="2">Item 2</option>
+          <option value="3">Item 3</option>
+          <option value="4">Item 4</option>
+        </NativeSelect>
       </ComponentPreview>
       <DocText level="titleTwo">Installation</DocText>
-      <SyntaxHighlighter language="typescript">{modalCode}</SyntaxHighlighter>
+      <SyntaxHighlighter language="typescript">
+        {nativeSelectCode}
+      </SyntaxHighlighter>
       <DocText level="titleTwo">Example</DocText>
       <ComponentPreview>
-        <ModalExample />
+        <NativeSelectExample />
       </ComponentPreview>
       <SyntaxHighlighter language="typescript">
-        {modalExampleCode}
+        {nativeSelectExampleCode}
       </SyntaxHighlighter>
     </>
   );
 };
 
-export default ModalPage;
+export default NativeSelectPage;

@@ -47,7 +47,7 @@ const ModalBody = React.forwardRef<
 ModalBody.displayName = "ModalBody";
 
 const modalContentStyle = cva(
-  "duration-400 fixed z-50 flex w-full bg-base-0 flex-col border border-base-300 shadow-md transition-all data-[state=closed]:invisible data-[state=closed]:opacity-0 data-[state=open]:opacity-100",
+  "duration-400 fixed z-50 flex w-full bg-base-0 flex-col shadow-md transition-all data-[state=closed]:invisible data-[state=closed]:opacity-0 data-[state=open]:opacity-100",
   {
     variants: {
       size: {

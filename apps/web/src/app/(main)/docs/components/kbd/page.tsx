@@ -3,7 +3,14 @@ import React from "react";
 import { ComponentPreview } from "@/components/core/component-preview";
 import { DocText } from "@/components/core/doc-text";
 import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
-import { kbdCode, KbdExample, kbdExampleCode } from "@repo/react-ui";
+import {
+  Kbd,
+  kbdCode,
+  KbdExample,
+  kbdExampleCode,
+  KbdGroup,
+  KbdSeparator,
+} from "@repo/react-ui";
 
 const KbdPage = () => {
   return (
@@ -13,7 +20,31 @@ const KbdPage = () => {
         A visual element representing keyboard input.
       </DocText>
       <ComponentPreview>
-        <KbdExample />
+        <div className="flex flex-col items-center space-y-8">
+          <KbdGroup>
+            <Kbd size="sm">Ctrl</Kbd>
+            <KbdSeparator>+</KbdSeparator>
+            <Kbd size="sm">Shift</Kbd>
+            <KbdSeparator>+</KbdSeparator>
+            <Kbd size="sm">V</Kbd>
+          </KbdGroup>
+
+          <KbdGroup>
+            <Kbd size="md">Ctrl</Kbd>
+            <KbdSeparator>+</KbdSeparator>
+            <Kbd size="md">Shift</Kbd>
+            <KbdSeparator>+</KbdSeparator>
+            <Kbd size="md">V</Kbd>
+          </KbdGroup>
+
+          <KbdGroup>
+            <Kbd size="lg">Ctrl</Kbd>
+            <KbdSeparator>+</KbdSeparator>
+            <Kbd size="lg">Shift</Kbd>
+            <KbdSeparator>+</KbdSeparator>
+            <Kbd size="lg">V</Kbd>
+          </KbdGroup>
+        </div>
       </ComponentPreview>
       <DocText level="titleTwo">Installation</DocText>
       <SyntaxHighlighter language="typescript">{kbdCode}</SyntaxHighlighter>

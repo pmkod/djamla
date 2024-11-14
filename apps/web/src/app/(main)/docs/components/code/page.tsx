@@ -3,7 +3,7 @@ import React from "react";
 import { ComponentPreview } from "@/components/core/component-preview";
 import { DocText } from "@/components/core/doc-text";
 import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
-import { codeCode, CodeExample, codeExampleCode } from "@repo/react-ui";
+import { Code, codeCode, CodeExample, codeExampleCode } from "@repo/react-ui";
 
 const CodePage = () => {
   return (
@@ -12,8 +12,8 @@ const CodePage = () => {
       <DocText level="paragraph">
         A container for displaying formatted code snippets.
       </DocText>
-      <ComponentPreview>
-        <CodeExample />
+      <ComponentPreview defaultSize="md" sizes={["sm", "md", "lg"]}>
+        <Code size="sm">@ark-ui/react</Code>
       </ComponentPreview>
       <DocText level="titleTwo">Installation</DocText>
       <SyntaxHighlighter language="typescript">{codeCode}</SyntaxHighlighter>

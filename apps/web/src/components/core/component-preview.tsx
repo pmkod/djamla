@@ -8,11 +8,13 @@ import React, {
 } from "react";
 import { IconCheck } from "@tabler/icons-react";
 import { ToggleGroup, Toggle, Switch } from "@repo/react-ui";
+import { shake } from "radash";
 
 type Size = "xs" | "sm" | "md" | "lg" | "xl";
 type Variant = "solid" | "outline" | "soft" | "plain" | "ghost";
 type ColorScheme = "primary" | "red" | "black" | "green";
 type Position = "top" | "right" | "bottom" | "left";
+type Orientation = "vertical" | "horizontal";
 
 interface ComponentPreviewProps {
   children: ReactNode;
@@ -24,6 +26,8 @@ interface ComponentPreviewProps {
   defaultColorScheme?: ColorScheme;
   positions?: Position[];
   defaultPosition?: Position;
+  orientations?: Orientation[];
+  defaultOrientation?: Orientation;
   fullWidth?: boolean;
   isLoading?: boolean;
   disabled?: boolean;
@@ -39,13 +43,15 @@ const colors = {
 export const ComponentPreview = ({
   children,
   sizes,
-  defaultSize = "md",
+  defaultSize,
   variants,
-  defaultVariant = "solid",
+  defaultVariant,
   colorSchemes,
-  defaultColorScheme = "primary",
+  defaultColorScheme,
   positions,
   defaultPosition,
+  defaultOrientation,
+  orientations,
   fullWidth,
   isLoading,
   disabled,
@@ -54,6 +60,7 @@ export const ComponentPreview = ({
   const [variant, setVariant] = useState(defaultVariant);
   const [colorScheme, setColorScheme] = useState(defaultColorScheme);
   const [position, setPosition] = useState(defaultPosition);
+  const [orientation, setOrientation] = useState(defaultOrientation);
   const [_isLoading, _setIsLoading] = useState(isLoading);
   const [_disabled, _setDisabled] = useState(disabled);
   const [_fullWidth, _setFullwidth] = useState(fullWidth);
@@ -63,6 +70,7 @@ export const ComponentPreview = ({
     variants !== undefined ||
     colorSchemes !== undefined ||
     positions !== undefined ||
+    orientations !== undefined ||
     _isLoading !== undefined ||
     _disabled !== undefined ||
     _fullWidth !== undefined;
@@ -71,24 +79,28 @@ export const ComponentPreview = ({
     <div className="mt-8 mb-8 flex min-h-40 rounded border border-base-300">
       <div className="flex flex-1 items-center justify-center px-10 py-4">
         {Children.toArray(children).map((child) =>
-          cloneElement(child as ReactElement, {
-            size,
-            variant,
-            colorScheme,
-            position,
-            fullWidth: _fullWidth,
-            loading: _isLoading,
-            disabled: _disabled,
-          })
+          cloneElement(
+            child as ReactElement,
+            shake({
+              size,
+              variant,
+              colorScheme,
+              position,
+              orientation,
+              fullWidth: _fullWidth,
+              isLoading: _isLoading,
+              disabled: _disabled,
+            })
+          )
         )}
       </div>
       {showRightPanel && (
-        <div className="space-y-4 border-l border-l-base-300 px-6 py-4">
+        <div className="space-y-4 border-l border-l-base-300 px-6 py-4 text-base-700">
           {positions !== undefined && (
             <div>
               <div>Position</div>
               <div className="mt-0.5">
-                <ToggleGroup defaultValue={[defaultVariant]}>
+                <ToggleGroup>
                   {positions.map((position) => (
                     <Toggle
                       key={position}
@@ -108,7 +120,7 @@ export const ComponentPreview = ({
             <div>
               <div>Variant</div>
               <div className="mt-0.5">
-                <ToggleGroup defaultValue={[defaultVariant]}>
+                <ToggleGroup>
                   {variants.map((variant) => (
                     <Toggle
                       key={variant}
@@ -128,7 +140,7 @@ export const ComponentPreview = ({
             <div>
               <div>Size</div>
               <div className="mt-0.5">
-                <ToggleGroup defaultValue={[defaultSize]}>
+                <ToggleGroup>
                   {sizes.map((size) => (
                     <Toggle
                       key={size}
@@ -167,8 +179,28 @@ export const ComponentPreview = ({
               </div>
             </div>
           )}
+          {orientations !== undefined && (
+            <div>
+              <div>Orientation</div>
+              <div className="mt-0.5">
+                <ToggleGroup>
+                  {orientations.map((orientation) => (
+                    <Toggle
+                      key={orientation}
+                      value={orientation}
+                      size="sm"
+                      variant="outline"
+                      onClick={() => setOrientation(orientation)}
+                    >
+                      {orientation}
+                    </Toggle>
+                  ))}
+                </ToggleGroup>
+              </div>
+            </div>
+          )}
 
-          {_isLoading !== undefined && (
+          {isLoading !== undefined && (
             <div className="flex items-center gap-x-2">
               <Switch
                 checked={_isLoading}

@@ -25,7 +25,7 @@ const PopoverContent = forwardRef<
       <PopoverPrimitives.Content
         ref={ref}
         className={
-          "z-50 block w-72 rounded border border-base-300 bg-white px-4 py-3 shadow-sm outline-none transition-all duration-200 data-[state=open]:visible data-[state=closed]:invisible data-[state=closed]:scale-95 data-[state=open]:scale-100 data-[state=closed]:opacity-0 data-[state=open]:opacity-100 " +
+          "z-50 block w-72 rounded border border-base-300 bg-base-0 px-4 py-3 shadow-sm outline-none transition-all duration-200 data-[state=open]:visible data-[state=closed]:invisible data-[state=closed]:scale-95 data-[state=open]:scale-100 data-[state=closed]:opacity-0 data-[state=open]:opacity-100 " +
           className
         }
         {...props}
@@ -42,7 +42,11 @@ const PopoverTitle = forwardRef<
   React.ElementRef<typeof PopoverPrimitives.Title>,
   React.ComponentPropsWithoutRef<typeof PopoverPrimitives.Title>
 >((props, ref) => (
-  <PopoverPrimitives.Title ref={ref} className="font-semibold" {...props} />
+  <PopoverPrimitives.Title
+    ref={ref}
+    className="text-base-900 font-semibold"
+    {...props}
+  />
 ));
 
 PopoverTitle.displayName = "PopoverTitle";
@@ -53,7 +57,7 @@ const PopoverDescription = forwardRef<
 >((props, ref) => (
   <PopoverPrimitives.Description
     ref={ref}
-    className="text-sm font-normal text-base-700"
+    className="text-sm font-normal text-base-600"
     {...props}
   />
 ));

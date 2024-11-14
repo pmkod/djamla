@@ -3,7 +3,12 @@ import React from "react";
 import { ComponentPreview } from "@/components/core/component-preview";
 import { DocText } from "@/components/core/doc-text";
 import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
-import { sliderCode, SliderExample, sliderExampleCode } from "@repo/react-ui";
+import {
+  Slider,
+  sliderCode,
+  SliderExample,
+  sliderExampleCode,
+} from "@repo/react-ui";
 
 const SliderPage = () => {
   return (
@@ -12,8 +17,13 @@ const SliderPage = () => {
       <DocText level="paragraph">
         A control for selecting numeric values.
       </DocText>
-      <ComponentPreview>
-        <SliderExample />
+      <ComponentPreview
+        defaultSize="md"
+        sizes={["sm", "md", "lg", "xl"]}
+        defaultOrientation="horizontal"
+        orientations={["horizontal", "vertical"]}
+      >
+        <Slider />
       </ComponentPreview>
       <DocText level="titleTwo">Installation</DocText>
       <SyntaxHighlighter language="typescript">{sliderCode}</SyntaxHighlighter>

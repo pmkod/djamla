@@ -1,3 +1,4 @@
+"use client";
 import {
   Carousel,
   CarouselControl,
@@ -13,16 +14,18 @@ export const CarouselExample = () => {
     "https://tinyurl.com/59jxz9uu",
   ];
   return (
-    <Carousel>
-      <CarouselControl />
-      <CarouselIndicatorGroup itemCount={images.length} />
-      <CarouselItemGroup>
-        {images.map((image, index) => (
-          <CarouselItem key={index} index={index}>
-            <img src={image} alt={`Slide ${index}`} />
-          </CarouselItem>
-        ))}
-      </CarouselItemGroup>
-    </Carousel>
+    <div className="aspect-video">
+      <Carousel>
+        <CarouselControl />
+        <CarouselIndicatorGroup itemCount={images.length} />
+        <CarouselItemGroup>
+          {images.map((image, index) => (
+            <CarouselItem key={index} index={index}>
+              <img src={image} alt={`Slide ${index}`} />
+            </CarouselItem>
+          ))}
+        </CarouselItemGroup>
+      </Carousel>
+    </div>
   );
 };

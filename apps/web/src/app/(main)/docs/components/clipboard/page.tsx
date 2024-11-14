@@ -4,6 +4,7 @@ import { ComponentPreview } from "@/components/core/component-preview";
 import { DocText } from "@/components/core/doc-text";
 import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
 import {
+  Clipboard,
   clipboardCode,
   ClipboardExample,
   clipboardExampleCode,
@@ -16,8 +17,8 @@ const ClipboardPage = () => {
       <DocText level="paragraph">
         A component for copying and pasting content.
       </DocText>
-      <ComponentPreview>
-        <ClipboardExample />
+      <ComponentPreview defaultSize="md" sizes={["xs", "sm", "md", "lg", "xl"]}>
+        <Clipboard value="https://ark-ui.com" />
       </ComponentPreview>
       <DocText level="titleTwo">Installation</DocText>
       <SyntaxHighlighter language="typescript">

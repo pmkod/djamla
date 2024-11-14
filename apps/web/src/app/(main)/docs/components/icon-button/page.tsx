@@ -8,12 +8,13 @@ import {
   IconButtonExample,
   iconButtonExampleCode,
 } from "@repo/react-ui";
+import { IconPlus } from "@tabler/icons-react";
 import React from "react";
 
 const IconButtonPage = () => {
   return (
     <>
-      <DocText>IconButton</DocText>
+      <DocText>Icon Button</DocText>
       <DocText level="paragraph">
         A button component represented by an icon.
       </DocText>
@@ -24,8 +25,13 @@ const IconButtonPage = () => {
         defaultSize="md"
         sizes={["xs", "sm", "md", "lg", "xl"]}
         colorSchemes={["primary", "red", "black"]}
+        isLoading={false}
+        fullWidth={false}
+        disabled={false}
       >
-        <IconButton>IconButton</IconButton>
+        <IconButton>
+          <IconPlus />
+        </IconButton>
       </ComponentPreview>
       <DocText level="titleTwo">Installation</DocText>
       <SyntaxHighlighter language="typescript">

@@ -31,44 +31,46 @@ export const FormExample = () => {
     console.log(values);
   };
   return (
-    <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)}>
-        <div className="mb-5 space-y-3">
-          <FormField
-            control={form.control}
-            name="email"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Email</FormLabel>
-                <FormControl>
-                  <Input placeholder="kod" {...field} />
-                </FormControl>
-                <FormFieldHelperText>
-                  This is your public display name.
-                </FormFieldHelperText>
-                <FormFieldErrorMessage />
-              </FormItem>
-            )}
-          />
-          <FormField
-            control={form.control}
-            name="password"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Password</FormLabel>
-                <FormControl>
-                  <Input type="password" placeholder="kod" {...field} />
-                </FormControl>
-                <FormFieldErrorMessage />
-              </FormItem>
-            )}
-          />
-        </div>
+    <div className="w-full max-w-96">
+      <Form {...form}>
+        <form onSubmit={form.handleSubmit(onSubmit)}>
+          <div className="mb-5 space-y-3">
+            <FormField
+              control={form.control}
+              name="email"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Email</FormLabel>
+                  <FormControl>
+                    <Input placeholder="kod" {...field} />
+                  </FormControl>
+                  <FormFieldHelperText>
+                    This is your public display name.
+                  </FormFieldHelperText>
+                  <FormFieldErrorMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="password"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Password</FormLabel>
+                  <FormControl>
+                    <Input type="password" placeholder="kod" {...field} />
+                  </FormControl>
+                  <FormFieldErrorMessage />
+                </FormItem>
+              )}
+            />
+          </div>
 
-        <Button type="submit" fullWidth colorScheme="primary">
-          Log in
-        </Button>
-      </form>
-    </Form>
+          <Button type="submit" fullWidth colorScheme="primary">
+            Log in
+          </Button>
+        </form>
+      </Form>
+    </div>
   );
 };

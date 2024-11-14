@@ -2,13 +2,9 @@ import { cva, VariantProps } from "class-variance-authority";
 import React, { forwardRef } from "react";
 
 export const codeStyle = cva(
-  "inline-flex items-center whitespace-pre rounded font-medium",
+  "inline-flex items-center whitespace-pre rounded font-medium border border-base-300 bg-base-100 text-base-800",
   {
     variants: {
-      variant: {
-        outline: "border border-base-300 bg-base-100",
-        ghost: "bg-base-100",
-      },
       size: {
         sm: "px-0.5 text-xs",
         md: "px-1 pb-px text-sm",
@@ -17,7 +13,6 @@ export const codeStyle = cva(
     },
     defaultVariants: {
       size: "md",
-      variant: "outline",
     },
   }
 );
@@ -30,14 +25,14 @@ export interface CodeProps
     VariantProps<typeof codeStyle> {}
 
 export const Code = forwardRef<HTMLElement, CodeProps>(
-  ({ size, variant, children, ...props }, ref) => {
+  ({ size, children, ...props }, ref) => {
     return (
       <code
         ref={ref}
         style={{
           fontFamily: "Courier New, Arial, Georgia ,Times New Roman, ubuntu",
         }}
-        className={codeStyle({ size, variant })}
+        className={codeStyle({ size })}
         {...props}
       >
         {children}

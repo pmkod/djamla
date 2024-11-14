@@ -122,7 +122,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         ref={ref}
         {...props}
       >
-        <div className="size-full flex items-center justify-center cursor-pointer pb-px">
+        <div className="size-full flex items-center justify-center cursor-pointer pb-px bg-inherit">
           {children}
           {isLoading && (
             <div className="absolute inset-0 flex items-center justify-center bg-inherit">

@@ -5,7 +5,7 @@ import { cva, VariantProps } from "class-variance-authority";
 import React, { ComponentPropsWithoutRef, forwardRef } from "react";
 
 const iconButtonStyle = cva(
-  "relative ring-offset-background focus-visible:ring-ring inline-flex aspect-square items-center justify-center whitespace-nowrap disabled:opacity-50 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none",
+  "relative ring-offset-background focus-visible:ring-ring inline-flex aspect-square items-center justify-center whitespace-nowrap disabled:opacity-50 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none overflow-hidden",
   {
     variants: {
       variant: {

@@ -18,7 +18,7 @@ export const ContextMenuExample = () => {
   return (
     <Menu>
       <ContextMenuTrigger asChild>
-        <div className="flex h-52 w-96 items-center justify-center rounded border border-dashed border-base-400">
+        <div className="flex h-52 w-96 items-center justify-center rounded border border-dashed border-base-400 text-base-800">
           Right click here
         </div>
       </ContextMenuTrigger>

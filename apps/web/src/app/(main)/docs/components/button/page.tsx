@@ -21,9 +21,12 @@ const ButtonPage = () => {
         defaultVariant="solid"
         variants={["solid", "outline", "ghost"]}
         defaultColorScheme="primary"
+        colorSchemes={["primary", "red", "black"]}
         defaultSize="md"
         sizes={["xs", "sm", "md", "lg", "xl"]}
-        colorSchemes={["primary", "red", "black"]}
+        isLoading={false}
+        fullWidth={false}
+        disabled={false}
       >
         <Button>Button</Button>
       </ComponentPreview>

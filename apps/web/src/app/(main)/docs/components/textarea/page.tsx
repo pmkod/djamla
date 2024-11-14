@@ -4,6 +4,7 @@ import { ComponentPreview } from "@/components/core/component-preview";
 import { DocText } from "@/components/core/doc-text";
 import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
 import {
+  Textarea,
   textareaCode,
   TextareaExample,
   textareaExampleCode,
@@ -14,8 +15,13 @@ const TextareaPage = () => {
     <>
       <DocText>Textarea</DocText>
       <DocText level="paragraph">A multiline text input field.</DocText>
-      <ComponentPreview>
-        <TextareaExample />
+      <ComponentPreview
+        defaultVariant="outline"
+        variants={["outline", "soft", "plain"]}
+        defaultSize="md"
+        sizes={["sm", "md", "lg"]}
+      >
+        <Textarea placeholder="Type here" />
       </ComponentPreview>
       <DocText level="titleTwo">Installation</DocText>
       <SyntaxHighlighter language="typescript">

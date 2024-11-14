@@ -9,7 +9,7 @@ export const inputStyle = cva(
     variants: {
       variant: {
         outline: "border border-base-400 bg-transparent",
-        ghost: "border border-base-200 bg-base-100",
+        soft: "bg-base-100",
         plain: "bg-transparent",
       },
       size: {

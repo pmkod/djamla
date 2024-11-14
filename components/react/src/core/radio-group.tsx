@@ -47,7 +47,7 @@ const radioGroupItemStyle = cva(
   }
 );
 
-const radioGroupItemTextStyle = cva("", {
+const radioGroupItemTextStyle = cva("text-base-900", {
   variants: {
     size: {
       sm: "text-xs",

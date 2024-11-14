@@ -17,10 +17,12 @@ const FormPage = () => {
       </ComponentPreview>
       <DocText level="titleTwo">Installation</DocText>
       <SyntaxHighlighter language="typescript">{formCode}</SyntaxHighlighter>
-      <DocText level="titleTwo">Example</DocText>
+      {/* <DocText level="titleTwo">Example</DocText>
       <ComponentPreview>
         <FormExample />
-      </ComponentPreview>
+      </ComponentPreview> */}
+      <DocText level="titleTwo">Example code</DocText>
+
       <SyntaxHighlighter language="typescript">
         {formExampleCode}
       </SyntaxHighlighter>
