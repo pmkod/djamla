@@ -10,7 +10,7 @@ WORKDIR /app
 
 COPY . .
 
-RUN pnpm -r website install && pnpm --filter @repo/scripts generate:components:codes && pnpm --filter website run build 
+RUN pnpm -r install && pnpm --filter @repo/scripts generate:components:codes && pnpm --filter website run build 
 
 EXPOSE 3000
 
