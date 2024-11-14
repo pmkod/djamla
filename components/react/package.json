@@ -16,7 +16,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@ark-ui/react": "^4.3.0",
+    "@ark-ui/react": "^4.4.3",
     "@hookform/resolvers": "^3.9.1",
     "@tabler/icons-react": "^3.21.0",
     "class-variance-authority": "^0.7.0",
