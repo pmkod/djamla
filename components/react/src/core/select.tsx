@@ -4,11 +4,12 @@ import {
   Select as SelectPrimitives,
   createListCollection,
 } from "@ark-ui/react";
+
 import { cva, VariantProps } from "class-variance-authority";
 import { IconCheck, IconChevronDown } from "@tabler/icons-react";
 
 const selectStyle = cva(
-  "flex w-full items-center justify-between rounded-sm border border-base-400 px-2.5 disabled:cursor-not-allowed disabled:opacity-50",
+  "relative flex w-full items-center justify-between rounded-sm border border-base-400 px-2.5 disabled:cursor-not-allowed disabled:opacity-50",
   {
     variants: {
       size: {
@@ -34,7 +35,8 @@ const Select = forwardRef<
   return (
     <SelectPrimitives.Root
       ref={ref}
-      className="relative z-20 w-full"
+      className="w-full relative flex flex-col"
+      positioning={{ sameWidth: true }}
       {...props}
     >
       <SelectPrimitives.Control className="text-base-900 hover:bg-base-100 transition-colors">
@@ -49,11 +51,13 @@ const Select = forwardRef<
           </SelectPrimitives.Indicator>
         </SelectPrimitives.Trigger>
       </SelectPrimitives.Control>
-      <SelectPrimitives.Positioner className="absolute left-0 right-0 z-40">
-        <SelectPrimitives.Content className="w-full rounded-sm border border-base-300 bg-base-0 data-[state=open]:visible data-[state=closed]:invisible data-[state=open]:scale-100 data-[state=closed]:scale-50 data-[state=open]:opacity-100 data-[state=closed]:opacity-0 transition-all duration-300">
+
+      <SelectPrimitives.Positioner className="pointer-events-none">
+        <SelectPrimitives.Content className="flex flex-col h-max origin-top z-40 rounded-sm border border-base-300 bg-base-0 data-[state=open]:visible data-[state=closed]:invisible data-[state=open]:scale-100 data-[state=closed]:scale-95 data-[state=open]:opacity-100 data-[state=closed]:opacity-0 transition-all duration-300">
           {children}
         </SelectPrimitives.Content>
       </SelectPrimitives.Positioner>
+
       <SelectPrimitives.HiddenSelect />
     </SelectPrimitives.Root>
   );
@@ -65,11 +69,7 @@ const SelectItemGroup = forwardRef<
   React.ElementRef<typeof SelectPrimitives.ItemGroup>,
   React.ComponentPropsWithoutRef<typeof SelectPrimitives.ItemGroup>
 >((props, ref) => (
-  <SelectPrimitives.ItemGroup
-    ref={ref}
-    className="flex w-full flex-col"
-    {...props}
-  />
+  <SelectPrimitives.ItemGroup className="w-full" ref={ref} {...props} />
 ));
 
 SelectItemGroup.displayName = "SelectItemGroup";
@@ -92,7 +92,7 @@ const SelectItem = forwardRef<
   React.ComponentPropsWithoutRef<typeof SelectPrimitives.Item>
 >(({ children, ...props }, ref) => (
   <SelectPrimitives.Item
-    className="flex justify-between items-center hover:bg-base-200 transition-colors cursor-pointer px-2.5 py-2 text-sm text-base-700"
+    className="w-full flex justify-between items-center hover:bg-base-200 transition-colors cursor-pointer px-2.5 py-2 text-sm text-base-700"
     ref={ref}
     {...props}
   >

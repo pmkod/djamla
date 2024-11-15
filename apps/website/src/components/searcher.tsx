@@ -29,6 +29,10 @@ export const Searcher = () => {
     setOpen(true);
   };
 
+  const hideModal = () => {
+    setOpen(false);
+  };
+
   const handleQChange: ChangeEventHandler<HTMLInputElement> = (e) => {
     setQ(e.target.value);
   };
@@ -90,6 +94,7 @@ export const Searcher = () => {
                         key={index}
                         path={path}
                         label={label}
+                        onClick={hideModal}
                       />
                     ))}
                   </SearchSuggestionGroupBody>
@@ -105,6 +110,7 @@ export const Searcher = () => {
                         key={index}
                         path={path}
                         label={label}
+                        onClick={hideModal}
                       />
                     ))}
                   </SearchSuggestionGroupBody>
@@ -182,12 +188,18 @@ const SearchSuggestionGroupBody = ({ children }: PropsWithChildren) => {
 interface SearchSuggestionItemProps {
   label: string;
   path: string;
+  onClick: React.MouseEventHandler<HTMLAnchorElement>;
 }
 
-const SearchSuggestionItem = ({ path, label }: SearchSuggestionItemProps) => {
+const SearchSuggestionItem = ({
+  path,
+  label,
+  onClick,
+}: SearchSuggestionItemProps) => {
   return (
     <Link
       href={path}
+      onClick={onClick}
       className="flex items-center px-3 py-1 font-medium text-base-600 hover:bg-base-200 transition-colors rounded-sm"
     >
       <IconFile size={20} className="mr-3" />

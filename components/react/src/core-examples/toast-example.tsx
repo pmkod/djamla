@@ -6,7 +6,7 @@ export const ToastExample = () => {
     toast.create({
       title: "Toast title",
       description:
-        "Toast description znkmalznrkg amrgklnrmakgnzrmgnergn oern m!l",
+        "Toast description znkmalznrkg amrgklnrmakgnzrmgnergn oern qz pfnz zrogn rgqozrlgnqzrùngqzrgùqzrgqzrùkg m!l",
       type: "success",
     });
   };

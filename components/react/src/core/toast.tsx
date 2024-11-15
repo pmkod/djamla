@@ -15,14 +15,7 @@ const toast = createToaster({
 });
 
 const toastStyle = cva(
-  [
-    "relative",
-    "translate-x-[--x] translate-y-[--y] rotate-0",
-    // "opacity-[--opacity]",
-    "data-[state=closed]:scale-75 data-[state=open]:scale-[--scale]",
-    "rounded px-5 py-3.5 shadow sm:w-96 transition-all transform duration-500",
-    "",
-  ],
+  ["block relative rounded px-5 py-3.5 shadow-xl", "max-w-96"],
   {
     variants: {
       type: {
@@ -44,13 +37,16 @@ const Toast = () => {
         return (
           <ToastPrimitives.Root
             style={{
-              overflowWrap: "anywhere",
-              transitionProperty: "opacity",
               height: "var(--height)",
+              width: "var(--width)",
               zIndex: "var(--z-index)",
-              //   opacity: "var(--opacity)",
-              //   scale: "var(--scale)",
-              //   transform: "translate(var(--x), calc(var(--y) * 4))",
+              translate: "var(--x) var(--y) 0",
+              scale: "var(--scale)",
+              opacity: "var(--opacity)",
+              overflowWrap: "anywhere",
+              willChange: "translate, opacity, scale",
+              transitionProperty: "translate, scale, opacity, height",
+              transitionDuration: "300ms",
             }}
             className={toastStyle({
               type: toast.type as VariantProps<typeof toastStyle>["type"],

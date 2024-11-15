@@ -12,8 +12,6 @@ const darkThemeName = "dark";
 const ThemeSwitch = () => {
   const [theme, setTheme] = useLocalStorage({
     key: themeKey,
-    defaultValue: lightThemeName,
-    getInitialValueInEffect: false,
   });
 
   const changeTheme = () => {

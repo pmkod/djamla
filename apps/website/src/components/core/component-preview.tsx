@@ -7,7 +7,15 @@ import React, {
   useState,
 } from "react";
 import { IconCheck } from "@tabler/icons-react";
-import { ToggleGroup, Toggle, Switch } from "@repo/react-ui";
+import {
+  ToggleGroup,
+  Toggle,
+  Switch,
+  Select,
+  SelectItemGroup,
+  SelectItem,
+  createListCollection,
+} from "@repo/react-ui";
 import { shake } from "radash";
 
 type Size = "xs" | "sm" | "md" | "lg" | "xl";
@@ -75,6 +83,8 @@ export const ComponentPreview = ({
     _disabled !== undefined ||
     _fullWidth !== undefined;
 
+  const variantsCollenction = createListCollection({ items: variants || [] });
+
   return (
     <div className="mt-8 mb-8 flex min-h-40 rounded border border-base-300">
       <div className="flex flex-1 items-center justify-center px-10 py-4">
@@ -96,63 +106,91 @@ export const ComponentPreview = ({
       </div>
       {showRightPanel && (
         <div className="space-y-4 border-l border-l-base-300 px-6 py-4 text-base-700">
-          {positions !== undefined && (
-            <div>
-              <div>Position</div>
-              <div className="mt-0.5">
-                <ToggleGroup>
-                  {positions.map((position) => (
-                    <Toggle
-                      key={position}
-                      value={position}
-                      size="sm"
-                      variant="outline"
-                      onClick={() => setPosition(position)}
-                    >
-                      <div className="px-2.5">{position}</div>
-                    </Toggle>
-                  ))}
-                </ToggleGroup>
-              </div>
-            </div>
-          )}
-          {variants !== undefined && (
+          {variants !== undefined && defaultVariant !== undefined && (
             <div>
               <div>Variant</div>
               <div className="mt-0.5">
-                <ToggleGroup>
-                  {variants.map((variant) => (
-                    <Toggle
-                      key={variant}
-                      value={variant}
-                      size="sm"
-                      variant="outline"
-                      onClick={() => setVariant(variant)}
-                    >
-                      <div className="px-2.5">{variant}</div>
-                    </Toggle>
-                  ))}
-                </ToggleGroup>
+                <Select
+                  size="md"
+                  defaultValue={[defaultVariant]}
+                  collection={variantsCollenction}
+                >
+                  <SelectItemGroup defaultValue={defaultVariant}>
+                    {variantsCollenction.items.map((variant, index) => (
+                      <SelectItem
+                        key={index}
+                        item={variant}
+                        onClick={() => setVariant(variant)}
+                      />
+                    ))}
+                  </SelectItemGroup>
+                </Select>
               </div>
             </div>
           )}
-          {sizes !== undefined && (
+          {sizes !== undefined && defaultSize !== undefined && (
             <div>
               <div>Size</div>
               <div className="mt-0.5">
-                <ToggleGroup>
-                  {sizes.map((size) => (
-                    <Toggle
-                      key={size}
-                      value={size}
-                      size="sm"
-                      variant="outline"
-                      onClick={() => setSize(size)}
-                    >
-                      {size}
-                    </Toggle>
-                  ))}
-                </ToggleGroup>
+                <Select
+                  size="md"
+                  defaultValue={[defaultSize]}
+                  collection={createListCollection({ items: sizes })}
+                >
+                  <SelectItemGroup defaultValue={defaultSize}>
+                    {sizes.map((size, index) => (
+                      <SelectItem
+                        key={index}
+                        item={size}
+                        onClick={() => setSize(size)}
+                      />
+                    ))}
+                  </SelectItemGroup>
+                </Select>
+              </div>
+            </div>
+          )}
+          {positions !== undefined && defaultPosition !== undefined && (
+            <div>
+              <div>Position</div>
+              <div className="mt-0.5">
+                <Select
+                  size="md"
+                  defaultValue={[defaultPosition]}
+                  collection={createListCollection({ items: positions })}
+                >
+                  <SelectItemGroup defaultValue={defaultPosition}>
+                    {positions.map((position, index) => (
+                      <SelectItem
+                        key={index}
+                        item={position}
+                        onClick={() => setPosition(position)}
+                      />
+                    ))}
+                  </SelectItemGroup>
+                </Select>
+              </div>
+            </div>
+          )}
+          {orientations !== undefined && defaultOrientation !== undefined && (
+            <div>
+              <div>Orientation</div>
+              <div className="mt-0.5">
+                <Select
+                  size="md"
+                  defaultValue={[defaultOrientation]}
+                  collection={createListCollection({ items: orientations })}
+                >
+                  <SelectItemGroup defaultValue={defaultSize}>
+                    {orientations.map((orientation, index) => (
+                      <SelectItem
+                        key={index}
+                        item={orientation}
+                        onClick={() => setOrientation(orientation)}
+                      />
+                    ))}
+                  </SelectItemGroup>
+                </Select>
               </div>
             </div>
           )}
@@ -179,27 +217,6 @@ export const ComponentPreview = ({
               </div>
             </div>
           )}
-          {orientations !== undefined && (
-            <div>
-              <div>Orientation</div>
-              <div className="mt-0.5">
-                <ToggleGroup>
-                  {orientations.map((orientation) => (
-                    <Toggle
-                      key={orientation}
-                      value={orientation}
-                      size="sm"
-                      variant="outline"
-                      onClick={() => setOrientation(orientation)}
-                    >
-                      {orientation}
-                    </Toggle>
-                  ))}
-                </ToggleGroup>
-              </div>
-            </div>
-          )}
-
           {isLoading !== undefined && (
             <div className="flex items-center gap-x-2">
               <Switch
