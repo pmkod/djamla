@@ -38,10 +38,9 @@ const Toast = () => {
           <ToastPrimitives.Root
             style={{
               height: "var(--height)",
-              width: "var(--width)",
-              zIndex: "var(--z-index)",
               translate: "var(--x) var(--y) 0",
               scale: "var(--scale)",
+              zIndex: "var(--z-index)",
               opacity: "var(--opacity)",
               overflowWrap: "anywhere",
               willChange: "translate, opacity, scale",

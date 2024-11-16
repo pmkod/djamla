@@ -15,11 +15,11 @@ const toggleItemStyle = cva(
           "border-y border-l border-base-300 bg-transparent last:border-r hover:bg-base-300",
       },
       size: {
-        xs: "h-7 min-w-7",
-        sm: "h-8 min-w-8",
-        md: "h-9 min-w-9",
-        lg: "h-10 min-w-10",
-        xl: "h-11 min-w-11",
+        xs: "min-h-7 min-w-7",
+        sm: "min-h-8 min-w-8",
+        md: "min-h-9 min-w-9",
+        lg: "min-h-10 min-w-10",
+        xl: "min-h-11 min-w-11",
       },
     },
     defaultVariants: {
