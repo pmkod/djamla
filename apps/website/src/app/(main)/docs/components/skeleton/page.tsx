@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import { ComponentPreview } from "@/components/core/component-preview";
 import { DocText } from "@/components/core/doc-text";
@@ -9,11 +8,21 @@ import {
   skeletonExampleCode,
 } from "@repo/react-ui";
 
+import { Metadata } from "next";
+
+const title = "Skeleton";
+const description = "A placeholder for loading content.";
+
+export const metadata: Metadata = {
+  title,
+  description,
+};
+
 const SkeletonPage = () => {
   return (
     <>
-      <DocText>Skeleton</DocText>
-      <DocText level="paragraph">A placeholder for loading content.</DocText>
+      <DocText>{title}</DocText>
+      <DocText level="paragraph">{description}</DocText>
       <ComponentPreview>
         <SkeletonExample />
       </ComponentPreview>

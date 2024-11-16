@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import { ComponentPreview } from "@/components/core/component-preview";
 import { DocText } from "@/components/core/doc-text";
@@ -8,12 +7,21 @@ import {
   PinInputExample,
   pinInputExampleCode,
 } from "@repo/react-ui";
+import { Metadata } from "next";
+
+const title = "Pin Input";
+const description = "A segmented input for entering codes.";
+
+export const metadata: Metadata = {
+  title,
+  description,
+};
 
 const PinInputPage = () => {
   return (
     <>
-      <DocText>Pin Input</DocText>
-      <DocText level="paragraph">A segmented input for entering codes.</DocText>
+      <DocText>{title}</DocText>
+      <DocText level="paragraph">{description}</DocText>
       <ComponentPreview>
         <PinInputExample />
       </ComponentPreview>

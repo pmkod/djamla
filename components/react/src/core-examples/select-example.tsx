@@ -1,3 +1,4 @@
+"use client";
 import { Select, SelectItem, SelectItemGroup } from "../core/select";
 import { createListCollection } from "@ark-ui/react";
 

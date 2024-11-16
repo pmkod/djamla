@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import { ComponentPreview } from "@/components/core/component-preview";
 import { DocText } from "@/components/core/doc-text";
@@ -8,14 +7,21 @@ import {
   DropzoneExample,
   dropzoneExampleCode,
 } from "@repo/react-ui";
+import { Metadata } from "next";
+
+const title = "Dropzone";
+const description = "An area that accepts file drops and uploads.";
+
+export const metadata: Metadata = {
+  title,
+  description,
+};
 
 const DropzonePage = () => {
   return (
     <>
-      <DocText>Dropzone</DocText>
-      <DocText level="paragraph">
-        An area that accepts file drops and uploads.
-      </DocText>
+      <DocText>{title}</DocText>
+      <DocText level="paragraph">{description}</DocText>
       <ComponentPreview>
         <DropzoneExample />
       </ComponentPreview>

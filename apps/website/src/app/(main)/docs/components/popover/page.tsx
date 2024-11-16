@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import { ComponentPreview } from "@/components/core/component-preview";
 import { DocText } from "@/components/core/doc-text";
@@ -8,12 +7,21 @@ import {
   PopoverExample,
   popoverExampleCode,
 } from "@repo/react-ui";
+import { Metadata } from "next";
+
+const title = "Popover";
+const description = "A floating content container.";
+
+export const metadata: Metadata = {
+  title,
+  description,
+};
 
 const PopoverPage = () => {
   return (
     <>
-      <DocText>Popover</DocText>
-      <DocText level="paragraph">A floating content container.</DocText>
+      <DocText>{title}</DocText>
+      <DocText level="paragraph">{description}</DocText>
       <ComponentPreview>
         <PopoverExample />
       </ComponentPreview>

@@ -1,4 +1,3 @@
-"use client";
 import { ComponentPreview } from "@/components/core/component-preview";
 import { DocText } from "@/components/core/doc-text";
 import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
@@ -8,15 +7,22 @@ import {
   ButtonExample,
   buttonExampleCode,
 } from "@repo/react-ui";
+import { Metadata } from "next";
 import React from "react";
+
+const title = "Button";
+const description = "An interactive element designed to trigger actions.";
+
+export const metadata: Metadata = {
+  title,
+  description,
+};
 
 const ButtonPage = () => {
   return (
     <>
-      <DocText>Button</DocText>
-      <DocText level="paragraph">
-        An interactive element designed to trigger actions.
-      </DocText>
+      <DocText>{title}</DocText>
+      <DocText level="paragraph">{description}</DocText>
       <ComponentPreview
         defaultVariant="solid"
         variants={["solid", "outline", "ghost"]}

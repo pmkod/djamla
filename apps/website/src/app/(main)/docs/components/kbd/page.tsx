@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import { ComponentPreview } from "@/components/core/component-preview";
 import { DocText } from "@/components/core/doc-text";
@@ -11,14 +10,21 @@ import {
   KbdGroup,
   KbdSeparator,
 } from "@repo/react-ui";
+import { Metadata } from "next";
+
+const title = "Kbd";
+const description = "A visual element representing keyboard input.";
+
+export const metadata: Metadata = {
+  title,
+  description,
+};
 
 const KbdPage = () => {
   return (
     <>
-      <DocText>Kbd</DocText>
-      <DocText level="paragraph">
-        A visual element representing keyboard input.
-      </DocText>
+      <DocText>{title}</DocText>
+      <DocText level="paragraph">{description}</DocText>
       <ComponentPreview>
         <div className="flex flex-col items-center space-y-8">
           <KbdGroup>

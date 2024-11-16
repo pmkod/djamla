@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import { ComponentPreview } from "@/components/core/component-preview";
 import { DocText } from "@/components/core/doc-text";
@@ -9,13 +8,21 @@ import {
   hoverCardExampleCode,
 } from "@repo/react-ui";
 
+import { Metadata } from "next";
+
+const title = "Hover Card";
+const description = "A floating card that appears on element hover.";
+
+export const metadata: Metadata = {
+  title,
+  description,
+};
+
 const HoverCardPage = () => {
   return (
     <>
-      <DocText>Hover Card</DocText>
-      <DocText level="paragraph">
-        A floating card that appears on element hover.{" "}
-      </DocText>
+      <DocText>{title}</DocText>
+      <DocText level="paragraph">{description}</DocText>
       <ComponentPreview>
         <HoverCardExample />
       </ComponentPreview>

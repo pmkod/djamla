@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import { ComponentPreview } from "@/components/core/component-preview";
 import { DocText } from "@/components/core/doc-text";
@@ -12,14 +11,21 @@ import {
   TabsExample,
   tabsExampleCode,
 } from "@repo/react-ui";
+import { Metadata } from "next";
+
+const title = "Tabs";
+const description = "A set of panels with tabbed navigation.";
+
+export const metadata: Metadata = {
+  title,
+  description,
+};
 
 const TabsPage = () => {
   return (
     <>
-      <DocText>Tabs</DocText>
-      <DocText level="paragraph">
-        A set of panels with tabbed navigation.
-      </DocText>
+      <DocText>{title}</DocText>
+      <DocText level="paragraph">{description}</DocText>
       <ComponentPreview>
         <div className="w-full">
           <Tabs defaultValue="account">

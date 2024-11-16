@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import { ComponentPreview } from "@/components/core/component-preview";
 import { DocText } from "@/components/core/doc-text";
@@ -8,14 +7,22 @@ import {
   AccordionExample,
   accordionExampleCode,
 } from "@repo/react-ui";
+import { Metadata } from "next";
+
+const title = "Accordion";
+const description =
+  "A collapsible element that reveals and hides content sections.";
+
+export const metadata: Metadata = {
+  title,
+  description,
+};
 
 const AccordionPage = () => {
   return (
     <>
-      <DocText>Accordion</DocText>
-      <DocText level="paragraph">
-        A collapsible element that reveals and hides content sections.
-      </DocText>
+      <DocText>{title}</DocText>
+      <DocText level="paragraph">{description}</DocText>
       <ComponentPreview>
         <AccordionExample />
       </ComponentPreview>

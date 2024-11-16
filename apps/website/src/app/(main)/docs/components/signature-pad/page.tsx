@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import { ComponentPreview } from "@/components/core/component-preview";
 import { DocText } from "@/components/core/doc-text";
@@ -9,13 +8,21 @@ import {
   signaturePadExampleCode,
 } from "@repo/react-ui";
 
+import { Metadata } from "next";
+
+const title = "Signature Pad";
+const description = "A canvas for capturing handwritten signatures.";
+
+export const metadata: Metadata = {
+  title,
+  description,
+};
+
 const SignaturePadPage = () => {
   return (
     <>
-      <DocText>Signature Pad</DocText>
-      <DocText level="paragraph">
-        A canvas for capturing handwritten signatures.
-      </DocText>
+      <DocText>{title}</DocText>
+      <DocText level="paragraph">{description}</DocText>
       <ComponentPreview>
         <SignaturePadExample />
       </ComponentPreview>

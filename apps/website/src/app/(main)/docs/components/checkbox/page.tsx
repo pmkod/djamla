@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import { ComponentPreview } from "@/components/core/component-preview";
 import { DocText } from "@/components/core/doc-text";
@@ -9,14 +8,21 @@ import {
   CheckboxExample,
   checkboxExampleCode,
 } from "@repo/react-ui";
+import { Metadata } from "next";
+
+const title = "Checkbox";
+const description = "A slideshow component for cycling through content.";
+
+export const metadata: Metadata = {
+  title,
+  description,
+};
 
 const CheckboxPage = () => {
   return (
     <>
-      <DocText>Checkbox</DocText>
-      <DocText level="paragraph">
-        A slideshow component for cycling through content.
-      </DocText>
+      <DocText>{title}</DocText>
+      <DocText level="paragraph">{description}</DocText>
       <ComponentPreview
         defaultSize="md"
         sizes={["sm", "md", "lg", "xl"]}

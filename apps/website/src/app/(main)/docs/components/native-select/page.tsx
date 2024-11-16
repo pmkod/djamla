@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import { ComponentPreview } from "@/components/core/component-preview";
 import { DocText } from "@/components/core/doc-text";
@@ -9,14 +8,21 @@ import {
   NativeSelectExample,
   nativeSelectExampleCode,
 } from "@repo/react-ui";
+import { Metadata } from "next";
+
+const title = "Native Select";
+const description = "A platform-native dropdown selection control.";
+
+export const metadata: Metadata = {
+  title,
+  description,
+};
 
 const NativeSelectPage = () => {
   return (
     <>
-      <DocText>Native Select</DocText>
-      <DocText level="paragraph">
-        A platform-native dropdown selection control.{" "}
-      </DocText>
+      <DocText>{title}</DocText>
+      <DocText level="paragraph">{description}</DocText>
       <ComponentPreview
         defaultVariant="outline"
         variants={["outline", "soft", "plain"]}

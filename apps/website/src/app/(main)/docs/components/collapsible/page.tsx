@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import { ComponentPreview } from "@/components/core/component-preview";
 import { DocText } from "@/components/core/doc-text";
@@ -8,14 +7,21 @@ import {
   CollapsibleExample,
   collapsibleExampleCode,
 } from "@repo/react-ui";
+import { Metadata } from "next";
+
+const title = "Collapsible";
+const description = "An expandable container that shows or hides content.";
+
+export const metadata: Metadata = {
+  title,
+  description,
+};
 
 const CollapsiblePage = () => {
   return (
     <>
-      <DocText>Collapsible</DocText>
-      <DocText level="paragraph">
-        An expandable container that shows or hides content.
-      </DocText>
+      <DocText>{title}</DocText>
+      <DocText level="paragraph">{description}</DocText>
       <ComponentPreview>
         <CollapsibleExample />
       </ComponentPreview>

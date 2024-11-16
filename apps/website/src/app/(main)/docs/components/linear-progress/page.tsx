@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import { ComponentPreview } from "@/components/core/component-preview";
 import { DocText } from "@/components/core/doc-text";
@@ -8,14 +7,21 @@ import {
   LinearProgressExample,
   linearProgressExampleCode,
 } from "@repo/react-ui";
+import { Metadata } from "next";
+
+const title = "Linear Progress";
+const description = "A bar indicating process completion status.";
+
+export const metadata: Metadata = {
+  title,
+  description,
+};
 
 const LinearProgressPage = () => {
   return (
     <>
-      <DocText>Linear Progress</DocText>
-      <DocText level="paragraph">
-        A bar indicating process completion status.
-      </DocText>
+      <DocText>{title}</DocText>
+      <DocText level="paragraph">{description}</DocText>
       <ComponentPreview>
         <LinearProgressExample />
       </ComponentPreview>

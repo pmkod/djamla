@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import { ComponentPreview } from "@/components/core/component-preview";
 import { DocText } from "@/components/core/doc-text";
@@ -9,14 +8,21 @@ import {
   InputExample,
   inputExampleCode,
 } from "@repo/react-ui";
+import { Metadata } from "next";
+
+const title = "Input";
+const description = "A field for accepting user text input.";
+
+export const metadata: Metadata = {
+  title,
+  description,
+};
 
 const InputPage = () => {
   return (
     <>
-      <DocText>Input</DocText>
-      <DocText level="paragraph">
-        A field for accepting user text input.
-      </DocText>
+      <DocText>{title}</DocText>
+      <DocText level="paragraph">{description}</DocText>
       <ComponentPreview
         defaultVariant="outline"
         variants={["outline", "soft", "plain"]}

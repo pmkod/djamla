@@ -43,7 +43,7 @@ interface ComponentPreviewProps {
 
 const colors = {
   primary: "bg-primary-500 hover:bg-primary-600",
-  black: "bg-base-900 hover:bg-black",
+  black: "bg-base-900 hover:bg-base-950",
   green: "bg-green-500 hover:bg-green-600",
   red: "bg-red-500 hover:bg-red-600",
 };
@@ -209,7 +209,7 @@ export const ComponentPreview = ({
                       }
                     >
                       {colorScheme === cS && (
-                        <IconCheck className="h-4 w-4 text-white" />
+                        <IconCheck className="h-4 w-4 text-base-0" />
                       )}
                     </div>
                   ))}

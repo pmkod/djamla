@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import { ComponentPreview } from "@/components/core/component-preview";
 import { DocText } from "@/components/core/doc-text";
@@ -10,11 +9,21 @@ import {
   switchExampleCode,
 } from "@repo/react-ui";
 
+import { Metadata } from "next";
+
+const title = "Siwtch";
+const description = "A toggle control for binary states.";
+
+export const metadata: Metadata = {
+  title,
+  description,
+};
+
 const SwitchPage = () => {
   return (
     <>
-      <DocText>Siwtch</DocText>
-      <DocText level="paragraph">A toggle control for binary states.</DocText>
+      <DocText>{title}</DocText>
+      <DocText level="paragraph">{description}</DocText>
       <ComponentPreview
         defaultColorScheme="primary"
         colorSchemes={["primary", "black"]}

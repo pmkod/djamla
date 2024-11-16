@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import { ComponentPreview } from "@/components/core/component-preview";
 import { DocText } from "@/components/core/doc-text";
@@ -9,14 +8,21 @@ import {
   ClipboardExample,
   clipboardExampleCode,
 } from "@repo/react-ui";
+import { Metadata } from "next";
+
+const title = "Clipboard";
+const description = "A component for copying and pasting content.";
+
+export const metadata: Metadata = {
+  title,
+  description,
+};
 
 const ClipboardPage = () => {
   return (
     <>
-      <DocText>Clipboard</DocText>
-      <DocText level="paragraph">
-        A component for copying and pasting content.
-      </DocText>
+      <DocText>{title}</DocText>
+      <DocText level="paragraph">{description}</DocText>
       <ComponentPreview defaultSize="md" sizes={["xs", "sm", "md", "lg", "xl"]}>
         <Clipboard value="https://ark-ui.com" />
       </ComponentPreview>

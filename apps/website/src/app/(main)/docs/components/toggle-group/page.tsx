@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import { ComponentPreview } from "@/components/core/component-preview";
 import { DocText } from "@/components/core/doc-text";
@@ -11,12 +10,21 @@ import {
   ToggleItem,
 } from "@repo/react-ui";
 import { IconPlus } from "@tabler/icons-react";
+import { Metadata } from "next";
+
+const title = "Toggle Group";
+const description = "A set of connected toggle controls.";
+
+export const metadata: Metadata = {
+  title,
+  description,
+};
 
 const ToggleGroupPage = () => {
   return (
     <>
-      <DocText>Toggle Group</DocText>
-      <DocText level="paragraph">A set of connected toggle controls.</DocText>
+      <DocText>{title}</DocText>
+      <DocText level="paragraph">{description}</DocText>
       <ComponentPreview>
         <div className="flex gap-x-20">
           <ToggleGroup orientation="horizontal" variant="outline" size="sm">

@@ -1,4 +1,3 @@
-"use client";
 import { ComponentPreview } from "@/components/core/component-preview";
 import { DocText } from "@/components/core/doc-text";
 import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
@@ -10,14 +9,21 @@ import {
 } from "@repo/react-ui";
 import { IconPlus } from "@tabler/icons-react";
 import React from "react";
+import { Metadata } from "next";
+
+const title = "Icon Button";
+const description = "A button component represented by an icon.";
+
+export const metadata: Metadata = {
+  title,
+  description,
+};
 
 const IconButtonPage = () => {
   return (
     <>
-      <DocText>Icon Button</DocText>
-      <DocText level="paragraph">
-        A button component represented by an icon.
-      </DocText>
+      <DocText>{title}</DocText>
+      <DocText level="paragraph">{description}</DocText>
       <ComponentPreview
         defaultVariant="solid"
         variants={["solid", "outline", "ghost"]}

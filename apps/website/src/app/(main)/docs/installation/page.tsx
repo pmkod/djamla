@@ -1,4 +1,3 @@
-"use client";
 import { DocText } from "@/components/core/doc-text";
 import { ExternalLink } from "@/components/core/externaly-link";
 import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
@@ -7,7 +6,12 @@ import {
   PackageManagerTabs,
 } from "@/components/tabs/package-manager-tabs";
 import { Tab, TabContent, TabList, Tabs } from "@repo/react-ui";
+import { Metadata } from "next";
 import React from "react";
+
+export const metadata: Metadata = {
+  title: "Installation",
+};
 
 const InstallationPage = () => {
   return (

@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import { ComponentPreview } from "@/components/core/component-preview";
 import { DocText } from "@/components/core/doc-text";
@@ -8,14 +7,21 @@ import {
   AlertDialogExample,
   alertDialogExampleCode,
 } from "@repo/react-ui";
+import { Metadata } from "next";
+
+const title = "Alert Dialog";
+const description = "An interruptive modal that requires user response.";
+
+export const metadata: Metadata = {
+  title,
+  description,
+};
 
 const AlertDialogPage = () => {
   return (
     <>
-      <DocText>Alert Dialog</DocText>
-      <DocText level="paragraph">
-        An interruptive modal that requires user response.
-      </DocText>
+      <DocText>{title}</DocText>
+      <DocText level="paragraph">{description}</DocText>
       <ComponentPreview>
         <AlertDialogExample />
       </ComponentPreview>

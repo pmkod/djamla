@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import { ComponentPreview } from "@/components/core/component-preview";
 import { DocText } from "@/components/core/doc-text";
@@ -9,12 +8,21 @@ import {
   TextareaExample,
   textareaExampleCode,
 } from "@repo/react-ui";
+import { Metadata } from "next";
+
+const title = "Textarea";
+const description = "A multiline text input field.";
+
+export const metadata: Metadata = {
+  title,
+  description,
+};
 
 const TextareaPage = () => {
   return (
     <>
-      <DocText>Textarea</DocText>
-      <DocText level="paragraph">A multiline text input field.</DocText>
+      <DocText>{title}</DocText>
+      <DocText level="paragraph">{description}</DocText>
       <ComponentPreview
         defaultVariant="outline"
         variants={["outline", "soft", "plain"]}

@@ -4,7 +4,10 @@ import { PropsWithChildren } from "react";
 import "@repo/tailwind-config/globals.css";
 
 export const metadata: Metadata = {
-  title: "Djamla",
+  title: {
+    template: "%s | Djamla",
+    default: "D",
+  },
   description:
     "Accessible and customizable components built on Ark UI. Free and Open Source.",
 };

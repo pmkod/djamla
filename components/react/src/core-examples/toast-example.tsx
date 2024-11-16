@@ -1,3 +1,4 @@
+"use client";
 import { Button } from "../core/button";
 import { toast, Toast } from "../core/toast";
 

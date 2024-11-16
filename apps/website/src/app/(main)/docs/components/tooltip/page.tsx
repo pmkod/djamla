@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import { ComponentPreview } from "@/components/core/component-preview";
 import { DocText } from "@/components/core/doc-text";
@@ -8,14 +7,21 @@ import {
   TooltipExample,
   tooltipExampleCode,
 } from "@repo/react-ui";
+import { Metadata } from "next";
+
+const title = "Tooltip";
+const description = "A floating label for additional information.";
+
+export const metadata: Metadata = {
+  title,
+  description,
+};
 
 const TooltipPage = () => {
   return (
     <>
-      <DocText>Tooltip</DocText>
-      <DocText level="paragraph">
-        A floating label for additional information.
-      </DocText>
+      <DocText>{title}</DocText>
+      <DocText level="paragraph">{description}</DocText>
       <ComponentPreview>
         <TooltipExample />
       </ComponentPreview>

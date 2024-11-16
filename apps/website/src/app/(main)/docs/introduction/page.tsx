@@ -8,6 +8,11 @@ import {
   AccordionItemSummary,
 } from "@repo/react-ui";
 import { ExternalLink } from "@/components/core/externaly-link";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Introduction",
+};
 
 const IntroductionPage = () => {
   return (
@@ -25,7 +30,7 @@ const IntroductionPage = () => {
         minimal effort and maximum customization.
       </DocText>
       <DocText level="titleTwo">Remerciements</DocText>
-      <ul className="list-disc list-inside pl-10 space-y-2">
+      <ul className="list-disc list-inside pl-6 space-y-2 text-base-500">
         <li>
           <ExternalLink href="https://tailwindcss.com">
             Tailwind CSS&nbsp;

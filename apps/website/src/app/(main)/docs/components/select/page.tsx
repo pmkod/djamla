@@ -1,37 +1,27 @@
-"use client";
 import React from "react";
-import { ComponentPreview } from "@/components/core/component-preview";
 import { DocText } from "@/components/core/doc-text";
 import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
-import {
-  Select,
-  selectCode,
-  SelectExample,
-  selectExampleCode,
-  SelectItem,
-  SelectItemGroup,
-  createListCollection,
-} from "@repo/react-ui";
+import { selectCode, SelectExample, selectExampleCode } from "@repo/react-ui";
+
+import { Metadata } from "next";
+import { SelectComponentPreview } from "./_select-component-preview";
+import { ComponentPreview } from "@/components/core/component-preview";
+// import { SelectComponentPreview } from "./_select-component-preview";
+
+const title = "Select";
+const description = "A customizable dropdown selection control.";
+
+export const metadata: Metadata = {
+  title,
+  description,
+};
 
 const SelectPage = () => {
-  const items = ["React", "React native", "Angular", "Vue", "Svelte", "Solid"];
-
-  const collection = createListCollection({ items });
   return (
     <>
-      <DocText>Select</DocText>
-      <DocText level="paragraph">
-        A customizable dropdown selection control.
-      </DocText>
-      <ComponentPreview defaultSize="md" sizes={["xs", "sm", "md", "lg", "xl"]}>
-        <Select collection={collection}>
-          <SelectItemGroup>
-            {items.map((item) => (
-              <SelectItem key={item} item={item} />
-            ))}
-          </SelectItemGroup>
-        </Select>
-      </ComponentPreview>
+      <DocText>{title}</DocText>
+      <DocText level="paragraph">{description}</DocText>
+      <SelectComponentPreview />
       <DocText level="titleTwo">Installation</DocText>
       <SyntaxHighlighter language="typescript">{selectCode}</SyntaxHighlighter>
       <DocText level="titleTwo">Example</DocText>

@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import { ComponentPreview } from "@/components/core/component-preview";
 import { DocText } from "@/components/core/doc-text";
@@ -11,11 +10,21 @@ import {
   RadioGroupItem,
 } from "@repo/react-ui";
 
+import { Metadata } from "next";
+
+const title = "Radio Group";
+const description = "A set of mutually exclusive options.";
+
+export const metadata: Metadata = {
+  title,
+  description,
+};
+
 const RadioGroupPage = () => {
   return (
     <>
-      <DocText>Radio Group</DocText>
-      <DocText level="paragraph">A set of mutually exclusive options.</DocText>
+      <DocText>{title}</DocText>
+      <DocText level="paragraph">{description}</DocText>
       <ComponentPreview defaultSize="md">
         <RadioGroup orientation="horizontal">
           <RadioGroupItem value="a" size="sm">

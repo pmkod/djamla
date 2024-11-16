@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import { ComponentPreview } from "@/components/core/component-preview";
 import { DocText } from "@/components/core/doc-text";
@@ -14,14 +13,21 @@ import {
   DrawerTrigger,
   Button,
 } from "@repo/react-ui";
+import { Metadata } from "next";
+
+const title = "Drawer";
+const description = "A sliding panel that emerges from screen edges.";
+
+export const metadata: Metadata = {
+  title,
+  description,
+};
 
 const DrawerPage = () => {
   return (
     <>
-      <DocText>Drawer</DocText>
-      <DocText level="paragraph">
-        A sliding panel that emerges from screen edges.
-      </DocText>
+      <DocText>{title}</DocText>
+      <DocText level="paragraph">{description}</DocText>
       <ComponentPreview>
         <div className="grid grid-cols-2 gap-2">
           <Drawer>

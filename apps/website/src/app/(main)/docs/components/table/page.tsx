@@ -1,17 +1,24 @@
-"use client";
 import React from "react";
 import { ComponentPreview } from "@/components/core/component-preview";
 import { DocText } from "@/components/core/doc-text";
 import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
 import { tableCode, TableExample, tableExampleCode } from "@repo/react-ui";
 
+import { Metadata } from "next";
+
+const title = "Table";
+const description = "A grid for displaying structured data.";
+
+export const metadata: Metadata = {
+  title,
+  description,
+};
+
 const TablePage = () => {
   return (
     <>
-      <DocText>Table</DocText>
-      <DocText level="paragraph">
-        A grid for displaying structured data.
-      </DocText>
+      <DocText>{title}</DocText>
+      <DocText level="paragraph">{description}</DocText>
       <ComponentPreview>
         <TableExample />
       </ComponentPreview>

@@ -1,15 +1,23 @@
-"use client";
 import React from "react";
 import { ComponentPreview } from "@/components/core/component-preview";
 import { DocText } from "@/components/core/doc-text";
 import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
 import { toastCode, ToastExample, toastExampleCode } from "@repo/react-ui";
+import { Metadata } from "next";
+
+const title = "Toast";
+const description = "A temporary notification message.";
+
+export const metadata: Metadata = {
+  title,
+  description,
+};
 
 const ToastPage = () => {
   return (
     <>
-      <DocText>Toast</DocText>
-      <DocText level="paragraph">A temporary notification message.</DocText>
+      <DocText>{title}</DocText>
+      <DocText level="paragraph">{description}</DocText>
       <ComponentPreview>
         <ToastExample />
       </ComponentPreview>

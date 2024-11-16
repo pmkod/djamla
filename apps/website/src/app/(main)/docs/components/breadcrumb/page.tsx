@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import { ComponentPreview } from "@/components/core/component-preview";
 import { DocText } from "@/components/core/doc-text";
@@ -8,14 +7,22 @@ import {
   BreadcrumbExample,
   breadcrumbExampleCode,
 } from "@repo/react-ui";
+import { Metadata } from "next";
+
+const title = "Breadcrumb";
+const description =
+  "A navigation element showing the current location hierarchy.";
+
+export const metadata: Metadata = {
+  title,
+  description,
+};
 
 const BreadcrumbPage = () => {
   return (
     <>
-      <DocText>Breadcrumb</DocText>
-      <DocText level="paragraph">
-        A navigation element showing the current location hierarchy.{" "}
-      </DocText>
+      <DocText>{title}</DocText>
+      <DocText level="paragraph">{description}</DocText>
       <ComponentPreview>
         <BreadcrumbExample />
       </ComponentPreview>

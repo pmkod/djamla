@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import { ComponentPreview } from "@/components/core/component-preview";
 import { DocText } from "@/components/core/doc-text";
@@ -16,14 +15,21 @@ import {
   ModalExample,
   modalExampleCode,
 } from "@repo/react-ui";
+import { Metadata } from "next";
+
+const title = "Modal";
+const description = "An overlay dialog for focused content.";
+
+export const metadata: Metadata = {
+  title,
+  description,
+};
 
 const ModalPage = () => {
   return (
     <>
-      <DocText>Modal</DocText>
-      <DocText level="paragraph">
-        An overlay dialog for focused content.
-      </DocText>
+      <DocText>{title}</DocText>
+      <DocText level="paragraph">{description}</DocText>
       <ComponentPreview>
         <div className="grid grid-cols-3 gap-4">
           <Modal>

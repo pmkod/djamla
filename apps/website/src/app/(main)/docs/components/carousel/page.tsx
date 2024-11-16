@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import { ComponentPreview } from "@/components/core/component-preview";
 import { DocText } from "@/components/core/doc-text";
@@ -8,14 +7,21 @@ import {
   CarouselExample,
   carouselExampleCode,
 } from "@repo/react-ui";
+import { Metadata } from "next";
+
+const title = "Carousel";
+const description = "A slideshow component for cycling through content.";
+
+export const metadata: Metadata = {
+  title,
+  description,
+};
 
 const CarouselPage = () => {
   return (
     <>
-      <DocText>Carousel</DocText>
-      <DocText level="paragraph">
-        A slideshow component for cycling through content.
-      </DocText>
+      <DocText>{title}</DocText>
+      <DocText level="paragraph">{description}</DocText>
       <ComponentPreview>
         <CarouselExample />
       </ComponentPreview>

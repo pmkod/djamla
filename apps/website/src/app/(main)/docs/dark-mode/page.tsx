@@ -1,6 +1,11 @@
 import { DocText } from "@/components/core/doc-text";
 import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
+import { Metadata } from "next";
 import React from "react";
+
+export const metadata: Metadata = {
+  title: "Dark mode",
+};
 
 const DarkModePage = () => {
   return (

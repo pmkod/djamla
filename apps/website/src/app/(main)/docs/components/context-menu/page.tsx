@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import { ComponentPreview } from "@/components/core/component-preview";
 import { DocText } from "@/components/core/doc-text";
@@ -8,14 +7,21 @@ import {
   ContextMenuExample,
   contextMenuExampleCode,
 } from "@repo/react-ui";
+import { Metadata } from "next";
+
+const title = "Context Menu";
+const description = "A floating menu triggered by right-click interaction.";
+
+export const metadata: Metadata = {
+  title,
+  description,
+};
 
 const ContextMenuPage = () => {
   return (
     <>
-      <DocText>Context Menu</DocText>
-      <DocText level="paragraph">
-        A floating menu triggered by right-click interaction.
-      </DocText>
+      <DocText>{title}</DocText>
+      <DocText level="paragraph">{description}</DocText>
       <ComponentPreview>
         <ContextMenuExample />
       </ComponentPreview>

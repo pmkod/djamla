@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import { ComponentPreview } from "@/components/core/component-preview";
 import { DocText } from "@/components/core/doc-text";
@@ -9,14 +8,21 @@ import {
   LoaderExample,
   loaderExampleCode,
 } from "@repo/react-ui";
+import { Metadata } from "next";
+
+const title = "Loader";
+const description = "A visual indicator for loading states.";
+
+export const metadata: Metadata = {
+  title,
+  description,
+};
 
 const LoaderPage = () => {
   return (
     <>
-      <DocText>Loader</DocText>
-      <DocText level="paragraph">
-        A visual indicator for loading states.
-      </DocText>
+      <DocText>{title}</DocText>
+      <DocText level="paragraph">{description}</DocText>
       <ComponentPreview
         defaultSize="md"
         sizes={["sm", "md", "lg", "xl"]}

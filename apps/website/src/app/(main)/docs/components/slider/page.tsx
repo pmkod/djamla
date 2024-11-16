@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import { ComponentPreview } from "@/components/core/component-preview";
 import { DocText } from "@/components/core/doc-text";
@@ -10,13 +9,21 @@ import {
   sliderExampleCode,
 } from "@repo/react-ui";
 
+import { Metadata } from "next";
+
+const title = "Slider";
+const description = "A control for selecting numeric values.";
+
+export const metadata: Metadata = {
+  title,
+  description,
+};
+
 const SliderPage = () => {
   return (
     <>
-      <DocText>Slider</DocText>
-      <DocText level="paragraph">
-        A control for selecting numeric values.
-      </DocText>
+      <DocText>{title}</DocText>
+      <DocText level="paragraph">{description}</DocText>
       <ComponentPreview
         defaultSize="md"
         sizes={["sm", "md", "lg", "xl"]}

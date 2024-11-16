@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import { ComponentPreview } from "@/components/core/component-preview";
 import { DocText } from "@/components/core/doc-text";
@@ -12,14 +11,21 @@ import {
   AlertTitle,
 } from "@repo/react-ui";
 import { IconInfoCircle } from "@tabler/icons-react";
+import { Metadata } from "next";
+
+const title = "Alert";
+const description = "A message that displays important information.";
+
+export const metadata: Metadata = {
+  title,
+  description,
+};
 
 const AlertPage = () => {
   return (
     <>
-      <DocText>Alert</DocText>
-      <DocText level="paragraph">
-        A message that displays important information.{" "}
-      </DocText>
+      <DocText>{title}</DocText>
+      <DocText level="paragraph">{description}</DocText>
       <ComponentPreview
         defaultColorScheme="primary"
         colorSchemes={["primary", "green", "red", "black"]}
