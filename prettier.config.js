@@ -7,7 +7,6 @@
 const config = {
     plugins: ['prettier-plugin-tailwindcss'],
     tailwindFunctions: ['cva'],
-    tailwind
 }
 
 module.exports = config

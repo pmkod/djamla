@@ -1,7 +1,10 @@
 import React from "react";
 import { Container } from "../core/container";
 import Link from "next/link";
-import { Button } from "@repo/react-ui";
+import { Button, IconButton } from "@repo/react-ui";
+import { ExternalLink } from "../core/external-link";
+import { githupRepoLink } from "@/constants/links";
+import { Icon123 } from "@tabler/icons-react";
 
 export const HeroSection = () => {
   return (
@@ -22,7 +25,13 @@ export const HeroSection = () => {
           </Button>
 
           <Button variant="outline" colorScheme="black" size="xl" asChild>
-            <Link href="/docs/introduction">Github</Link>
+            <Link
+              href={githupRepoLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Github
+            </Link>
           </Button>
         </div>
       </div>

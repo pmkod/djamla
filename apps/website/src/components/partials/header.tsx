@@ -42,7 +42,7 @@ export const Header = () => {
                   </Link>
                 ))}
               </div>
-              <div className="mr-3 flex-1 sm:ml-5 sm:w-96 sm:flex-none">
+              <div className="mr-1 flex-1 sm:ml-5 sm:flex-none md:w-96">
                 <Searcher />
               </div>
               <div className="mr-2">

@@ -5,7 +5,7 @@ import { cva, VariantProps } from "class-variance-authority";
 import React, { ComponentPropsWithoutRef, forwardRef } from "react";
 
 const iconButtonStyle = cva(
-  "ring-offset-background focus-visible:ring-ring relative inline-flex aspect-square items-center justify-center overflow-hidden whitespace-nowrap transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
+  "ring-offset-background focus-visible:ring-ring relative inline-flex aspect-square items-center justify-center overflow-hidden whitespace-nowrap transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2",
   {
     variants: {
       variant: {
@@ -26,11 +26,12 @@ const iconButtonStyle = cva(
         lg: "h-11 rounded",
         xl: "h-12 rounded",
       },
-      disabled: {
-        true: "opacity-50",
-      },
       fullWidth: {
         true: "w-full",
+      },
+
+      disabled: {
+        true: "pointer-events-none opacity-50",
       },
     },
     compoundVariants: [
@@ -119,12 +120,13 @@ export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
       children,
       fullWidth,
       isLoading,
+      disabled,
       ...props
     }: IconButtonProps,
     ref,
   ) => {
     if (isLoading) {
-      props.disabled = true;
+      disabled = true;
     }
     return (
       <ark.button
@@ -133,16 +135,21 @@ export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
           variant,
           colorScheme,
           fullWidth,
+          disabled,
         })}
-        {...props}
         ref={ref}
+        disabled={disabled}
+        {...props}
       >
-        {children}
-
-        {isLoading && (
-          <div className="absolute inset-0 flex items-center justify-center bg-inherit">
-            <IconLoader2 className="aspect-square h-1/2 animate-spin" />
+        {isLoading ? (
+          <div>
+            <div className="absolute inset-0 flex items-center justify-center bg-inherit">
+              <IconLoader2 className="aspect-square h-1/2 animate-spin" />
+            </div>
+            <div className="opacity-0">{children}</div>
           </div>
+        ) : (
+          children
         )}
       </ark.button>
     );

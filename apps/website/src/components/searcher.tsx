@@ -2,6 +2,7 @@ import { coreComponents } from "@/constants/components";
 import { headerLinks, sidebarGettingStartedLinks } from "@/constants/links";
 import { useDidUpdate, useWindowEvent } from "@mantine/hooks";
 import {
+  IconButton,
   Input,
   Kbd,
   Modal,
@@ -57,10 +58,17 @@ export const Searcher = () => {
   return (
     <Modal open={open} onOpenChange={({ open }) => setOpen(open)}>
       <ModalTrigger asChild>
-        <div className="bg-base-100 hover:bg-base-200 border-base-300 flex h-9 cursor-pointer items-center justify-between rounded-sm border pl-3 pr-1.5 transition-colors">
-          <div className="text-base-400 text-sm font-medium">Search</div>
-          <div className="hidden sm:block">
-            <Kbd size="md">Ctrl + k</Kbd>
+        <div className="">
+          <div className="float-right md:hidden">
+            <IconButton variant="ghost" colorScheme="black" size="sm">
+              <IconSearch size={22} />
+            </IconButton>
+          </div>
+          <div className="bg-base-100 hover:bg-base-200 border-base-300 hidden h-9 cursor-pointer items-center justify-between rounded-sm border pl-3 pr-1.5 transition-colors md:flex">
+            <div className="text-base-400 text-sm font-medium">Search</div>
+            <div className="hidden sm:block">
+              <Kbd size="md">Ctrl + k</Kbd>
+            </div>
           </div>
         </div>
       </ModalTrigger>

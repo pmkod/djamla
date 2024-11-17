@@ -28,6 +28,7 @@ const SyntaxHighlighter = ({ children, language }: SyntaxHighlighterProps) => {
       console.log(error);
     }
   };
+
   useDidUpdate(() => {
     if (copied === true) {
       start();
@@ -47,8 +48,13 @@ const SyntaxHighlighter = ({ children, language }: SyntaxHighlighterProps) => {
           fontSize: 14,
           padding: 20,
           width: "100%",
-          flex: 1,
           maxHeight,
+          maxWidth: "100%",
+
+          margin: 0,
+          wordBreak: "break-all",
+          whiteSpace: "pre-wrap",
+          minWidth: 200,
         }}
       >
         {children}

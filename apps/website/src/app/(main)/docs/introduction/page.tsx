@@ -7,7 +7,7 @@ import {
   AccordionItemDetails,
   AccordionItemSummary,
 } from "@repo/react-ui";
-import { ExternalLink } from "@/components/core/externaly-link";
+import { ExternalLink } from "@/components/core/external-link";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

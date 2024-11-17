@@ -15,7 +15,7 @@ export const SignaturePadExample = () => {
         <SignaturePad onDrawEnd={handleDrawEnd} />
       </div>
 
-      <div className="mt-5 h-52 w-96">
+      <div className="mt-5 h-52 w-96 rounded border bg-neutral-50">
         {signature && (
           <img
             src={signature}

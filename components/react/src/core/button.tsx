@@ -1,12 +1,11 @@
 "use client";
-
-import { ComponentPropsWithRef, forwardRef } from "react";
 import { ark } from "@ark-ui/react";
+import { ComponentPropsWithRef, forwardRef } from "react";
 import { IconLoader2 } from "@tabler/icons-react";
 import { cva, type VariantProps } from "class-variance-authority";
 
 const buttonStyle = cva(
-  "ring-offset-background focus-visible:ring-ring relative inline-flex items-center justify-center overflow-hidden whitespace-nowrap font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none",
+  "ring-offset-background focus-visible:ring-ring relative inline-flex items-center justify-center overflow-hidden whitespace-nowrap font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2",
   {
     variants: {
       variant: {
@@ -28,6 +27,9 @@ const buttonStyle = cva(
       },
       fullWidth: {
         true: "w-full",
+      },
+      disabled: {
+        true: "pointer-events-none opacity-50",
       },
     },
     compoundVariants: [
@@ -89,7 +91,7 @@ const buttonStyle = cva(
 
 interface ButtonProps
   extends ComponentPropsWithRef<typeof ark.button>,
-    VariantProps<typeof buttonStyle> {
+    Omit<VariantProps<typeof buttonStyle>, "disabled"> {
   isLoading?: boolean;
 }
 
@@ -103,12 +105,13 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       children,
       isLoading,
       fullWidth,
+      disabled,
       ...props
     },
     ref,
   ) => {
     if (isLoading) {
-      props.disabled = true;
+      disabled = true;
     }
     return (
       <ark.button
@@ -118,18 +121,22 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           colorScheme,
           className,
           fullWidth,
+          disabled,
         })}
         ref={ref}
+        disabled={disabled}
         {...props}
       >
-        <div className="flex size-full cursor-pointer items-center justify-center bg-inherit pb-px">
-          {children}
-          {isLoading && (
+        {isLoading ? (
+          <div>
             <div className="absolute inset-0 flex items-center justify-center bg-inherit">
               <IconLoader2 className="aspect-square h-1/2 animate-spin" />
             </div>
-          )}
-        </div>
+            <div className="opacity-0">{children}</div>
+          </div>
+        ) : (
+          children
+        )}
       </ark.button>
     );
   },

@@ -1,5 +1,5 @@
 import { DocText } from "@/components/core/doc-text";
-import { ExternalLink } from "@/components/core/externaly-link";
+import { ExternalLink } from "@/components/core/external-link";
 import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
 import {
   PackageManagerTabContent,

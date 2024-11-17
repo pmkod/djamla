@@ -1,7 +1,7 @@
 import React from "react";
 import { Container } from "../core/container";
 import { Logo } from "../core/logo";
-import { ExternalLink } from "../core/externaly-link";
+import { ExternalLink } from "../core/external-link";
 import { authorGithubProfileLink, githupRepoLink } from "@/constants/links";
 
 export const Footer = () => {
