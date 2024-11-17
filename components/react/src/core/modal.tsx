@@ -15,7 +15,7 @@ const ModalHeader = ({
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) => (
   <div
-    className="flex h-12 min-h-12 items-center gap-x-3 px-2 text-center"
+    className="text-base-900 flex h-12 min-h-12 items-center gap-x-3 px-2 text-center"
     {...props}
   />
 );
@@ -39,7 +39,11 @@ const ModalBody = React.forwardRef<
   HTMLDivElement,
   InputHTMLAttributes<HTMLInputElement>
 >(({ className, children, ...props }, ref) => (
-  <div ref={ref} className="flex-1 overflow-auto px-2" {...props}>
+  <div
+    ref={ref}
+    className="text-base-600 w-full flex-1 overflow-auto px-2"
+    {...props}
+  >
     {children}
   </div>
 ));
@@ -47,20 +51,18 @@ const ModalBody = React.forwardRef<
 ModalBody.displayName = "ModalBody";
 
 const modalContentStyle = cva(
-  "duration-400 bg-base-0 fixed z-50 flex w-full flex-col shadow-md transition-all data-[state=closed]:invisible data-[state=closed]:opacity-0 data-[state=open]:opacity-100",
+  "duration-400 bg-base-0 flex w-full flex-col shadow-md transition-all data-[state=open]:visible data-[state=closed]:invisible data-[state=closed]:translate-y-4 data-[state=open]:translate-y-0 data-[state=closed]:opacity-0 data-[state=open]:opacity-100",
   {
     variants: {
       size: {
-        xs: "left-1/2 top-[50%] max-h-[70vh] max-w-xs -translate-x-1/2 -translate-y-[60%] sm:rounded",
-        sm: "left-1/2 top-[50%] max-h-[70vh] max-w-sm -translate-x-1/2 -translate-y-[60%] sm:rounded",
-        md: "left-1/2 top-[50%] max-h-[70vh] max-w-md -translate-x-1/2 -translate-y-[60%] sm:rounded",
-        lg: "left-1/2 top-[50%] max-h-[70vh] max-w-lg -translate-x-1/2 -translate-y-[60%] sm:rounded",
-        xl: "left-1/2 top-[50%] max-h-[70vh] max-w-xl -translate-x-1/2 -translate-y-[60%] sm:rounded",
-        "2xl":
-          "left-1/2 top-[50%] max-h-[70vh] max-w-2xl -translate-x-1/2 -translate-y-[60%] sm:rounded",
-        "3xl":
-          "left-1/2 top-[50%] max-h-[70vh] max-w-3xl -translate-x-1/2 -translate-y-[60%] sm:rounded",
-        fullscreen: "inset-0 h-screen max-h-screen w-screen rounded-none",
+        xs: "max-h-[70vh] max-w-xs sm:rounded",
+        sm: "max-h-[70vh] max-w-sm sm:rounded",
+        md: "max-h-[70vh] max-w-md sm:rounded",
+        lg: "max-h-[70vh] max-w-lg sm:rounded",
+        xl: "max-h-[70vh] max-w-xl sm:rounded",
+        "2xl": "max-h-[70vh] max-w-2xl sm:rounded",
+        "3xl": "max-h-[70vh] max-w-3xl sm:rounded",
+        fullscreen: "h-screen w-screen rounded-none",
       },
     },
     defaultVariants: {
@@ -76,16 +78,17 @@ const ModalContent = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof DialogPrimitives.Content> &
     ModalContentProps
 >(({ className, size, ...props }, ref) => (
-  <Portal>
-    <DialogPrimitives.Backdrop className="bg-base-900 pointer-events-none fixed inset-0 z-50 block bg-opacity-0 transition-all duration-500 data-[state=open]:visible data-[state=closed]:invisible data-[state=open]:bg-opacity-50" />
-    <DialogPrimitives.Positioner>
+  <>
+    <DialogPrimitives.Backdrop className="duration-400 pointer-events-none fixed inset-0 z-50 block bg-neutral-800 bg-opacity-0 backdrop-blur-sm backdrop-brightness-50 transition-all data-[state=open]:visible data-[state=closed]:invisible data-[state=open]:bg-opacity-50" />
+
+    <DialogPrimitives.Positioner className="fixed left-0 top-0 z-50 flex h-screen w-screen items-center justify-center">
       <DialogPrimitives.Content
         ref={ref}
-        className={modalContentStyle({ size })}
+        className={modalContentStyle({ size, className })}
         {...props}
       />
     </DialogPrimitives.Positioner>
-  </Portal>
+  </>
 ));
 
 ModalContent.displayName = "ModalContent";
@@ -94,7 +97,7 @@ const ModalFooter = ({
   className,
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) => (
-  <div className="px-4 py-2.5" {...props} />
+  <div className="text-base-600 px-4 py-2.5" {...props} />
 );
 
 ModalFooter.displayName = "ModalFooter";

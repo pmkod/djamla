@@ -58,7 +58,7 @@ export const Searcher = () => {
   return (
     <Modal open={open} onOpenChange={({ open }) => setOpen(open)}>
       <ModalTrigger asChild>
-        <div className="">
+        <div>
           <div className="float-right md:hidden">
             <IconButton variant="ghost" colorScheme="black" size="sm">
               <IconSearch size={22} />
@@ -87,7 +87,7 @@ export const Searcher = () => {
           </ModalHeader>
         </div>
         <ModalBody>
-          <div className="pt-4">
+          <div className="w-full pt-4">
             {noResults ? (
               <div className="flex h-44 items-center justify-center">
                 <p className="text-base-500">No results</p>

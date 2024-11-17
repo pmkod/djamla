@@ -12,20 +12,20 @@ const AlertDialogContent = React.forwardRef<
   React.ElementRef<typeof DialogPrimitives.Content>,
   React.ComponentPropsWithoutRef<typeof DialogPrimitives.Content>
 >(({ className, ...props }, ref) => (
-  <Portal>
-    <DialogPrimitives.Backdrop className="bg-base-900 duration-400 pointer-events-none fixed inset-0 z-50 block bg-opacity-0 transition-all data-[state=open]:visible data-[state=closed]:invisible data-[state=open]:bg-opacity-50" />
+  <>
+    <DialogPrimitives.Backdrop className="duration-400 pointer-events-none fixed inset-0 z-50 block bg-neutral-800 bg-opacity-0 backdrop-blur-sm backdrop-brightness-50 transition-all data-[state=open]:visible data-[state=closed]:invisible data-[state=open]:bg-opacity-50" />
 
-    <DialogPrimitives.Positioner>
+    <DialogPrimitives.Positioner className="fixed left-0 top-0 z-50 flex h-screen w-screen items-center justify-center">
       <DialogPrimitives.Content
         ref={ref}
         className={
-          "bg-base-0 fixed left-[50%] top-[50%] z-50 grid w-96 max-w-lg translate-x-[-50%] gap-4 rounded p-6 shadow-lg transition-all duration-200 data-[state=open]:visible data-[state=closed]:invisible data-[state=closed]:translate-y-[-70%] data-[state=open]:translate-y-[-80%] data-[state=closed]:opacity-0 data-[state=open]:opacity-100 " +
+          "bg-base-0 data-[state=closed]:translate-0 grid w-96 max-w-lg gap-4 rounded p-6 shadow-lg transition-all duration-200 data-[state=open]:visible data-[state=closed]:invisible data-[state=open]:-translate-y-14 data-[state=closed]:opacity-0 data-[state=open]:opacity-100 " +
           className
         }
         {...props}
       />
     </DialogPrimitives.Positioner>
-  </Portal>
+  </>
 ));
 AlertDialogContent.displayName = DialogPrimitives.Content.displayName;
 
@@ -45,7 +45,7 @@ const AlertDialogFooter = ({
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) => (
   <div
-    className={"flex flex-col items-stretch gap-y-2" + className}
+    className={"flex flex-col items-stretch gap-y-2 " + className}
     {...props}
   />
 );
@@ -97,7 +97,9 @@ const AlertDialogCancel = React.forwardRef<
     className={className}
     {...props}
   >
-    <Button variant="outline">{children}</Button>
+    <Button variant="outline" colorScheme="black">
+      {children}
+    </Button>
   </DialogPrimitives.CloseTrigger>
 ));
 AlertDialogCancel.displayName = "AlertDialogCancel";

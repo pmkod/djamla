@@ -19,7 +19,7 @@ const AlertDialogContent = React.forwardRef<
       <DialogPrimitives.Content
         ref={ref}
         className={
-          "bg-base-0 w-96 fixed left-[50%] top-[50%] z-50 grid max-w-lg translate-x-[-50%] data-[state=open]:translate-y-[-80%] data-[state=closed]:translate-y-[-70%] gap-4 p-6 shadow-lg transition-all duration-200 data-[state=open]:visible data-[state=closed]:invisible data-[state=open]:opacity-100 data-[state=closed]:opacity-0 rounded " +
+          "bg-base-0 w-96 fixed left-1/2 top-1/2 z-50 grid max-w-lg translate-x-[-50%] data-[state=open]:translate-y-[-80%] data-[state=closed]:translate-y-[-70%] gap-4 p-6 shadow-lg transition-all duration-200 data-[state=open]:visible data-[state=closed]:invisible data-[state=open]:opacity-100 data-[state=closed]:opacity-0 rounded " +
           className
         }
         {...props}

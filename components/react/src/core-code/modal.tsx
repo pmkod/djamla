@@ -51,15 +51,15 @@ const modalContentStyle = cva(
   {
     variants: {
       size: {
-        xs: "left-1/2 top-[50%] max-h-[70vh] max-w-xs -translate-x-1/2 -translate-y-[60%] sm:rounded",
-        sm: "left-1/2 top-[50%] max-h-[70vh] max-w-sm -translate-x-1/2 -translate-y-[60%] sm:rounded",
-        md: "left-1/2 top-[50%] max-h-[70vh] max-w-md -translate-x-1/2 -translate-y-[60%] sm:rounded",
-        lg: "left-1/2 top-[50%] max-h-[70vh] max-w-lg -translate-x-1/2 -translate-y-[60%] sm:rounded",
-        xl: "left-1/2 top-[50%] max-h-[70vh] max-w-xl -translate-x-1/2 -translate-y-[60%] sm:rounded",
+        xs: "left-1/2 top-1/2 max-h-[70vh] max-w-xs -translate-x-1/2 -translate-y-[60%] sm:rounded",
+        sm: "left-1/2 top-1/2 max-h-[70vh] max-w-sm -translate-x-1/2 -translate-y-[60%] sm:rounded",
+        md: "left-1/2 top-1/2 max-h-[70vh] max-w-md -translate-x-1/2 -translate-y-[60%] sm:rounded",
+        lg: "left-1/2 top-1/2 max-h-[70vh] max-w-lg -translate-x-1/2 -translate-y-[60%] sm:rounded",
+        xl: "left-1/2 top-1/2 max-h-[70vh] max-w-xl -translate-x-1/2 -translate-y-[60%] sm:rounded",
         "2xl":
-          "left-1/2 top-[50%] max-h-[70vh] max-w-2xl -translate-x-1/2 -translate-y-[60%] sm:rounded",
+          "left-1/2 top-1/2 max-h-[70vh] max-w-2xl -translate-x-1/2 -translate-y-[60%] sm:rounded",
         "3xl":
-          "left-1/2 top-[50%] max-h-[70vh] max-w-3xl -translate-x-1/2 -translate-y-[60%] sm:rounded",
+          "left-1/2 top-1/2 max-h-[70vh] max-w-3xl -translate-x-1/2 -translate-y-[60%] sm:rounded",
         fullscreen: "inset-0 h-screen w-screen max-h-screen rounded-none",
       },
     },
