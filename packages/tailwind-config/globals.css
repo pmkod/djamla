@@ -34,18 +34,18 @@
 
 .dark {
   /* Base */
-  --color-base-0: 0 0 0;
-  --color-base-50: 3 7 18;
-  --color-base-100: 17 24 39;
-  --color-base-200: 31 41 55;
-  --color-base-300: 55 65 81;
-  --color-base-400: 75 85 99;
-  --color-base-500: 107 114 128;
-  --color-base-600: 156 163 175;
-  --color-base-700: 209 213 219;
-  --color-base-800: 229 231 235;
-  --color-base-900: 243 244 246;
-  --color-base-950: 249 250 251;
+  --color-base-0: 5 5 5;
+  --color-base-50: 10 10 10;
+  --color-base-100: 23 23 23;
+  --color-base-200: 38 38 38;
+  --color-base-300: 64 64 64;
+  --color-base-400: 82 82 82;
+  --color-base-500: 115 115 115;
+  --color-base-600: 163 163 163;
+  --color-base-700: 212 212 212;
+  --color-base-800: 229 229 229;
+  --color-base-900: 245 245 245;
+  --color-base-950: 250 250 250;
   --color-base-1000: 255 255 255;
 
   /* primary */

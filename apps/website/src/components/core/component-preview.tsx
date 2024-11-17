@@ -105,7 +105,7 @@ export const ComponentPreview = ({
         )}
       </div>
       {showRightPanel && (
-        <div className="border-l-base-300 text-base-700 space-y-4 border-t px-6 py-4 md:border-l md:border-t-0">
+        <div className="border-l-base-300 text-base-700 bg-base-100 space-y-4 border-t px-6 py-4 md:border-l md:border-t-0">
           {variants !== undefined && defaultVariant !== undefined && (
             <div>
               <div>Variant</div>
