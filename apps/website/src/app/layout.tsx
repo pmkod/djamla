@@ -1,4 +1,6 @@
 import { Metadata } from "next";
+import Script from "next/script";
+import Head from "next/head";
 import { Figtree } from "next/font/google";
 import { PropsWithChildren } from "react";
 import "@repo/tailwind-config/globals.css";
@@ -20,6 +22,13 @@ const figtree = Figtree({
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html lang="en" className={figtree.className}>
+      <Head>
+        <Script
+          defer
+          src="https://umami.djamla.com/script.js"
+          data-website-id="690cac2b-2ee7-41b5-aac4-21a1be5eab51"
+        />
+      </Head>
       <body className="bg-base-0">{children}</body>
     </html>
   );
