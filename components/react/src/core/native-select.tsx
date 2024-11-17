@@ -4,11 +4,11 @@ import { cva, VariantProps } from "class-variance-authority";
 import { forwardRef } from "react";
 
 const selectStyle = cva(
-  "w-full cursor-pointer rounded-sm px-2.5 text-base-800 focus:border-primary-500 disabled:cursor-not-allowed disabled:opacity-50 data-[invalid]:border-red-500 [&>option]:bg-base-0",
+  "text-base-800 focus:border-primary-500 [&>option]:bg-base-0 w-full cursor-pointer rounded-sm px-2.5 disabled:cursor-not-allowed disabled:opacity-50 data-[invalid]:border-red-500",
   {
     variants: {
       variant: {
-        outline: "border border-base-400 bg-transparent",
+        outline: "border-base-400 border bg-transparent",
         soft: "bg-base-100",
         plain: "bg-transparent",
       },
@@ -22,7 +22,7 @@ const selectStyle = cva(
       variant: "outline",
       size: "md",
     },
-  }
+  },
 );
 
 const NativeSelect = forwardRef<

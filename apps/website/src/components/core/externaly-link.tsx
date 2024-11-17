@@ -12,7 +12,7 @@ const ExternalLink = ({ href, children }: ExternalLinkProps) => {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="border-b border-base-500"
+      className="border-base-500 border-b"
     >
       {children}
     </Link>

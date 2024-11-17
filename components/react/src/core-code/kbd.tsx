@@ -66,4 +66,4 @@ const KbdSeparator = forwardRef<
 KbdSeparator.displayName = "KbdSeparator";
 
 export { KbdGroup, Kbd, KbdSeparator };
-`
+`;

@@ -113,4 +113,4 @@ const Badge = forwardRef<HTMLDivElement, BadgeProps>(
 );
 
 export { Badge, badgeStyle };
-`
+`;

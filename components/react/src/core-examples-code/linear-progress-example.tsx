@@ -3,4 +3,4 @@ export const linearProgressExampleCode = `import { LinearProgress } from "../cor
 export const LinearProgressExample = () => {
   return <LinearProgress size="md" value={70} />;
 };
-`
+`;

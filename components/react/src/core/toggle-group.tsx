@@ -8,12 +8,12 @@ import { cva, VariantProps } from "class-variance-authority";
 import { forwardRef } from "react";
 
 const toggleGroupStyle = cva(
-  "flex self-start bg-transparent rounded overflow-hidden",
+  "flex self-start overflow-hidden rounded bg-transparent",
   {
     variants: {
       variant: {
-        plain: "[&>*]:rounded gap-1",
-        outline: "border border-base-300 divide-base-300",
+        plain: "gap-1 [&>*]:rounded",
+        outline: "border-base-300 divide-base-300 border",
       },
       orientation: {
         vertical: "flex-col",
@@ -95,7 +95,7 @@ const toggleGroupStyle = cva(
       orientation: "horizontal",
       size: "md",
     },
-  }
+  },
 );
 const ToggleGroup = forwardRef<
   React.ElementRef<typeof ToggleGroupPrimitives.Root> &
@@ -105,7 +105,7 @@ const ToggleGroup = forwardRef<
 >(
   (
     { className, children, variant, orientation = "horizontal", ...props },
-    ref
+    ref,
   ) => (
     <ToggleGroupPrimitives.Root
       ref={ref}
@@ -114,7 +114,7 @@ const ToggleGroup = forwardRef<
     >
       {children}
     </ToggleGroupPrimitives.Root>
-  )
+  ),
 );
 
 const ToggleItem = forwardRef<
@@ -123,7 +123,7 @@ const ToggleItem = forwardRef<
 >(({ className, children, ...props }, ref) => (
   <ToggleGroupPrimitives.Item
     ref={ref}
-    className="data-[orientation=vertical]:w-full data-[orientation=horizontal]:h-full aspect-square focus-visible:ring-ring inline-flex items-center text-base-500 overflow-hidden justify-center text-sm font-medium transition-colors  focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-base-200 data-[state=off]:hover:bg-base-100"
+    className="focus-visible:ring-ring text-base-500 data-[state=on]:bg-base-200 data-[state=off]:hover:bg-base-100 inline-flex aspect-square items-center justify-center overflow-hidden text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[orientation=horizontal]:h-full data-[orientation=vertical]:w-full"
     {...props}
   >
     {children}

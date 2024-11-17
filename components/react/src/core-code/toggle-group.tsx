@@ -3,4 +3,4 @@ export const toggleGroupCode = `import { ToggleGroup as ToggleGroupPrimitives } 
 const ToggleGroup = ToggleGroupPrimitives.Root;
 
 export { ToggleGroup };
-`
+`;

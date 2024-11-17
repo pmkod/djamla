@@ -4,12 +4,12 @@ import { forwardRef } from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 
 const badgeStyle = cva(
-  "inline-flex items-center shrink-0 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",
+  "focus:ring-ring inline-flex shrink-0 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2",
   {
     variants: {
       variant: {
         solid: "text-white",
-        outline: "bg-transparent border border-base-300",
+        outline: "border-base-300 border bg-transparent",
         soft: "",
         plain: "bg-transparent",
       },
@@ -75,7 +75,7 @@ const badgeStyle = cva(
       {
         variant: "outline",
         colorScheme: "black",
-        className: " text-base-900",
+        className: "text-base-900",
       },
       {
         variant: "soft",
@@ -93,7 +93,7 @@ const badgeStyle = cva(
       colorScheme: "primary",
       size: "md",
     },
-  }
+  },
 );
 
 export interface BadgeProps
@@ -109,7 +109,7 @@ const Badge = forwardRef<HTMLDivElement, BadgeProps>(
         {...props}
       />
     );
-  }
+  },
 );
 
 export { Badge, badgeStyle };

@@ -47,7 +47,7 @@ const ModalBody = React.forwardRef<
 ModalBody.displayName = "ModalBody";
 
 const modalContentStyle = cva(
-  "duration-400 fixed z-50 flex w-full bg-base-0 flex-col shadow-md transition-all data-[state=closed]:invisible data-[state=closed]:opacity-0 data-[state=open]:opacity-100",
+  "duration-400 bg-base-0 fixed z-50 flex w-full flex-col shadow-md transition-all data-[state=closed]:invisible data-[state=closed]:opacity-0 data-[state=open]:opacity-100",
   {
     variants: {
       size: {
@@ -60,13 +60,13 @@ const modalContentStyle = cva(
           "left-1/2 top-[50%] max-h-[70vh] max-w-2xl -translate-x-1/2 -translate-y-[60%] sm:rounded",
         "3xl":
           "left-1/2 top-[50%] max-h-[70vh] max-w-3xl -translate-x-1/2 -translate-y-[60%] sm:rounded",
-        fullscreen: "inset-0 h-screen w-screen max-h-screen rounded-none",
+        fullscreen: "inset-0 h-screen max-h-screen w-screen rounded-none",
       },
     },
     defaultVariants: {
       size: "md",
     },
-  }
+  },
 );
 
 interface ModalContentProps extends VariantProps<typeof modalContentStyle> {}
@@ -77,7 +77,7 @@ const ModalContent = React.forwardRef<
     ModalContentProps
 >(({ className, size, ...props }, ref) => (
   <Portal>
-    <DialogPrimitives.Backdrop className="pointer-events-none fixed inset-0 z-50 block bg-base-900 bg-opacity-0 transition-all duration-500 data-[state=open]:visible data-[state=closed]:invisible data-[state=open]:bg-opacity-50" />
+    <DialogPrimitives.Backdrop className="bg-base-900 pointer-events-none fixed inset-0 z-50 block bg-opacity-0 transition-all duration-500 data-[state=open]:visible data-[state=closed]:invisible data-[state=open]:bg-opacity-50" />
     <DialogPrimitives.Positioner>
       <DialogPrimitives.Content
         ref={ref}
@@ -106,7 +106,7 @@ const ModalCloseButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
         {children || <IconX className="h-5 w-5" />}
       </IconButton>
     </DialogPrimitives.CloseTrigger>
-  )
+  ),
 );
 
 ModalCloseButton.displayName = "ModalCloseButton";

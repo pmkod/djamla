@@ -4,11 +4,11 @@ import { Field as FieldPrimitives } from "@ark-ui/react";
 import { cva, VariantProps } from "class-variance-authority";
 
 export const textareaStyle = cva(
-  "w-full resize-none rounded-sm px-2.5 py-1.5 text-base-800 outline-none focus:border-primary-500 disabled:cursor-not-allowed disabled:opacity-50 data-[invalid]:border-red-500",
+  "text-base-800 focus:border-primary-500 w-full resize-none rounded-sm px-2.5 py-1.5 outline-none disabled:cursor-not-allowed disabled:opacity-50 data-[invalid]:border-red-500",
   {
     variants: {
       variant: {
-        outline: "border border-base-400 bg-transparent",
+        outline: "border-base-400 border bg-transparent",
         soft: "bg-base-100",
         plain: "bg-transparent",
       },
@@ -25,7 +25,7 @@ export const textareaStyle = cva(
       variant: "outline",
       size: "md",
     },
-  }
+  },
 );
 
 export const Textarea = forwardRef<

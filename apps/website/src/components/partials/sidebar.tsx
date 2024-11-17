@@ -38,7 +38,7 @@ const SidebarGroup = ({ children }: PropsWithChildren) => {
 };
 
 const SidebarGroupTitle = ({ children }: PropsWithChildren) => {
-  return <div className="mb-2 font-medium text-base-800">{children}</div>;
+  return <div className="text-base-800 mb-2 font-medium">{children}</div>;
 };
 
 const SidebarGroupContent = ({ children }: PropsWithChildren) => {
@@ -56,7 +56,7 @@ const SidebarLink = ({ children, path }: SidebarLinkProps) => {
   return (
     <Link
       href={path}
-      className={`block py-px cursor-pointer text-base-600 transition-colors ${
+      className={`text-base-600 block cursor-pointer py-px transition-colors ${
         isCurrentPath ? "text-primary-500 font-semibold" : "hover:text-base-900"
       }`}
     >

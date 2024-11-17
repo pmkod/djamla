@@ -33,4 +33,4 @@ const QrCodeOverlay = forwardRef<
 QrCodeOverlay.displayName = "QrCodeOverlay";
 
 export { QrCode, QrCodeOverlay };
-`
+`;

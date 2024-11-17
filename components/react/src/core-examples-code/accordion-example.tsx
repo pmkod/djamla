@@ -38,4 +38,4 @@ export const AccordionExample = () => {
     </Accordion>
   );
 };
-`
+`;

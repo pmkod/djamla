@@ -18,11 +18,11 @@ export const Header = () => {
   };
   return (
     <>
-      <div className="sticky z-40 top-0 bg-base-0">
+      <div className="bg-base-0 sticky top-0 z-40">
         <Container>
-          <div className="flex justify-between items-center h-14">
+          <div className="flex h-14 items-center justify-between">
             <div className="flex items-center">
-              <button className="py-2 pr-2 lg:hidden mr-2" onClick={openDrawer}>
+              <button className="mr-2 py-2 pr-2 lg:hidden" onClick={openDrawer}>
                 <IconMenu2 className="text-base-800" />
               </button>
               <Link href="/">
@@ -30,19 +30,19 @@ export const Header = () => {
               </Link>
             </div>
 
-            <div className="flex justify-end items-center flex-1 ml-5">
-              <div className="hidden lg:flex items-center gap-x-1">
+            <div className="ml-5 flex flex-1 items-center justify-end">
+              <div className="hidden items-center gap-x-1 lg:flex">
                 {headerLinks.map(({ path, label }, index) => (
                   <Link
                     key={index}
                     href={path}
-                    className="px-1.5 py-0.5 rounded-sm font-medium border border-transparent text-base-600 hover:bg-base-100 hover:border-base-200 transition-colors"
+                    className="text-base-600 hover:bg-base-100 hover:border-base-200 rounded-sm border border-transparent px-1.5 py-0.5 font-medium transition-colors"
                   >
                     {label}
                   </Link>
                 ))}
               </div>
-              <div className="mr-3 sm:ml-5 flex-1 sm:flex-none sm:w-96">
+              <div className="mr-3 flex-1 sm:ml-5 sm:w-96 sm:flex-none">
                 <Searcher />
               </div>
               <div className="mr-2">
@@ -83,15 +83,15 @@ const Drawer = ({ open, setOpen }: DrawerProps) => {
   }, [pathname, hideDrawer]);
   return (
     <div
-      className={`fixed z-40 inset-0 bg-base-0 ${
+      className={`bg-base-0 fixed inset-0 z-40 ${
         open ? "visible" : "invisible"
       }`}
     >
       <Container>
-        <div className="flex flex-col h-screen">
-          <div className="flex items-center h-14">
+        <div className="flex h-screen flex-col">
+          <div className="flex h-14 items-center">
             <button
-              className="py-2 pr-2 mr-2 text-base-800"
+              className="text-base-800 mr-2 py-2 pr-2"
               onClick={hideDrawer}
             >
               <IconX />
@@ -107,7 +107,7 @@ const Drawer = ({ open, setOpen }: DrawerProps) => {
                 <Link
                   key={index}
                   href={path}
-                  className="block text-base-700"
+                  className="text-base-700 block"
                   onClick={hideDrawer}
                 >
                   {label}

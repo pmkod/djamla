@@ -6,11 +6,11 @@ import { Button } from "@repo/react-ui";
 export const HeroSection = () => {
   return (
     <Container>
-      <div className="min-h-[80vh] pb-8 flex flex-col items-center justify-center space-y-10">
-        <div className="max-w-4xl text-5xl md:text-7xl text-center text-base-800 font-bold">
+      <div className="flex min-h-[80vh] flex-col items-center justify-center space-y-10 pb-8">
+        <div className="text-base-800 max-w-4xl text-center text-5xl font-bold md:text-7xl">
           Make beautiful websites fast
         </div>
-        <div className="max-w-xl text-xl text-center text-base-600">
+        <div className="text-base-600 max-w-xl text-center text-xl">
           Simple, beautiful, powerful and customizable designed components that
           you can copy and paste into your code. <br /> Based on ark-ui and
           tailwindcss

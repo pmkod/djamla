@@ -7,7 +7,7 @@ import { cva, VariantProps } from "class-variance-authority";
 const Tabs = TabsPrimitive.Root;
 
 const tabListStyle = cva(
-  "relative flex h-10 items-center justify-start border-b border-b-base-300",
+  "border-b-base-300 relative flex h-10 items-center justify-start border-b",
   {
     variants: {
       size: {
@@ -19,7 +19,7 @@ const tabListStyle = cva(
     defaultVariants: {
       size: "md",
     },
-  }
+  },
 );
 
 const TabList = React.forwardRef<
@@ -47,13 +47,13 @@ const Tab = React.forwardRef<
     <TabsPrimitive.Trigger
       ref={ref}
       className={
-        "inline-flex flex-shrink-0 text-base-700 h-full items-center justify-center overflow-visible whitespace-nowrap px-3 text-sm font-medium transition-all hover:bg-base-200 disabled:pointer-events-none disabled:opacity-50 " +
+        "text-base-700 hover:bg-base-200 inline-flex h-full flex-shrink-0 items-center justify-center overflow-visible whitespace-nowrap px-3 text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 " +
         className
       }
       {...props}
     >
       {children}
-      <TabsPrimitive.Indicator className="w-[--width] h-0.5 left-0 bottom-0 bg-primary-600" />
+      <TabsPrimitive.Indicator className="bg-primary-600 bottom-0 left-0 h-0.5 w-[--width]" />
     </TabsPrimitive.Trigger>
   );
 });

@@ -77,4 +77,4 @@ DropzoneText.displayName = "DropzoneText";
 const DropzoneTrigger = FileUploadPrimitives.Trigger;
 
 export { Dropzone, DropzoneTrigger, DropzoneText };
-`
+`;

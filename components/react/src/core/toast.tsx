@@ -15,24 +15,24 @@ const toast = createToaster({
 });
 
 const toastStyle = cva(
-  ["block relative rounded px-5 py-3.5 shadow-xl", "max-w-96"],
+  ["relative block rounded px-5 py-3.5 shadow-xl", "max-w-96"],
   {
     variants: {
       type: {
         success: "bg-green-500 text-white",
-        info: "border border-base-200 bg-white",
+        info: "border-base-200 border bg-white",
         error: "bg-red-600 text-white",
       },
     },
     defaultVariants: {
       type: "info",
     },
-  }
+  },
 );
 
 const Toast = () => {
   return (
-    <Toaster toaster={toast} className="w-screen flex flex-col gap-y-4">
+    <Toaster toaster={toast} className="flex w-screen flex-col gap-y-4">
       {(toast) => {
         return (
           <ToastPrimitives.Root

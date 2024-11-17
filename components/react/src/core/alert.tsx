@@ -4,12 +4,12 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { ark } from "@ark-ui/react";
 
 const alertStyle = cva(
-  "relative flex gap-3 w-full shrink-0 rounded-sm px-4 py-3",
+  "relative flex w-full shrink-0 gap-3 rounded-sm px-4 py-3",
   {
     variants: {
       variant: {
         solid: "text-white",
-        outline: "border border-base-300",
+        outline: "border-base-300 border",
         soft: "",
         plain: "",
       },
@@ -90,7 +90,7 @@ const alertStyle = cva(
       {
         variant: "outline",
         colorScheme: "black",
-        className: " text-base-900",
+        className: "text-base-900",
       },
       {
         variant: "soft",
@@ -107,7 +107,7 @@ const alertStyle = cva(
       variant: "solid",
       colorScheme: "black",
     },
-  }
+  },
 );
 
 const Alert = forwardRef<

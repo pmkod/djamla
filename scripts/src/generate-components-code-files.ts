@@ -30,7 +30,7 @@ for (const uiDirPath of allUiLibDirPaths) {
   for (const componentDirName of componentDirs) {
     if (allComponentDirs.includes(componentDirName)) {
       const componentFiles = readdirSync(
-        path.join(uiDirPath, componentDirName)
+        path.join(uiDirPath, componentDirName),
       );
       const componentCodesDirName = componentDirName + "-code";
       const componentCodesDirPath = path.join(uiDirPath, componentCodesDirName);
@@ -44,13 +44,13 @@ for (const uiDirPath of allUiLibDirPaths) {
 
       for (const componentFileName of componentFiles) {
         const componentFileBuffer = readFileSync(
-          path.join(uiDirPath, componentDirName, componentFileName)
+          path.join(uiDirPath, componentDirName, componentFileName),
         );
 
         const componentCodeFilePath = path.join(
           uiDirPath,
           componentCodesDirName,
-          componentFileName
+          componentFileName,
         );
 
         try {
@@ -59,7 +59,7 @@ for (const uiDirPath of allUiLibDirPaths) {
 
         writeFileSync(
           componentCodeFilePath,
-          `export const ${toCamelCase(path.parse(componentFileName).name)}Code = \`${componentFileBuffer.toString().replaceAll("`", "\\`").replaceAll("$", "\\$")}\``
+          `export const ${toCamelCase(path.parse(componentFileName).name)}Code = \`${componentFileBuffer.toString().replaceAll("`", "\\`").replaceAll("$", "\\$")}\``,
         );
       }
     }

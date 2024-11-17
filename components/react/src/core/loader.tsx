@@ -23,7 +23,7 @@ const loaderStyle = cva(
       size: "md",
       colorScheme: "primary",
     },
-  }
+  },
 );
 
 interface LoaderProps
@@ -44,7 +44,7 @@ const Loader = forwardRef<HTMLDivElement, LoaderProps>(
         {...props}
       ></div>
     );
-  }
+  },
 );
 
 Loader.displayName = "Loader";

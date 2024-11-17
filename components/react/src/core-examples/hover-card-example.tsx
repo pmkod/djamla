@@ -13,7 +13,7 @@ export const HoverCardExample = () => {
         <Button variant="ghost">@nextjs</Button>
       </HoverCardTrigger>
       <HoverCardContent>
-        <div className="w-80 flex justify-between space-x-4">
+        <div className="flex w-80 justify-between space-x-4">
           <Avatar>
             <AvatarImage src="https://github.com/vercel.png" />
             <AvatarFallback>VC</AvatarFallback>
@@ -24,7 +24,7 @@ export const HoverCardExample = () => {
               The React Framework – created and maintained by @vercel.
             </p>
             <div className="flex items-center pt-2">
-              <span className="text-xs text-muted-foreground">
+              <span className="text-muted-foreground text-xs">
                 Joined December 2021
               </span>
             </div>

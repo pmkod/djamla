@@ -31,12 +31,12 @@ const TreeViewBranchControl = forwardRef<
   return (
     <TreeViewPrimitives.BranchControl
       ref={ref}
-      className="rounded pl-[calc(calc(var(--depth)_+_1)_*_16px)] transition-colors hover:bg-base-100"
+      className="hover:bg-base-100 rounded pl-[calc(calc(var(--depth)_+_1)_*_16px)] transition-colors"
       {...props}
     >
       <div className="flex h-9 -translate-x-6 items-center">
         <TreeViewPrimitives.BranchIndicator
-          className="mr-2 h-4 w-4 shrink-0 text-primary-600 transition-transform duration-200 data-[state=open]:rotate-90 data-[disabled]:opacity-40 data-[disabled]:hover:bg-transparent"
+          className="text-primary-600 mr-2 h-4 w-4 shrink-0 transition-transform duration-200 data-[state=open]:rotate-90 data-[disabled]:opacity-40 data-[disabled]:hover:bg-transparent"
           asChild
         >
           <IconChevronRight />
@@ -73,7 +73,7 @@ const TreeViewItem = forwardRef<
   return (
     <TreeViewPrimitives.Item
       ref={ref}
-      className="flex h-9 cursor-pointer items-center rounded pl-[calc(calc(var(--depth)_+_1)_*_16px)] transition-colors hover:bg-base-100 data-[disabled]:opacity-40 data-[disabled]:hover:bg-transparent"
+      className="hover:bg-base-100 flex h-9 cursor-pointer items-center rounded pl-[calc(calc(var(--depth)_+_1)_*_16px)] transition-colors data-[disabled]:opacity-40 data-[disabled]:hover:bg-transparent"
       {...props}
     >
       <div className="">

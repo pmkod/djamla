@@ -5,7 +5,7 @@ import "@repo/tailwind-config/globals.css";
 
 export const metadata: Metadata = {
   title: {
-    template: "%s | Djamla",
+    template: "%s - Djamla",
     default: "D",
   },
   description:

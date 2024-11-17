@@ -6,9 +6,9 @@ import { authorGithubProfileLink, githupRepoLink } from "@/constants/links";
 
 export const Footer = () => {
   return (
-    <footer className="bg-base-100 border-t border-t-base-300">
+    <footer className="bg-base-100 border-t-base-300 border-t">
       <Container>
-        <div className="pt-8 pb-12">
+        <div className="pb-12 pt-8">
           <div className="mb-4">
             <Logo />
           </div>

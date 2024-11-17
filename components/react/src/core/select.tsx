@@ -9,7 +9,7 @@ import { cva, VariantProps } from "class-variance-authority";
 import { IconCheck, IconChevronDown } from "@tabler/icons-react";
 
 const selectStyle = cva(
-  "relative flex w-full items-center justify-between rounded-sm border border-base-400 px-2.5 disabled:cursor-not-allowed disabled:opacity-50",
+  "border-base-400 relative flex w-full items-center justify-between rounded-sm border px-2.5 disabled:cursor-not-allowed disabled:opacity-50",
   {
     variants: {
       size: {
@@ -23,7 +23,7 @@ const selectStyle = cva(
     defaultVariants: {
       size: "md",
     },
-  }
+  },
 );
 
 const Select = forwardRef<
@@ -35,7 +35,7 @@ const Select = forwardRef<
   return (
     <SelectPrimitives.Root
       ref={ref}
-      className="w-full relative flex flex-col"
+      className="relative flex w-full flex-col"
       positioning={{ sameWidth: true }}
       {...props}
     >
@@ -53,7 +53,7 @@ const Select = forwardRef<
       </SelectPrimitives.Control>
 
       <SelectPrimitives.Positioner className="pointer-events-none">
-        <SelectPrimitives.Content className="flex flex-col h-max origin-top z-40 rounded-sm border border-base-300 bg-base-0 data-[state=open]:visible data-[state=closed]:invisible data-[state=open]:scale-100 data-[state=closed]:scale-95 data-[state=open]:opacity-100 data-[state=closed]:opacity-0 transition-all duration-300">
+        <SelectPrimitives.Content className="border-base-300 bg-base-0 z-40 flex h-max origin-top flex-col rounded-sm border transition-all duration-300 data-[state=open]:visible data-[state=closed]:invisible data-[state=closed]:scale-95 data-[state=open]:scale-100 data-[state=closed]:opacity-0 data-[state=open]:opacity-100">
           {children}
         </SelectPrimitives.Content>
       </SelectPrimitives.Positioner>
@@ -79,7 +79,7 @@ const SelectItemGroupLabel = forwardRef<
   React.ComponentPropsWithoutRef<typeof SelectPrimitives.ItemGroupLabel>
 >((props, ref) => (
   <SelectPrimitives.ItemGroupLabel
-    className="text-sm text-base-500"
+    className="text-base-500 text-sm"
     ref={ref}
     {...props}
   />
@@ -92,7 +92,7 @@ const SelectItem = forwardRef<
   React.ComponentPropsWithoutRef<typeof SelectPrimitives.Item>
 >(({ children, ...props }, ref) => (
   <SelectPrimitives.Item
-    className="w-full flex justify-between items-center hover:bg-base-200 transition-colors cursor-pointer px-2.5 py-2 text-sm text-base-700"
+    className="hover:bg-base-200 text-base-700 flex w-full cursor-pointer items-center justify-between px-2.5 py-2 text-sm transition-colors"
     ref={ref}
     {...props}
   >

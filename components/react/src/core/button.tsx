@@ -6,13 +6,13 @@ import { IconLoader2 } from "@tabler/icons-react";
 import { cva, type VariantProps } from "class-variance-authority";
 
 const buttonStyle = cva(
-  "relative inline-flex items-center overflow-hidden justify-center whitespace-nowrap font-semibold ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none",
+  "ring-offset-background focus-visible:ring-ring relative inline-flex items-center justify-center overflow-hidden whitespace-nowrap font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none",
   {
     variants: {
       variant: {
         solid: "",
-        outline: "bg-transparent hover:bg-base-100 border border-base-300",
-        ghost: "bg-transparent hover:bg-base-100",
+        outline: "hover:bg-base-100 border-base-300 border bg-transparent",
+        ghost: "hover:bg-base-100 bg-transparent",
       },
       colorScheme: {
         primary: "",
@@ -22,7 +22,7 @@ const buttonStyle = cva(
       size: {
         xs: "h-7 rounded-sm px-2.5 text-xs",
         sm: "h-9 rounded-sm px-3 text-sm",
-        md: "h-10 px-3.5 rounded-[3px] text-base",
+        md: "h-10 rounded-[3px] px-3.5 text-base",
         lg: "h-11 rounded px-5 text-lg",
         xl: "h-12 rounded px-8 text-lg",
       },
@@ -50,7 +50,7 @@ const buttonStyle = cva(
       {
         variant: "solid",
         colorScheme: "red",
-        className: "bg-red-500 hover:bg-red-600 text-white",
+        className: "bg-red-500 text-white hover:bg-red-600",
       },
       {
         variant: "outline",
@@ -71,7 +71,7 @@ const buttonStyle = cva(
       {
         variant: "outline",
         colorScheme: "black",
-        className: " text-base-900",
+        className: "text-base-900",
       },
       {
         variant: "ghost",
@@ -84,7 +84,7 @@ const buttonStyle = cva(
       size: "md",
       colorScheme: "primary",
     },
-  }
+  },
 );
 
 interface ButtonProps
@@ -105,7 +105,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       fullWidth,
       ...props
     },
-    ref
+    ref,
   ) => {
     if (isLoading) {
       props.disabled = true;
@@ -122,17 +122,17 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         ref={ref}
         {...props}
       >
-        <div className="size-full flex items-center justify-center cursor-pointer pb-px bg-inherit">
+        <div className="flex size-full cursor-pointer items-center justify-center bg-inherit pb-px">
           {children}
           {isLoading && (
             <div className="absolute inset-0 flex items-center justify-center bg-inherit">
-              <IconLoader2 className="h-1/2 aspect-square animate-spin" />
+              <IconLoader2 className="aspect-square h-1/2 animate-spin" />
             </div>
           )}
         </div>
       </ark.button>
     );
-  }
+  },
 );
 
 Button.displayName = "Button";

@@ -61,7 +61,7 @@ const SyntaxHighlighter = ({ children, language }: SyntaxHighlighterProps) => {
       >
         <button
           onClick={copyCode}
-          className="p-1.5 rounded border border-neutral-600 hover:bg-neutral-700 transition-colors"
+          className="rounded border border-neutral-600 p-1.5 transition-colors hover:bg-neutral-700"
         >
           {copied ? (
             <IconCheck size={18} className="text-neutral-300" />

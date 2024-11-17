@@ -57,15 +57,15 @@ export const Searcher = () => {
   return (
     <Modal open={open} onOpenChange={({ open }) => setOpen(open)}>
       <ModalTrigger asChild>
-        <div className="h-9 flex justify-between items-center pl-3 pr-1.5 bg-base-100 hover:bg-base-200 transition-colors border border-base-300 rounded-sm cursor-pointer">
-          <div className="text-sm font-medium text-base-400">Search</div>
+        <div className="bg-base-100 hover:bg-base-200 border-base-300 flex h-9 cursor-pointer items-center justify-between rounded-sm border pl-3 pr-1.5 transition-colors">
+          <div className="text-base-400 text-sm font-medium">Search</div>
           <div className="hidden sm:block">
             <Kbd size="md">Ctrl + k</Kbd>
           </div>
         </div>
       </ModalTrigger>
       <ModalContent size="lg">
-        <div className="border-b border-b-base-300">
+        <div className="border-b-base-300 border-b">
           <ModalHeader>
             <IconSearch size={22} className="text-base-500 ml-2" />
             <Input
@@ -81,7 +81,7 @@ export const Searcher = () => {
         <ModalBody>
           <div className="pt-4">
             {noResults ? (
-              <div className="h-44 flex items-center justify-center">
+              <div className="flex h-44 items-center justify-center">
                 <p className="text-base-500">No results</p>
               </div>
             ) : (
@@ -140,7 +140,7 @@ const useSearch = (q: string) => {
     .filter(
       ({ label, keywords }) =>
         label.toLowerCase().includes(q) ||
-        keywords.join("-").replaceAll(" ", "").toLowerCase().includes(q)
+        keywords.join("-").replaceAll(" ", "").toLowerCase().includes(q),
     )
     .map(({ path, label }) => ({
       path,
@@ -175,7 +175,7 @@ const SearchSuggestionGroup = ({
 
 const SearchSuggestionGroupLabel = ({ children }: PropsWithChildren) => {
   return (
-    <div className="px-3.5 mb-0.5 text-sm font-medium text-base-400">
+    <div className="text-base-400 mb-0.5 px-3.5 text-sm font-medium">
       {children}
     </div>
   );
@@ -200,7 +200,7 @@ const SearchSuggestionItem = ({
     <Link
       href={path}
       onClick={onClick}
-      className="flex items-center px-3 py-1 font-medium text-base-600 hover:bg-base-200 transition-colors rounded-sm"
+      className="text-base-600 hover:bg-base-200 flex items-center rounded-sm px-3 py-1 font-medium transition-colors"
     >
       <IconFile size={20} className="mr-3" />
       {label}

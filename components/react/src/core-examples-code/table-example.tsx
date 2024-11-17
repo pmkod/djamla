@@ -85,4 +85,4 @@ export const TableExample = () => {
     </Table>
   );
 };
-`
+`;

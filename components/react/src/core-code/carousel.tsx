@@ -142,4 +142,4 @@ export {
   CarouselIndicatorGroup,
   CarouselItem,
 };
-`
+`;

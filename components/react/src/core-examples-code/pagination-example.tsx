@@ -3,4 +3,4 @@ export const paginationExampleCode = `import { Pagination } from "../core/pagina
 export const PaginationExample = () => {
   return <Pagination defaultPage={1} count={500} pageSize={10} />;
 };
-`
+`;

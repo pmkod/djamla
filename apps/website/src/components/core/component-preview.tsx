@@ -86,7 +86,7 @@ export const ComponentPreview = ({
   const variantsCollenction = createListCollection({ items: variants || [] });
 
   return (
-    <div className="mt-8 mb-8 flex min-h-40 rounded border border-base-300">
+    <div className="border-base-300 mb-8 mt-8 flex min-h-40 rounded border">
       <div className="flex flex-1 items-center justify-center px-10 py-4">
         {Children.toArray(children).map((child) =>
           cloneElement(
@@ -100,12 +100,12 @@ export const ComponentPreview = ({
               fullWidth: _fullWidth,
               isLoading: _isLoading,
               disabled: _disabled,
-            })
-          )
+            }),
+          ),
         )}
       </div>
       {showRightPanel && (
-        <div className="space-y-4 border-l border-l-base-300 px-6 py-4 text-base-700">
+        <div className="border-l-base-300 text-base-700 space-y-4 border-l px-6 py-4">
           {variants !== undefined && defaultVariant !== undefined && (
             <div>
               <div>Variant</div>
@@ -209,7 +209,7 @@ export const ComponentPreview = ({
                       }
                     >
                       {colorScheme === cS && (
-                        <IconCheck className="h-4 w-4 text-base-0" />
+                        <IconCheck className="text-base-0 h-4 w-4" />
                       )}
                     </div>
                   ))}

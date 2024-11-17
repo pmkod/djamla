@@ -77,4 +77,4 @@ const TabContent = React.forwardRef<
 TabContent.displayName = "TabContent";
 
 export { Tabs, Tab, TabList, TabContent };
-`
+`;

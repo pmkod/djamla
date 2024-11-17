@@ -30,7 +30,7 @@ const IntroductionPage = () => {
         minimal effort and maximum customization.
       </DocText>
       <DocText level="titleTwo">Remerciements</DocText>
-      <ul className="list-disc list-inside pl-6 space-y-2 text-base-500">
+      <ul className="text-base-500 list-inside list-disc space-y-2 pl-6">
         <li>
           <ExternalLink href="https://tailwindcss.com">
             Tailwind CSS&nbsp;

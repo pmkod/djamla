@@ -1,5 +1,8 @@
+import Image from "next/image";
 import React from "react";
 
 export const Logo = () => {
-  return <div className="text-xl font-bold text-base-700">Djamla</div>;
+  return (
+    <Image src="/djamla-logo.png" alt="Djamla logo" width={100} height={40} />
+  );
 };

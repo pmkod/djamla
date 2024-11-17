@@ -27,7 +27,7 @@ const Pagination = forwardRef<
             page.type === "page" ? (
               <PaginationPrimitives.Item
                 key={index}
-                className={`${basePaginationButtonClassName} border border-base-300 data-[selected]:border-primary-600 data-[selected]:bg-primary-600 data-[selected]:text-white`}
+                className={`${basePaginationButtonClassName} border-base-300 data-[selected]:border-primary-600 data-[selected]:bg-primary-600 border data-[selected]:text-white`}
                 {...page}
               >
                 {page.value}
@@ -40,7 +40,7 @@ const Pagination = forwardRef<
               >
                 &#8230;
               </PaginationPrimitives.Ellipsis>
-            )
+            ),
           )
         }
       </PaginationPrimitives.Context>

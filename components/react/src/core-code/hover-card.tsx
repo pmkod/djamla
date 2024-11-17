@@ -27,4 +27,4 @@ const HoverCardContent = forwardRef<
 HoverCardContent.displayName = HoverCardPrimitives.Content.displayName;
 
 export { HoverCard, HoverCardTrigger, HoverCardContent };
-`
+`;

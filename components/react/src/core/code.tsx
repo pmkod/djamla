@@ -2,7 +2,7 @@ import { cva, VariantProps } from "class-variance-authority";
 import React, { forwardRef } from "react";
 
 export const codeStyle = cva(
-  "inline-flex items-center whitespace-pre rounded font-medium border border-base-300 bg-base-100 text-base-800",
+  "border-base-300 bg-base-100 text-base-800 inline-flex items-center whitespace-pre rounded border font-medium",
   {
     variants: {
       size: {
@@ -14,7 +14,7 @@ export const codeStyle = cva(
     defaultVariants: {
       size: "md",
     },
-  }
+  },
 );
 
 export interface CodeProps
@@ -38,7 +38,7 @@ export const Code = forwardRef<HTMLElement, CodeProps>(
         {children}
       </code>
     );
-  }
+  },
 );
 
 Code.displayName = "Code";

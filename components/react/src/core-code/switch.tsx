@@ -49,4 +49,4 @@ const Switch = forwardRef<
 Switch.displayName = "Switch";
 
 export { Switch };
-`
+`;

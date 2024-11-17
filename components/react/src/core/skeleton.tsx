@@ -1,7 +1,7 @@
 import { cva, VariantProps } from "class-variance-authority";
 import { forwardRef } from "react";
 
-const skeletonStyle = cva("animate-pulse bg-base-200", {
+const skeletonStyle = cva("bg-base-200 animate-pulse", {
   variants: {
     rounded: {
       xs: "rounded-sm",
@@ -41,7 +41,7 @@ const Skeleton = forwardRef<HTMLDivElement, SkeletonProps>(
         {...props}
       />
     );
-  }
+  },
 );
 
 Skeleton.displayName = "Skeleton";
