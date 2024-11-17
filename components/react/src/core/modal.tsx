@@ -80,7 +80,6 @@ const ModalContent = React.forwardRef<
 >(({ className, size, ...props }, ref) => (
   <>
     <DialogPrimitives.Backdrop className="duration-400 pointer-events-none fixed inset-0 z-50 block bg-neutral-800 bg-opacity-0 backdrop-blur-sm backdrop-brightness-50 transition-all data-[state=open]:visible data-[state=closed]:invisible data-[state=open]:bg-opacity-50" />
-
     <DialogPrimitives.Positioner className="fixed left-0 top-0 z-50 flex h-screen w-screen items-center justify-center">
       <DialogPrimitives.Content
         ref={ref}
