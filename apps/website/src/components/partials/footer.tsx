@@ -16,10 +16,6 @@ export const Footer = () => {
             A project create by{" "}
             <ExternalLink href={authorGithubProfileLink}>pmkod</ExternalLink>
           </p>
-          <p className="text-base-500">
-            The source code is available on{" "}
-            <ExternalLink href={githupRepoLink}>Github</ExternalLink>
-          </p>
         </div>
       </Container>
     </footer>
