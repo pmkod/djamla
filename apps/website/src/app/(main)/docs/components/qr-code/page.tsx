@@ -2,7 +2,7 @@ import React from "react";
 import { ComponentPreview } from "@/components/core/component-preview";
 import { DocText } from "@/components/core/doc-text";
 import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
-import { popoverCode, QrCodeExample, qrCodeExampleCode } from "@repo/react-ui";
+import { qrCodeCode, QrCodeExample, qrCodeExampleCode } from "@repo/react-ui";
 
 import { Metadata } from "next";
 
@@ -23,7 +23,7 @@ const QrCodePage = () => {
         <QrCodeExample />
       </ComponentPreview>
       <DocText level="titleTwo">Installation</DocText>
-      <SyntaxHighlighter language="typescript">{popoverCode}</SyntaxHighlighter>
+      <SyntaxHighlighter language="typescript">{qrCodeCode}</SyntaxHighlighter>
       <DocText level="titleTwo">Example</DocText>
       <ComponentPreview>
         <QrCodeExample />
