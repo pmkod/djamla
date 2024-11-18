@@ -26,4 +26,6 @@ export const sidebarGettingStartedLinks = [
 
 export const authorGithubProfileLink = "https://github.com/pmkod";
 
+export const authorTwitterProfileLink = "https://x.com/kodkod___";
+
 export const githupRepoLink = "https://github.com/pmkod/djamla";
