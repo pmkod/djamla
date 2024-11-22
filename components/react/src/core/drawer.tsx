@@ -57,14 +57,14 @@ DrawerTitle.displayName = "DrawerTitle";
 export const DrawerClose = DialogPrimitives.CloseTrigger;
 
 const drawerContentStyle = cva(
-  "bg-base-0 fixed z-50 flex flex-col p-4 transition-all duration-500 data-[state=open]:visible data-[state=closed]:invisible",
+  "bg-base-0 fixed z-[60] flex flex-col p-4 transition-all duration-500 data-[state=open]:visible data-[state=closed]:invisible",
   {
     variants: {
       side: {
         top: "left-0 right-0 top-0 max-h-[90%] min-h-96 data-[state=closed]:-translate-y-full data-[state=open]:translate-y-0",
-        left: "bottom-0 left-0 top-0 min-w-96 max-w-[90%] data-[state=closed]:-translate-x-full data-[state=open]:translate-x-0",
+        left: "max-w-screen bottom-0 left-0 top-0 min-w-96 data-[state=closed]:-translate-x-full data-[state=open]:translate-x-0",
         right:
-          "bottom-0 right-0 top-0 min-w-96 max-w-[90%] data-[state=closed]:translate-x-full data-[state=open]:translate-x-0",
+          "max-w-screen bottom-0 right-0 top-0 min-w-96 data-[state=closed]:translate-x-full data-[state=open]:translate-x-0",
         bottom:
           "bottom-0 left-0 right-0 max-h-[90%] min-h-96 data-[state=closed]:translate-y-full data-[state=open]:translate-y-0",
       },

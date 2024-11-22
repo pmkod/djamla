@@ -7,7 +7,7 @@ import "@repo/tailwind-config/globals.css";
 export const metadata: Metadata = {
   title: {
     template: "%s - Djamla",
-    default: "D",
+    default: "Djamla",
   },
   description:
     "Accessible and customizable components built on Ark UI. Free and Open Source.",

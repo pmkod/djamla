@@ -1,0 +1,21 @@
+{
+  "name": "@repo/vue-ui",
+  "private": true,
+  "type": "module",
+  "main": "./nuxt.config.ts",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@ark-ui/vue": "^4.4.1",
+    "@tabler/icons-vue": "^3.22.0",
+    "class-variance-authority": "^0.7.0",
+    "nuxt": "^3.14.159",
+    "vue": "latest",
+    "vue-router": "latest"
+  }
+}

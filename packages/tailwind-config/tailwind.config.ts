@@ -13,6 +13,9 @@ const config: Omit<Config, "content"> = {
   content: [
     "../../components/react/src/**/*.{js,ts,jsx,tsx,mdx}",
     "../../components/solid/src/**/*.{js,ts,jsx,tsx,mdx}",
+    "../../components/vue/src/**/*.{js,ts,jsx,tsx,mdx}",
+    "../../playgrounds/nuxt/**/*.{vue,js,ts}",
+    "../../playgrounds/solid-start/**/*.{js,ts,jsx,tsx,mdx}",
     "../../apps/website/src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {

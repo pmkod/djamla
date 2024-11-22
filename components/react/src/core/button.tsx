@@ -5,7 +5,7 @@ import { IconLoader2 } from "@tabler/icons-react";
 import { cva, type VariantProps } from "class-variance-authority";
 
 const buttonStyle = cva(
-  "ring-offset-background focus-visible:ring-ring relative inline-flex items-center justify-center overflow-hidden whitespace-nowrap font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2",
+  "focus-visible:ring-ring relative inline-flex items-center justify-center overflow-hidden whitespace-nowrap font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2",
   {
     variants: {
       variant: {
@@ -128,8 +128,8 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         {...props}
       >
         {isLoading ? (
-          <div>
-            <div className="absolute inset-0 flex items-center justify-center bg-inherit">
+          <div className="">
+            <div className="absolute inset-0 z-0 flex items-center justify-center bg-inherit">
               <IconLoader2 className="aspect-square h-1/2 animate-spin" />
             </div>
             <div className="opacity-0">{children}</div>

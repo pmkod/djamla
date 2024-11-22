@@ -125,6 +125,7 @@ const FormControl = forwardRef<
           : `${formDescriptionId} ${formMessageId}`
       }
       aria-invalid={!!error}
+      asChild
       {...props}
     />
   );

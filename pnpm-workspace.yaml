@@ -2,4 +2,5 @@ packages:
   - "apps/*"
   - "packages/*"
   - "components/*"
+  - "playgrounds/*"
   - "scripts"
