@@ -15,42 +15,37 @@ const toast = createToaster({
 });
 
 const toastStyle = cva(
-  [
-    "relative",
-    "translate-x-[--x] translate-y-[--y] rotate-0",
-    // "opacity-[--opacity]",
-    "data-[state=closed]:scale-75 data-[state=open]:scale-[--scale]",
-    "rounded px-5 py-3.5 shadow sm:w-96 transition-all transform duration-500",
-    "",
-  ],
+  ["relative block rounded px-5 py-3.5 shadow-xl", "max-w-96"],
   {
     variants: {
       type: {
         success: "bg-green-500 text-white",
-        info: "border border-base-200 bg-white",
+        info: "border-base-200 border bg-white",
         error: "bg-red-600 text-white",
       },
     },
     defaultVariants: {
       type: "info",
     },
-  }
+  },
 );
 
 const Toast = () => {
   return (
-    <Toaster toaster={toast} className="w-screen flex flex-col gap-y-4">
+    <Toaster toaster={toast} className="flex w-screen flex-col gap-y-4">
       {(toast) => {
         return (
           <ToastPrimitives.Root
             style={{
-              overflowWrap: "anywhere",
-              transitionProperty: "opacity",
               height: "var(--height)",
+              translate: "var(--x) var(--y) 0",
+              scale: "var(--scale)",
               zIndex: "var(--z-index)",
-              //   opacity: "var(--opacity)",
-              //   scale: "var(--scale)",
-              //   transform: "translate(var(--x), calc(var(--y) * 4))",
+              opacity: "var(--opacity)",
+              overflowWrap: "anywhere",
+              willChange: "translate, opacity, scale",
+              transitionProperty: "translate, scale, opacity, height",
+              transitionDuration: "300ms",
             }}
             className={toastStyle({
               type: toast.type as VariantProps<typeof toastStyle>["type"],
@@ -78,4 +73,4 @@ const Toast = () => {
 Toast.displayName = "Toast";
 
 export { Toast, toast };
-`;
+`

@@ -31,7 +31,7 @@ const RadioGroup = forwardRef<
 RadioGroup.displayName = "RadioGroup";
 
 const radioGroupItemStyle = cva(
-  "aspect-square rounded-full border border-base-400 p-0.5 transition-colors hover:bg-base-100",
+  "border-base-400 hover:bg-base-100 aspect-square rounded-full border p-0.5 transition-colors",
   {
     variants: {
       size: {
@@ -44,7 +44,7 @@ const radioGroupItemStyle = cva(
         true: "border-primary-400",
       },
     },
-  }
+  },
 );
 
 const radioGroupItemTextStyle = cva("text-base-900", {
@@ -100,4 +100,4 @@ const RadioGroupItem = forwardRef<
 RadioGroupItem.displayName = "RadioGroupItem";
 
 export { RadioGroup, RadioGroupItem };
-`;
+`

@@ -6,7 +6,7 @@ import { forwardRef } from "react";
 
 const defaultOrientation = "horizontal";
 
-const sliderTrackStyle = cva("overflow-hidden rounded-full bg-base-200", {
+const sliderTrackStyle = cva("bg-base-200 overflow-hidden rounded-full", {
   variants: {
     size: {
       sm: "",
@@ -85,7 +85,7 @@ const sliderRangeStyle = cva("bg-primary-500", {
 });
 
 const sliderThumbStyle = cva(
-  "cursor-pointer rounded-full border-[3px] border-primary-400 bg-white transition-colors hover:bg-base-100 disabled:pointer-events-none disabled:opacity-50",
+  "border-primary-400 cursor-pointer rounded-full border-[3px] bg-white transition-colors hover:bg-neutral-400 disabled:pointer-events-none disabled:opacity-50",
   {
     variants: {
       orientation: {
@@ -96,7 +96,7 @@ const sliderThumbStyle = cva(
     defaultVariants: {
       orientation: defaultOrientation,
     },
-  }
+  },
 );
 
 const Slider = forwardRef<
@@ -113,7 +113,7 @@ const Slider = forwardRef<
     {...props}
   >
     <SliderPrimitives.Control
-      className={\`flex items-center \${orientation === "horizontal" ? "w-full h-max" : "w-max h-full flex-col"}\`}
+      className={\`flex items-center \${orientation === "horizontal" ? "h-max w-full" : "h-full w-max flex-col"}\`}
     >
       <SliderPrimitives.Track
         className={sliderTrackStyle({ size, orientation })}
@@ -133,4 +133,4 @@ const Slider = forwardRef<
 Slider.displayName = "Slider";
 
 export { Slider };
-`;
+`

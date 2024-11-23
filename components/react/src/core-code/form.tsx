@@ -22,7 +22,7 @@ type FormFieldContextValue<
 };
 
 const FormFieldContext = createContext<FormFieldContextValue>(
-  {} as FormFieldContextValue
+  {} as FormFieldContextValue,
 );
 
 const FormField = <
@@ -68,7 +68,7 @@ type FormItemContextValue = {
 };
 
 const FormItemContext = createContext<FormItemContextValue>(
-  {} as FormItemContextValue
+  {} as FormItemContextValue,
 );
 
 const FormItem = forwardRef<
@@ -125,6 +125,7 @@ const FormControl = forwardRef<
           : \`\${formDescriptionId} \${formMessageId}\`
       }
       aria-invalid={!!error}
+      asChild
       {...props}
     />
   );
@@ -142,7 +143,7 @@ const FormFieldHelperText = forwardRef<
     <p
       ref={ref}
       id={formDescriptionId}
-      className={"text-sm leading-[1] text-base-500 " + className}
+      className={"text-base-500 text-sm leading-[1] " + className}
       {...props}
     />
   );
@@ -185,4 +186,4 @@ export {
   useFormField,
   FormFieldErrorMessage,
 };
-`;
+`

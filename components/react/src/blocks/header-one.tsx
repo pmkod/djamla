@@ -1,4 +1,4 @@
-import { IconMenu, IconMenu2 } from "@tabler/icons-react";
+import { IconMenu2 } from "@tabler/icons-react";
 import { Button } from "../core/button";
 import { IconButton } from "../core/icon-button";
 import {
@@ -7,8 +7,6 @@ import {
   DrawerCloseButton,
   DrawerContent,
   DrawerFooter,
-  DrawerHeader,
-  DrawerTitle,
   DrawerTrigger,
 } from "../core/drawer";
 
@@ -37,10 +35,10 @@ const headerLinks = [
 
 const HeaderOne = () => {
   return (
-    <header className="sticky left-0 right-0 top-0 z-50 mx-auto flex h-16 max-w-[1366px] items-center bg-white px-6">
+    <header className="bg-base-0 sticky left-0 right-0 top-0 z-50 mx-auto flex h-16 max-w-[1366px] items-center px-6">
       <DrawerMenu />
-      <a href="#" className="text-2xl font-bold">
-        Logo
+      <a href="#">
+        <Logo />
       </a>
 
       <div className="flex-1">
@@ -80,8 +78,8 @@ const DrawerMenu = () => {
           <div className="flex h-max gap-x-4 px-2">
             <DrawerCloseButton />
 
-            <a href="#" className="text-2xl font-bold">
-              Logo
+            <a href="#">
+              <Logo />
             </a>
           </div>
           <DrawerBody>
@@ -109,6 +107,10 @@ const DrawerMenu = () => {
       </Drawer>
     </div>
   );
+};
+
+const Logo = () => {
+  return <span className="text-base-800 text-2xl font-bold">Logo</span>;
 };
 
 export { HeaderOne };

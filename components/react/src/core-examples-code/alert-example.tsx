@@ -24,4 +24,4 @@ export const AlertExample = () => {
     </Alert>
   );
 };
-`;
+`

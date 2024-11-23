@@ -42,7 +42,7 @@ export const FormExample = () => {
                 <FormItem>
                   <FormLabel>Email</FormLabel>
                   <FormControl>
-                    <Input placeholder="kod" {...field} />
+                    <Input {...field} />
                   </FormControl>
                   <FormFieldHelperText>
                     This is your public display name.
@@ -58,7 +58,7 @@ export const FormExample = () => {
                 <FormItem>
                   <FormLabel>Password</FormLabel>
                   <FormControl>
-                    <Input type="password" placeholder="kod" {...field} />
+                    <Input type="password" {...field} />
                   </FormControl>
                   <FormFieldErrorMessage />
                 </FormItem>
@@ -74,4 +74,4 @@ export const FormExample = () => {
     </div>
   );
 };
-`;
+`

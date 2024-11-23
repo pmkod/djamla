@@ -4,7 +4,7 @@ import { Avatar as AvatarPrimitives } from "@ark-ui/react";
 import { cva, VariantProps } from "class-variance-authority";
 
 const avatarStyle = cva(
-  "relative flex shrink-0 overflow-hidden rounded-full bg-base-200",
+  "bg-base-200 relative flex shrink-0 overflow-hidden rounded-full",
   {
     variants: {
       size: {
@@ -18,7 +18,7 @@ const avatarStyle = cva(
     defaultVariants: {
       size: "md",
     },
-  }
+  },
 );
 
 const Avatar = forwardRef<
@@ -40,7 +40,7 @@ const AvatarImage = forwardRef<
 >(({ className, ...props }, ref) => (
   <AvatarPrimitives.Image
     ref={ref}
-    className={"aspect-square h-full w-full bg-base-200 " + className}
+    className={"bg-base-200 aspect-square h-full w-full " + className}
     {...props}
   />
 ));
@@ -53,7 +53,7 @@ const AvatarFallback = forwardRef<
   <AvatarPrimitives.Fallback
     ref={ref}
     className={
-      "flex h-full w-full items-center justify-center rounded-full bg-base-200 text-[length:inherit] font-normal text-base-400 " +
+      "bg-base-200 text-base-400 flex h-full w-full items-center justify-center rounded-full text-[length:inherit] font-normal " +
       className
     }
     {...props}
@@ -62,4 +62,4 @@ const AvatarFallback = forwardRef<
 AvatarFallback.displayName = AvatarPrimitives.Fallback.displayName;
 
 export { Avatar, AvatarImage, AvatarFallback };
-`;
+`

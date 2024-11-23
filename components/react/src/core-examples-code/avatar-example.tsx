@@ -7,4 +7,4 @@ export const AvatarExample = () => {
     </Avatar>
   );
 };
-`;
+`

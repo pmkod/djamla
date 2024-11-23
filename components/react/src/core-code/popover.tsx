@@ -25,7 +25,7 @@ const PopoverContent = forwardRef<
       <PopoverPrimitives.Content
         ref={ref}
         className={
-          "z-50 block w-72 rounded border border-base-300 bg-base-0 px-4 py-3 shadow-sm outline-none transition-all duration-200 data-[state=open]:visible data-[state=closed]:invisible data-[state=closed]:scale-95 data-[state=open]:scale-100 data-[state=closed]:opacity-0 data-[state=open]:opacity-100 " +
+          "border-base-300 bg-base-0 z-50 block w-72 rounded border px-4 py-3 shadow-sm outline-none transition-all duration-200 data-[state=open]:visible data-[state=closed]:invisible data-[state=closed]:scale-95 data-[state=open]:scale-100 data-[state=closed]:opacity-0 data-[state=open]:opacity-100 " +
           className
         }
         {...props}
@@ -57,7 +57,7 @@ const PopoverDescription = forwardRef<
 >((props, ref) => (
   <PopoverPrimitives.Description
     ref={ref}
-    className="text-sm font-normal text-base-600"
+    className="text-base-600 text-sm font-normal"
     {...props}
   />
 ));
@@ -73,7 +73,7 @@ const PopoverHeader = forwardRef<HTMLDivElement, PopoverHeaderProps>(
     <div ref={ref} className="mb-0.5 flex items-center justify-between">
       {children}
     </div>
-  )
+  ),
 );
 
 PopoverHeader.displayName = "PopoverHeader";
@@ -84,7 +84,7 @@ const PopoverCloseButton = forwardRef<
 >(({ children, ...props }, ref) => (
   <PopoverPrimitives.CloseTrigger
     ref={ref}
-    className="flex h-6 w-6 items-center justify-center hover:bg-base-100"
+    className="hover:bg-base-100 flex h-6 w-6 items-center justify-center"
     {...props}
   >
     <IconX className="h-4 w-4" />
@@ -102,4 +102,4 @@ export {
   PopoverCloseButton,
   PopoverTrigger,
 };
-`;
+`

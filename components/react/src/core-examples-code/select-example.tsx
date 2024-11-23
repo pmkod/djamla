@@ -1,4 +1,5 @@
-export const selectExampleCode = `import { Select, SelectItem, SelectItemGroup } from "../core/select";
+export const selectExampleCode = `"use client";
+import { Select, SelectItem, SelectItemGroup } from "../core/select";
 import { createListCollection } from "@ark-ui/react";
 
 export const SelectExample = () => {
@@ -15,4 +16,4 @@ export const SelectExample = () => {
     </Select>
   );
 };
-`;
+`

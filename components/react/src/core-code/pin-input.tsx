@@ -18,7 +18,7 @@ const PinInput = forwardRef<
             <PinInputPrimitives.Input
               key={index}
               index={index}
-              className="h-16 w-12 rounded border border-base-300 text-center text-xl outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 placeholder:focus:opacity-0 data-[disabled]:opacity-50 bg-transparent"
+              className="border-base-300 text-base-800 focus:border-primary-500 focus:ring-primary-500 h-16 w-12 rounded border bg-transparent text-center text-xl outline-none focus:ring-1 placeholder:focus:opacity-0 data-[disabled]:opacity-50"
               placeholder="_"
             />
           ))}
@@ -31,4 +31,4 @@ const PinInput = forwardRef<
 PinInput.displayName = "PinInput";
 
 export { PinInput };
-`;
+`

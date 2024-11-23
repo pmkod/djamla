@@ -21,8 +21,13 @@ const toCamelCase = (str: string): string => {
 
 const coreComponentsDirName = "core";
 const coreExampleComponentsDirName = "core-examples";
+const blockComponentsDirName = "blocks";
 
-const allComponentDirs = [coreComponentsDirName, coreExampleComponentsDirName];
+const allComponentDirs = [
+  coreComponentsDirName,
+  coreExampleComponentsDirName,
+  blockComponentsDirName,
+];
 
 const allUiLibDirPaths = [reactUiDirPath];
 for (const uiDirPath of allUiLibDirPaths) {

@@ -28,7 +28,7 @@ const AccordionItemSummary = forwardRef<
 >(({ className, children, ...props }, ref) => (
   <AccordionPrimitives.ItemTrigger
     ref={ref}
-    className="inline-flex w-full items-center justify-between text-base-800 px-4 py-2.5 font-medium transition-all hover:bg-base-100 disabled:opacity-40 disabled:hover:bg-transparent [&[data-state=open]>svg]:rotate-180"
+    className="text-base-800 hover:bg-base-100 inline-flex w-full items-center justify-between px-4 py-2.5 font-medium transition-all disabled:opacity-40 disabled:hover:bg-transparent [&[data-state=open]>svg]:rotate-180"
     {...props}
   >
     {children}
@@ -46,7 +46,7 @@ const AccordionItemDetails = forwardRef<
 >(({ className, children, ...props }, ref) => (
   <AccordionPrimitives.ItemContent
     ref={ref}
-    className="grid overflow-hidden text-sm transition-all text-base-500 duration-300 ease-in-out data-[state=closed]:grid-rows-[0fr] data-[state=open]:grid-rows-[1fr]"
+    className="text-base-500 grid overflow-hidden text-sm transition-all duration-300 ease-in-out data-[state=closed]:grid-rows-[0fr] data-[state=open]:grid-rows-[1fr]"
     {...props}
   >
     <div className="overflow-hidden">
@@ -58,4 +58,4 @@ const AccordionItemDetails = forwardRef<
 AccordionItemDetails.displayName = "AccordionItemDetails";
 
 export { Accordion, AccordionItem, AccordionItemSummary, AccordionItemDetails };
-`;
+`

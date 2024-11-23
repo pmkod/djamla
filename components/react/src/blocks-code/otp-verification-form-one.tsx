@@ -1,5 +1,4 @@
-"use client";
-import { Button } from "../core/button";
+export const otpVerificationFormOneCode = `"use client";
 import { Form } from "../core/form";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
@@ -9,18 +8,18 @@ import { PinInputValueChangeDetails } from "@ark-ui/react";
 
 const otpLength = 6;
 
-const userVerificationFormSchema = z.object({
+const otpVerificationFormSchema = z.object({
   otp: z.string().length(otpLength),
 });
 
-const UserVerificationFormOne = () => {
-  const form = useForm<z.infer<typeof userVerificationFormSchema>>({
-    resolver: zodResolver(userVerificationFormSchema),
+const OtpVerificationFormOne = () => {
+  const form = useForm<z.infer<typeof otpVerificationFormSchema>>({
+    resolver: zodResolver(otpVerificationFormSchema),
     defaultValues: {
       otp: "",
     },
   });
-  const onSubmit = (values: z.infer<typeof userVerificationFormSchema>) => {
+  const onSubmit = (values: z.infer<typeof otpVerificationFormSchema>) => {
     console.log(values);
   };
   const handleValueComplete = ({
@@ -35,7 +34,7 @@ const UserVerificationFormOne = () => {
           onSubmit={form.handleSubmit(onSubmit)}
           className="border-base-300 w-max max-w-full rounded-sm sm:border sm:px-10 sm:pb-12 sm:pt-8"
         >
-          <div className="mb-0.5 text-3xl font-semibold">User verification</div>
+          <div className="mb-0.5 text-3xl font-semibold">Otp verification</div>
           <p className="text-base-500">Enter the code you received</p>
           <div className="mt-7">
             <PinInput
@@ -55,4 +54,5 @@ const UserVerificationFormOne = () => {
   );
 };
 
-export { UserVerificationFormOne };
+export { OtpVerificationFormOne };
+`

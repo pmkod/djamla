@@ -2,17 +2,18 @@ import { PropsWithChildren } from "react";
 
 const FooterOne = () => {
   return (
-    <footer>
+    <footer className="bg-base-50 border-base-200 border-t">
       <div className="mx-auto max-w-screen-xl space-y-8 px-6 py-16 lg:space-y-16">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           <div>
-            <a href="#" className="text-primary-500 text-2xl font-bold">
+            <a href="#" className="text-primary-800 text-2xl font-bold">
               Logo
             </a>
 
             <p className="mt-4 max-w-xs text-gray-500">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse non
-              cupiditate quae nam molestias.
+              cupiditate quae nam molestias. Take on hyperui, a tailwindcss
+              components collecion
             </p>
 
             <ul className="mt-8 flex gap-6">
@@ -192,7 +193,7 @@ const FooterOne = () => {
         </div>
 
         <p className="text-xs text-gray-500">
-          &copy; 2024. Company Name. All rights reserved.
+          &copy; {new Date().getFullYear()}. Company Name. All rights reserved.
         </p>
       </div>
     </footer>

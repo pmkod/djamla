@@ -1,4 +1,5 @@
-export const toastExampleCode = `import { Button } from "../core/button";
+export const toastExampleCode = `"use client";
+import { Button } from "../core/button";
 import { toast, Toast } from "../core/toast";
 
 export const ToastExample = () => {
@@ -6,7 +7,7 @@ export const ToastExample = () => {
     toast.create({
       title: "Toast title",
       description:
-        "Toast description znkmalznrkg amrgklnrmakgnzrmgnergn oern m!l",
+        "Toast description znkmalznrkg amrgklnrmakgnzrmgnergn oern qz pfnz zrogn rgqozrlgnqzrùngqzrgùqzrgqzrùkg m!l",
       type: "success",
     });
   };
@@ -22,4 +23,4 @@ export const ToastExample = () => {
     </div>
   );
 };
-`;
+`

@@ -5,13 +5,13 @@ import { cva, VariantProps } from "class-variance-authority";
 import React, { ComponentPropsWithoutRef, forwardRef } from "react";
 
 const iconButtonStyle = cva(
-  "relative ring-offset-background focus-visible:ring-ring inline-flex aspect-square items-center justify-center whitespace-nowrap disabled:opacity-50 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none overflow-hidden",
+  "ring-offset-background focus-visible:ring-ring relative inline-flex aspect-square items-center justify-center overflow-hidden whitespace-nowrap transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2",
   {
     variants: {
       variant: {
         solid: "",
-        outline: "border border-base-300 bg-transparent hover:bg-base-100",
-        ghost: "bg-transparent hover:bg-base-100",
+        outline: "border-base-300 hover:bg-base-100 border bg-transparent",
+        ghost: "hover:bg-base-100 bg-transparent",
         plain: "",
       },
       colorScheme: {
@@ -26,11 +26,12 @@ const iconButtonStyle = cva(
         lg: "h-11 rounded",
         xl: "h-12 rounded",
       },
-      disabled: {
-        true: "opacity-50",
-      },
       fullWidth: {
         true: "w-full",
+      },
+
+      disabled: {
+        true: "pointer-events-none opacity-50",
       },
     },
     compoundVariants: [
@@ -57,7 +58,7 @@ const iconButtonStyle = cva(
       {
         variant: "solid",
         colorScheme: "red",
-        className: "bg-red-500 hover:bg-red-600 text-white",
+        className: "bg-red-500 text-white hover:bg-red-600",
       },
       {
         variant: "outline",
@@ -72,7 +73,7 @@ const iconButtonStyle = cva(
       {
         variant: "plain",
         colorScheme: "red",
-        className: "text-red-500 hover:bg-base-100",
+        className: "hover:bg-base-100 text-red-500",
       },
       {
         variant: "solid",
@@ -101,7 +102,7 @@ const iconButtonStyle = cva(
       size: "md",
       fullWidth: false,
     },
-  }
+  },
 );
 
 interface IconButtonProps
@@ -119,12 +120,13 @@ export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
       children,
       fullWidth,
       isLoading,
+      disabled,
       ...props
     }: IconButtonProps,
-    ref
+    ref,
   ) => {
     if (isLoading) {
-      props.disabled = true;
+      disabled = true;
     }
     return (
       <ark.button
@@ -133,21 +135,26 @@ export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
           variant,
           colorScheme,
           fullWidth,
+          disabled,
         })}
-        {...props}
         ref={ref}
+        disabled={disabled}
+        {...props}
       >
-        {children}
-
-        {isLoading && (
-          <div className="absolute inset-0 flex items-center justify-center bg-inherit">
-            <IconLoader2 className="h-1/2 aspect-square animate-spin" />
+        {isLoading ? (
+          <div>
+            <div className="absolute inset-0 flex items-center justify-center bg-inherit">
+              <IconLoader2 className="aspect-square h-1/2 animate-spin" />
+            </div>
+            <div className="opacity-0">{children}</div>
           </div>
+        ) : (
+          children
         )}
       </ark.button>
     );
-  }
+  },
 );
 
 IconButton.displayName = "IconButton";
-`;
+`

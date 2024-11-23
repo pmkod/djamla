@@ -2,7 +2,7 @@ import { Button } from "../core/button";
 
 const HeroSectionOne = () => (
   <div className="mx-auto max-w-screen-xl">
-    <div className="flex min-h-[90vh] flex-col items-center justify-center space-y-10 px-7 pb-8">
+    <div className="flex min-h-[84vh] flex-col items-center justify-center space-y-10 px-7 pb-8">
       <h1 className="text-base-800 max-w-4xl text-center text-5xl font-bold md:text-7xl">
         Make beautiful <br /> websites fast
       </h1>

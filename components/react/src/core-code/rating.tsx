@@ -13,7 +13,7 @@ const ratingStarStyle = cva("cursor-pointer outline-none transition-colors", {
       lg: "size-7",
     },
     highlighted: {
-      true: "opacity-100 fill-amber-400",
+      true: "fill-amber-400 opacity-100",
       false: "fill-base-200",
     },
   },
@@ -53,4 +53,4 @@ const Rating = forwardRef<
 ));
 
 export { Rating };
-`;
+`

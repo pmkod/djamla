@@ -1,9 +1,10 @@
-export const switchCode = `import React, { forwardRef } from "react";
+export const switchCode = `"use client";
+import React, { forwardRef } from "react";
 import { Switch as SwitchPrimitives } from "@ark-ui/react";
 import { cva, VariantProps } from "class-variance-authority";
 
 const switchControlStyle = cva(
-  "inline-flex aspect-[2/1] cursor-pointer items-center rounded-full bg-base-300 p-1 data-[disabled]:cursor-default data-[disabled]:opacity-50",
+  "bg-base-300 inline-flex aspect-[2/1] cursor-pointer items-center rounded-full p-1 data-[disabled]:cursor-default data-[disabled]:opacity-50",
   {
     variants: {
       size: {
@@ -22,7 +23,7 @@ const switchControlStyle = cva(
       size: "md",
       colorScheme: "primary",
     },
-  }
+  },
 );
 
 const Switch = forwardRef<
@@ -49,4 +50,4 @@ const Switch = forwardRef<
 Switch.displayName = "Switch";
 
 export { Switch };
-`;
+`

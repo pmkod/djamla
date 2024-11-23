@@ -7,6 +7,10 @@ export const headerLinks = [
     path: "/docs/components/accordion",
     label: "Components",
   },
+  {
+    path: "/blocks",
+    label: "Blocks",
+  },
 ];
 
 export const sidebarGettingStartedLinks = [

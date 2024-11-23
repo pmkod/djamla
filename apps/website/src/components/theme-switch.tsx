@@ -3,16 +3,11 @@ import React, { useEffect } from "react";
 import { useLocalStorage } from "@mantine/hooks";
 import { IconButton } from "@repo/react-ui";
 import { IconMoon, IconSun } from "@tabler/icons-react";
-
-const themeKey = "theme";
-
-const lightThemeName = "light";
-const darkThemeName = "dark";
+import { useTheme } from "@/hooks/use-theme";
+import { darkThemeName, lightThemeName } from "@/constants/themes";
 
 const ThemeSwitch = () => {
-  const [theme, setTheme] = useLocalStorage({
-    key: themeKey,
-  });
+  const { theme, setTheme } = useTheme();
 
   const changeTheme = () => {
     if (theme === lightThemeName) {

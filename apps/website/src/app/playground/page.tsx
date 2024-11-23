@@ -7,7 +7,7 @@ import {
   NewPasswordFormOne,
   PasswordResetFormOne,
   SignupFormOne,
-  UserVerificationFormOne,
+  OtpVerificationFormOne,
 } from "@repo/react-ui";
 import React from "react";
 
@@ -20,7 +20,7 @@ const PlaygroundPage = () => {
       <SignupFormOne />
       <PasswordResetFormOne />
       <NewPasswordFormOne />
-      <UserVerificationFormOne />
+      <OtpVerificationFormOne />
       <BottomNavOne />
       <FooterOne />
     </>

@@ -239,19 +239,28 @@ export * from "./core-examples/tree-view-example";
 export * from "./core-examples-code/tree-view-example";
 
 export * from "./blocks/header-one";
+export * from "./blocks-code/header-one";
 
 export * from "./blocks/footer-one";
+export * from "./blocks-code/footer-one";
 
 export * from "./blocks/hero-section-one";
+export * from "./blocks-code/hero-section-one";
 
 export * from "./blocks/login-form-one";
+export * from "./blocks-code/login-form-one";
 
 export * from "./blocks/signup-form-one";
+export * from "./blocks-code/signup-form-one";
 
 export * from "./blocks/password-reset-form-one";
+export * from "./blocks-code/password-reset-form-one";
 
 export * from "./blocks/new-password-form-one";
+export * from "./blocks-code/new-password-form-one";
 
-export * from "./blocks/user-verification-form-one";
+export * from "./blocks/otp-verification-form-one";
+export * from "./blocks-code/otp-verification-form-one";
 
 export * from "./blocks/bottom-nav-one";
+export * from "./blocks-code/bottom-nav-one";

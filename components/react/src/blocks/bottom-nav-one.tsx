@@ -1,5 +1,5 @@
 import { IconBell, IconHome2, IconSearch, IconUser } from "@tabler/icons-react";
-import React, { PropsWithChildren, ReactNode } from "react";
+import { PropsWithChildren, ReactNode } from "react";
 
 const bottomNavLinks = [
   {

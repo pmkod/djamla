@@ -3,7 +3,7 @@ import { Toggle } from "../core/toggle";
 
 export const ToggleGroupExample = () => {
   return (
-    <ToggleGroup multiple>
+    <ToggleGroup multiple orientation="horizontal">
       <Toggle value="a" size="xl" variant="outline">
         A
       </Toggle>
@@ -16,4 +16,4 @@ export const ToggleGroupExample = () => {
     </ToggleGroup>
   );
 };
-`;
+`

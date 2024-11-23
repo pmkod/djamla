@@ -2,7 +2,7 @@ export const kbdCode = `import { cva, VariantProps } from "class-variance-author
 import React, { forwardRef, HtmlHTMLAttributes } from "react";
 
 const kbdStyle = cva(
-  "inline-flex items-center text-base-800 whitespace-pre rounded border border-b-2 border-base-300 bg-base-50 font-medium",
+  "text-base-800 border-base-300 bg-base-50 inline-flex items-center whitespace-pre rounded border border-b-2 font-medium",
   {
     variants: {
       size: {
@@ -14,7 +14,7 @@ const kbdStyle = cva(
     defaultVariants: {
       size: "md",
     },
-  }
+  },
 );
 
 interface KbdProps
@@ -31,7 +31,7 @@ const Kbd = forwardRef<HTMLElement, KbdProps>(
         {children}
       </kbd>
     );
-  }
+  },
 );
 
 Kbd.displayName = "Kbd";
@@ -47,7 +47,7 @@ const KbdGroup = forwardRef<HTMLDivElement, HtmlHTMLAttributes<HTMLDivElement>>(
         {children}
       </div>
     );
-  }
+  },
 );
 
 KbdGroup.displayName = "KbdGroup";
@@ -66,4 +66,4 @@ const KbdSeparator = forwardRef<
 KbdSeparator.displayName = "KbdSeparator";
 
 export { KbdGroup, Kbd, KbdSeparator };
-`;
+`

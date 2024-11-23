@@ -13,14 +13,7 @@ import {
 } from "../core/form";
 import { Input } from "../core/input";
 import { Button } from "../core/button";
-import {
-  IconBrandGithub,
-  IconBrandGithubCopilot,
-  IconBrandGithubFilled,
-  IconBrandGoogle,
-  IconBrandGoogleFilled,
-  IconBrandGoogleFit,
-} from "@tabler/icons-react";
+import { IconBrandGithub, IconBrandGoogle } from "@tabler/icons-react";
 
 const loginFormSchema = z.object({
   email: z.string().email(),

@@ -33,7 +33,7 @@ const TableFooter = forwardRef<
   <tfoot
     ref={ref}
     className={
-      "border-t bg-base-200 pointer-events-none font-medium [&>tr]:last:border-b-0"
+      "bg-base-200 pointer-events-none border-t font-medium [&>tr]:last:border-b-0"
     }
     {...props}
   />
@@ -47,7 +47,7 @@ const TableRow = forwardRef<
   <tr
     ref={ref}
     className={
-      "border-b transition-colors text-base-600 hover:bg-base-100 data-[state=selected]:bg-base-100"
+      "text-base-600 hover:bg-base-100 data-[state=selected]:bg-base-100 border-b transition-colors"
     }
     {...props}
   />
@@ -61,7 +61,7 @@ const TableHead = forwardRef<
   <th
     ref={ref}
     className={
-      "h-12 px-4 text-left align-middle font-medium text-base-700 [&:has([role=checkbox])]:pr-0"
+      "text-base-700 h-12 px-4 text-left align-middle font-medium [&:has([role=checkbox])]:pr-0"
     }
     {...props}
   />
@@ -86,7 +86,7 @@ const TableCaption = forwardRef<
 >(({ className, ...props }, ref) => (
   <caption
     ref={ref}
-    className={"mt-4 text-sm text-muted-foreground"}
+    className={"text-muted-foreground mt-4 text-sm"}
     {...props}
   />
 ));
@@ -102,4 +102,4 @@ export {
   TableCell,
   TableCaption,
 };
-`;
+`

@@ -15,7 +15,7 @@ export const DrawerHeader = ({
   className,
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) => (
-  <div className="flex items-center" {...props} />
+  <div className="text-base-900 flex min-h-8 items-center" {...props} />
 );
 
 DrawerHeader.displayName = "DrawerHeader";
@@ -24,10 +24,22 @@ export const DrawerBody = ({
   className,
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) => (
-  <div className="mt-6 flex-1 overflow-y-auto" {...props} />
+  <div className="text-base-600 mt-6 flex-1 overflow-y-auto" {...props} />
 );
 
 DrawerBody.displayName = "DrawerBody";
+
+export const DrawerFooter = ({
+  className,
+  ...props
+}: React.HTMLAttributes<HTMLDivElement>) => (
+  <div
+    className="text-base-900 flex min-h-8 items-center justify-between"
+    {...props}
+  />
+);
+
+DrawerFooter.displayName = "DrawerFooter";
 
 export const DrawerTitle = React.forwardRef<
   React.ElementRef<typeof DialogPrimitives.Title>,
@@ -35,7 +47,7 @@ export const DrawerTitle = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <DialogPrimitives.Title
     ref={ref}
-    className="flex-1 text-xl text-base-900 font-semibold"
+    className="flex-1 text-xl font-semibold"
     {...props}
   />
 ));
@@ -45,14 +57,14 @@ DrawerTitle.displayName = "DrawerTitle";
 export const DrawerClose = DialogPrimitives.CloseTrigger;
 
 const drawerContentStyle = cva(
-  "fixed z-50 flex flex-col bg-base-0 p-4 transition-all duration-300 data-[state=open]:visible data-[state=closed]:invisible",
+  "bg-base-0 fixed z-[60] flex flex-col p-4 transition-all duration-500 data-[state=open]:visible data-[state=closed]:invisible",
   {
     variants: {
       side: {
         top: "left-0 right-0 top-0 max-h-[90%] min-h-96 data-[state=closed]:-translate-y-full data-[state=open]:translate-y-0",
-        left: "bottom-0 left-0 top-0 min-w-96 max-w-[90%] data-[state=closed]:-translate-x-full data-[state=open]:translate-x-0",
+        left: "max-w-screen bottom-0 left-0 top-0 min-w-96 data-[state=closed]:-translate-x-full data-[state=open]:translate-x-0",
         right:
-          "bottom-0 right-0 top-0 min-w-96 max-w-[90%] data-[state=closed]:translate-x-full data-[state=open]:translate-x-0",
+          "max-w-screen bottom-0 right-0 top-0 min-w-96 data-[state=closed]:translate-x-full data-[state=open]:translate-x-0",
         bottom:
           "bottom-0 left-0 right-0 max-h-[90%] min-h-96 data-[state=closed]:translate-y-full data-[state=open]:translate-y-0",
       },
@@ -60,7 +72,7 @@ const drawerContentStyle = cva(
     defaultVariants: {
       side: "left",
     },
-  }
+  },
 );
 
 export const DrawerContent = React.forwardRef<
@@ -70,16 +82,15 @@ export const DrawerContent = React.forwardRef<
     VariantProps<typeof drawerContentStyle>
 >(({ className, side, ...props }, ref) => (
   <>
-    <Portal>
-      <DialogPrimitives.Backdrop className="pointer-events-none fixed inset-0 z-50 block bg-base-0 transition-all duration-500 data-[state=open]:visible data-[state=closed]:invisible data-[state=closed]:bg-opacity-0 data-[state=open]:bg-opacity-50" />
-      <DialogPrimitives.Positioner>
-        <DialogPrimitives.Content
-          ref={ref}
-          className={drawerContentStyle({ side })}
-          {...props}
-        />
-      </DialogPrimitives.Positioner>
-    </Portal>
+    <DialogPrimitives.Backdrop className="duration-4000 pointer-events-none fixed inset-0 z-50 block bg-neutral-800 bg-opacity-0 backdrop-blur-sm backdrop-brightness-50 transition-all data-[state=open]:visible data-[state=closed]:invisible data-[state=open]:bg-opacity-50" />
+
+    <DialogPrimitives.Positioner className="fixed left-0 top-0 z-50 h-screen w-screen">
+      <DialogPrimitives.Content
+        ref={ref}
+        className={drawerContentStyle({ side })}
+        {...props}
+      />
+    </DialogPrimitives.Positioner>
   </>
 ));
 
@@ -97,4 +108,4 @@ export const DrawerCloseButton = React.forwardRef<
 ));
 
 DrawerCloseButton.displayName = "DrawerCloseButton";
-`;
+`

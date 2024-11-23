@@ -97,4 +97,4 @@ export const BreadcrumbEllipsis = ({
 );
 
 BreadcrumbEllipsis.displayName = "BreadcrumbEllipsis";
-`;
+`
