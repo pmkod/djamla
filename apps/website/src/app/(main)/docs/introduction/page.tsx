@@ -1,14 +1,13 @@
-import Link from "next/link";
-import React from "react";
 import { DocText } from "@/components/core/doc-text";
+import { ExternalLink } from "@/components/core/external-link";
 import {
   Accordion,
   AccordionItem,
   AccordionItemDetails,
   AccordionItemSummary,
 } from "@repo/react-ui";
-import { ExternalLink } from "@/components/core/external-link";
 import { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Introduction",

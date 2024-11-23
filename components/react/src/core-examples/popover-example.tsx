@@ -1,3 +1,4 @@
+import { Button } from "../core/button";
 import {
   Popover,
   PopoverCloseButton,
@@ -7,7 +8,6 @@ import {
   PopoverTitle,
   PopoverTrigger,
 } from "../core/popover";
-import { Button } from "../core/button";
 
 export const PopoverExample = () => {
   return (

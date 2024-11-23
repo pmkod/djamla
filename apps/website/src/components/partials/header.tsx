@@ -1,15 +1,15 @@
 "use client";
-import React, { Dispatch, useCallback, useEffect, useState } from "react";
-import { Logo } from "../core/logo";
-import Link from "next/link";
-import { Container } from "../core/container";
+import { githupRepoLink, headerLinks } from "@/constants/links";
 import { IconMenu2, IconX } from "@tabler/icons-react";
-import { GithubIcon } from "../icons/github-icon";
-import { headerLinks, githupRepoLink } from "@/constants/links";
-import { Sidebar } from "./sidebar";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
+import React, { Dispatch, useCallback, useEffect, useState } from "react";
+import { Container } from "../core/container";
+import { Logo } from "../core/logo";
+import { GithubIcon } from "../icons/github-icon";
 import { Searcher } from "../searcher";
 import { ThemeSwitch } from "../theme-switch";
+import { Sidebar } from "./sidebar";
 
 export const Header = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);

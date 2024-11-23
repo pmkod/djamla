@@ -91,4 +91,4 @@ const NewPasswordFormOne = () => {
 };
 
 export { NewPasswordFormOne };
-`
+`;

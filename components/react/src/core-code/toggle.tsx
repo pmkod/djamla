@@ -49,4 +49,4 @@ const Toggle = forwardRef<
 Toggle.displayName = "Toggle";
 
 export { Toggle };
-`
+`;

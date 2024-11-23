@@ -4,8 +4,7 @@ import {
   BlockPreview,
 } from "@/components/core/block-presentation";
 import { DocText } from "@/components/core/doc-text";
-import { HeroSectionOne, heroSectionOneCode } from "@repo/react-ui";
-import React from "react";
+import { heroSectionOneCode } from "@repo/react-ui";
 
 const HeroSectionsPage = () => {
   return (

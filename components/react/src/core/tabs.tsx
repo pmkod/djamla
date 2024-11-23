@@ -1,8 +1,8 @@
 "use client";
 
-import * as React from "react";
 import { Tabs as TabsPrimitive } from "@ark-ui/react";
 import { cva, VariantProps } from "class-variance-authority";
+import * as React from "react";
 
 const Tabs = TabsPrimitive.Root;
 
@@ -76,4 +76,4 @@ const TabContent = React.forwardRef<
 
 TabContent.displayName = "TabContent";
 
-export { Tabs, Tab, TabList, TabContent };
+export { Tab, TabContent, TabList, Tabs };

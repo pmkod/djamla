@@ -1,5 +1,5 @@
-import { forwardRef } from "react";
 import { PinInput as PinInputPrimitives } from "@ark-ui/react";
+import { forwardRef } from "react";
 
 interface PinInputProps {
   length: number;

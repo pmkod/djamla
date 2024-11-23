@@ -49,4 +49,4 @@ const Clipboard = forwardRef<
 Clipboard.displayName = "Clipboard";
 
 export { Clipboard };
-`
+`;

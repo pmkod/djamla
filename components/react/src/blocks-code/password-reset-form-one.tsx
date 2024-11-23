@@ -72,4 +72,4 @@ const PasswordResetFormOne = () => {
 };
 
 export { PasswordResetFormOne };
-`
+`;

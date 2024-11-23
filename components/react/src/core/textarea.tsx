@@ -1,7 +1,7 @@
 "use client";
-import React, { forwardRef } from "react";
 import { Field as FieldPrimitives } from "@ark-ui/react";
 import { cva, VariantProps } from "class-variance-authority";
+import React, { forwardRef } from "react";
 
 export const textareaStyle = cva(
   "text-base-800 focus:border-primary-500 w-full resize-none rounded-sm px-2.5 py-1.5 outline-none disabled:cursor-not-allowed disabled:opacity-50 data-[invalid]:border-red-500",

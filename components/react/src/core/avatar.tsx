@@ -1,7 +1,7 @@
 "use client";
-import { ComponentPropsWithoutRef, ElementRef, forwardRef } from "react";
 import { Avatar as AvatarPrimitives } from "@ark-ui/react";
 import { cva, VariantProps } from "class-variance-authority";
+import { ComponentPropsWithoutRef, ElementRef, forwardRef } from "react";
 
 const avatarStyle = cva(
   "bg-base-200 relative flex shrink-0 overflow-hidden rounded-full",
@@ -61,4 +61,4 @@ const AvatarFallback = forwardRef<
 ));
 AvatarFallback.displayName = AvatarPrimitives.Fallback.displayName;
 
-export { Avatar, AvatarImage, AvatarFallback };
+export { Avatar, AvatarFallback, AvatarImage };

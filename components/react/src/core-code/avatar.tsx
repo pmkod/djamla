@@ -62,4 +62,4 @@ const AvatarFallback = forwardRef<
 AvatarFallback.displayName = AvatarPrimitives.Fallback.displayName;
 
 export { Avatar, AvatarImage, AvatarFallback };
-`
+`;

@@ -1,9 +1,9 @@
 "use client";
-import React from "react";
-import { Dialog as DialogPrimitives, Portal } from "@ark-ui/react";
-import { cva, VariantProps } from "class-variance-authority";
-import { IconButton } from "./icon-button";
+import { Dialog as DialogPrimitives } from "@ark-ui/react";
 import { IconX } from "@tabler/icons-react";
+import { cva, VariantProps } from "class-variance-authority";
+import React from "react";
+import { IconButton } from "./icon-button";
 
 export const Drawer = DialogPrimitives.Root;
 

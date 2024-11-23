@@ -133,4 +133,4 @@ const Slider = forwardRef<
 Slider.displayName = "Slider";
 
 export { Slider };
-`
+`;

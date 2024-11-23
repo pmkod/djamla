@@ -1,11 +1,11 @@
 "use client";
-import React, { forwardRef } from "react";
 import {
   Carousel as CarouselPrimitives,
   useCarouselContext,
 } from "@ark-ui/react";
-import { cva } from "class-variance-authority";
 import { IconChevronLeft, IconChevronRight } from "@tabler/icons-react";
+import { cva } from "class-variance-authority";
+import React, { forwardRef } from "react";
 
 const Carousel = forwardRef<
   React.ElementRef<typeof CarouselPrimitives.Root>,
@@ -137,8 +137,8 @@ CarouselIndicatorGroup.displayName = "CarouselIndicatorGroup";
 
 export {
   Carousel,
-  CarouselItemGroup,
   CarouselControl,
   CarouselIndicatorGroup,
   CarouselItem,
+  CarouselItemGroup,
 };

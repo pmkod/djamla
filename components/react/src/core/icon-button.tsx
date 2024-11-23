@@ -2,7 +2,7 @@
 import { ark } from "@ark-ui/react";
 import { IconLoader2 } from "@tabler/icons-react";
 import { cva, VariantProps } from "class-variance-authority";
-import React, { ComponentPropsWithoutRef, forwardRef } from "react";
+import { ComponentPropsWithoutRef, forwardRef } from "react";
 
 const iconButtonStyle = cva(
   "ring-offset-background focus-visible:ring-ring relative inline-flex aspect-square items-center justify-center overflow-hidden whitespace-nowrap transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2",

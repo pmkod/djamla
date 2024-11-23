@@ -55,4 +55,4 @@ const OtpVerificationFormOne = () => {
 };
 
 export { OtpVerificationFormOne };
-`
+`;

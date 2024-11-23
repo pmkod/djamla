@@ -8,7 +8,6 @@ import {
   buttonExampleCode,
 } from "@repo/react-ui";
 import { Metadata } from "next";
-import React from "react";
 
 const title = "Button";
 const description = "An interactive element designed to trigger actions.";

@@ -50,4 +50,4 @@ const Loader = forwardRef<HTMLDivElement, LoaderProps>(
 Loader.displayName = "Loader";
 
 export { Loader };
-`
+`;

@@ -7,7 +7,6 @@ import {
 } from "@/components/tabs/package-manager-tabs";
 import { Tab, TabContent, TabList, Tabs } from "@repo/react-ui";
 import { Metadata } from "next";
-import React from "react";
 
 export const metadata: Metadata = {
   title: "Installation",

@@ -17,5 +17,8 @@
   "packageManager": "pnpm@8.15.6",
   "engines": {
     "node": ">=18"
+  },
+  "dependencies": {
+    "prettier-plugin-organize-imports": "^4.1.0"
   }
 }

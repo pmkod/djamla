@@ -4,8 +4,7 @@ import {
   BlockPreview,
 } from "@/components/core/block-presentation";
 import { DocText } from "@/components/core/doc-text";
-import { SignupFormOne, signupFormOneCode } from "@repo/react-ui";
-import React from "react";
+import { signupFormOneCode } from "@repo/react-ui";
 
 const SignupFormsPage = () => {
   return (

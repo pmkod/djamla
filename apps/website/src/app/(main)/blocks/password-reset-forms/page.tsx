@@ -4,8 +4,7 @@ import {
   BlockPreview,
 } from "@/components/core/block-presentation";
 import { DocText } from "@/components/core/doc-text";
-import { PasswordResetFormOne, passwordResetFormOneCode } from "@repo/react-ui";
-import React from "react";
+import { passwordResetFormOneCode } from "@repo/react-ui";
 
 const PasswordResetFormsPage = () => {
   return (

@@ -1,6 +1,6 @@
 "use client";
-import { useState } from "react";
 import { SignaturePadDrawEndDetails } from "@ark-ui/react";
+import { useState } from "react";
 import { SignaturePad } from "../core/signature-pad";
 
 export const SignaturePadExample = () => {

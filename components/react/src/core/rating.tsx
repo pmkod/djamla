@@ -1,9 +1,9 @@
 "use client";
 
-import { forwardRef } from "react";
 import { RatingGroup as RatingGroupPrimitives } from "@ark-ui/react";
 import { IconStarFilled } from "@tabler/icons-react";
 import { cva, VariantProps } from "class-variance-authority";
+import { forwardRef } from "react";
 
 const ratingStarStyle = cva("cursor-pointer outline-none transition-colors", {
   variants: {

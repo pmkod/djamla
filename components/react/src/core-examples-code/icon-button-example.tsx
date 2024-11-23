@@ -3,4 +3,4 @@ export const iconButtonExampleCode = `import { IconButton } from "../core/icon-b
 export const IconButtonExample = () => {
   return <IconButton variant="solid">AA</IconButton>;
 };
-`
+`;

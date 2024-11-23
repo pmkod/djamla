@@ -1,7 +1,7 @@
 "use client";
-import React, { useState } from "react";
-import { IconCheck, IconClipboard } from "@tabler/icons-react";
 import { useDidUpdate, useElementSize, useTimeout } from "@mantine/hooks";
+import { IconCheck, IconClipboard } from "@tabler/icons-react";
+import { useState } from "react";
 import ReactSyntaxHighlighter from "react-syntax-highlighter";
 import { androidstudio } from "react-syntax-highlighter/dist/esm/styles/hljs";
 

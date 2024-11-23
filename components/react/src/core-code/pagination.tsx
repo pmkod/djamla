@@ -56,4 +56,4 @@ const Pagination = forwardRef<
 Pagination.displayName = "Pagination";
 
 export { Pagination };
-`
+`;

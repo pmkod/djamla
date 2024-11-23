@@ -1,5 +1,5 @@
-import React, { forwardRef } from "react";
 import { SignaturePad as SignaturePadPrimitives } from "@ark-ui/react";
+import React, { forwardRef } from "react";
 
 const SignaturePad = forwardRef<
   React.ElementRef<typeof SignaturePadPrimitives.Root>,

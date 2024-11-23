@@ -1,3 +1,4 @@
+import { IconInfoCircle } from "@tabler/icons-react";
 import {
   Alert,
   AlertContent,
@@ -5,7 +6,6 @@ import {
   AlertIcon,
   AlertTitle,
 } from "../core/alert";
-import { IconInfoCircle } from "@tabler/icons-react";
 
 export const AlertExample = () => {
   return (

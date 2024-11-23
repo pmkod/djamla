@@ -1,8 +1,8 @@
 "use client";
-import React, { useCallback } from "react";
 import { IconButton } from "@repo/react-ui";
 import { IconMoon, IconSun } from "@tabler/icons-react";
 import { useTheme } from "next-themes";
+import { useCallback } from "react";
 
 const lightThemeName = "light";
 const darkThemeName = "dark";
@@ -23,9 +23,6 @@ const ThemeSwitch = () => {
     >
       <IconSun size={22} className="hidden [html.light_&]:block" />
       <IconMoon size={22} className="hidden [html.dark_&]:block" />
-      {/* {resolvedTheme === lightThemeName ? (
-      ) : (
-      )} */}
     </IconButton>
   );
 };

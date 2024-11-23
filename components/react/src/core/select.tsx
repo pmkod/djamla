@@ -1,12 +1,12 @@
 "use client";
-import React, { forwardRef } from "react";
 import {
-  Select as SelectPrimitives,
   createListCollection,
+  Select as SelectPrimitives,
 } from "@ark-ui/react";
+import React, { forwardRef } from "react";
 
-import { cva, VariantProps } from "class-variance-authority";
 import { IconCheck, IconChevronDown } from "@tabler/icons-react";
+import { cva, VariantProps } from "class-variance-authority";
 
 const selectStyle = cva(
   "border-base-400 relative flex w-full items-center justify-between rounded-sm border px-2.5 disabled:cursor-not-allowed disabled:opacity-50",
@@ -106,9 +106,9 @@ const SelectItem = forwardRef<
 SelectItem.displayName = "SelectItem";
 
 export {
+  createListCollection,
   Select,
   SelectItem,
   SelectItemGroup,
   SelectItemGroupLabel,
-  createListCollection,
 };

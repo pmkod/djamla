@@ -4,8 +4,7 @@ import {
   BlockPreview,
 } from "@/components/core/block-presentation";
 import { DocText } from "@/components/core/doc-text";
-import { HeaderOne, headerOneCode } from "@repo/react-ui";
-import React from "react";
+import { headerOneCode } from "@repo/react-ui";
 
 const HeadersPage = () => {
   return (

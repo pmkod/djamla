@@ -1,3 +1,4 @@
+import { Button } from "../core/button";
 import {
   Modal,
   ModalBody,
@@ -7,7 +8,6 @@ import {
   ModalTitle,
   ModalTrigger,
 } from "../core/modal";
-import { Button } from "../core/button";
 
 export const ModalExample = () => {
   return (

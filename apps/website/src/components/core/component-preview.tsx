@@ -1,22 +1,20 @@
 "use client";
-import React, {
+import {
+  createListCollection,
+  Select,
+  SelectItem,
+  SelectItemGroup,
+  Switch,
+} from "@repo/react-ui";
+import { IconCheck } from "@tabler/icons-react";
+import { shake } from "radash";
+import {
   Children,
   cloneElement,
   ReactElement,
   ReactNode,
   useState,
 } from "react";
-import { IconCheck } from "@tabler/icons-react";
-import {
-  ToggleGroup,
-  Toggle,
-  Switch,
-  Select,
-  SelectItemGroup,
-  SelectItem,
-  createListCollection,
-} from "@repo/react-ui";
-import { shake } from "radash";
 
 type Size = "xs" | "sm" | "md" | "lg" | "xl";
 type Variant = "solid" | "outline" | "soft" | "plain" | "ghost";

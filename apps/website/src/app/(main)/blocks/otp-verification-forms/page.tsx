@@ -4,11 +4,7 @@ import {
   BlockPreview,
 } from "@/components/core/block-presentation";
 import { DocText } from "@/components/core/doc-text";
-import {
-  OtpVerificationFormOne,
-  otpVerificationFormOneCode,
-} from "@repo/react-ui";
-import React from "react";
+import { otpVerificationFormOneCode } from "@repo/react-ui";
 
 const OtpVerficationFormsPage = () => {
   return (

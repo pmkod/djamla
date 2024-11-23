@@ -26,4 +26,4 @@ const SignaturePad = forwardRef<
 SignaturePad.displayName = "SignaturePad";
 
 export { SignaturePad };
-`
+`;

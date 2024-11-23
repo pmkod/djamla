@@ -8,7 +8,6 @@ import {
   iconButtonExampleCode,
 } from "@repo/react-ui";
 import { IconPlus } from "@tabler/icons-react";
-import React from "react";
 import { Metadata } from "next";
 
 const title = "Icon Button";

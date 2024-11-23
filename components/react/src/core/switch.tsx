@@ -1,7 +1,7 @@
 "use client";
-import React, { forwardRef } from "react";
 import { Switch as SwitchPrimitives } from "@ark-ui/react";
 import { cva, VariantProps } from "class-variance-authority";
+import React, { forwardRef } from "react";
 
 const switchControlStyle = cva(
   "bg-base-300 inline-flex aspect-[2/1] cursor-pointer items-center rounded-full p-1 data-[disabled]:cursor-default data-[disabled]:opacity-50",

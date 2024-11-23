@@ -1,15 +1,8 @@
 "use client";
-import React, {
-  PropsWithChildren,
-  ReactNode,
-  useEffect,
-  useRef,
-  useState,
-} from "react";
-import { Tabs as TabsPrimitives } from "@ark-ui/react";
 import { useTheme } from "@/hooks/use-theme";
+import { Tabs as TabsPrimitives } from "@ark-ui/react";
 import { atom, useAtom, useAtomValue } from "jotai";
-import { SyntaxHighlighter } from "./syntax-highlighter";
+import { PropsWithChildren, ReactNode, useRef, useState } from "react";
 import { BlockSyntaxHighlighter } from "./block-syntax-highlighter";
 
 const PREVIEW = "PREVIEW";
@@ -160,4 +153,4 @@ const BlockCode = ({ children }: BlockCodeProps) => {
   );
 };
 
-export { BlockPresentation, BlockPreview, BlockCode };
+export { BlockCode, BlockPresentation, BlockPreview };

@@ -1,10 +1,10 @@
 "use client";
-import { Form } from "../core/form";
-import { z } from "zod";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { PinInput } from "../core/pin-input";
 import { PinInputValueChangeDetails } from "@ark-ui/react";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
+import { Form } from "../core/form";
+import { PinInput } from "../core/pin-input";
 
 const otpLength = 6;
 

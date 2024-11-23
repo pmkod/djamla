@@ -1,9 +1,9 @@
+import { Button } from "../core/button";
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
 } from "../core/collapsible";
-import { Button } from "../core/button";
 
 export const CollapsibleExample = () => {
   return (

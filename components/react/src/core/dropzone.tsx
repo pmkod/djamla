@@ -1,7 +1,7 @@
 "use client";
-import React, { forwardRef } from "react";
 import { FileUpload as FileUploadPrimitives } from "@ark-ui/react";
 import { IconTrash } from "@tabler/icons-react";
+import React, { forwardRef } from "react";
 
 const Dropzone = forwardRef<
   React.ElementRef<typeof FileUploadPrimitives.Root>,
@@ -76,4 +76,4 @@ DropzoneText.displayName = "DropzoneText";
 
 const DropzoneTrigger = FileUploadPrimitives.Trigger;
 
-export { Dropzone, DropzoneTrigger, DropzoneText };
+export { Dropzone, DropzoneText, DropzoneTrigger };

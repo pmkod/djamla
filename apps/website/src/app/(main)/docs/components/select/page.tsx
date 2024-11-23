@@ -1,11 +1,10 @@
-import React from "react";
 import { DocText } from "@/components/core/doc-text";
 import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
 import { selectCode, SelectExample, selectExampleCode } from "@repo/react-ui";
 
+import { ComponentPreview } from "@/components/core/component-preview";
 import { Metadata } from "next";
 import { SelectComponentPreview } from "./_select-component-preview";
-import { ComponentPreview } from "@/components/core/component-preview";
 // import { SelectComponentPreview } from "./_select-component-preview";
 
 const title = "Select";

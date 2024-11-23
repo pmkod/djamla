@@ -1,6 +1,4 @@
-import { Container } from "@/components/core/container";
 import { BlockItem } from "@/components/items/block-item";
-import React from "react";
 
 const blocks = [
   {

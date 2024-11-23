@@ -1,8 +1,8 @@
-import React, { forwardRef } from "react";
 import { Clipboard as ClipboardPrimitives } from "@ark-ui/react";
 import { IconCheck, IconClipboard } from "@tabler/icons-react";
-import { IconButton } from "./icon-button";
 import { cva, VariantProps } from "class-variance-authority";
+import React, { forwardRef } from "react";
+import { IconButton } from "./icon-button";
 
 const clipboardInputStyle = cva(
   "border-base-300 bg-base-0 text-base-500 w-full rounded-sm border pl-3",

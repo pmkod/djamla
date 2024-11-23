@@ -58,4 +58,4 @@ const AccordionItemDetails = forwardRef<
 AccordionItemDetails.displayName = "AccordionItemDetails";
 
 export { Accordion, AccordionItem, AccordionItemSummary, AccordionItemDetails };
-`
+`;

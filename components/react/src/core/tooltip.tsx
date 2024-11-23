@@ -1,5 +1,5 @@
-import { forwardRef } from "react";
 import { Tooltip as TooltipPrimitives, TooltipRootProps } from "@ark-ui/react";
+import { forwardRef } from "react";
 
 const Tooltip = (props: TooltipRootProps) => {
   return (
@@ -33,4 +33,4 @@ const TooltipContent = forwardRef<
 
 TooltipContent.displayName = "TooltipContent";
 
-export { Tooltip, TooltipTrigger, TooltipContent };
+export { Tooltip, TooltipContent, TooltipTrigger };

@@ -1,5 +1,5 @@
 import { Container } from "@/components/core/container";
-import React, { PropsWithChildren } from "react";
+import { PropsWithChildren } from "react";
 
 const BlocksLayout = ({ children }: PropsWithChildren) => {
   return (

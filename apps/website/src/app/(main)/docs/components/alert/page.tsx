@@ -1,12 +1,13 @@
-import React from "react";
 import { ComponentPreview } from "@/components/core/component-preview";
 import { DocText } from "@/components/core/doc-text";
 import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
-import { alertCode, AlertExample, alertExampleCode } from "@repo/react-ui";
 import {
   Alert,
+  alertCode,
   AlertContent,
   AlertDescription,
+  AlertExample,
+  alertExampleCode,
   AlertIcon,
   AlertTitle,
 } from "@repo/react-ui";

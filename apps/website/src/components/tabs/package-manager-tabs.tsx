@@ -1,7 +1,7 @@
 "use client";
 import {} from "@ark-ui/react";
-import { Tab, TabList, TabContent, Tabs } from "@repo/react-ui";
-import React, { PropsWithChildren, ReactNode } from "react";
+import { Tab, TabContent, TabList, Tabs } from "@repo/react-ui";
+import { PropsWithChildren, ReactNode } from "react";
 
 const PackageManagerTabs = ({ children }: PropsWithChildren) => {
   return (
@@ -28,4 +28,4 @@ const PackageManagerTabContent = ({
   return <TabContent value={value}>{children}</TabContent>;
 };
 
-export { PackageManagerTabs, PackageManagerTabContent };
+export { PackageManagerTabContent, PackageManagerTabs };

@@ -1,6 +1,5 @@
 import { IconArrowRight } from "@tabler/icons-react";
 import Link from "next/link";
-import React from "react";
 
 interface BlockItemProps {
   path: string;

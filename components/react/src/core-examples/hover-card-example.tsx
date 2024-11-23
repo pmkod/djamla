@@ -1,10 +1,10 @@
+import { Avatar, AvatarFallback, AvatarImage } from "../core/avatar";
+import { Button } from "../core/button";
 import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
 } from "../core/hover-card";
-import { Button } from "../core/button";
-import { Avatar, AvatarFallback, AvatarImage } from "../core/avatar";
 
 export const HoverCardExample = () => {
   return (

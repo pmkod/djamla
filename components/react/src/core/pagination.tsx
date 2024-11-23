@@ -1,7 +1,7 @@
 "use client";
-import React, { forwardRef } from "react";
 import { Pagination as PaginationPrimitives } from "@ark-ui/react";
 import { IconChevronLeft, IconChevronRight } from "@tabler/icons-react";
+import React, { forwardRef } from "react";
 
 const basePaginationButtonClassName =
   "size-9 aspect-square flex items-center justify-center rounded-sm hover:bg-base-100 text-base-900 data-[disabled]:hover:bg-transparent transition-colors";

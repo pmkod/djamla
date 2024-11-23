@@ -1,17 +1,18 @@
-import React from "react";
 import { ComponentPreview } from "@/components/core/component-preview";
 import { DocText } from "@/components/core/doc-text";
 import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
-import { drawerCode, DrawerExample, drawerExampleCode } from "@repo/react-ui";
 import {
+  Button,
   Drawer,
   DrawerBody,
   DrawerCloseButton,
+  drawerCode,
   DrawerContent,
+  DrawerExample,
+  drawerExampleCode,
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
-  Button,
 } from "@repo/react-ui";
 import { Metadata } from "next";
 

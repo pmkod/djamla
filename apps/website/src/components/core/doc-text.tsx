@@ -1,5 +1,5 @@
 import { cva, VariantProps } from "class-variance-authority";
-import React, { ReactNode } from "react";
+import { ReactNode } from "react";
 
 const docTextStyle = cva(undefined, {
   variants: {

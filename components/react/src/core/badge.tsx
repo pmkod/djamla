@@ -1,7 +1,7 @@
 "use client";
 
-import { forwardRef } from "react";
 import { cva, type VariantProps } from "class-variance-authority";
+import { forwardRef } from "react";
 
 const badgeStyle = cva(
   "focus:ring-ring inline-flex shrink-0 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2",

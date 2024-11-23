@@ -1,10 +1,7 @@
-import React from "react";
-import { Container } from "../core/container";
-import Link from "next/link";
-import { Button, IconButton } from "@repo/react-ui";
-import { ExternalLink } from "../core/external-link";
 import { githupRepoLink } from "@/constants/links";
-import { Icon123 } from "@tabler/icons-react";
+import { Button } from "@repo/react-ui";
+import Link from "next/link";
+import { Container } from "../core/container";
 
 export const HeroSection = () => {
   return (

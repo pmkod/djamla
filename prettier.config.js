@@ -5,7 +5,7 @@
  */
 
 const config = {
-    plugins: ['prettier-plugin-tailwindcss'],
+    plugins: ["prettier-plugin-organize-imports","prettier-plugin-tailwindcss"],
     tailwindFunctions: ['cva'],
 }
 

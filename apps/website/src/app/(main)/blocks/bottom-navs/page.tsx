@@ -4,8 +4,7 @@ import {
   BlockPreview,
 } from "@/components/core/block-presentation";
 import { DocText } from "@/components/core/doc-text";
-import { BottomNavOne, bottomNavOneCode } from "@repo/react-ui";
-import React from "react";
+import { bottomNavOneCode } from "@repo/react-ui";
 
 const BottomNavsPage = () => {
   return (

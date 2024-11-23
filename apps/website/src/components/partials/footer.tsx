@@ -1,14 +1,12 @@
-import React from "react";
-import { Container } from "../core/container";
-import { Logo } from "../core/logo";
-import { ExternalLink } from "../core/external-link";
 import {
   authorGithubProfileLink,
   authorTwitterProfileLink,
-  githupRepoLink,
 } from "@/constants/links";
-import Link from "next/link";
 import { IconBrandTwitter } from "@tabler/icons-react";
+import Link from "next/link";
+import { Container } from "../core/container";
+import { ExternalLink } from "../core/external-link";
+import { Logo } from "../core/logo";
 
 export const Footer = () => {
   return (

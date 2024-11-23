@@ -3,17 +3,17 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 
+import { IconBrandGithub, IconBrandGoogle } from "@tabler/icons-react";
+import { Button } from "../core/button";
 import {
   Form,
   FormControl,
   FormField,
+  FormFieldErrorMessage,
   FormItem,
   FormLabel,
-  FormFieldErrorMessage,
 } from "../core/form";
 import { Input } from "../core/input";
-import { Button } from "../core/button";
-import { IconBrandGithub, IconBrandGoogle } from "@tabler/icons-react";
 
 const loginFormSchema = z.object({
   email: z.string().email(),

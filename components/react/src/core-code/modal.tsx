@@ -123,4 +123,4 @@ export {
   ModalCloseButton,
   ModalTitle,
 };
-`
+`;

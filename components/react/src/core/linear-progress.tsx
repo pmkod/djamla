@@ -1,7 +1,7 @@
 "use client";
-import { forwardRef } from "react";
 import { Progress as ProgressPrimitives } from "@ark-ui/react";
 import { cva, VariantProps } from "class-variance-authority";
+import { forwardRef } from "react";
 
 const linearProgressStyle = cva(
   "bg-base-200 w-full overflow-hidden rounded-full",

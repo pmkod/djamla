@@ -1,4 +1,3 @@
-import React from "react";
 import { ComponentPreview } from "@/components/core/component-preview";
 import { DocText } from "@/components/core/doc-text";
 import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
@@ -7,13 +6,13 @@ import {
   Modal,
   ModalBody,
   ModalCloseButton,
+  modalCode,
   ModalContent,
+  ModalExample,
+  modalExampleCode,
   ModalHeader,
   ModalTitle,
   ModalTrigger,
-  modalCode,
-  ModalExample,
-  modalExampleCode,
 } from "@repo/react-ui";
 import { Metadata } from "next";
 

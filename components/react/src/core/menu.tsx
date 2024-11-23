@@ -1,7 +1,7 @@
 "use client";
-import { forwardRef } from "react";
 import { Menu as MenuPrimitives, MenuRootProps, Portal } from "@ark-ui/react";
 import { IconChevronRight } from "@tabler/icons-react";
+import { forwardRef } from "react";
 
 const Menu = (props: MenuRootProps) => {
   return (
@@ -132,12 +132,12 @@ MenuSeparator.displayName = "MenuSeparator";
 
 export {
   Menu,
-  SubMenu,
-  MenuItem,
-  MenuTrigger,
-  MenuTriggerItem,
   MenuContent,
   MenuGroup,
   MenuGroupLabel,
+  MenuItem,
   MenuSeparator,
+  MenuTrigger,
+  MenuTriggerItem,
+  SubMenu,
 };

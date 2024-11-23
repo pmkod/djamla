@@ -102,4 +102,4 @@ export {
   TableCell,
   TableCaption,
 };
-`
+`;

@@ -5,11 +5,10 @@ import {
   HeroSectionOne,
   LoginFormOne,
   NewPasswordFormOne,
+  OtpVerificationFormOne,
   PasswordResetFormOne,
   SignupFormOne,
-  OtpVerificationFormOne,
 } from "@repo/react-ui";
-import React from "react";
 
 const PlaygroundPage = () => {
   return (

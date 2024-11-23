@@ -53,4 +53,4 @@ const Rating = forwardRef<
 ));
 
 export { Rating };
-`
+`;

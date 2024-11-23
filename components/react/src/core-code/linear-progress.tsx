@@ -42,4 +42,4 @@ const LinearProgress = forwardRef<
 LinearProgress.displayName = "LinearProgress";
 
 export { LinearProgress };
-`
+`;

@@ -1,12 +1,12 @@
 "use client";
 
-import { forwardRef } from "react";
 import {
   Popover as PopoverPrimitives,
   PopoverRootProps,
   Portal,
 } from "@ark-ui/react";
 import { IconX } from "@tabler/icons-react";
+import { forwardRef } from "react";
 
 const Popover = (props: PopoverRootProps) => (
   <PopoverPrimitives.Root portalled {...props} />
@@ -95,10 +95,10 @@ PopoverCloseButton.displayName = "PopoverCloseButton";
 
 export {
   Popover,
+  PopoverCloseButton,
   PopoverContent,
   PopoverDescription,
-  PopoverTitle,
   PopoverHeader,
-  PopoverCloseButton,
+  PopoverTitle,
   PopoverTrigger,
 };

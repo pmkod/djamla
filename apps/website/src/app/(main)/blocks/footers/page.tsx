@@ -5,7 +5,6 @@ import {
 } from "@/components/core/block-presentation";
 import { DocText } from "@/components/core/doc-text";
 import { footerOneCode } from "@repo/react-ui";
-import React from "react";
 
 const FootersPage = () => {
   return (

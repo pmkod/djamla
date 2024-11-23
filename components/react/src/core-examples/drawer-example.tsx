@@ -1,3 +1,4 @@
+import { Button } from "../core/button";
 import {
   Drawer,
   DrawerBody,
@@ -7,7 +8,6 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from "../core/drawer";
-import { Button } from "../core/button";
 
 export const DrawerExample = () => {
   return (

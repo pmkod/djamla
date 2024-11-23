@@ -59,4 +59,4 @@ const BottomNavItem = ({ path, label, icon }: BottomNavItemProps) => {
 };
 
 export { BottomNavOne };
-`
+`;

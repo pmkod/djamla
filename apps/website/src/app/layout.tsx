@@ -1,12 +1,9 @@
-import { Metadata } from "next";
 import "@repo/tailwind-config/globals.css";
-import { PropsWithChildren } from "react";
-// import { ThemeProvider } from "./_theme-provider";
-
+import { Metadata } from "next";
+import { ThemeProvider } from "next-themes";
 import { Figtree } from "next/font/google";
 import Script from "next/script";
-import { lightThemeName } from "@/hooks/use-theme";
-import { ThemeProvider } from "next-themes";
+import { PropsWithChildren } from "react";
 
 export const metadata: Metadata = {
   title: {

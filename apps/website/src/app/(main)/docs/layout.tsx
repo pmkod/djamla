@@ -1,6 +1,6 @@
 import { Container } from "@/components/core/container";
 import { Sidebar } from "@/components/partials/sidebar";
-import React, { PropsWithChildren } from "react";
+import { PropsWithChildren } from "react";
 
 const DocsLayout = ({ children }: PropsWithChildren) => {
   return (

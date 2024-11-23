@@ -1,12 +1,12 @@
+import { Button } from "../core/button";
 import {
   Card,
+  CardBody,
+  CardDescription,
+  CardFooter,
   CardHeader,
   CardTitle,
-  CardDescription,
-  CardBody,
-  CardFooter,
 } from "../core/card";
-import { Button } from "../core/button";
 
 export const CardExample = () => {
   return (

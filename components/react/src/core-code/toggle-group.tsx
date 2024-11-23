@@ -133,4 +133,4 @@ const ToggleItem = forwardRef<
 ToggleItem.displayName = "ToggleItem";
 
 export { ToggleGroup, ToggleItem };
-`
+`;

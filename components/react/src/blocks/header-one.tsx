@@ -1,6 +1,5 @@
 import { IconMenu2 } from "@tabler/icons-react";
 import { Button } from "../core/button";
-import { IconButton } from "../core/icon-button";
 import {
   Drawer,
   DrawerBody,
@@ -9,6 +8,7 @@ import {
   DrawerFooter,
   DrawerTrigger,
 } from "../core/drawer";
+import { IconButton } from "../core/icon-button";
 
 const headerLinks = [
   {
