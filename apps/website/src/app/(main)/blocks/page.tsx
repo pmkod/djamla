@@ -16,6 +16,10 @@ const blocks = [
     name: "Footers",
   },
   {
+    path: "/blocks/bottom-navs",
+    name: "Bottom navs",
+  },
+  {
     path: "/blocks/login-forms",
     name: "Login forms",
   },

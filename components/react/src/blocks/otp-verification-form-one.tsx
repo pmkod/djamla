@@ -34,7 +34,9 @@ const OtpVerificationFormOne = () => {
           onSubmit={form.handleSubmit(onSubmit)}
           className="border-base-300 w-max max-w-full rounded-sm sm:border sm:px-10 sm:pb-12 sm:pt-8"
         >
-          <div className="mb-0.5 text-3xl font-semibold">Otp verification</div>
+          <div className="text-base-900 mb-0.5 text-3xl font-semibold">
+            Otp verification
+          </div>
           <p className="text-base-500">Enter the code you received</p>
           <div className="mt-7">
             <PinInput

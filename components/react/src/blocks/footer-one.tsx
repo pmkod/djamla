@@ -6,11 +6,11 @@ const FooterOne = () => {
       <div className="mx-auto max-w-screen-xl space-y-8 px-6 py-16 lg:space-y-16">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           <div>
-            <a href="#" className="text-primary-800 text-2xl font-bold">
+            <a href="#" className="text-base-800 text-2xl font-bold">
               Logo
             </a>
 
-            <p className="mt-4 max-w-xs text-gray-500">
+            <p className="text-base-500 mt-4 max-w-xs">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse non
               cupiditate quae nam molestias. Take on hyperui, a tailwindcss
               components collecion
@@ -22,7 +22,7 @@ const FooterOne = () => {
                   href="#"
                   rel="noreferrer"
                   target="_blank"
-                  className="text-gray-700 transition hover:opacity-75"
+                  className="text-base-700 transition hover:opacity-75"
                 >
                   <span className="sr-only">Facebook</span>
 
@@ -46,7 +46,7 @@ const FooterOne = () => {
                   href="#"
                   rel="noreferrer"
                   target="_blank"
-                  className="text-gray-700 transition hover:opacity-75"
+                  className="text-base-700 transition hover:opacity-75"
                 >
                   <span className="sr-only">Instagram</span>
 
@@ -70,7 +70,7 @@ const FooterOne = () => {
                   href="#"
                   rel="noreferrer"
                   target="_blank"
-                  className="text-gray-700 transition hover:opacity-75"
+                  className="text-base-700 transition hover:opacity-75"
                 >
                   <span className="sr-only">Twitter</span>
 
@@ -90,7 +90,7 @@ const FooterOne = () => {
                   href="#"
                   rel="noreferrer"
                   target="_blank"
-                  className="text-gray-700 transition hover:opacity-75"
+                  className="text-base-700 transition hover:opacity-75"
                 >
                   <span className="sr-only">GitHub</span>
 
@@ -114,7 +114,7 @@ const FooterOne = () => {
                   href="#"
                   rel="noreferrer"
                   target="_blank"
-                  className="text-gray-700 transition hover:opacity-75"
+                  className="text-base-700 transition hover:opacity-75"
                 >
                   <span className="sr-only">Dribbble</span>
 
@@ -192,7 +192,7 @@ const FooterOne = () => {
           </div>
         </div>
 
-        <p className="text-xs text-gray-500">
+        <p className="text-base-500 text-xs">
           &copy; {new Date().getFullYear()}. Company Name. All rights reserved.
         </p>
       </div>
@@ -207,7 +207,7 @@ const FooterGroup = ({ children }: PropsWithChildren) => {
 };
 
 const FooterGroupName = ({ children }: PropsWithChildren) => {
-  return <p className="font-medium text-gray-900">{children}</p>;
+  return <p className="text-base-900 font-medium">{children}</p>;
 };
 
 const FooterGroupList = ({ children }: PropsWithChildren) => {

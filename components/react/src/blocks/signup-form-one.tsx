@@ -44,7 +44,9 @@ const SignupFormOne = () => {
           onSubmit={form.handleSubmit(onSubmit)}
           className="border-base-300 w-[480px] max-w-full rounded-sm sm:border sm:px-10 sm:pb-12 sm:pt-8"
         >
-          <div className="mb-0.5 text-3xl font-semibold">Sign up</div>
+          <div className="text-base-900 mb-0.5 text-3xl font-semibold">
+            Sign up
+          </div>
           <p className="text-base-500">
             Create an account by entering your first name, last name, email and
             a password
@@ -71,10 +73,10 @@ const SignupFormOne = () => {
 
           <div className="relative mt-5">
             <div className="absolute inset-0 flex items-center">
-              <span className="w-full border-t" />
+              <span className="border-t-base-500 w-full border-t" />
             </div>
             <div className="relative flex justify-center text-xs uppercase">
-              <span className="bg-base-0 text-muted-foreground px-2">
+              <span className="bg-base-0 text-base-500 px-2">
                 Or continue with
               </span>
             </div>

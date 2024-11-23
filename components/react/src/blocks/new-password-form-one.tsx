@@ -48,7 +48,9 @@ const NewPasswordFormOne = () => {
           className="border-base-300 w-[480px] max-w-full rounded-sm sm:border sm:px-10 sm:pb-12 sm:pt-8"
         >
           <div className="mb-5">
-            <div className="mb-0.5 text-3xl font-semibold">New password</div>
+            <div className="text-base-900 mb-0.5 text-3xl font-semibold">
+              New password
+            </div>
             <p className="text-base-500">Choose your new password</p>
           </div>
           <div className="space-y-3">
