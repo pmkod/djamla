@@ -1,5 +1,4 @@
 "use client";
-import { useTheme } from "@/hooks/use-theme";
 import { Tabs as TabsPrimitives } from "@ark-ui/react";
 import { atom, useAtom, useAtomValue } from "jotai";
 import { PropsWithChildren, ReactNode, useRef, useState } from "react";
@@ -97,9 +96,6 @@ interface BlockPreviewProps {
 }
 
 const BlockPreview = ({ children, src }: BlockPreviewProps) => {
-  const { theme } = useTheme();
-  const iframeRef = useRef<HTMLIFrameElement>(null);
-
   const [iframeLoaded, setIframeLoaded] = useState(false);
   const currentSize = useAtomValue(screenSizeAtom);
 
