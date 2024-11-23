@@ -41,9 +41,8 @@ const BlocksPage = () => {
   return (
     <>
       <div className="text-base-800 text-center text-4xl font-bold">Blocks</div>
-      <div className="text-base-500 mx-auto mt-2 max-w-96 text-center leading-5">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis enim
-        soluta eligendi sequi ut?
+      <div className="text-base-500 mx-auto mt-2 max-w-96 text-center text-xl leading-5">
+        A collections of components you can copy and paste in your project.
       </div>
 
       <div className="mb-40 mt-10">

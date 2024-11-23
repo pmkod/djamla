@@ -4,10 +4,9 @@ import { useLocalStorage } from "@mantine/hooks";
 import { IconButton } from "@repo/react-ui";
 import { IconMoon, IconSun } from "@tabler/icons-react";
 import { useTheme } from "@/hooks/use-theme";
-import { darkThemeName, lightThemeName } from "@/constants/themes";
 
 const ThemeSwitch = () => {
-  const { theme, setTheme } = useTheme();
+  const { theme, setTheme, lightThemeName, darkThemeName } = useTheme();
 
   const changeTheme = () => {
     if (theme === lightThemeName) {
@@ -16,14 +15,6 @@ const ThemeSwitch = () => {
       setTheme(lightThemeName);
     }
   };
-
-  useEffect(() => {
-    if (theme === lightThemeName) {
-      document.documentElement.classList.remove(darkThemeName);
-    } else {
-      document.documentElement.classList.add(darkThemeName);
-    }
-  }, [theme]);
 
   return (
     <IconButton
