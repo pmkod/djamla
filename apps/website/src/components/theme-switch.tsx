@@ -1,20 +1,18 @@
 "use client";
-import React, { useEffect } from "react";
-import { useLocalStorage } from "@mantine/hooks";
+import React, { useCallback } from "react";
 import { IconButton } from "@repo/react-ui";
 import { IconMoon, IconSun } from "@tabler/icons-react";
-import { useTheme } from "@/hooks/use-theme";
+import { useTheme } from "next-themes";
+
+const lightThemeName = "light";
+const darkThemeName = "dark";
 
 const ThemeSwitch = () => {
-  const { theme, setTheme, lightThemeName, darkThemeName } = useTheme();
+  const { setTheme, resolvedTheme } = useTheme();
 
-  const changeTheme = () => {
-    if (theme === lightThemeName) {
-      setTheme(darkThemeName);
-    } else {
-      setTheme(lightThemeName);
-    }
-  };
+  const changeTheme = useCallback(() => {
+    setTheme(resolvedTheme === lightThemeName ? darkThemeName : lightThemeName);
+  }, [resolvedTheme, setTheme]);
 
   return (
     <IconButton
@@ -23,11 +21,11 @@ const ThemeSwitch = () => {
       size="sm"
       onClick={changeTheme}
     >
-      {theme === lightThemeName ? (
-        <IconSun size={22} />
+      <IconSun size={22} className="hidden [html.light_&]:block" />
+      <IconMoon size={22} className="hidden [html.dark_&]:block" />
+      {/* {resolvedTheme === lightThemeName ? (
       ) : (
-        <IconMoon size={22} />
-      )}
+      )} */}
     </IconButton>
   );
 };

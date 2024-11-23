@@ -1,7 +1,12 @@
 import { Metadata } from "next";
 import "@repo/tailwind-config/globals.css";
-import { Html } from "./_html";
 import { PropsWithChildren } from "react";
+// import { ThemeProvider } from "./_theme-provider";
+
+import { Figtree } from "next/font/google";
+import Script from "next/script";
+import { lightThemeName } from "@/hooks/use-theme";
+import { ThemeProvider } from "next-themes";
 
 export const metadata: Metadata = {
   title: {
@@ -12,6 +17,29 @@ export const metadata: Metadata = {
     "Accessible and customizable components built on Ark UI. Free and Open Source.",
 };
 
+const figtree = Figtree({
+  weight: ["400", "500", "600", "700"],
+  subsets: ["latin"],
+});
+
 export default function RootLayout({ children }: PropsWithChildren) {
-  return <Html>{children}</Html>;
+  return (
+    <html lang="en" className={figtree.className} suppressHydrationWarning>
+      <body className="bg-base-0">
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
+        <Script
+          async
+          src="https://umami.djamla.com/script.js"
+          data-website-id="690cac2b-2ee7-41b5-aac4-21a1be5eab51"
+        />
+      </body>
+    </html>
+  );
 }

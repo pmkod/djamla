@@ -3,6 +3,8 @@ import React from "react";
 
 export const Logo = () => {
   return (
-    <Image src="/djamla-logo.png" alt="Djamla logo" width={100} height={40} />
+    <div className="relative h-4 w-24">
+      <Image src="/djamla-logo.png" alt="Djamla logo" fill />
+    </div>
   );
 };
