@@ -1,14 +1,29 @@
 import { DocText } from "@/components/core/doc-text";
 import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
+import {
+  PackageManagerTabContent,
+  PackageManagerTabs,
+} from "@/components/tabs/package-manager-tabs";
 
 const NextPage = () => {
   return (
     <>
       <DocText level="titleOne">Dark mode in next.js</DocText>
       <DocText level="titleTwo">Intall next-themes</DocText>
-      <SyntaxHighlighter language="typescript">
-        document.documentElement.classList.add("dark");
-      </SyntaxHighlighter>
+      <PackageManagerTabs>
+        <PackageManagerTabContent value="npm">
+          <SyntaxHighlighter>npm install next-themes</SyntaxHighlighter>
+        </PackageManagerTabContent>
+        <PackageManagerTabContent value="yarn">
+          <SyntaxHighlighter>yarn add next-themes</SyntaxHighlighter>
+        </PackageManagerTabContent>
+        <PackageManagerTabContent value="pnpm">
+          <SyntaxHighlighter>pnpm add next-themes</SyntaxHighlighter>
+        </PackageManagerTabContent>
+        <PackageManagerTabContent value="bun">
+          <SyntaxHighlighter>bun add next-themes</SyntaxHighlighter>
+        </PackageManagerTabContent>
+      </PackageManagerTabs>
       <DocText level="titleTwo">Add ThemeProvider</DocText>
 
       <DocText level="paragraph">
