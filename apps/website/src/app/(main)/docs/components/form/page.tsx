@@ -25,19 +25,29 @@ const FormPage = () => {
         <FormExample />
       </ComponentPreview>
       <DocText level="titleTwo">Installation</DocText>
-      <DocText level="paragraphTwo">First, install zod</DocText>
+      <DocText level="paragraphTwo">
+        First, install zod, react-hook-form, @hookform/resolvers
+      </DocText>
       <PackageManagerTabs>
         <PackageManagerTabContent value="npm">
-          <SyntaxHighlighter>npm add zod</SyntaxHighlighter>
+          <SyntaxHighlighter>
+            npm add zod react-hook-form @hookform/resolvers
+          </SyntaxHighlighter>
         </PackageManagerTabContent>
         <PackageManagerTabContent value="yarn">
-          <SyntaxHighlighter>yarn add zod</SyntaxHighlighter>
+          <SyntaxHighlighter>
+            yarn add zod react-hook-form @hookform/resolvers
+          </SyntaxHighlighter>
         </PackageManagerTabContent>
         <PackageManagerTabContent value="pnpm">
-          <SyntaxHighlighter>pnpm add zod</SyntaxHighlighter>
+          <SyntaxHighlighter>
+            pnpm add zod react-hook-form @hookform/resolvers
+          </SyntaxHighlighter>
         </PackageManagerTabContent>
         <PackageManagerTabContent value="bun">
-          <SyntaxHighlighter>bun add zod</SyntaxHighlighter>
+          <SyntaxHighlighter>
+            bun add zod react-hook-form @hookform/resolvers
+          </SyntaxHighlighter>
         </PackageManagerTabContent>
       </PackageManagerTabs>
       <DocText level="paragraphTwo">Copy following code</DocText>
