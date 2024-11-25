@@ -1,6 +1,9 @@
 import type { LinksFunction, LoaderFunctionArgs } from "@remix-run/node";
-// import clsx from "clsx"
-import { PreventFlashOnWrongTheme, ThemeProvider } from "remix-themes";
+import {
+  PreventFlashOnWrongTheme,
+  ThemeProvider,
+  useTheme,
+} from "remix-themes";
 
 import { themeSessionResolver } from "./sessions.server";
 
@@ -49,10 +52,10 @@ export default function AppWithProviders() {
 
 export function App() {
   const data = useLoaderData<typeof loader>();
-  // const [] = useTheme()
+  const [theme] = useTheme();
 
   return (
-    <html lang="en">
+    <html lang="en" className={theme ?? ""}>
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -64,7 +67,6 @@ export function App() {
         <Outlet />
         <ScrollRestoration />
         <Scripts />
-        {/* <LiveReload /> */}
         <LiveReload />
       </body>
     </html>

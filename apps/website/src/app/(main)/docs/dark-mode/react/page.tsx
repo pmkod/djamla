@@ -103,6 +103,28 @@ export default App;
 
 `}
       </SyntaxHighlighter>
+      <DocText level="titleTwo">Create useTheme hook</DocText>
+      <DocText level="paragraphTwo">
+        Create <Code>use-theme.tsx</Code> file and add following code
+      </DocText>
+      <SyntaxHighlighter language="typescript">
+        {`
+import { useContext } from "react";
+import { ThemeProviderContext } from "./theme-provider";
+
+const useTheme = () => {
+  const context = useContext(ThemeProviderContext);
+
+  if (context === undefined)
+    throw new Error("useTheme must be used within a ThemeProvider");
+
+  return context;
+};
+
+export { useTheme };
+
+          `}
+      </SyntaxHighlighter>
       <DocText level="titleTwo">Create theme toggle</DocText>
 
       <DocText level="paragraphTwo">

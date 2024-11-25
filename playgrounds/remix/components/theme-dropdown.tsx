@@ -7,11 +7,9 @@ import {
 } from "@repo/react-ui";
 import { IconMoon, IconSun } from "@tabler/icons-react";
 import { Theme, useTheme } from "remix-themes";
-// import { useTheme } from "./use-theme";
 
 const ThemeDropdown = () => {
-  // const { setTheme } = useTheme();
-  const [theme, setTheme] = useTheme();
+  const [, setTheme] = useTheme();
 
   return (
     <Menu>
@@ -27,12 +25,6 @@ const ThemeDropdown = () => {
         </MenuItem>
         <MenuItem value="dark" onClick={() => setTheme(Theme.DARK)}>
           Dark
-        </MenuItem>
-        <MenuItem
-          value="to-show-current-theme"
-          onClick={() => setTheme(Theme.DARK)}
-        >
-          {theme}
         </MenuItem>
       </MenuContent>
     </Menu>
