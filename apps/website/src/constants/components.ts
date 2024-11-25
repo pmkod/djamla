@@ -107,6 +107,11 @@ export const coreComponents = [
     keywords: ["Spinner", "Loading"],
   },
   {
+    path: "/docs/components/menu",
+    label: "Menu",
+    keywords: ["Dropdown"],
+  },
+  {
     path: "/docs/components/modal",
     label: "Modal",
     keywords: ["Dialog", "Popup"],

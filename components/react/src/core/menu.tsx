@@ -79,7 +79,7 @@ const MenuContent = forwardRef<
       <MenuPrimitives.Positioner>
         <MenuPrimitives.Content
           ref={ref}
-          className="border-base-200 text-base-500 bg-base-0 w-max min-w-36 overflow-hidden rounded border p-1 shadow-md outline-none data-[placement]:right-0"
+          className="border-base-200 text-base-500 bg-base-0 block w-max min-w-36 overflow-hidden rounded border p-1 shadow-md outline-none transition-all data-[state=open]:visible data-[state=closed]:invisible data-[state=closed]:scale-95 data-[state=open]:scale-100 data-[state=closed]:opacity-0 data-[state=open]:opacity-100"
           {...props}
         >
           {children}
