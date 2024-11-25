@@ -32,7 +32,8 @@
   --color-primary-950: 30 27 75;
 }
 
-.dark {
+.dark,
+:root[class~="dark"] {
   /* Base */
   --color-base-0: 5 5 5;
   --color-base-50: 10 10 10;
