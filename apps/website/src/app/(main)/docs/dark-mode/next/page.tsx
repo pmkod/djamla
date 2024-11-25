@@ -26,13 +26,7 @@ const NextPage = () => {
       </PackageManagerTabs>
       <DocText level="titleTwo">Add ThemeProvider</DocText>
 
-      <DocText level="paragraph">
-        Add ThemeProvider to root layout, and add{" "}
-        <span className="bg-base-200 text-base-900 px-1 font-medium">
-          bg-base-0
-        </span>{" "}
-        in body className
-      </DocText>
+      <DocText level="paragraphTwo">Add ThemeProvider to root layout.</DocText>
       <SyntaxHighlighter language="typescript">
         {`
 import { ThemeProvider } from "next-themes";
@@ -40,7 +34,7 @@ import { ThemeProvider } from "next-themes";
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="bg-base-0">
+      <body>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
