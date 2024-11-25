@@ -1,6 +1,10 @@
 import { ComponentPreview } from "@/components/core/component-preview";
 import { DocText } from "@/components/core/doc-text";
 import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
+import {
+  PackageManagerTabContent,
+  PackageManagerTabs,
+} from "@/components/tabs/package-manager-tabs";
 import { formCode, FormExample, formExampleCode } from "@repo/react-ui";
 import { Metadata } from "next";
 
@@ -21,6 +25,23 @@ const FormPage = () => {
         <FormExample />
       </ComponentPreview>
       <DocText level="titleTwo">Installation</DocText>
+      <DocText level="paragraphTwo">First, install zod</DocText>
+      <PackageManagerTabs>
+        <PackageManagerTabContent value="npm">
+          <SyntaxHighlighter>npm add zod</SyntaxHighlighter>
+        </PackageManagerTabContent>
+        <PackageManagerTabContent value="yarn">
+          <SyntaxHighlighter>yarn add zod</SyntaxHighlighter>
+        </PackageManagerTabContent>
+        <PackageManagerTabContent value="pnpm">
+          <SyntaxHighlighter>pnpm add zod</SyntaxHighlighter>
+        </PackageManagerTabContent>
+        <PackageManagerTabContent value="bun">
+          <SyntaxHighlighter>bun add zod</SyntaxHighlighter>
+        </PackageManagerTabContent>
+      </PackageManagerTabs>
+      <DocText level="paragraphTwo">Copy following code</DocText>
+
       <SyntaxHighlighter language="typescript">{formCode}</SyntaxHighlighter>
       {/* <DocText level="titleTwo">Example</DocText>
       <ComponentPreview>
