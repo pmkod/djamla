@@ -126,6 +126,13 @@ const InstallationPage = () => {
   --color-primary-900: 224 231 255;
   --color-primary-950: 238 242 255;
 }
+
+@layer base {
+  body {
+    @apply bg-base-0 text-base-800;
+  }
+}
+
 `}
       </SyntaxHighlighter>
       <DocText level="titleTwo">Edit your tailwind config file</DocText>

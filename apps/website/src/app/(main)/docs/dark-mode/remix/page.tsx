@@ -116,7 +116,7 @@ export function App() {
         <PreventFlashOnWrongTheme ssrTheme={Boolean(data.theme)} />
         <Links />
       </head>
-      <body className="bg-base-0">
+      <body>
         <Outlet />
         <ScrollRestoration />
         <Scripts />
