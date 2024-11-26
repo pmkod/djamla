@@ -85,7 +85,7 @@ const sliderRangeStyle = cva("bg-primary-500", {
 });
 
 const sliderThumbStyle = cva(
-  "border-primary-400 cursor-pointer rounded-full border-[3px] bg-white transition-colors hover:bg-neutral-400 disabled:pointer-events-none disabled:opacity-50",
+  "border-primary-400 hover:bg-base-400 cursor-pointer rounded-full border-[3px] bg-white transition-colors disabled:pointer-events-none disabled:opacity-50",
   {
     variants: {
       orientation: {
