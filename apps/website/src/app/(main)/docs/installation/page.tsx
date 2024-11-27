@@ -32,7 +32,7 @@ const InstallationPage = () => {
       <DocText level="paragraphTwo">You need to install ark ui</DocText>
       <PackageManagerTabs>
         <PackageManagerTabContent value="npm">
-          <SyntaxHighlighter>npm add @ark-ui/react</SyntaxHighlighter>
+          <SyntaxHighlighter>npm install @ark-ui/react</SyntaxHighlighter>
         </PackageManagerTabContent>
         <PackageManagerTabContent value="yarn">
           <SyntaxHighlighter>yarn add @ark-ui/react</SyntaxHighlighter>
@@ -48,7 +48,7 @@ const InstallationPage = () => {
       <DocText level="paragraphTwo">You need to install tabler icons</DocText>
       <PackageManagerTabs>
         <PackageManagerTabContent value="npm">
-          <SyntaxHighlighter>npm add @tabler/icons-react</SyntaxHighlighter>
+          <SyntaxHighlighter>npm install @tabler/icons-react</SyntaxHighlighter>
         </PackageManagerTabContent>
         <PackageManagerTabContent value="yarn">
           <SyntaxHighlighter>yarn add @tabler/icons-react</SyntaxHighlighter>

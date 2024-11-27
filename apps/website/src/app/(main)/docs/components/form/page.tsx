@@ -31,7 +31,7 @@ const FormPage = () => {
       <PackageManagerTabs>
         <PackageManagerTabContent value="npm">
           <SyntaxHighlighter>
-            npm add zod react-hook-form @hookform/resolvers
+            npm install zod react-hook-form @hookform/resolvers
           </SyntaxHighlighter>
         </PackageManagerTabContent>
         <PackageManagerTabContent value="yarn">
