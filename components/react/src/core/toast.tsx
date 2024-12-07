@@ -12,6 +12,7 @@ const toast = createToaster({
   placement: "bottom-end",
   gap: 24,
   max: 20,
+  overlap: true
 });
 
 const defaultToastType = "info";
