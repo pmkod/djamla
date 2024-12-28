@@ -96,6 +96,11 @@ export const coreComponents = [
     keywords: [],
   },
   { path: "/docs/components/kbd", label: "Kbd", keywords: ["Keywords", "Key"] },
+  {
+    path: "/docs/components/label",
+    label: "Label",
+    keywords: ["Label"],
+  },
   // {
   //   path: "/docs/components/linear-progress",
   //   label: "Linear progress",
