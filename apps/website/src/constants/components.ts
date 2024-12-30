@@ -101,11 +101,11 @@ export const coreComponents = [
     label: "Label",
     keywords: ["Label"],
   },
-  // {
-  //   path: "/docs/components/linear-progress",
-  //   label: "Linear progress",
-  //   keywords: ["Progress", "Bar"],
-  // },
+  {
+    path: "/docs/components/linear-progress",
+    label: "Linear progress",
+    keywords: ["Progress", "Bar"],
+  },
   {
     path: "/docs/components/loader",
     label: "Loader",

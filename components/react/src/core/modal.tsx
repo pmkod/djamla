@@ -105,7 +105,7 @@ const ModalCloseButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ children, ...props }, ref) => (
     <DialogPrimitives.CloseTrigger ref={ref} asChild>
       <IconButton variant="plain" colorScheme="black" size="sm" {...props}>
-        {children || <IconX className="h-5 w-5" />}
+        {children ?? <IconX className="h-5 w-5" />}
       </IconButton>
     </DialogPrimitives.CloseTrigger>
   ),

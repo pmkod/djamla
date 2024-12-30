@@ -8,13 +8,14 @@
     "version": "vinxi version"
   },
   "dependencies": {
+    "@repo/solid-ui": "workspace:*",
+    "@repo/tailwind-config": "workspace:*",
     "@solidjs/meta": "^0.29.4",
     "@solidjs/router": "^0.15.0",
     "@solidjs/start": "^1.0.10",
+    "@tabler/icons-solidjs": "^3.26.0",
     "solid-js": "^1.9.2",
-    "vinxi": "^0.4.3",
-    "@repo/tailwind-config": "workspace:*",
-    "@repo/solid-ui": "workspace:*"
+    "vinxi": "^0.4.3"
   },
   "overrides": {
     "vite": "5.4.10"
