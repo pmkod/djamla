@@ -10,6 +10,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@ark-ui/solid": "^4.7.0",
+    "@tabler/icons-solidjs": "^3.26.0",
+    "class-variance-authority": "^0.7.0",
     "solid-js": "^1.9.2"
   }
 }
