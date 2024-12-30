@@ -152,6 +152,11 @@ export const coreComponents = [
     keywords: ["Options", "Choice"],
   },
   {
+    path: "/docs/components/rating",
+    label: "Rating",
+    keywords: ["Rating", "Star"],
+  },
+  {
     path: "/docs/components/select",
     label: "Select",
     keywords: ["Options"],

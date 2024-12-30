@@ -1,9 +1,8 @@
-"use client";
 
-import { ToggleGroup as ToggleGroupPrimitives } from "@ark-ui/react";
+import { ToggleGroup as ToggleGroupPrimitives } from "@ark-ui/solid";
 import { cva, VariantProps } from "class-variance-authority";
-import { forwardRef } from "react";
 import { ToggleGroup } from "./toggle-group";
+import { splitProps } from "solid-js";
 
 const toggleItemStyle = cva(
   "focus-visible:ring-ring hover:bg-base-200 data-[state=on]:bg-base-200 data-[state=off]:hover:bg-base-50 text-base-800 inline-flex items-center justify-center text-sm font-medium transition-colors first:rounded-l last:rounded-r focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
@@ -29,22 +28,25 @@ const toggleItemStyle = cva(
   },
 );
 
-const Toggle = forwardRef<
-  React.ElementRef<typeof ToggleGroupPrimitives.Item> &
-    VariantProps<typeof toggleItemStyle>,
-  React.ComponentPropsWithoutRef<typeof ToggleGroupPrimitives.Item> &
-    VariantProps<typeof toggleItemStyle>
->(({ className, children, variant, size, ...props }, ref) => (
-  <ToggleGroup>
-    <ToggleGroupPrimitives.Item
-      ref={ref}
-      className={toggleItemStyle({ variant, size, className })}
-      {...props}
-    >
-      {children}
-    </ToggleGroupPrimitives.Item>
-  </ToggleGroup>
-));
+interface ToggleProps extends ToggleGroupPrimitives.ItemProps, VariantProps<typeof toggleItemStyle> {
+
+}
+const Toggle = (props: ToggleProps ) => {
+    const [local, restProps] = splitProps(props, ['variant','size','children'])
+
+    return (
+        (
+            <ToggleGroup>
+              <ToggleGroupPrimitives.Item
+                class={toggleItemStyle({ variant: local.variant, size: local.size })}
+                {...restProps}
+              >
+                {local.children}
+              </ToggleGroupPrimitives.Item>
+            </ToggleGroup>
+          )
+    )
+}
 
 
 export { Toggle };

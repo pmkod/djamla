@@ -12,7 +12,6 @@ export default function Home() {
             </div>
 
             <div class="p-10 flex">
-
             </div>
         </div>
     )
