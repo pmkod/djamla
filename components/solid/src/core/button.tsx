@@ -112,7 +112,6 @@ export const Button = (props: ButtonProps) => {
         fullWidth: local.fullWidth,
         disabled: disabled(),
       })}
-      ref={rest.ref}
       disabled={disabled()}
       {...rest}
     >

@@ -69,7 +69,7 @@ const TableRow = (props: TableRowProps) => (
 // 
 // 
 
-interface TableHeadProps extends JSX.HTMLAttributes<HTMLTableCellElement> {
+interface TableHeadProps extends JSX.ThHTMLAttributes<HTMLTableCellElement> {
 }
 
 const TableHead = (props: TableHeadProps) => (
@@ -87,7 +87,7 @@ const TableHead = (props: TableHeadProps) => (
 // 
 // 
 
-interface TableCellProps extends JSX.HTMLAttributes<HTMLTableCellElement> {
+interface TableCellProps extends JSX.TdHTMLAttributes<HTMLTableCellElement> {
 }
 
 const TableCell = (props: TableCellProps) => (

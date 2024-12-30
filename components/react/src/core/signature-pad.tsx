@@ -1,4 +1,4 @@
-import { SignaturePad as SignaturePadPrimitives } from "@ark-ui/react";
+import { SignaturePad as SignaturePadPrimitives, SignaturePadDrawEndDetails } from "@ark-ui/react";
 import React, { forwardRef } from "react";
 
 const SignaturePad = forwardRef<
@@ -25,4 +25,4 @@ const SignaturePad = forwardRef<
 
 SignaturePad.displayName = "SignaturePad";
 
-export { SignaturePad };
+export { SignaturePad, type SignaturePadDrawEndDetails };
