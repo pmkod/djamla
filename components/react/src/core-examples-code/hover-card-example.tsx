@@ -1,4 +1,4 @@
-export const hoverCardExampleCode = `import { Avatar, AvatarFallback, AvatarImage } from "../core/avatar";
+export const reactHoverCardExampleCode = `import { Avatar, AvatarFallback, AvatarImage } from "../core/avatar";
 import { Button } from "../core/button";
 import {
   HoverCard,

@@ -1,4 +1,4 @@
-export const carouselCode = `import {
+export const solidCarouselCode = `import {
   Carousel as CarouselPrimitives,
   useCarouselContext,
 } from "@ark-ui/solid";

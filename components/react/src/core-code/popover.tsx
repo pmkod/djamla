@@ -1,4 +1,4 @@
-export const popoverCode = `"use client";
+export const reactPopoverCode = `"use client";
 
 import {
   Popover as PopoverPrimitives,

@@ -1,4 +1,4 @@
-export const hoverCardCode = `"use client";
+export const solidHoverCardCode = `"use client";
 
 import { HoverCard as HoverCardPrimitives,  } from "@ark-ui/solid";
 import { splitProps } from "solid-js";

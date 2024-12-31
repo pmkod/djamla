@@ -1,4 +1,4 @@
-export const selectExampleCode = `"use client";
+export const reactSelectExampleCode = `"use client";
 import { createListCollection } from "@ark-ui/react";
 import { Select, SelectItem, SelectItemGroup } from "../core/select";
 

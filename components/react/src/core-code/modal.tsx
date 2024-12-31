@@ -1,4 +1,4 @@
-export const modalCode = `"use client";
+export const reactModalCode = `"use client";
 import { Dialog as DialogPrimitives } from "@ark-ui/react";
 import { IconX } from "@tabler/icons-react";
 import { cva, VariantProps } from "class-variance-authority";

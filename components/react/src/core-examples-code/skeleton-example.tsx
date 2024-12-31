@@ -1,4 +1,4 @@
-export const skeletonExampleCode = `import { Skeleton } from "../core/skeleton";
+export const reactSkeletonExampleCode = `import { Skeleton } from "../core/skeleton";
 
 export const SkeletonExample = () => {
   return (

@@ -1,4 +1,4 @@
-export const kbdCode = `import { cva, VariantProps } from "class-variance-authority";
+export const solidKbdCode = `import { cva, VariantProps } from "class-variance-authority";
 import { JSX, splitProps } from "solid-js";
 
 const kbdStyle = cva(

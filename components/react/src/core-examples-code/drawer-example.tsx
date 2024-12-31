@@ -1,4 +1,4 @@
-export const drawerExampleCode = `import { Button } from "../core/button";
+export const reactDrawerExampleCode = `import { Button } from "../core/button";
 import {
   Drawer,
   DrawerBody,

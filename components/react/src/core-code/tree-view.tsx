@@ -1,4 +1,4 @@
-export const treeViewCode = `import { TreeView as TreeViewPrimitives } from "@ark-ui/react";
+export const reactTreeViewCode = `import { TreeView as TreeViewPrimitives } from "@ark-ui/react";
 import { IconChevronRight } from "@tabler/icons-react";
 import React, { forwardRef } from "react";
 

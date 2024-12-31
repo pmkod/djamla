@@ -1,4 +1,4 @@
-export const tooltipCode = `import { Tooltip as TooltipPrimitives, TooltipRootProps } from "@ark-ui/react";
+export const reactTooltipCode = `import { Tooltip as TooltipPrimitives, TooltipRootProps } from "@ark-ui/react";
 import { forwardRef } from "react";
 
 const Tooltip = (props: TooltipRootProps) => {

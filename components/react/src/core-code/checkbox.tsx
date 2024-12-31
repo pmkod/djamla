@@ -1,4 +1,4 @@
-export const checkboxCode = `"use client";
+export const reactCheckboxCode = `"use client";
 import { Checkbox as CheckboxPrimitives } from "@ark-ui/react";
 import { IconCheck } from "@tabler/icons-react";
 import { cva, VariantProps } from "class-variance-authority";

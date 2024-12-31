@@ -1,4 +1,4 @@
-export const drawerCode = `"use client";
+export const solidDrawerCode = `"use client";
 import { Dialog as DialogPrimitives } from "@ark-ui/solid";
 import { IconX } from "@tabler/icons-solidjs";
 import {JSX, splitProps} from "solid-js"

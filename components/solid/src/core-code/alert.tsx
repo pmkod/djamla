@@ -1,4 +1,4 @@
-export const alertCode = `"use client";
+export const solidAlertCode = `"use client";
 import { ark } from "@ark-ui/solid";
 import { cva, type VariantProps } from "class-variance-authority";
 import {JSX, splitProps} from "solid-js"

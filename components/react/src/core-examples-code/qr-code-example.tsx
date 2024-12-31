@@ -1,4 +1,4 @@
-export const qrCodeExampleCode = `import { QrCode, QrCodeOverlay } from "../core/qr-code";
+export const reactQrCodeExampleCode = `import { QrCode, QrCodeOverlay } from "../core/qr-code";
 
 export const QrCodeExample = () => {
   return (

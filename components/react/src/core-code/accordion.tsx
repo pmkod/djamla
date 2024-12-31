@@ -1,4 +1,4 @@
-export const accordionCode = `"use client";
+export const reactAccordionCode = `"use client";
 
 import { Accordion as AccordionPrimitives } from "@ark-ui/react";
 import { IconChevronDown } from "@tabler/icons-react";

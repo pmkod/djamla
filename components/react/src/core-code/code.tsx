@@ -1,4 +1,4 @@
-export const codeCode = `import { cva, VariantProps } from "class-variance-authority";
+export const reactCodeCode = `import { cva, VariantProps } from "class-variance-authority";
 import React, { forwardRef } from "react";
 
 export const codeStyle = cva(

@@ -1,4 +1,4 @@
-export const signaturePadExampleCode = `"use client";
+export const reactSignaturePadExampleCode = `"use client";
 import { SignaturePadDrawEndDetails } from "@ark-ui/react";
 import { useState } from "react";
 import { SignaturePad } from "../core/signature-pad";

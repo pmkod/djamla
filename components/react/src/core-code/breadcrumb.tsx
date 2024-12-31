@@ -1,4 +1,4 @@
-export const breadcrumbCode = `import { ark } from "@ark-ui/react";
+export const reactBreadcrumbCode = `import { ark } from "@ark-ui/react";
 import { IconChevronRight, IconDots } from "@tabler/icons-react";
 import * as React from "react";
 

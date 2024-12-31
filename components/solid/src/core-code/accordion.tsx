@@ -1,4 +1,4 @@
-export const accordionCode = `"use client";
+export const solidAccordionCode = `"use client";
 
 import { Accordion as AccordionPrimitives } from "@ark-ui/solid";
 import { IconChevronDown } from "@tabler/icons-solidjs";

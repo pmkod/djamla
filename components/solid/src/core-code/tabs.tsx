@@ -1,4 +1,4 @@
-export const tabsCode = `
+export const solidTabsCode = `
 import { Tabs as TabsPrimitives } from "@ark-ui/solid";
 import { cva, VariantProps } from "class-variance-authority";
 import {splitProps} from "solid-js"

@@ -1,4 +1,4 @@
-export const tableCode = `import {JSX} from "solid-js"
+export const solidTableCode = `import {JSX} from "solid-js"
 
 interface TableProps extends JSX.HTMLAttributes<HTMLTableElement> {
 }

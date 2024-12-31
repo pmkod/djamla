@@ -1,4 +1,4 @@
-export const radioGroupCode = `import {
+export const solidRadioGroupCode = `import {
   RadioGroup as RadioGroupPrimitives,
   useRadioGroup,
 } from "@ark-ui/solid";

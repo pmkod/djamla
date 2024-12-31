@@ -30,8 +30,8 @@ const allComponentDirs = [
   blockComponentsDirName,
 ];
 
-const allUiLibDirPaths = [reactUiDirPath, solidUiDirPath];
-for (const uiDirPath of allUiLibDirPaths) {
+const uiLibs = [{name: "React", path: reactUiDirPath}, {name: "Solid", path: solidUiDirPath}];
+for (const {path: uiDirPath, name: uiLibName} of uiLibs) {
   const componentDirs = readdirSync(uiDirPath);
   for (const componentDirName of componentDirs) {
     if (allComponentDirs.includes(componentDirName)) {
@@ -65,7 +65,7 @@ for (const uiDirPath of allUiLibDirPaths) {
 
         writeFileSync(
           componentCodeFilePath,
-          `export const ${toCamelCase(path.parse(componentFileName).name)}Code = \`${componentFileBuffer.toString().replaceAll("`", "\\`").replaceAll("$", "\\$")}\``,
+          `export const ${toCamelCase(uiLibName + "-" + path.parse(componentFileName).name)}Code = \`${componentFileBuffer.toString().replaceAll("`", "\\`").replaceAll("$", "\\$")}\``,
         );
       }
     }

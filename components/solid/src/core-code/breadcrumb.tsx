@@ -1,4 +1,4 @@
-export const breadcrumbCode = `import { IconChevronRight, IconDots } from "@tabler/icons-solidjs";
+export const solidBreadcrumbCode = `import { IconChevronRight, IconDots } from "@tabler/icons-solidjs";
 import {JSX} from "solid-js"
 
 export const Breadcrumb = ( props: JSX.HTMLAttributes<HTMLElement>) => <nav aria-label="breadcrumb" {...props} />;

@@ -1,4 +1,4 @@
-export const modalExampleCode = `import { Button } from "../core/button";
+export const reactModalExampleCode = `import { Button } from "../core/button";
 import {
   Modal,
   ModalBody,

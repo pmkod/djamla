@@ -3,10 +3,11 @@ import { DocText } from "@/components/core/doc-text";
 import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
 import { FrameworkTabList, FrameworkTabs, ReactTab, ReactTabContent, SolidTab, SolidTabContent } from "@/components/tabs/framework-tabs";
 import {
-  accordionCode,
+  reactAccordionCode,
   AccordionExample,
-  accordionExampleCode,
+  reactAccordionExampleCode,
 } from "@repo/react-ui";
+import {solidAccordionCode} from "@repo/solid-ui"
 import { Metadata } from "next";
 
 const title = "Accordion";
@@ -36,12 +37,16 @@ const AccordionPage = () => {
 <ReactTabContent>
 
       <SyntaxHighlighter language="typescript">
-        {accordionCode}
+        {reactAccordionCode}
       </SyntaxHighlighter>
 </ReactTabContent>
 <SolidTabContent>
-Aaa
-</SolidTabContent>
+
+<SyntaxHighlighter language="typescript">
+        {solidAccordionCode}
+
+        
+      </SyntaxHighlighter></SolidTabContent>
       </FrameworkTabs>
       <DocText level="titleTwo">Example</DocText>
       <ComponentPreview>
@@ -58,7 +63,7 @@ Aaa
 
 
       <SyntaxHighlighter language="typescript">
-        {accordionExampleCode}
+        {reactAccordionExampleCode}
       </SyntaxHighlighter>
         </ReactTabContent>
       </FrameworkTabs>

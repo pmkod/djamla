@@ -1,4 +1,4 @@
-export const avatarCode = `"use client";
+export const reactAvatarCode = `"use client";
 import { Avatar as AvatarPrimitives } from "@ark-ui/react";
 import { cva, VariantProps } from "class-variance-authority";
 import { ComponentPropsWithoutRef, ElementRef, forwardRef } from "react";

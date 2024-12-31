@@ -1,4 +1,4 @@
-export const alertDialogCode = `"use client";
+export const reactAlertDialogCode = `"use client";
 
 import { Dialog as DialogPrimitives } from "@ark-ui/react";
 import * as React from "react";

@@ -1,4 +1,4 @@
-export const skeletonCode = `import { cva, VariantProps } from "class-variance-authority";
+export const reactSkeletonCode = `import { cva, VariantProps } from "class-variance-authority";
 import { forwardRef } from "react";
 
 const skeletonStyle = cva("bg-base-200 animate-pulse", {

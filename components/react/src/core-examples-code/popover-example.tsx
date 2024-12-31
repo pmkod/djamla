@@ -1,4 +1,4 @@
-export const popoverExampleCode = `import { Button } from "../core/button";
+export const reactPopoverExampleCode = `import { Button } from "../core/button";
 import {
   Popover,
   PopoverCloseButton,

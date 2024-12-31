@@ -1,4 +1,4 @@
-export const hoverCardCode = `"use client";
+export const reactHoverCardCode = `"use client";
 
 import { HoverCard as HoverCardPrimitives, Portal } from "@ark-ui/react";
 import { forwardRef } from "react";

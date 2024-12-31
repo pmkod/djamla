@@ -1,4 +1,4 @@
-export const dropzoneCode = `import { FileUpload as FileUploadPrimitives } from "@ark-ui/solid";
+export const solidDropzoneCode = `import { FileUpload as FileUploadPrimitives } from "@ark-ui/solid";
 import { IconTrash } from "@tabler/icons-solidjs";
 import {For, JSX, splitProps} from "solid-js"
 

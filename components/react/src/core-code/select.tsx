@@ -1,4 +1,4 @@
-export const selectCode = `"use client";
+export const reactSelectCode = `"use client";
 import {
   createListCollection,
   Select as SelectPrimitives,

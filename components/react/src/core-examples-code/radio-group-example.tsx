@@ -1,4 +1,4 @@
-export const radioGroupExampleCode = `import { RadioGroup, RadioGroupItem } from "../core/radio-group";
+export const reactRadioGroupExampleCode = `import { RadioGroup, RadioGroupItem } from "../core/radio-group";
 
 export const RadioGroupExample = () => {
   return (

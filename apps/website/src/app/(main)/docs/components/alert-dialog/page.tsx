@@ -3,10 +3,11 @@ import { DocText } from "@/components/core/doc-text";
 import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
 import { FrameworkTabList, FrameworkTabs, ReactTab, ReactTabContent, SolidTab, SolidTabContent } from "@/components/tabs/framework-tabs";
 import {
-  alertDialogCode,
+  reactAlertDialogCode,
   AlertDialogExample,
-  alertDialogExampleCode,
+  reactAlertDialogExampleCode,
 } from "@repo/react-ui";
+import { solidAlertDialogCode } from "@repo/solid-ui";
 import { Metadata } from "next";
 
 const title = "Alert Dialog";
@@ -38,12 +39,14 @@ const AlertDialogPage = () => {
         <ReactTabContent>
 
       <SyntaxHighlighter language="typescript">
-        {alertDialogCode}
+        {reactAlertDialogCode}
       </SyntaxHighlighter>
         </ReactTabContent>
 
         <SolidTabContent>
-
+        <SyntaxHighlighter language="typescript">
+        {solidAlertDialogCode}
+      </SyntaxHighlighter>
         </SolidTabContent>
       </FrameworkTabs>
       <DocText level="titleTwo">Example</DocText>
@@ -59,7 +62,7 @@ const AlertDialogPage = () => {
         </FrameworkTabList>
         <ReactTabContent>
       <SyntaxHighlighter language="typescript">
-        {alertDialogExampleCode}
+        {reactAlertDialogExampleCode}
       </SyntaxHighlighter>
 
         </ReactTabContent>

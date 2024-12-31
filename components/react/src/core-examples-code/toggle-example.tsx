@@ -1,4 +1,4 @@
-export const toggleExampleCode = `import { Toggle } from "../core/toggle";
+export const reactToggleExampleCode = `import { Toggle } from "../core/toggle";
 
 export const ToggleExample = () => {
   return (

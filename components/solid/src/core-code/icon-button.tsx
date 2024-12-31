@@ -1,4 +1,4 @@
-export const iconButtonCode = `"use client";
+export const solidIconButtonCode = `"use client";
 import { ark } from "@ark-ui/solid";
 import { IconLoader2 } from "@tabler/icons-solidjs";
 import { cva, VariantProps } from "class-variance-authority";

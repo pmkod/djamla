@@ -1,4 +1,4 @@
-export const otpVerificationFormOneCode = `"use client";
+export const reactOtpVerificationFormOneCode = `"use client";
 import { PinInputValueChangeDetails } from "@ark-ui/react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";

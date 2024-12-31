@@ -1,4 +1,4 @@
-export const breadcrumbExampleCode = `import {
+export const reactBreadcrumbExampleCode = `import {
   Breadcrumb,
   BreadcrumbEllipsis,
   BreadcrumbItem,

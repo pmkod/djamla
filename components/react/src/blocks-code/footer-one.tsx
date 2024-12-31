@@ -1,4 +1,4 @@
-export const footerOneCode = `import { PropsWithChildren } from "react";
+export const reactFooterOneCode = `import { PropsWithChildren } from "react";
 
 const FooterOne = () => {
   return (

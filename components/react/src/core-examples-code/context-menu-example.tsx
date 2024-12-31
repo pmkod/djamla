@@ -1,4 +1,4 @@
-export const contextMenuExampleCode = `import {
+export const reactContextMenuExampleCode = `import {
   IconBasket,
   IconHeart,
   IconLogout,

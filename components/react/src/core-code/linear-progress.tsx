@@ -1,4 +1,4 @@
-export const linearProgressCode = `"use client";
+export const reactLinearProgressCode = `"use client";
 import { Progress as ProgressPrimitives } from "@ark-ui/react";
 import { cva, VariantProps } from "class-variance-authority";
 import { forwardRef } from "react";

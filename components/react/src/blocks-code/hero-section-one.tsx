@@ -1,4 +1,4 @@
-export const heroSectionOneCode = `import { Button } from "../core/button";
+export const reactHeroSectionOneCode = `import { Button } from "../core/button";
 
 const HeroSectionOne = () => (
   <div className="mx-auto max-w-screen-xl">

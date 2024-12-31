@@ -1,4 +1,4 @@
-export const kbdCode = `import { cva, VariantProps } from "class-variance-authority";
+export const reactKbdCode = `import { cva, VariantProps } from "class-variance-authority";
 import React, { forwardRef, HtmlHTMLAttributes } from "react";
 
 const kbdStyle = cva(

@@ -1,4 +1,4 @@
-export const contextMenuCode = `import { Menu as MenuPrimitives } from "@ark-ui/solid";
+export const solidContextMenuCode = `import { Menu as MenuPrimitives } from "@ark-ui/solid";
 
 const ContextMenuTrigger = MenuPrimitives.ContextTrigger;
 

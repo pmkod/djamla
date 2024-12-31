@@ -1,4 +1,4 @@
-export const selectCode = `import {
+export const solidSelectCode = `import {
     CollectionItem,
   createListCollection,
   Select as SelectPrimitives,

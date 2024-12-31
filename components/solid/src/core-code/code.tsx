@@ -1,4 +1,4 @@
-export const codeCode = `import { cva, VariantProps } from "class-variance-authority";
+export const solidCodeCode = `import { cva, VariantProps } from "class-variance-authority";
 import { JSX, splitProps } from "solid-js";
 
  const codeStyle = cva(

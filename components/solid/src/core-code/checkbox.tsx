@@ -1,4 +1,4 @@
-export const checkboxCode = `"use client";
+export const solidCheckboxCode = `"use client";
 import { Checkbox as CheckboxPrimitives } from "@ark-ui/solid";
 import { IconCheck } from "@tabler/icons-solidjs";
 import { cva, VariantProps } from "class-variance-authority";

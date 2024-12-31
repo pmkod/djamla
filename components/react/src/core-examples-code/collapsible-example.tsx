@@ -1,4 +1,4 @@
-export const collapsibleExampleCode = `import { Button } from "../core/button";
+export const reactCollapsibleExampleCode = `import { Button } from "../core/button";
 import {
   Collapsible,
   CollapsibleContent,

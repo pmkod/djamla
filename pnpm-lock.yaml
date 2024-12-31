@@ -57,6 +57,9 @@ importers:
       '@repo/react-ui':
         specifier: workspace:*
         version: link:../../components/react
+      '@repo/solid-ui':
+        specifier: workspace:*
+        version: link:../../components/solid
       '@tabler/icons-react':
         specifier: ^3.21.0
         version: 3.22.0(react@18.3.1)

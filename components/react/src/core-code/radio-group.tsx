@@ -1,4 +1,4 @@
-export const radioGroupCode = `"use client";
+export const reactRadioGroupCode = `"use client";
 import {
   RadioGroup as RadioGroupPrimitives,
   useRadioGroupContext,

@@ -1,4 +1,4 @@
-export const inputCode = `"use client";
+export const reactInputCode = `"use client";
 import { Field as FieldPrimitives } from "@ark-ui/react";
 import { cva, VariantProps } from "class-variance-authority";
 import { forwardRef } from "react";

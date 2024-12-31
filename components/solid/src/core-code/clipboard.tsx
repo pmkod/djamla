@@ -1,4 +1,4 @@
-export const clipboardCode = `import { Clipboard as ClipboardPrimitives } from "@ark-ui/solid";
+export const solidClipboardCode = `import { Clipboard as ClipboardPrimitives } from "@ark-ui/solid";
 import { IconCheck, IconClipboard } from "@tabler/icons-solidjs";
 import { cva, VariantProps } from "class-variance-authority";
 import { JSX, splitProps } from "solid-js";

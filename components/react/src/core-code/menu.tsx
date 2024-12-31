@@ -1,4 +1,4 @@
-export const menuCode = `"use client";
+export const reactMenuCode = `"use client";
 import { Menu as MenuPrimitives, MenuRootProps, Portal } from "@ark-ui/react";
 import { IconChevronRight } from "@tabler/icons-react";
 import { forwardRef } from "react";

@@ -1,4 +1,4 @@
-export const nativeSelectCode = `"use client";
+export const reactNativeSelectCode = `"use client";
 import { Field as FieldPrimitives } from "@ark-ui/react";
 import { cva, VariantProps } from "class-variance-authority";
 import { forwardRef } from "react";

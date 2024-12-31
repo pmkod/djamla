@@ -1,4 +1,4 @@
-export const alertDialogExampleCode = `import {
+export const reactAlertDialogExampleCode = `import {
   AlertDialog,
   AlertDialogCancel,
   AlertDialogContent,

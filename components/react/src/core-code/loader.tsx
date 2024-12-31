@@ -1,4 +1,4 @@
-export const loaderCode = `import { cva, VariantProps } from "class-variance-authority";
+export const reactLoaderCode = `import { cva, VariantProps } from "class-variance-authority";
 import { forwardRef, HTMLAttributes } from "react";
 
 const loaderStyle = cva(

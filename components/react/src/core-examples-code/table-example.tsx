@@ -1,4 +1,4 @@
-export const tableExampleCode = `import {
+export const reactTableExampleCode = `import {
   Table,
   TableBody,
   TableCaption,

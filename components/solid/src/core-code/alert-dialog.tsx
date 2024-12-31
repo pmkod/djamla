@@ -1,4 +1,4 @@
-export const alertDialogCode = `"use client";
+export const solidAlertDialogCode = `"use client";
 
 import { Dialog as DialogPrimitives } from "@ark-ui/solid";
 import { Button } from "./button";

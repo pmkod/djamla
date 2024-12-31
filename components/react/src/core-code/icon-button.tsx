@@ -1,4 +1,4 @@
-export const iconButtonCode = `"use client";
+export const reactIconButtonCode = `"use client";
 import { ark } from "@ark-ui/react";
 import { IconLoader2 } from "@tabler/icons-react";
 import { cva, VariantProps } from "class-variance-authority";

@@ -1,4 +1,4 @@
-export const ratingCode = `"use client";
+export const reactRatingCode = `"use client";
 
 import { RatingGroup as RatingGroupPrimitives } from "@ark-ui/react";
 import { IconStarFilled } from "@tabler/icons-react";

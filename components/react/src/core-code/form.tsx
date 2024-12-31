@@ -1,4 +1,4 @@
-export const formCode = `"use client";
+export const reactFormCode = `"use client";
 import { ark } from "@ark-ui/react";
 import { createContext, forwardRef, useContext, useId } from "react";
 import {

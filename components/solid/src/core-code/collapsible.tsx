@@ -1,4 +1,4 @@
-export const collapsibleCode = `"use client";
+export const solidCollapsibleCode = `"use client";
 import { Collapsible as CollapsiblePrimitives } from "@ark-ui/solid";
 
 const Collapsible = CollapsiblePrimitives.Root;

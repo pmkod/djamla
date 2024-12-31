@@ -1,4 +1,4 @@
-export const treeViewExampleCode = `export const TreeViewExample = () => {
+export const reactTreeViewExampleCode = `export const TreeViewExample = () => {
   return <div>To do</div>;
 };
 `

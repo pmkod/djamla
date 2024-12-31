@@ -1,4 +1,4 @@
-export const toggleGroupCode = `import { ToggleGroup as ToggleGroupPrimitives } from "@ark-ui/react";
+export const reactToggleGroupCode = `import { ToggleGroup as ToggleGroupPrimitives } from "@ark-ui/react";
 import { cva, VariantProps } from "class-variance-authority";
 import { forwardRef } from "react";
 

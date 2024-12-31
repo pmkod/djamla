@@ -1,4 +1,4 @@
-export const toggleCode = `
+export const solidToggleCode = `
 import { ToggleGroup as ToggleGroupPrimitives } from "@ark-ui/solid";
 import { cva, VariantProps } from "class-variance-authority";
 import { ToggleGroup } from "./toggle-group";

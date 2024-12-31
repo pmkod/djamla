@@ -1,4 +1,4 @@
-export const cardCode = `import { JSX, splitProps } from "solid-js";
+export const solidCardCode = `import { JSX, splitProps } from "solid-js";
 
 interface CardProps extends JSX.HTMLAttributes<HTMLDivElement> {}
 

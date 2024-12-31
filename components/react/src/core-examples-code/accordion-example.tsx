@@ -1,4 +1,4 @@
-export const accordionExampleCode = `import {
+export const reactAccordionExampleCode = `import {
   Accordion,
   AccordionItem,
   AccordionItemDetails,

@@ -1,4 +1,4 @@
-export const signupFormOneCode = `"use client";
+export const reactSignupFormOneCode = `"use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";

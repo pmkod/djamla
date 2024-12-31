@@ -1,4 +1,4 @@
-export const tabsExampleCode = `import { Tab, TabContent, TabList, Tabs } from "../core/tabs";
+export const reactTabsExampleCode = `import { Tab, TabContent, TabList, Tabs } from "../core/tabs";
 
 export const TabsExample = () => {
   return (

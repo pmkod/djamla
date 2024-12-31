@@ -1,4 +1,4 @@
-export const avatarCode = `"use client";
+export const solidAvatarCode = `"use client";
 import { Avatar as AvatarPrimitives } from "@ark-ui/solid";
 import { cva, VariantProps } from "class-variance-authority";
 import { splitProps } from "solid-js";

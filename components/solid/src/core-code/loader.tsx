@@ -1,4 +1,4 @@
-export const loaderCode = `import { cva, VariantProps } from "class-variance-authority";
+export const solidLoaderCode = `import { cva, VariantProps } from "class-variance-authority";
 import {JSX, splitProps} from "solid-js"
 
 const loaderStyle = cva(

@@ -1,4 +1,4 @@
-export const nativeSelectCode = `"use client";
+export const solidNativeSelectCode = `"use client";
 import { Field as FieldPrimitives } from "@ark-ui/solid";
 import { cva, VariantProps } from "class-variance-authority";
 import { splitProps } from "solid-js";

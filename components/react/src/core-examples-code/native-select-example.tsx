@@ -1,4 +1,4 @@
-export const nativeSelectExampleCode = `import { NativeSelect } from "../core/native-select";
+export const reactNativeSelectExampleCode = `import { NativeSelect } from "../core/native-select";
 
 export const NativeSelectExample = () => {
   return (

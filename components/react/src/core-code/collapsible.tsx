@@ -1,4 +1,4 @@
-export const collapsibleCode = `"use client";
+export const reactCollapsibleCode = `"use client";
 import { Collapsible as CollapsiblePrimitives } from "@ark-ui/react";
 import { forwardRef } from "react";
 

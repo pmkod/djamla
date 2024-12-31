@@ -1,4 +1,4 @@
-export const paginationCode = `"use client";
+export const reactPaginationCode = `"use client";
 import { Pagination as PaginationPrimitives } from "@ark-ui/react";
 import { IconChevronLeft, IconChevronRight } from "@tabler/icons-react";
 import React, { forwardRef } from "react";

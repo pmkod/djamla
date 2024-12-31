@@ -1,4 +1,4 @@
-export const badgeCode = `"use client";
+export const solidBadgeCode = `"use client";
 
 import { cva, type VariantProps } from "class-variance-authority";
 import { JSX, splitProps } from "solid-js";

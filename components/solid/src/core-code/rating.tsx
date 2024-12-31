@@ -1,4 +1,4 @@
-export const ratingCode = `"use client";
+export const solidRatingCode = `"use client";
 
 import { RatingGroup as RatingGroupPrimitives } from "@ark-ui/solid";
 import { IconStarFilled } from "@tabler/icons-solidjs";

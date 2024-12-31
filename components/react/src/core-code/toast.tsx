@@ -1,4 +1,4 @@
-export const toastCode = `"use client";
+export const reactToastCode = `"use client";
 import {
   Toast as ToastPrimitives,
   Toaster,

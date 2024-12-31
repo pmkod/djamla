@@ -1,4 +1,4 @@
-export const paginationCode = `"use client";
+export const solidPaginationCode = `"use client";
 import { Pagination as PaginationPrimitives } from "@ark-ui/solid";
 import { IconChevronLeft, IconChevronRight } from "@tabler/icons-solidjs";
 import { For } from "solid-js";

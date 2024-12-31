@@ -1,4 +1,4 @@
-export const textareaCode = `"use client";
+export const reactTextareaCode = `"use client";
 import { Field as FieldPrimitives } from "@ark-ui/react";
 import { cva, VariantProps } from "class-variance-authority";
 import React, { forwardRef } from "react";

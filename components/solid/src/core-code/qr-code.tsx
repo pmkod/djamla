@@ -1,4 +1,4 @@
-export const qrCodeCode = `import { QrCode as QrCodePrimitives } from "@ark-ui/solid";
+export const solidQrCodeCode = `import { QrCode as QrCodePrimitives } from "@ark-ui/solid";
 import { splitProps } from "solid-js";
 
 const QrCode =(props:QrCodePrimitives.RootProps) => {

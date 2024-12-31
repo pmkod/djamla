@@ -1,4 +1,4 @@
-export const labelCode = `import { DetailedHTMLProps, forwardRef } from "react";
+export const reactLabelCode = `import { DetailedHTMLProps, forwardRef } from "react";
 
 const Label = forwardRef<
   HTMLLabelElement,

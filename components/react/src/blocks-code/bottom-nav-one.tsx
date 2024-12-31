@@ -1,4 +1,4 @@
-export const bottomNavOneCode = `import { IconBell, IconHome2, IconSearch, IconUser } from "@tabler/icons-react";
+export const reactBottomNavOneCode = `import { IconBell, IconHome2, IconSearch, IconUser } from "@tabler/icons-react";
 import { PropsWithChildren, ReactNode } from "react";
 
 const bottomNavLinks = [

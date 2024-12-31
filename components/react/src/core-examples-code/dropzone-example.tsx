@@ -1,4 +1,4 @@
-export const dropzoneExampleCode = `import { Button } from "../core/button";
+export const reactDropzoneExampleCode = `import { Button } from "../core/button";
 import { Dropzone, DropzoneText, DropzoneTrigger } from "../core/dropzone";
 
 export const DropzoneExample = () => {

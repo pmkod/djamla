@@ -1,4 +1,4 @@
-export const clipboardCode = `import { Clipboard as ClipboardPrimitives } from "@ark-ui/react";
+export const reactClipboardCode = `import { Clipboard as ClipboardPrimitives } from "@ark-ui/react";
 import { IconCheck, IconClipboard } from "@tabler/icons-react";
 import { cva, VariantProps } from "class-variance-authority";
 import React, { forwardRef } from "react";

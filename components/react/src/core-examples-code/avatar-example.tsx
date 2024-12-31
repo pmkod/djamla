@@ -1,4 +1,4 @@
-export const avatarExampleCode = `import { Avatar, AvatarImage } from "../core/avatar";
+export const reactAvatarExampleCode = `import { Avatar, AvatarImage } from "../core/avatar";
 
 export const AvatarExample = () => {
   return (

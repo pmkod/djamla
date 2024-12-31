@@ -1,4 +1,4 @@
-export const alertCode = `"use client";
+export const reactAlertCode = `"use client";
 import { ark } from "@ark-ui/react";
 import { cva, type VariantProps } from "class-variance-authority";
 import { ComponentPropsWithRef, forwardRef, HTMLAttributes } from "react";

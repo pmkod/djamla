@@ -1,4 +1,4 @@
-export const signaturePadCode = `import { SignaturePad as SignaturePadPrimitives, SignaturePadDrawEndDetails } from "@ark-ui/solid";
+export const solidSignaturePadCode = `import { SignaturePad as SignaturePadPrimitives, SignaturePadDrawEndDetails } from "@ark-ui/solid";
 
 const SignaturePad = (props: SignaturePadPrimitives.RootProps) => {
   return (

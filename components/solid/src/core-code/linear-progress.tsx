@@ -1,4 +1,4 @@
-export const linearProgressCode = `"use client";
+export const solidLinearProgressCode = `"use client";
 import { Progress as ProgressPrimitives } from "@ark-ui/solid";
 import { cva, VariantProps } from "class-variance-authority";
 import { splitProps } from "solid-js";

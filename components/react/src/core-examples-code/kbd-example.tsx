@@ -1,4 +1,4 @@
-export const kbdExampleCode = `import { Kbd, KbdGroup, KbdSeparator } from "../core/kbd";
+export const reactKbdExampleCode = `import { Kbd, KbdGroup, KbdSeparator } from "../core/kbd";
 
 export const KbdExample = () => {
   return (

@@ -1,4 +1,4 @@
-export const qrCodeCode = `import { QrCode as QrCodePrimitives } from "@ark-ui/react";
+export const reactQrCodeCode = `import { QrCode as QrCodePrimitives } from "@ark-ui/react";
 import React, { forwardRef } from "react";
 
 const QrCode = forwardRef<

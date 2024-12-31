@@ -13,6 +13,7 @@
     "@hookform/resolvers": "^3.9.1",
     "@mantine/hooks": "^7.13.5",
     "@repo/react-ui": "workspace:*",
+    "@repo/solid-ui": "workspace:*",
     "@tabler/icons-react": "^3.21.0",
     "class-variance-authority": "^0.7.0",
     "geist": "^1.3.1",

@@ -1,4 +1,4 @@
-export const tableCode = `import { forwardRef } from "react";
+export const reactTableCode = `import { forwardRef } from "react";
 
 const Table = forwardRef<
   HTMLTableElement,

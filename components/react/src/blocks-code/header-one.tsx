@@ -1,4 +1,4 @@
-export const headerOneCode = `import { IconMenu2 } from "@tabler/icons-react";
+export const reactHeaderOneCode = `import { IconMenu2 } from "@tabler/icons-react";
 import { Button } from "../core/button";
 import {
   Drawer,

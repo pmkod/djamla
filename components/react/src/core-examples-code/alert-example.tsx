@@ -1,4 +1,4 @@
-export const alertExampleCode = `import { IconInfoCircle } from "@tabler/icons-react";
+export const reactAlertExampleCode = `import { IconInfoCircle } from "@tabler/icons-react";
 import {
   Alert,
   AlertContent,

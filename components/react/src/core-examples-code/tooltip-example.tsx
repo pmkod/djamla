@@ -1,4 +1,4 @@
-export const tooltipExampleCode = `import { Button } from "../core/button";
+export const reactTooltipExampleCode = `import { Button } from "../core/button";
 import { Tooltip, TooltipContent, TooltipTrigger } from "../core/tooltip";
 
 export const TooltipExample = () => {

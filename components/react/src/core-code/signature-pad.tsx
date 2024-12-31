@@ -1,4 +1,4 @@
-export const signaturePadCode = `import { SignaturePad as SignaturePadPrimitives, SignaturePadDrawEndDetails } from "@ark-ui/react";
+export const reactSignaturePadCode = `import { SignaturePad as SignaturePadPrimitives, SignaturePadDrawEndDetails } from "@ark-ui/react";
 import React, { forwardRef } from "react";
 
 const SignaturePad = forwardRef<

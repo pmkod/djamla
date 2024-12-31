@@ -1,1 +1,1 @@
-export const treeViewCode = ``
+export const solidTreeViewCode = ``

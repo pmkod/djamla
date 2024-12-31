@@ -1,4 +1,4 @@
-export const carouselExampleCode = `"use client";
+export const reactCarouselExampleCode = `"use client";
 import {
   Carousel,
   CarouselControl,

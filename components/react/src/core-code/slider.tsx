@@ -1,4 +1,4 @@
-export const sliderCode = `"use client";
+export const reactSliderCode = `"use client";
 
 import { Slider as SliderPrimitives } from "@ark-ui/react";
 import { cva, VariantProps } from "class-variance-authority";

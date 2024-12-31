@@ -1,4 +1,4 @@
-export const inputCode = `import {JSX, splitProps} from "solid-js"
+export const solidInputCode = `import {JSX, splitProps} from "solid-js"
 import { Field as FieldPrimitives } from "@ark-ui/solid";
 import { cva, VariantProps } from "class-variance-authority";
 

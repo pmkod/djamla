@@ -1,4 +1,4 @@
-export const skeletonCode = `import { cva, VariantProps } from "class-variance-authority";
+export const solidSkeletonCode = `import { cva, VariantProps } from "class-variance-authority";
 import { JSX, splitProps } from "solid-js";
 
 const skeletonStyle = cva("bg-base-200 animate-pulse", {

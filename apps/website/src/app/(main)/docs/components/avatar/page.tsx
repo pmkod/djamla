@@ -4,12 +4,13 @@ import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
 import { FrameworkTabList, FrameworkTabs, ReactTab, ReactTabContent, SolidTab, SolidTabContent } from "@/components/tabs/framework-tabs";
 import {
   Avatar,
-  avatarCode,
+  reactAvatarCode,
   AvatarExample,
-  avatarExampleCode,
+  reactAvatarExampleCode,
   AvatarFallback,
   AvatarImage,
 } from "@repo/react-ui";
+import { solidAvatarCode } from "@repo/solid-ui";
 import { Metadata } from "next";
 
 const title = "Avatar";
@@ -41,10 +42,11 @@ const AvatarPage = () => {
         </FrameworkTabList>
         <ReactTabContent>
 
-      <SyntaxHighlighter language="typescript">{avatarCode}</SyntaxHighlighter>
+      <SyntaxHighlighter language="typescript">{reactAvatarCode}</SyntaxHighlighter>
         </ReactTabContent>
 
         <SolidTabContent>
+        <SyntaxHighlighter language="typescript">{solidAvatarCode}</SyntaxHighlighter>
 
         </SolidTabContent>
       </FrameworkTabs>
@@ -62,7 +64,7 @@ const AvatarPage = () => {
         <ReactTabContent>
 
       <SyntaxHighlighter language="typescript">
-        {avatarExampleCode}
+        {reactAvatarExampleCode}
       </SyntaxHighlighter>
         </ReactTabContent>
 

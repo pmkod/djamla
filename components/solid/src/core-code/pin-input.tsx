@@ -1,4 +1,4 @@
-export const pinInputCode = `import { PinInput as PinInputPrimitives } from "@ark-ui/solid";
+export const solidPinInputCode = `import { PinInput as PinInputPrimitives } from "@ark-ui/solid";
 import { Index } from 'solid-js'
 
 

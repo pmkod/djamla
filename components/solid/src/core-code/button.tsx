@@ -1,4 +1,4 @@
-export const buttonCode = `// Button.tsx
+export const solidButtonCode = `// Button.tsx
 import { IconLoader2 } from "@tabler/icons-solidjs";
 import { cva, type VariantProps } from "class-variance-authority";
 import { JSX, Show, splitProps } from "solid-js";

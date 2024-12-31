@@ -1,4 +1,4 @@
-export const tabsCode = `"use client";
+export const reactTabsCode = `"use client";
 
 import { Tabs as TabsPrimitive } from "@ark-ui/react";
 import { cva, VariantProps } from "class-variance-authority";

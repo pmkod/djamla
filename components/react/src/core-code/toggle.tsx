@@ -1,4 +1,4 @@
-export const toggleCode = `"use client";
+export const reactToggleCode = `"use client";
 
 import { ToggleGroup as ToggleGroupPrimitives } from "@ark-ui/react";
 import { cva, VariantProps } from "class-variance-authority";

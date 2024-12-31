@@ -4,14 +4,15 @@ import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
 import { FrameworkTabList, FrameworkTabs, ReactTab, ReactTabContent, SolidTab, SolidTabContent } from "@/components/tabs/framework-tabs";
 import {
   Alert,
-  alertCode,
+  reactAlertCode,
   AlertContent,
   AlertDescription,
   AlertExample,
-  alertExampleCode,
+  reactAlertExampleCode,
   AlertIcon,
   AlertTitle,
 } from "@repo/react-ui";
+import { solidAlertCode } from "@repo/solid-ui";
 import { IconInfoCircle } from "@tabler/icons-react";
 import { Metadata } from "next";
 
@@ -60,10 +61,11 @@ const AlertPage = () => {
           <SolidTab />
         </FrameworkTabList>
         <ReactTabContent>
-      <SyntaxHighlighter language="typescript">{alertCode}</SyntaxHighlighter>
+      <SyntaxHighlighter language="typescript">{reactAlertCode}</SyntaxHighlighter>
         </ReactTabContent>
 
         <SolidTabContent>
+        <SyntaxHighlighter language="typescript">{solidAlertCode}</SyntaxHighlighter>
 
         </SolidTabContent>
       </FrameworkTabs>
@@ -84,7 +86,7 @@ const AlertPage = () => {
         </FrameworkTabList>
         <ReactTabContent>
       <SyntaxHighlighter language="typescript">
-        {alertExampleCode}
+        {reactAlertExampleCode}
       </SyntaxHighlighter>
 
         </ReactTabContent>

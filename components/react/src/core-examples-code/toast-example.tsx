@@ -1,4 +1,4 @@
-export const toastExampleCode = `"use client";
+export const reactToastExampleCode = `"use client";
 import { Button } from "../core/button";
 import { toast, Toast } from "../core/toast";
 

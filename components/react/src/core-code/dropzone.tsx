@@ -1,4 +1,4 @@
-export const dropzoneCode = `"use client";
+export const reactDropzoneCode = `"use client";
 import { FileUpload as FileUploadPrimitives } from "@ark-ui/react";
 import { IconTrash } from "@tabler/icons-react";
 import React, { forwardRef } from "react";

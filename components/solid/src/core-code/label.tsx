@@ -1,4 +1,4 @@
-export const labelCode = `import { JSX, splitProps } from "solid-js";
+export const solidLabelCode = `import { JSX, splitProps } from "solid-js";
 
 interface LabelProps extends JSX.LabelHTMLAttributes<HTMLLabelElement> {
 

@@ -1,4 +1,4 @@
-export const menuCode = `"use client";
+export const solidMenuCode = `"use client";
 import { Menu as MenuPrimitives } from "@ark-ui/solid";
 import { IconChevronRight } from "@tabler/icons-solidjs";
 import { splitProps } from "solid-js";

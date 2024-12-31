@@ -1,4 +1,4 @@
-export const cardExampleCode = `import { Button } from "../core/button";
+export const reactCardExampleCode = `import { Button } from "../core/button";
 import {
   Card,
   CardBody,

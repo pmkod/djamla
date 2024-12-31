@@ -1,4 +1,4 @@
-export const switchCode = `"use client";
+export const reactSwitchCode = `"use client";
 import { Switch as SwitchPrimitives } from "@ark-ui/react";
 import { cva, VariantProps } from "class-variance-authority";
 import React, { forwardRef } from "react";

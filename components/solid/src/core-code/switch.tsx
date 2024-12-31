@@ -1,4 +1,4 @@
-export const switchCode = `"use client";
+export const solidSwitchCode = `"use client";
 import { Switch as SwitchPrimitives } from "@ark-ui/solid";
 import { cva, VariantProps } from "class-variance-authority";
 import { splitProps } from "solid-js";

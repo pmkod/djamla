@@ -1,4 +1,4 @@
-export const buttonExampleCode = `import { Button } from "../core/button";
+export const reactButtonExampleCode = `import { Button } from "../core/button";
 
 export const ButtonExample = () => {
   return (

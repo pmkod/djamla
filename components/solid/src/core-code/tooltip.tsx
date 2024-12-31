@@ -1,4 +1,4 @@
-export const tooltipCode = `import { Tooltip as TooltipPrimitives, TooltipRootProps } from "@ark-ui/solid";
+export const solidTooltipCode = `import { Tooltip as TooltipPrimitives, TooltipRootProps } from "@ark-ui/solid";
 
 
 // 

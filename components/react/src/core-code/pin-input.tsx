@@ -1,4 +1,4 @@
-export const pinInputCode = `import { PinInput as PinInputPrimitives } from "@ark-ui/react";
+export const reactPinInputCode = `import { PinInput as PinInputPrimitives } from "@ark-ui/react";
 import { forwardRef } from "react";
 
 interface PinInputProps {
