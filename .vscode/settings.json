@@ -4,5 +4,9 @@
       "mode": "auto"
     }
   ],
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {}
+  },
 }

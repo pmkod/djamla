@@ -1,13 +1,20 @@
 import { ComponentPreview } from "@/components/core/component-preview";
 import { DocText } from "@/components/core/doc-text";
 import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
-import { FrameworkTabList, FrameworkTabs, ReactTab, ReactTabContent, SolidTab, SolidTabContent } from "@/components/tabs/framework-tabs";
 import {
-  reactAccordionCode,
+  FrameworkTabList,
+  FrameworkTabs,
+  ReactTab,
+  ReactTabContent,
+  SolidTab,
+  SolidTabContent,
+} from "@/components/tabs/framework-tabs";
+import {
   AccordionExample,
+  reactAccordionCode,
   reactAccordionExampleCode,
 } from "@repo/react-ui";
-import {solidAccordionCode} from "@repo/solid-ui"
+import { solidAccordionCode } from "@repo/solid-ui";
 import { Metadata } from "next";
 
 const title = "Accordion";
@@ -34,45 +41,38 @@ const AccordionPage = () => {
           <SolidTab />
         </FrameworkTabList>
 
-<ReactTabContent>
-
-      <SyntaxHighlighter language="typescript">
-        {reactAccordionCode}
-      </SyntaxHighlighter>
-</ReactTabContent>
-<SolidTabContent>
-
-<SyntaxHighlighter language="typescript">
-        {solidAccordionCode}
-
-        
-      </SyntaxHighlighter></SolidTabContent>
+        <ReactTabContent>
+          <SyntaxHighlighter language="typescript">
+            {reactAccordionCode}
+          </SyntaxHighlighter>
+        </ReactTabContent>
+        <SolidTabContent>
+          <SyntaxHighlighter language="typescript">
+            {solidAccordionCode}
+          </SyntaxHighlighter>
+        </SolidTabContent>
       </FrameworkTabs>
       <DocText level="titleTwo">Example</DocText>
       <ComponentPreview>
         <AccordionExample />
       </ComponentPreview>
       <FrameworkTabs>
-
-      <FrameworkTabList>
+        <FrameworkTabList>
           <ReactTab />
           <SolidTab />
         </FrameworkTabList>
 
         <ReactTabContent>
-
-
-      <SyntaxHighlighter language="typescript">
-        {reactAccordionExampleCode}
-      </SyntaxHighlighter>
+          <SyntaxHighlighter language="typescript">
+            {reactAccordionExampleCode}
+          </SyntaxHighlighter>
         </ReactTabContent>
+        <SolidTabContent>
+          <SyntaxHighlighter language="typescript">
+            {/* {reactAccordionExampleCode} */}
+          </SyntaxHighlighter>
+        </SolidTabContent>
       </FrameworkTabs>
-
-
-
-      
-
-      
     </>
   );
 };
