@@ -1,10 +1,16 @@
+import { AvailableSoonBlock } from "@/components/available-soon-block";
 import {
-  BlockCode,
+  BlockCodes,
   BlockPresentation,
   BlockPreview,
 } from "@/components/core/block-presentation";
+import { BlockSyntaxHighlighter } from "@/components/core/block-syntax-highlighter";
 import { DocText } from "@/components/core/doc-text";
-import { footerOneCode } from "@repo/react-ui";
+import {
+  ReactTabContent,
+  SolidTabContent,
+} from "@/components/tabs/framework-tabs";
+import { reactFooterOneCode } from "@repo/react-ui";
 
 const FootersPage = () => {
   return (
@@ -13,7 +19,16 @@ const FootersPage = () => {
       <BlockPresentation>
         <BlockPreview src="/blocks/footers/footer-one" />
 
-        <BlockCode>{footerOneCode}</BlockCode>
+        <BlockCodes>
+          <ReactTabContent>
+            <BlockSyntaxHighlighter>
+              {reactFooterOneCode}
+            </BlockSyntaxHighlighter>
+          </ReactTabContent>
+          <SolidTabContent>
+            <AvailableSoonBlock />
+          </SolidTabContent>
+        </BlockCodes>
       </BlockPresentation>
     </>
   );

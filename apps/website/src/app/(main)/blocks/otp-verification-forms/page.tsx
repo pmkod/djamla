@@ -1,10 +1,16 @@
+import { AvailableSoonBlock } from "@/components/available-soon-block";
 import {
-  BlockCode,
+  BlockCodes,
   BlockPresentation,
   BlockPreview,
 } from "@/components/core/block-presentation";
+import { BlockSyntaxHighlighter } from "@/components/core/block-syntax-highlighter";
 import { DocText } from "@/components/core/doc-text";
-import { otpVerificationFormOneCode } from "@repo/react-ui";
+import {
+  ReactTabContent,
+  SolidTabContent,
+} from "@/components/tabs/framework-tabs";
+import { reactOtpVerificationFormOneCode } from "@repo/react-ui";
 
 const OtpVerficationFormsPage = () => {
   return (
@@ -13,7 +19,16 @@ const OtpVerficationFormsPage = () => {
       <BlockPresentation>
         <BlockPreview src="/blocks/otp-verification-forms/otp-verification-form-one" />
 
-        <BlockCode>{otpVerificationFormOneCode}</BlockCode>
+        <BlockCodes>
+          <ReactTabContent>
+            <BlockSyntaxHighlighter>
+              {reactOtpVerificationFormOneCode}
+            </BlockSyntaxHighlighter>
+          </ReactTabContent>
+          <SolidTabContent>
+            <AvailableSoonBlock />
+          </SolidTabContent>
+        </BlockCodes>
       </BlockPresentation>
     </>
   );

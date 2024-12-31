@@ -3,9 +3,12 @@ import { Tabs as TabsPrimitives } from "@ark-ui/react";
 import { atom, useAtom, useAtomValue } from "jotai";
 import { PropsWithChildren, ReactNode, useRef, useState } from "react";
 import { BlockSyntaxHighlighter } from "./block-syntax-highlighter";
+import { TabList, Tabs } from "@repo/react-ui";
+import { FrameworkTabList, FrameworkTabs, ReactTab, ReactTabContent, SolidTab } from "../tabs/framework-tabs";
 
 const PREVIEW = "PREVIEW";
-const CODE = "CODE";
+// const CODE = "CODE";
+const CODES = "CODES";
 
 const MOBILE_SIZE = {
   id: 2,
@@ -58,7 +61,7 @@ const BlockPresentation = ({ children }: PropsWithChildren) => {
       <div className="flex justify-between">
         <TabsPrimitives.List className="bg-base-200 relative w-max space-x-1 rounded p-1">
           <Tab value={PREVIEW}>Preview</Tab>
-          <Tab value={CODE}>Code</Tab>
+          <Tab value={CODES}>Code</Tab>
         </TabsPrimitives.List>
 
         <ScreenSizeSelector />
@@ -135,18 +138,38 @@ const BlockPreview = ({ children, src }: BlockPreviewProps) => {
   );
 };
 
-interface BlockCodeProps {
-  children: string;
-}
+// interface BlockCodeProps {
+//   children: string;
+// }
 
-const BlockCode = ({ children }: BlockCodeProps) => {
+// const BlockCode = ({ children }: BlockCodeProps) => {
+//   return (
+//     <TabsPrimitives.Content value={CODE}>
+//       <BlockSyntaxHighlighter language="typescript">
+//         {children}
+//       </BlockSyntaxHighlighter>
+//     </TabsPrimitives.Content>
+//   );
+// };
+
+const BlockCodes = ({ children }: PropsWithChildren) => {
   return (
-    <TabsPrimitives.Content value={CODE}>
-      <BlockSyntaxHighlighter language="typescript">
+    <TabsPrimitives.Content value={CODES}>
+      {/* <BlockSyntaxHighlighter language="typescript">
         {children}
-      </BlockSyntaxHighlighter>
+      </BlockSyntaxHighlighter> */}
+      <FrameworkTabs>
+        <FrameworkTabList>
+          <ReactTab />
+          <SolidTab />
+
+        </FrameworkTabList>
+
+        {children}
+
+      </FrameworkTabs>
     </TabsPrimitives.Content>
   );
 };
 
-export { BlockCode, BlockPresentation, BlockPreview };
+export { BlockPresentation, BlockPreview, BlockCodes };

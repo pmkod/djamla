@@ -1,10 +1,16 @@
+import { AvailableSoonBlock } from "@/components/available-soon-block";
 import {
-  BlockCode,
+  BlockCodes,
   BlockPresentation,
   BlockPreview,
 } from "@/components/core/block-presentation";
+import { BlockSyntaxHighlighter } from "@/components/core/block-syntax-highlighter";
 import { DocText } from "@/components/core/doc-text";
-import { loginFormOneCode } from "@repo/react-ui";
+import {
+  ReactTabContent,
+  SolidTabContent,
+} from "@/components/tabs/framework-tabs";
+import { reactLoginFormOneCode } from "@repo/react-ui";
 
 const LoginFormsPage = () => {
   return (
@@ -12,8 +18,16 @@ const LoginFormsPage = () => {
       <DocText level="titleOne">Login forms</DocText>
       <BlockPresentation>
         <BlockPreview src="/blocks/login-forms/login-form-one" />
-
-        <BlockCode>{loginFormOneCode}</BlockCode>
+        <BlockCodes>
+          <ReactTabContent>
+            <BlockSyntaxHighlighter>
+              {reactLoginFormOneCode}
+            </BlockSyntaxHighlighter>
+          </ReactTabContent>
+          <SolidTabContent>
+            <AvailableSoonBlock />
+          </SolidTabContent>
+        </BlockCodes>
       </BlockPresentation>
     </>
   );

@@ -1,10 +1,16 @@
+import { AvailableSoonBlock } from "@/components/available-soon-block";
 import {
-  BlockCode,
+  BlockCodes,
   BlockPresentation,
   BlockPreview,
 } from "@/components/core/block-presentation";
+import { BlockSyntaxHighlighter } from "@/components/core/block-syntax-highlighter";
 import { DocText } from "@/components/core/doc-text";
-import { bottomNavOneCode } from "@repo/react-ui";
+import {
+  ReactTabContent,
+  SolidTabContent,
+} from "@/components/tabs/framework-tabs";
+import { reactBottomNavOneCode } from "@repo/react-ui";
 
 const BottomNavsPage = () => {
   return (
@@ -13,7 +19,16 @@ const BottomNavsPage = () => {
       <BlockPresentation>
         <BlockPreview src="/blocks/bottom-navs/bottom-nav-one" />
 
-        <BlockCode>{bottomNavOneCode}</BlockCode>
+        <BlockCodes>
+          <ReactTabContent>
+            <BlockSyntaxHighlighter>
+              {reactBottomNavOneCode}
+            </BlockSyntaxHighlighter>
+          </ReactTabContent>
+          <SolidTabContent>
+            <AvailableSoonBlock />
+          </SolidTabContent>
+        </BlockCodes>
       </BlockPresentation>
     </>
   );

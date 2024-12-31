@@ -1,10 +1,16 @@
+import { AvailableSoonBlock } from "@/components/available-soon-block";
 import {
-  BlockCode,
+  BlockCodes,
   BlockPresentation,
   BlockPreview,
 } from "@/components/core/block-presentation";
+import { BlockSyntaxHighlighter } from "@/components/core/block-syntax-highlighter";
 import { DocText } from "@/components/core/doc-text";
-import { signupFormOneCode } from "@repo/react-ui";
+import {
+  ReactTabContent,
+  SolidTabContent,
+} from "@/components/tabs/framework-tabs";
+import { reactSignupFormOneCode } from "@repo/react-ui";
 
 const SignupFormsPage = () => {
   return (
@@ -13,7 +19,16 @@ const SignupFormsPage = () => {
       <BlockPresentation>
         <BlockPreview src="/blocks/signup-forms/signup-form-one" />
 
-        <BlockCode>{signupFormOneCode}</BlockCode>
+        <BlockCodes>
+          <ReactTabContent>
+            <BlockSyntaxHighlighter>
+              {reactSignupFormOneCode}
+            </BlockSyntaxHighlighter>
+          </ReactTabContent>
+          <SolidTabContent>
+            <AvailableSoonBlock />
+          </SolidTabContent>
+        </BlockCodes>
       </BlockPresentation>
     </>
   );
