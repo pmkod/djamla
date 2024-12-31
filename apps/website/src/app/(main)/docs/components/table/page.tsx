@@ -1,7 +1,9 @@
 import { ComponentPreview } from "@/components/core/component-preview";
 import { DocText } from "@/components/core/doc-text";
 import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
-import { tableCode, TableExample, tableExampleCode } from "@repo/react-ui";
+import { FrameworkTabList, FrameworkTabs, ReactTab, ReactTabContent, SolidTab, SolidTabContent } from "@/components/tabs/framework-tabs";
+import { reactTableCode, TableExample, reactTableExampleCode, SliderExample } from "@repo/react-ui";
+import { solidTableCode } from "@repo/solid-ui";
 
 import { Metadata } from "next";
 
@@ -22,14 +24,51 @@ const TablePage = () => {
         <TableExample />
       </ComponentPreview>
       <DocText level="titleTwo">Installation</DocText>
-      <SyntaxHighlighter language="typescript">{tableCode}</SyntaxHighlighter>
+
+      <FrameworkTabs>
+
+<FrameworkTabList>
+    <ReactTab />
+    <SolidTab />
+  </FrameworkTabList>
+  <ReactTabContent>
+  <SyntaxHighlighter language="typescript">{reactTableCode}</SyntaxHighlighter>
+
+  </ReactTabContent>
+
+  <SolidTabContent>
+  <SyntaxHighlighter language="typescript">{solidTableCode}</SyntaxHighlighter>
+
+  </SolidTabContent>
+  </FrameworkTabs>
+
+
+
+
+
       <DocText level="titleTwo">Example</DocText>
       <ComponentPreview>
         <TableExample />
       </ComponentPreview>
-      <SyntaxHighlighter language="typescript">
-        {tableExampleCode}
+      <FrameworkTabs>
+      
+      <FrameworkTabList>
+    <ReactTab />
+    <SolidTab />
+  </FrameworkTabList>
+  <ReactTabContent>
+
+  <SyntaxHighlighter language="typescript">
+        {reactTableExampleCode}
       </SyntaxHighlighter>
+  </ReactTabContent>
+
+  <SolidTabContent>
+
+  </SolidTabContent>
+
+
+</FrameworkTabs>
     </>
   );
 };

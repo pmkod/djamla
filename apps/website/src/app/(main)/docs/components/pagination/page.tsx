@@ -3,10 +3,11 @@ import { DocText } from "@/components/core/doc-text";
 import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
 import { FrameworkTabList, FrameworkTabs, ReactTab, ReactTabContent, SolidTab, SolidTabContent } from "@/components/tabs/framework-tabs";
 import {
-  paginationCode,
+  reactPaginationCode,
   PaginationExample,
-  paginationExampleCode,
+  reactPaginationExampleCode,
 } from "@repo/react-ui";
+import { solidPaginationCode } from "@repo/solid-ui";
 import { Metadata } from "next";
 
 const title = "Pagination";
@@ -35,13 +36,15 @@ const PaginationPage = () => {
         </FrameworkTabList>
         <ReactTabContent>
       <SyntaxHighlighter language="typescript">
-        {paginationCode}
+        {reactPaginationCode}
       </SyntaxHighlighter>
 
         </ReactTabContent>
 
         <SolidTabContent>
-
+        <SyntaxHighlighter language="typescript">
+        {solidPaginationCode}
+      </SyntaxHighlighter>
         </SolidTabContent>
       </FrameworkTabs>
       <DocText level="titleTwo">Example</DocText>
@@ -49,7 +52,7 @@ const PaginationPage = () => {
         <PaginationExample />
       </ComponentPreview>
       <SyntaxHighlighter language="typescript">
-        {paginationExampleCode}
+        {reactPaginationExampleCode}
       </SyntaxHighlighter>
     </>
   );

@@ -3,10 +3,11 @@ import { DocText } from "@/components/core/doc-text";
 import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
 import { FrameworkTabList, FrameworkTabs, ReactTab, ReactTabContent, SolidTab, SolidTabContent } from "@/components/tabs/framework-tabs";
 import {
-  signaturePadCode,
+  reactSignaturePadCode,
   SignaturePadExample,
-  signaturePadExampleCode,
+  reactSignaturePadExampleCode,
 } from "@repo/react-ui";
+import { solidSignaturePadCode } from "@repo/solid-ui";
 
 import { Metadata } from "next";
 
@@ -36,12 +37,15 @@ const SignaturePadPage = () => {
         </FrameworkTabList>
         <ReactTabContent>
       <SyntaxHighlighter language="typescript">
-        {signaturePadCode}
+        {reactSignaturePadCode}
       </SyntaxHighlighter>
 
         </ReactTabContent>
 
         <SolidTabContent>
+        <SyntaxHighlighter language="typescript">
+        {solidSignaturePadCode}
+      </SyntaxHighlighter>
 
         </SolidTabContent>
       </FrameworkTabs>
@@ -59,7 +63,7 @@ const SignaturePadPage = () => {
         <ReactTabContent>
 
       <SyntaxHighlighter language="typescript">
-        {signaturePadExampleCode}
+        {reactSignaturePadExampleCode}
       </SyntaxHighlighter>
         </ReactTabContent>
 

@@ -3,10 +3,11 @@ import { DocText } from "@/components/core/doc-text";
 import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
 import { FrameworkTabList, FrameworkTabs, ReactTab, ReactTabContent, SolidTab, SolidTabContent } from "@/components/tabs/framework-tabs";
 import {
-  dropzoneCode,
+  reactDropzoneCode,
   DropzoneExample,
-  dropzoneExampleCode,
+  reactDropzoneExampleCode,
 } from "@repo/react-ui";
+import { solidDropzoneCode } from "@repo/solid-ui";
 import { Metadata } from "next";
 
 const title = "Dropzone";
@@ -36,12 +37,14 @@ const DropzonePage = () => {
         <ReactTabContent>
 
       <SyntaxHighlighter language="typescript">
-        {dropzoneCode}
+        {reactDropzoneCode}
       </SyntaxHighlighter>
         </ReactTabContent>
 
         <SolidTabContent>
-
+        <SyntaxHighlighter language="typescript">
+        {solidDropzoneCode}
+      </SyntaxHighlighter>
         </SolidTabContent>
       </FrameworkTabs>
       <DocText level="titleTwo">Example</DocText>
@@ -49,7 +52,7 @@ const DropzonePage = () => {
         <DropzoneExample />
       </ComponentPreview>
       <SyntaxHighlighter language="typescript">
-        {dropzoneExampleCode}
+        {reactDropzoneExampleCode}
       </SyntaxHighlighter>
 
       <FrameworkTabs>

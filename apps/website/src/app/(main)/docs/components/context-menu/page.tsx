@@ -3,10 +3,11 @@ import { DocText } from "@/components/core/doc-text";
 import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
 import { FrameworkTabList, FrameworkTabs, ReactTab, ReactTabContent, SolidTab, SolidTabContent } from "@/components/tabs/framework-tabs";
 import {
-  contextMenuCode,
+  reactContextMenuCode,
   ContextMenuExample,
-  contextMenuExampleCode,
+  reactContextMenuExampleCode,
 } from "@repo/react-ui";
+import { solidContextMenuCode } from "@repo/solid-ui";
 import { Metadata } from "next";
 
 const title = "Context Menu";
@@ -36,12 +37,15 @@ const ContextMenuPage = () => {
         <ReactTabContent>
 
       <SyntaxHighlighter language="typescript">
-        {contextMenuCode}
+        {reactContextMenuCode}
       </SyntaxHighlighter>
         </ReactTabContent>
 
         <SolidTabContent>
 
+        <SyntaxHighlighter language="typescript">
+        {solidContextMenuCode}
+      </SyntaxHighlighter>
         </SolidTabContent>
       </FrameworkTabs>
       <DocText level="titleTwo">Example</DocText>
@@ -58,7 +62,7 @@ const ContextMenuPage = () => {
         <ReactTabContent>
 
       <SyntaxHighlighter language="typescript">
-        {contextMenuExampleCode}
+        {reactContextMenuExampleCode}
       </SyntaxHighlighter>
         </ReactTabContent>
 

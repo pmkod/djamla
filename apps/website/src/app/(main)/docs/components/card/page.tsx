@@ -2,7 +2,8 @@ import { ComponentPreview } from "@/components/core/component-preview";
 import { DocText } from "@/components/core/doc-text";
 import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
 import { FrameworkTabList, FrameworkTabs, ReactTab, ReactTabContent, SolidTab, SolidTabContent } from "@/components/tabs/framework-tabs";
-import { cardCode, CardExample, cardExampleCode } from "@repo/react-ui";
+import { reactCardCode, CardExample, reactCardExampleCode } from "@repo/react-ui";
+import { solidCardCode } from "@repo/solid-ui";
 import { Metadata } from "next";
 
 const title = "Card";
@@ -30,11 +31,12 @@ const CardPage = () => {
           <SolidTab />
         </FrameworkTabList>
         <ReactTabContent>
-      <SyntaxHighlighter language="typescript">{cardCode}</SyntaxHighlighter>
+      <SyntaxHighlighter language="typescript">{reactCardCode}</SyntaxHighlighter>
 
         </ReactTabContent>
 
         <SolidTabContent>
+        <SyntaxHighlighter language="typescript">{solidCardCode}</SyntaxHighlighter>
 
         </SolidTabContent>
       </FrameworkTabs>
@@ -51,7 +53,7 @@ const CardPage = () => {
         </FrameworkTabList>
         <ReactTabContent>
       <SyntaxHighlighter language="typescript">
-        {cardExampleCode}
+        {reactCardExampleCode}
       </SyntaxHighlighter>
 
         </ReactTabContent>

@@ -4,12 +4,13 @@ import { FrameworkTabList, FrameworkTabs, ReactTab, ReactTabContent, SolidTab, S
 import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
 import {
   Switch,
-  switchCode,
+  reactSwitchCode,
   SwitchExample,
-  switchExampleCode,
+  reactSwitchExampleCode,
 } from "@repo/react-ui";
 
 import { Metadata } from "next";
+import { solidSwitchCode } from "@repo/solid-ui";
 
 const title = "Siwtch";
 const description = "A toggle control for binary states.";
@@ -41,11 +42,12 @@ const SwitchPage = () => {
           <SolidTab />
         </FrameworkTabList>
         <ReactTabContent>
-      <SyntaxHighlighter language="typescript">{switchCode}</SyntaxHighlighter>
+      <SyntaxHighlighter language="typescript">{reactSwitchCode}</SyntaxHighlighter>
 
         </ReactTabContent>
 
         <SolidTabContent>
+        <SyntaxHighlighter language="typescript">{solidSwitchCode}</SyntaxHighlighter>
 
         </SolidTabContent>
       </FrameworkTabs>
@@ -63,7 +65,7 @@ const SwitchPage = () => {
         </FrameworkTabList>
         <ReactTabContent>
       <SyntaxHighlighter language="typescript">
-        {switchExampleCode}
+        {reactSwitchExampleCode}
       </SyntaxHighlighter>
 
         </ReactTabContent>

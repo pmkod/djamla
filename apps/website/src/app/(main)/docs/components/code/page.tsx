@@ -2,7 +2,8 @@ import { ComponentPreview } from "@/components/core/component-preview";
 import { DocText } from "@/components/core/doc-text";
 import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
 import { FrameworkTabList, FrameworkTabs, ReactTab, ReactTabContent, SolidTab, SolidTabContent } from "@/components/tabs/framework-tabs";
-import { Code, codeCode, CodeExample, codeExampleCode } from "@repo/react-ui";
+import { Code, reactCodeCode, CodeExample, reactCodeExampleCode } from "@repo/react-ui";
+import { solidCodeCode } from "@repo/solid-ui";
 import { Metadata } from "next";
 
 const title = "Code";
@@ -30,11 +31,12 @@ const CodePage = () => {
           <SolidTab />
         </FrameworkTabList>
         <ReactTabContent>
-      <SyntaxHighlighter language="typescript">{codeCode}</SyntaxHighlighter>
+      <SyntaxHighlighter language="typescript">{reactCodeCode}</SyntaxHighlighter>
 
         </ReactTabContent>
 
         <SolidTabContent>
+        <SyntaxHighlighter language="typescript">{solidCodeCode}</SyntaxHighlighter>
 
         </SolidTabContent>
       </FrameworkTabs>
@@ -53,7 +55,7 @@ const CodePage = () => {
         <ReactTabContent>
 
       <SyntaxHighlighter language="typescript">
-        {codeExampleCode}
+        {reactCodeExampleCode}
       </SyntaxHighlighter>
         </ReactTabContent>
 

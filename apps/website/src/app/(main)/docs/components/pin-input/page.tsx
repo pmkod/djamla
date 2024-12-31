@@ -3,10 +3,11 @@ import { DocText } from "@/components/core/doc-text";
 import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
 import { FrameworkTabList, FrameworkTabs, ReactTab, SolidTab, ReactTabContent, SolidTabContent } from "@/components/tabs/framework-tabs";
 import {
-  pinInputCode,
+  reactPinInputCode,
   PinInputExample,
-  pinInputExampleCode,
+  reactPinInputExampleCode,
 } from "@repo/react-ui";
+import { solidPinInputCode } from "@repo/solid-ui";
 import { Metadata } from "next";
 
 const title = "Pin Input";
@@ -35,13 +36,15 @@ const PinInputPage = () => {
         </FrameworkTabList>
         <ReactTabContent>
       <SyntaxHighlighter language="typescript">
-        {pinInputCode}
+        {reactPinInputCode}
       </SyntaxHighlighter>
 
         </ReactTabContent>
 
         <SolidTabContent>
-
+        <SyntaxHighlighter language="typescript">
+        {solidPinInputCode}
+      </SyntaxHighlighter>
         </SolidTabContent>
       </FrameworkTabs>
       <DocText level="titleTwo">Example</DocText>
@@ -57,7 +60,7 @@ const PinInputPage = () => {
         </FrameworkTabList>
         <ReactTabContent>
       <SyntaxHighlighter language="typescript">
-        {pinInputExampleCode}
+        {reactPinInputExampleCode}
       </SyntaxHighlighter>
 
         </ReactTabContent>

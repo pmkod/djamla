@@ -2,7 +2,8 @@ import { ComponentPreview } from "@/components/core/component-preview";
 import { DocText } from "@/components/core/doc-text";
 import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
 import { FrameworkTabList, FrameworkTabs, ReactTab, ReactTabContent, SolidTab, SolidTabContent } from "@/components/tabs/framework-tabs";
-import { qrCodeCode, QrCodeExample, qrCodeExampleCode } from "@repo/react-ui";
+import { reactQrCodeCode, QrCodeExample, reactQrCodeExampleCode } from "@repo/react-ui";
+import { solidQrCodeCode } from "@repo/solid-ui";
 
 import { Metadata } from "next";
 
@@ -31,11 +32,12 @@ const QrCodePage = () => {
           <SolidTab />
         </FrameworkTabList>
         <ReactTabContent>
-      <SyntaxHighlighter language="typescript">{qrCodeCode}</SyntaxHighlighter>
+      <SyntaxHighlighter language="typescript">{reactQrCodeCode}</SyntaxHighlighter>
 
         </ReactTabContent>
 
         <SolidTabContent>
+        <SyntaxHighlighter language="typescript">{solidQrCodeCode}</SyntaxHighlighter>
 
         </SolidTabContent>
       </FrameworkTabs>
@@ -53,7 +55,7 @@ const QrCodePage = () => {
         </FrameworkTabList>
         <ReactTabContent>
       <SyntaxHighlighter language="typescript">
-        {qrCodeExampleCode}
+        {reactQrCodeExampleCode}
       </SyntaxHighlighter>
 
         </ReactTabContent>

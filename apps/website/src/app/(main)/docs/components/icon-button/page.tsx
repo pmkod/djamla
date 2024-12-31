@@ -4,10 +4,11 @@ import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
 import { FrameworkTabList, FrameworkTabs, ReactTab, ReactTabContent, SolidTab, SolidTabContent } from "@/components/tabs/framework-tabs";
 import {
   IconButton,
-  iconButtonCode,
+  reactIconButtonCode,
   IconButtonExample,
-  iconButtonExampleCode,
+  reactIconButtonExampleCode,
 } from "@repo/react-ui";
+import { solidIconButtonCode } from "@repo/solid-ui";
 import { IconPlus } from "@tabler/icons-react";
 import { Metadata } from "next";
 
@@ -49,13 +50,15 @@ const IconButtonPage = () => {
         </FrameworkTabList>
         <ReactTabContent>
       <SyntaxHighlighter language="typescript">
-        {iconButtonCode}
+        {reactIconButtonCode}
       </SyntaxHighlighter>
 
         </ReactTabContent>
 
         <SolidTabContent>
-
+        <SyntaxHighlighter language="typescript">
+        {solidIconButtonCode}
+      </SyntaxHighlighter>
         </SolidTabContent>
       </FrameworkTabs>
       <DocText level="titleTwo">Example</DocText>
@@ -71,7 +74,7 @@ const IconButtonPage = () => {
         </FrameworkTabList>
         <ReactTabContent>
       <SyntaxHighlighter language="typescript">
-        {iconButtonExampleCode}
+        {reactIconButtonExampleCode}
       </SyntaxHighlighter>
 
         </ReactTabContent>

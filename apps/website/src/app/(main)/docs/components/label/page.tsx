@@ -2,7 +2,8 @@ import { ComponentPreview } from "@/components/core/component-preview";
 import { DocText } from "@/components/core/doc-text";
 import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
 import { FrameworkTabList, FrameworkTabs, ReactTab, ReactTabContent, SolidTab, SolidTabContent } from "@/components/tabs/framework-tabs";
-import { labelCode, LabelExample, labelExampleCode } from "@repo/react-ui";
+import { reactLabelCode, LabelExample, reactLabelExampleCode } from "@repo/react-ui";
+import { solidLabelCode } from "@repo/solid-ui";
 import { Metadata } from "next";
 
 const title = "Label";
@@ -30,11 +31,12 @@ const LabelPage = () => {
           <SolidTab />
         </FrameworkTabList>
         <ReactTabContent>
-      <SyntaxHighlighter language="typescript">{labelCode}</SyntaxHighlighter>
+      <SyntaxHighlighter language="typescript">{reactLabelCode}</SyntaxHighlighter>
 
         </ReactTabContent>
 
-        <SolidTabContent>
+      <SyntaxHighlighter language="typescript">{solidLabelCode}</SyntaxHighlighter>
+      <SolidTabContent>
 
         </SolidTabContent>
       </FrameworkTabs>
@@ -53,7 +55,7 @@ const LabelPage = () => {
         <ReactTabContent>
 
       <SyntaxHighlighter language="typescript">
-        {labelExampleCode}
+        {reactLabelExampleCode}
       </SyntaxHighlighter>
         </ReactTabContent>
 

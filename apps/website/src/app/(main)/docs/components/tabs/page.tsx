@@ -1,15 +1,17 @@
 import { ComponentPreview } from "@/components/core/component-preview";
 import { DocText } from "@/components/core/doc-text";
 import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
+import { FrameworkTabList, FrameworkTabs, ReactTab, ReactTabContent, SolidTab, SolidTabContent } from "@/components/tabs/framework-tabs";
 import {
   Tab,
   TabContent,
   TabList,
   Tabs,
-  tabsCode,
+  reactTabsCode,
   TabsExample,
-  tabsExampleCode,
+  reactTabsExampleCode,
 } from "@repo/react-ui";
+import { solidTabsCode } from "@repo/solid-ui";
 import { Metadata } from "next";
 
 const title = "Tabs";
@@ -46,14 +48,50 @@ const TabsPage = () => {
         </div>
       </ComponentPreview>
       <DocText level="titleTwo">Installation</DocText>
-      <SyntaxHighlighter language="typescript">{tabsCode}</SyntaxHighlighter>
+
+      <FrameworkTabs>
+
+<FrameworkTabList>
+    <ReactTab />
+    <SolidTab />
+  </FrameworkTabList>
+  <ReactTabContent>
+  <SyntaxHighlighter language="typescript">{reactTabsCode}</SyntaxHighlighter>
+
+  </ReactTabContent>
+
+
+  <SolidTabContent>
+  <SyntaxHighlighter language="typescript">{solidTabsCode}</SyntaxHighlighter>
+
+  </SolidTabContent>
+
+
+</FrameworkTabs>
       <DocText level="titleTwo">Example</DocText>
       <ComponentPreview>
         <TabsExample />
       </ComponentPreview>
-      <SyntaxHighlighter language="typescript">
-        {tabsExampleCode}
+      <FrameworkTabs>
+
+<FrameworkTabList>
+    <ReactTab />
+    <SolidTab />
+  </FrameworkTabList>
+  <ReactTabContent>
+
+  <SyntaxHighlighter language="typescript">
+        {reactTabsExampleCode}
       </SyntaxHighlighter>
+  </ReactTabContent>
+
+
+  <SolidTabContent>
+
+  </SolidTabContent>
+
+
+</FrameworkTabs>
     </>
   );
 };

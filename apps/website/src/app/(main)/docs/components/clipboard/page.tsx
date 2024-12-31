@@ -4,10 +4,11 @@ import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
 import { FrameworkTabList, FrameworkTabs, ReactTab, ReactTabContent, SolidTab, SolidTabContent } from "@/components/tabs/framework-tabs";
 import {
   Clipboard,
-  clipboardCode,
+  reactClipboardCode,
   ClipboardExample,
-  clipboardExampleCode,
+  reactClipboardExampleCode,
 } from "@repo/react-ui";
+import { solidClipboardCode } from "@repo/solid-ui";
 import { Metadata } from "next";
 
 const title = "Clipboard";
@@ -36,12 +37,16 @@ const ClipboardPage = () => {
         </FrameworkTabList>
         <ReactTabContent>
       <SyntaxHighlighter language="typescript">
-        {clipboardCode}
+        {reactClipboardCode}
       </SyntaxHighlighter>
 
         </ReactTabContent>
 
         <SolidTabContent>
+
+        <SyntaxHighlighter language="typescript">
+        {solidClipboardCode}
+      </SyntaxHighlighter>
 
         </SolidTabContent>
       </FrameworkTabs>
@@ -58,7 +63,7 @@ const ClipboardPage = () => {
         </FrameworkTabList>
         <ReactTabContent>
       <SyntaxHighlighter language="typescript">
-        {clipboardExampleCode}
+        {reactClipboardExampleCode}
       </SyntaxHighlighter>
 
         </ReactTabContent>

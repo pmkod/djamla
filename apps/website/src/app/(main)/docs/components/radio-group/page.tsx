@@ -4,11 +4,12 @@ import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
 import { FrameworkTabList, FrameworkTabs, ReactTab, ReactTabContent, SolidTab, SolidTabContent } from "@/components/tabs/framework-tabs";
 import {
   RadioGroup,
-  radioGroupCode,
+  reactRadioGroupCode,
   RadioGroupExample,
-  radioGroupExampleCode,
+  reactRadioGroupExampleCode,
   RadioGroupItem,
 } from "@repo/react-ui";
+import { solidRadioGroupCode } from "@repo/solid-ui";
 
 import { Metadata } from "next";
 
@@ -51,13 +52,16 @@ const RadioGroupPage = () => {
         </FrameworkTabList>
         <ReactTabContent>
       <SyntaxHighlighter language="typescript">
-        {radioGroupCode}
+        {reactRadioGroupCode}
       </SyntaxHighlighter>
 
         </ReactTabContent>
 
         <SolidTabContent>
 
+        <SyntaxHighlighter language="typescript">
+        {solidRadioGroupCode}
+      </SyntaxHighlighter>
         </SolidTabContent>
       </FrameworkTabs>
       <DocText level="titleTwo">Example</DocText>
@@ -73,7 +77,7 @@ const RadioGroupPage = () => {
         </FrameworkTabList>
         <ReactTabContent>
       <SyntaxHighlighter language="typescript">
-        {radioGroupExampleCode}
+        {reactRadioGroupExampleCode}
       </SyntaxHighlighter>
 
         </ReactTabContent>

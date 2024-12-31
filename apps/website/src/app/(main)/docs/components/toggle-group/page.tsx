@@ -4,11 +4,12 @@ import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
 import { FrameworkTabList, FrameworkTabs, ReactTab, ReactTabContent, SolidTab, SolidTabContent } from "@/components/tabs/framework-tabs";
 import {
   ToggleGroup,
-  toggleGroupCode,
+  reactToggleGroupCode,
   ToggleGroupExample,
-  toggleGroupExampleCode,
+  reactToggleGroupExampleCode,
   ToggleItem,
 } from "@repo/react-ui";
+import { solidToggleGroupCode } from "@repo/solid-ui";
 import { IconPlus } from "@tabler/icons-react";
 import { Metadata } from "next";
 
@@ -72,12 +73,15 @@ const ToggleGroupPage = () => {
         </FrameworkTabList>
         <ReactTabContent>
       <SyntaxHighlighter language="typescript">
-        {toggleGroupCode}
+        {reactToggleGroupCode}
       </SyntaxHighlighter>
 
         </ReactTabContent>
 
         <SolidTabContent>
+        <SyntaxHighlighter language="typescript">
+        {solidToggleGroupCode}
+      </SyntaxHighlighter>
 
         </SolidTabContent>
       </FrameworkTabs>
@@ -94,7 +98,7 @@ const ToggleGroupPage = () => {
         </FrameworkTabList>
         <ReactTabContent>
       <SyntaxHighlighter language="typescript">
-        {toggleGroupExampleCode}
+        {reactToggleGroupExampleCode}
       </SyntaxHighlighter>
 
         </ReactTabContent>

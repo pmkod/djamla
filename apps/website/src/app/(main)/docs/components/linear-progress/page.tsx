@@ -3,10 +3,11 @@ import { DocText } from "@/components/core/doc-text";
 import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
 import { FrameworkTabList, FrameworkTabs, ReactTab, ReactTabContent, SolidTab, SolidTabContent } from "@/components/tabs/framework-tabs";
 import {
-  linearProgressCode,
+  reactLinearProgressCode,
   LinearProgressExample,
-  linearProgressExampleCode,
+  reactLinearProgressExampleCode,
 } from "@repo/react-ui";
+import { solidLinearProgressCode } from "@repo/solid-ui";
 import { Metadata } from "next";
 
 const title = "Linear Progress";
@@ -35,13 +36,15 @@ const LinearProgressPage = () => {
         </FrameworkTabList>
         <ReactTabContent>
       <SyntaxHighlighter language="typescript">
-        {linearProgressCode}
+        {reactLinearProgressCode}
       </SyntaxHighlighter>
 
         </ReactTabContent>
 
         <SolidTabContent>
-
+        <SyntaxHighlighter language="typescript">
+        {solidLinearProgressCode}
+      </SyntaxHighlighter>
         </SolidTabContent>
       </FrameworkTabs>
       <DocText level="titleTwo">Example</DocText>
@@ -57,7 +60,7 @@ const LinearProgressPage = () => {
         </FrameworkTabList>
         <ReactTabContent>
       <SyntaxHighlighter language="typescript">
-        {linearProgressExampleCode}
+        {reactLinearProgressExampleCode}
       </SyntaxHighlighter>
 
         </ReactTabContent>

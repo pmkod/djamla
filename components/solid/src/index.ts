@@ -19,6 +19,7 @@ export * from "./core-code/icon-button";
 export * from "./core-code/input";
 export * from "./core-code/kbd";
 export * from "./core-code/label";
+export * from "./core-code/linear-progress";
 export * from "./core-code/loader";
 export * from "./core-code/modal";
 export * from "./core-code/menu";

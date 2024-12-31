@@ -7,14 +7,15 @@ import {
   Drawer,
   DrawerBody,
   DrawerCloseButton,
-  drawerCode,
+  reactDrawerCode,
   DrawerContent,
   DrawerExample,
-  drawerExampleCode,
+  reactDrawerExampleCode,
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
 } from "@repo/react-ui";
+import { solidDrawerCode } from "@repo/solid-ui";
 import { Metadata } from "next";
 
 const title = "Drawer";
@@ -126,11 +127,12 @@ const DrawerPage = () => {
           <SolidTab />
         </FrameworkTabList>
         <ReactTabContent>
-      <SyntaxHighlighter language="typescript">{drawerCode}</SyntaxHighlighter>
+      <SyntaxHighlighter language="typescript">{reactDrawerCode}</SyntaxHighlighter>
 
         </ReactTabContent>
 
         <SolidTabContent>
+        <SyntaxHighlighter language="typescript">{solidDrawerCode}</SyntaxHighlighter>
 
         </SolidTabContent>
       </FrameworkTabs>
@@ -147,7 +149,7 @@ const DrawerPage = () => {
         </FrameworkTabList>
         <ReactTabContent>
       <SyntaxHighlighter language="typescript">
-        {drawerExampleCode}
+        {reactDrawerExampleCode}
       </SyntaxHighlighter>
 
         </ReactTabContent>

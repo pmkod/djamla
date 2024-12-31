@@ -4,10 +4,11 @@ import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
 import { FrameworkTabList, FrameworkTabs, ReactTab, ReactTabContent, SolidTab, SolidTabContent } from "@/components/tabs/framework-tabs";
 import {
   Badge,
-  badgeCode,
+  reactBadgeCode,
   BadgeExample,
-  badgeExampleCode,
+  reactBadgeExampleCode,
 } from "@repo/react-ui";
+import { solidBadgeCode } from "@repo/solid-ui";
 import { Metadata } from "next";
 
 const title = "Badge";
@@ -42,11 +43,12 @@ const BadgePage = () => {
           <SolidTab />
         </FrameworkTabList>
         <ReactTabContent>
-      <SyntaxHighlighter language="typescript">{badgeCode}</SyntaxHighlighter>
+      <SyntaxHighlighter language="typescript">{reactBadgeCode}</SyntaxHighlighter>
 
         </ReactTabContent>
 
         <SolidTabContent>
+        <SyntaxHighlighter language="typescript">{solidBadgeCode}</SyntaxHighlighter>
 
         </SolidTabContent>
       </FrameworkTabs>
@@ -64,7 +66,7 @@ const BadgePage = () => {
         </FrameworkTabList>
         <ReactTabContent>
       <SyntaxHighlighter language="typescript">
-        {badgeExampleCode}
+        {reactBadgeExampleCode}
       </SyntaxHighlighter>
 
         </ReactTabContent>

@@ -4,10 +4,11 @@ import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
 import { FrameworkTabList, FrameworkTabs, ReactTab, ReactTabContent, SolidTab, SolidTabContent } from "@/components/tabs/framework-tabs";
 import {
   Input,
-  inputCode,
+  reactInputCode,
   InputExample,
-  inputExampleCode,
+  reactInputExampleCode,
 } from "@repo/react-ui";
+import { solidInputCode } from "@repo/solid-ui";
 import { Metadata } from "next";
 
 const title = "Input";
@@ -41,11 +42,12 @@ const InputPage = () => {
           <SolidTab />
         </FrameworkTabList>
         <ReactTabContent>
-      <SyntaxHighlighter language="typescript">{inputCode}</SyntaxHighlighter>
+      <SyntaxHighlighter language="typescript">{reactInputCode}</SyntaxHighlighter>
 
         </ReactTabContent>
 
         <SolidTabContent>
+        <SyntaxHighlighter language="typescript">{solidInputCode}</SyntaxHighlighter>
 
         </SolidTabContent>
       </FrameworkTabs>
@@ -62,7 +64,7 @@ const InputPage = () => {
         </FrameworkTabList>
         <ReactTabContent>
       <SyntaxHighlighter language="typescript">
-        {inputExampleCode}
+        {reactInputExampleCode}
       </SyntaxHighlighter>
 
         </ReactTabContent>

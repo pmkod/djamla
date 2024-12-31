@@ -4,10 +4,11 @@ import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
 import { FrameworkTabList, FrameworkTabs, ReactTab, ReactTabContent, SolidTab, SolidTabContent } from "@/components/tabs/framework-tabs";
 import {
   Button,
-  buttonCode,
+  reactButtonCode,
   ButtonExample,
-  buttonExampleCode,
+  reactButtonExampleCode,
 } from "@repo/react-ui";
+import { solidButtonCode } from "@repo/solid-ui";
 import { Metadata } from "next";
 
 const title = "Button";
@@ -45,11 +46,12 @@ const ButtonPage = () => {
           <SolidTab />
         </FrameworkTabList>
         <ReactTabContent>
-      <SyntaxHighlighter language="typescript">{buttonCode}</SyntaxHighlighter>
+      <SyntaxHighlighter language="typescript">{reactButtonCode}</SyntaxHighlighter>
 
         </ReactTabContent>
 
         <SolidTabContent>
+        <SyntaxHighlighter language="typescript">{solidButtonCode}</SyntaxHighlighter>
 
         </SolidTabContent>
       </FrameworkTabs>
@@ -66,7 +68,7 @@ const ButtonPage = () => {
         </FrameworkTabList>
         <ReactTabContent>
       <SyntaxHighlighter language="typescript">
-        {buttonExampleCode}
+        {reactButtonExampleCode}
       </SyntaxHighlighter>
 
         </ReactTabContent>

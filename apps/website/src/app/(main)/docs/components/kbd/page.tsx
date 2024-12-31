@@ -4,12 +4,13 @@ import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
 import { FrameworkTabList, FrameworkTabs, ReactTab, ReactTabContent, SolidTab, SolidTabContent } from "@/components/tabs/framework-tabs";
 import {
   Kbd,
-  kbdCode,
+  reactKbdCode,
   KbdExample,
-  kbdExampleCode,
+  reactKbdExampleCode,
   KbdGroup,
   KbdSeparator,
 } from "@repo/react-ui";
+import { solidKbdCode } from "@repo/solid-ui";
 import { Metadata } from "next";
 
 const title = "Kbd";
@@ -61,11 +62,12 @@ const KbdPage = () => {
           <SolidTab />
         </FrameworkTabList>
         <ReactTabContent>
-      <SyntaxHighlighter language="typescript">{kbdCode}</SyntaxHighlighter>
+      <SyntaxHighlighter language="typescript">{reactKbdCode}</SyntaxHighlighter>
 
         </ReactTabContent>
 
         <SolidTabContent>
+        <SyntaxHighlighter language="typescript">{solidKbdCode}</SyntaxHighlighter>
 
         </SolidTabContent>
       </FrameworkTabs>
@@ -82,7 +84,7 @@ const KbdPage = () => {
         </FrameworkTabList>
         <ReactTabContent>
       <SyntaxHighlighter language="typescript">
-        {kbdExampleCode}
+        {reactKbdExampleCode}
       </SyntaxHighlighter>
 
         </ReactTabContent>

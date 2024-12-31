@@ -4,10 +4,11 @@ import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
 import { FrameworkTabList, FrameworkTabs, ReactTab, ReactTabContent, SolidTab, SolidTabContent } from "@/components/tabs/framework-tabs";
 import {
   Loader,
-  loaderCode,
+  reactLoaderCode,
   LoaderExample,
-  loaderExampleCode,
+  reactLoaderExampleCode,
 } from "@repo/react-ui";
+import { solidLoaderCode } from "@repo/solid-ui";
 import { Metadata } from "next";
 
 const title = "Loader";
@@ -40,11 +41,12 @@ const LoaderPage = () => {
           <SolidTab />
         </FrameworkTabList>
         <ReactTabContent>
-      <SyntaxHighlighter language="typescript">{loaderCode}</SyntaxHighlighter>
+      <SyntaxHighlighter language="typescript">{reactLoaderCode}</SyntaxHighlighter>
 
         </ReactTabContent>
 
         <SolidTabContent>
+        <SyntaxHighlighter language="typescript">{solidLoaderCode}</SyntaxHighlighter>
 
         </SolidTabContent>
       </FrameworkTabs>
@@ -62,7 +64,7 @@ const LoaderPage = () => {
         </FrameworkTabList>
         <ReactTabContent>
       <SyntaxHighlighter language="typescript">
-        {loaderExampleCode}
+        {reactLoaderExampleCode}
       </SyntaxHighlighter>
 
         </ReactTabContent>

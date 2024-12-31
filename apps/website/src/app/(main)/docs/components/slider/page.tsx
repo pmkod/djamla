@@ -4,10 +4,11 @@ import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
 import { FrameworkTabList, FrameworkTabs, ReactTab, ReactTabContent, SolidTab, SolidTabContent } from "@/components/tabs/framework-tabs";
 import {
   Slider,
-  sliderCode,
+  reactSliderCode,
   SliderExample,
-  sliderExampleCode,
+  reactSliderExampleCode,
 } from "@repo/react-ui";
+import { solidSliderCode } from "@repo/solid-ui";
 
 import { Metadata } from "next";
 
@@ -41,11 +42,12 @@ const SliderPage = () => {
           <SolidTab />
         </FrameworkTabList>
         <ReactTabContent>
-      <SyntaxHighlighter language="typescript">{sliderCode}</SyntaxHighlighter>
+      <SyntaxHighlighter language="typescript">{reactSliderCode}</SyntaxHighlighter>
 
         </ReactTabContent>
 
         <SolidTabContent>
+        <SyntaxHighlighter language="typescript">{solidSliderCode}</SyntaxHighlighter>
 
         </SolidTabContent>
       </FrameworkTabs>
@@ -63,7 +65,7 @@ const SliderPage = () => {
         </FrameworkTabList>
         <ReactTabContent>
       <SyntaxHighlighter language="typescript">
-        {sliderExampleCode}
+        {reactSliderExampleCode}
       </SyntaxHighlighter>
 
         </ReactTabContent>

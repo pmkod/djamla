@@ -7,14 +7,15 @@ import {
   Modal,
   ModalBody,
   ModalCloseButton,
-  modalCode,
+  reactModalCode,
   ModalContent,
   ModalExample,
-  modalExampleCode,
+  reactModalExampleCode,
   ModalHeader,
   ModalTitle,
   ModalTrigger,
 } from "@repo/react-ui";
+import { solidModalCode } from "@repo/solid-ui";
 import { Metadata } from "next";
 
 const title = "Modal";
@@ -224,11 +225,12 @@ const ModalPage = () => {
           <SolidTab />
         </FrameworkTabList>
         <ReactTabContent>
-      <SyntaxHighlighter language="typescript">{modalCode}</SyntaxHighlighter>
+      <SyntaxHighlighter language="typescript">{reactModalCode}</SyntaxHighlighter>
 
         </ReactTabContent>
 
         <SolidTabContent>
+        <SyntaxHighlighter language="typescript">{solidModalCode}</SyntaxHighlighter>
 
         </SolidTabContent>
       </FrameworkTabs>
@@ -246,7 +248,7 @@ const ModalPage = () => {
         <ReactTabContent>
 
       <SyntaxHighlighter language="typescript">
-        {modalExampleCode}
+        {reactModalExampleCode}
       </SyntaxHighlighter>
         </ReactTabContent>
 

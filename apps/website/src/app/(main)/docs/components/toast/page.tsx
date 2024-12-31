@@ -3,7 +3,8 @@ import { DocText } from "@/components/core/doc-text";
 import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
 import { FrameworkTabList, FrameworkTabs, ReactTab, ReactTabContent, SolidTab, SolidTabContent } from "@/components/tabs/framework-tabs";
 
-import { toastCode, ToastExample, toastExampleCode } from "@repo/react-ui";
+import { reactToastCode, ToastExample, reactToastExampleCode } from "@repo/react-ui";
+import { solidToastCode } from "@repo/solid-ui";
 import { Metadata } from "next";
 
 const title = "Toast";
@@ -31,11 +32,12 @@ const ToastPage = () => {
           <SolidTab />
         </FrameworkTabList>
         <ReactTabContent>
-      <SyntaxHighlighter language="typescript">{toastCode}</SyntaxHighlighter>
+      <SyntaxHighlighter language="typescript">{reactToastCode}</SyntaxHighlighter>
 
         </ReactTabContent>
 
         <SolidTabContent>
+        <SyntaxHighlighter language="typescript">{solidToastCode}</SyntaxHighlighter>
 
         </SolidTabContent>
       </FrameworkTabs>
@@ -52,7 +54,7 @@ const ToastPage = () => {
         </FrameworkTabList>
         <ReactTabContent>
       <SyntaxHighlighter language="typescript">
-        {toastExampleCode}
+        {reactToastExampleCode}
       </SyntaxHighlighter>
 
         </ReactTabContent>

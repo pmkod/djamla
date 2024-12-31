@@ -4,10 +4,11 @@ import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
 import { FrameworkTabList, FrameworkTabs, ReactTab, ReactTabContent, SolidTab, SolidTabContent } from "@/components/tabs/framework-tabs";
 import {
   Checkbox,
-  checkboxCode,
+  reactCheckboxCode,
   CheckboxExample,
-  checkboxExampleCode,
+  reactCheckboxExampleCode,
 } from "@repo/react-ui";
+import { solidCheckboxCode } from "@repo/solid-ui";
 import { Metadata } from "next";
 
 const title = "Checkbox";
@@ -41,13 +42,16 @@ const CheckboxPage = () => {
         </FrameworkTabList>
         <ReactTabContent>
       <SyntaxHighlighter language="typescript">
-        {checkboxCode}
+        {reactCheckboxCode}
       </SyntaxHighlighter>
 
         </ReactTabContent>
 
         <SolidTabContent>
 
+        <SyntaxHighlighter language="typescript">
+        {solidCheckboxCode}
+      </SyntaxHighlighter>
         </SolidTabContent>
       </FrameworkTabs>
       <DocText level="titleTwo">Example</DocText>
@@ -63,7 +67,7 @@ const CheckboxPage = () => {
         </FrameworkTabList>
         <ReactTabContent>
       <SyntaxHighlighter language="typescript">
-        {checkboxExampleCode}
+        {reactCheckboxExampleCode}
       </SyntaxHighlighter>
 
         </ReactTabContent>

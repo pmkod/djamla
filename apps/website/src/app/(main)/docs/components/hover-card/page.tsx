@@ -3,10 +3,11 @@ import { DocText } from "@/components/core/doc-text";
 import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
 import { FrameworkTabList, FrameworkTabs, ReactTab, ReactTabContent, SolidTab, SolidTabContent } from "@/components/tabs/framework-tabs";
 import {
-  hoverCardCode,
+  reactHoverCardCode,
   HoverCardExample,
-  hoverCardExampleCode,
+  reactHoverCardExampleCode,
 } from "@repo/react-ui";
+import { solidHoverCardCode } from "@repo/solid-ui";
 
 import { Metadata } from "next";
 
@@ -36,13 +37,16 @@ const HoverCardPage = () => {
         </FrameworkTabList>
         <ReactTabContent>
       <SyntaxHighlighter language="typescript">
-        {hoverCardCode}
+        {reactHoverCardCode}
       </SyntaxHighlighter>
 
         </ReactTabContent>
 
         <SolidTabContent>
 
+        <SyntaxHighlighter language="typescript">
+        {solidHoverCardCode}
+      </SyntaxHighlighter>
         </SolidTabContent>
       </FrameworkTabs>
       <DocText level="titleTwo">Example</DocText>
@@ -58,7 +62,7 @@ const HoverCardPage = () => {
         </FrameworkTabList>
         <ReactTabContent>
       <SyntaxHighlighter language="typescript">
-        {hoverCardExampleCode}
+        {reactHoverCardExampleCode}
       </SyntaxHighlighter>
 
         </ReactTabContent>

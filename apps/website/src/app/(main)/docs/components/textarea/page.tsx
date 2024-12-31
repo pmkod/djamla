@@ -5,10 +5,11 @@ import { FrameworkTabList, FrameworkTabs, ReactTab, ReactTabContent, SolidTab, S
 
 import {
   Textarea,
-  textareaCode,
+  reactTextareaCode,
   TextareaExample,
-  textareaExampleCode,
+  reactTextareaExampleCode,
 } from "@repo/react-ui";
+import { solidTextareaCode } from "@repo/solid-ui";
 import { Metadata } from "next";
 
 const title = "Textarea";
@@ -42,13 +43,16 @@ const TextareaPage = () => {
         </FrameworkTabList>
         <ReactTabContent>
       <SyntaxHighlighter language="typescript">
-        {textareaCode}
+        {reactTextareaCode}
       </SyntaxHighlighter>
 
         </ReactTabContent>
 
         <SolidTabContent>
 
+        <SyntaxHighlighter language="typescript">
+        {solidTextareaCode}
+      </SyntaxHighlighter>
         </SolidTabContent>
       </FrameworkTabs>
       <DocText level="titleTwo">Example</DocText>
@@ -64,7 +68,7 @@ const TextareaPage = () => {
         </FrameworkTabList>
         <ReactTabContent>
       <SyntaxHighlighter language="typescript">
-        {textareaExampleCode}
+        {reactTextareaExampleCode}
       </SyntaxHighlighter>
 
         </ReactTabContent>

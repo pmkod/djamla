@@ -3,10 +3,11 @@ import { DocText } from "@/components/core/doc-text";
 import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
 import { FrameworkTabList, FrameworkTabs, ReactTab, ReactTabContent, SolidTab, SolidTabContent } from "@/components/tabs/framework-tabs";
 import {
-  skeletonCode,
+  reactSkeletonCode,
   SkeletonExample,
-  skeletonExampleCode,
+  reactSkeletonExampleCode,
 } from "@repo/react-ui";
+import { solidSkeletonCode } from "@repo/solid-ui";
 
 import { Metadata } from "next";
 
@@ -36,13 +37,16 @@ const SkeletonPage = () => {
         </FrameworkTabList>
         <ReactTabContent>
       <SyntaxHighlighter language="typescript">
-        {skeletonCode}
+        {reactSkeletonCode}
       </SyntaxHighlighter>
 
         </ReactTabContent>
 
         <SolidTabContent>
 
+        <SyntaxHighlighter language="typescript">
+        {solidSkeletonCode}
+      </SyntaxHighlighter>
         </SolidTabContent>
       </FrameworkTabs>
       <DocText level="titleTwo">Example</DocText>
@@ -59,7 +63,7 @@ const SkeletonPage = () => {
         <ReactTabContent>
 
       <SyntaxHighlighter language="typescript">
-        {skeletonExampleCode}
+        {reactSkeletonExampleCode}
       </SyntaxHighlighter>
         </ReactTabContent>
 

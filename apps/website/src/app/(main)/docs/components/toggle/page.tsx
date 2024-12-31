@@ -3,7 +3,8 @@ import { DocText } from "@/components/core/doc-text";
 import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
 import { FrameworkTabList, FrameworkTabs, ReactTab, ReactTabContent, SolidTab, SolidTabContent } from "@/components/tabs/framework-tabs";
 
-import { toggleCode, ToggleExample, toggleExampleCode } from "@repo/react-ui";
+import { reactToggleCode, ToggleExample, reactToggleExampleCode } from "@repo/react-ui";
+import { solidToggleCode } from "@repo/solid-ui";
 import { Metadata } from "next";
 
 const title = "Toggle";
@@ -31,11 +32,12 @@ const TogglePage = () => {
           <SolidTab />
         </FrameworkTabList>
         <ReactTabContent>
-      <SyntaxHighlighter language="typescript">{toggleCode}</SyntaxHighlighter>
+      <SyntaxHighlighter language="typescript">{reactToggleCode}</SyntaxHighlighter>
 
         </ReactTabContent>
 
         <SolidTabContent>
+        <SyntaxHighlighter language="typescript">{solidToggleCode}</SyntaxHighlighter>
 
         </SolidTabContent>
       </FrameworkTabs>
@@ -52,7 +54,7 @@ const TogglePage = () => {
         </FrameworkTabList>
         <ReactTabContent>
       <SyntaxHighlighter language="typescript">
-        {toggleExampleCode}
+        {reactToggleExampleCode}
       </SyntaxHighlighter>
 
         </ReactTabContent>

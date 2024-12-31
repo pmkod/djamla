@@ -4,10 +4,11 @@ import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
 import { FrameworkTabList, FrameworkTabs, ReactTab, ReactTabContent, SolidTab, SolidTabContent } from "@/components/tabs/framework-tabs";
 import {
   NativeSelect,
-  nativeSelectCode,
+  reactNativeSelectCode,
   NativeSelectExample,
-  nativeSelectExampleCode,
+  reactNativeSelectExampleCode,
 } from "@repo/react-ui";
+import { solidNativeSelectCode } from "@repo/solid-ui";
 import { Metadata } from "next";
 
 const title = "Native Select";
@@ -46,13 +47,16 @@ const NativeSelectPage = () => {
         </FrameworkTabList>
         <ReactTabContent>
       <SyntaxHighlighter language="typescript">
-        {nativeSelectCode}
+        {reactNativeSelectCode}
       </SyntaxHighlighter>
 
         </ReactTabContent>
 
         <SolidTabContent>
 
+        <SyntaxHighlighter language="typescript">
+        {solidNativeSelectCode}
+      </SyntaxHighlighter>
         </SolidTabContent>
       </FrameworkTabs>
       <DocText level="titleTwo">Example</DocText>
@@ -60,7 +64,7 @@ const NativeSelectPage = () => {
         <NativeSelectExample />
       </ComponentPreview>
       <SyntaxHighlighter language="typescript">
-        {nativeSelectExampleCode}
+        {reactNativeSelectExampleCode}
       </SyntaxHighlighter>
 
       <FrameworkTabs>

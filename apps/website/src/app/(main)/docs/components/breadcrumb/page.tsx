@@ -3,10 +3,11 @@ import { DocText } from "@/components/core/doc-text";
 import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
 import { FrameworkTabList, FrameworkTabs, ReactTab, ReactTabContent, SolidTab, SolidTabContent } from "@/components/tabs/framework-tabs";
 import {
-  breadcrumbCode,
+  reactBreadcrumbCode,
   BreadcrumbExample,
-  breadcrumbExampleCode,
+  reactBreadcrumbExampleCode,
 } from "@repo/react-ui";
+import { solidBreadcrumbCode } from "@repo/solid-ui";
 import { Metadata } from "next";
 
 const title = "Breadcrumb";
@@ -36,13 +37,15 @@ const BreadcrumbPage = () => {
         </FrameworkTabList>
         <ReactTabContent>
       <SyntaxHighlighter language="typescript">
-        {breadcrumbCode}
+        {reactBreadcrumbCode}
       </SyntaxHighlighter>
 
         </ReactTabContent>
 
         <SolidTabContent>
-
+        <SyntaxHighlighter language="typescript">
+        {solidBreadcrumbCode}
+      </SyntaxHighlighter>
         </SolidTabContent>
       </FrameworkTabs>
       <DocText level="titleTwo">Example</DocText>
@@ -58,7 +61,7 @@ const BreadcrumbPage = () => {
         </FrameworkTabList>
         <ReactTabContent>
       <SyntaxHighlighter language="typescript">
-        {breadcrumbExampleCode}
+        {reactBreadcrumbExampleCode}
       </SyntaxHighlighter>
 
         </ReactTabContent>

@@ -2,7 +2,8 @@ import { ComponentPreview } from "@/components/core/component-preview";
 import { DocText } from "@/components/core/doc-text";
 import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
 import { FrameworkTabList, FrameworkTabs, ReactTab, ReactTabContent, SolidTab, SolidTabContent } from "@/components/tabs/framework-tabs";
-import { menuCode, MenuExample, menuExampleCode } from "@repo/react-ui";
+import { reactMenuCode, MenuExample, reactMenuExampleCode } from "@repo/react-ui";
+import { solidMenuCode } from "@repo/solid-ui";
 import { Metadata } from "next";
 
 const title = "Menu";
@@ -30,11 +31,12 @@ const MenuPage = () => {
           <SolidTab />
         </FrameworkTabList>
         <ReactTabContent>
-      <SyntaxHighlighter language="typescript">{menuCode}</SyntaxHighlighter>
+      <SyntaxHighlighter language="typescript">{reactMenuCode}</SyntaxHighlighter>
 
         </ReactTabContent>
 
         <SolidTabContent>
+        <SyntaxHighlighter language="typescript">{solidMenuCode}</SyntaxHighlighter>
 
         </SolidTabContent>
       </FrameworkTabs>
@@ -51,7 +53,7 @@ const MenuPage = () => {
         </FrameworkTabList>
         <ReactTabContent>
       <SyntaxHighlighter language="typescript">
-        {menuExampleCode}
+        {reactMenuExampleCode}
       </SyntaxHighlighter>
 
         </ReactTabContent>

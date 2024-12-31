@@ -3,10 +3,11 @@ import { DocText } from "@/components/core/doc-text";
 import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
 import { FrameworkTabList, FrameworkTabs, ReactTab, ReactTabContent, SolidTab, SolidTabContent } from "@/components/tabs/framework-tabs";
 import {
-  collapsibleCode,
+  reactCollapsibleCode,
   CollapsibleExample,
-  collapsibleExampleCode,
+  reactCollapsibleExampleCode,
 } from "@repo/react-ui";
+import { solidCollapsibleCode } from "@repo/solid-ui";
 import { Metadata } from "next";
 
 const title = "Collapsible";
@@ -35,13 +36,15 @@ const CollapsiblePage = () => {
         </FrameworkTabList>
         <ReactTabContent>
       <SyntaxHighlighter language="typescript">
-        {collapsibleCode}
+        {reactCollapsibleCode}
       </SyntaxHighlighter>
 
         </ReactTabContent>
 
         <SolidTabContent>
-
+        <SyntaxHighlighter language="typescript">
+        {solidCollapsibleCode}
+      </SyntaxHighlighter>
         </SolidTabContent>
       </FrameworkTabs>
       <DocText level="titleTwo">Example</DocText>
@@ -57,7 +60,7 @@ const CollapsiblePage = () => {
         </FrameworkTabList>
         <ReactTabContent>
       <SyntaxHighlighter language="typescript">
-        {collapsibleExampleCode}
+        {reactCollapsibleExampleCode}
       </SyntaxHighlighter>
 
         </ReactTabContent>

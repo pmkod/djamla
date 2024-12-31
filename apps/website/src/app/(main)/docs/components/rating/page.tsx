@@ -2,7 +2,8 @@ import { ComponentPreview } from "@/components/core/component-preview";
 import { DocText } from "@/components/core/doc-text";
 import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
 import { FrameworkTabList, FrameworkTabs, ReactTab, ReactTabContent, SolidTab, SolidTabContent } from "@/components/tabs/framework-tabs";
-import { ratingCode, RatingExample, ratingExampleCode } from "@repo/react-ui";
+import { reactRatingCode, RatingExample, reactRatingExampleCode } from "@repo/react-ui";
+import { solidRatingCode } from "@repo/solid-ui";
 
 import { Metadata } from "next";
 
@@ -31,11 +32,12 @@ const RatingPage = () => {
           <SolidTab />
         </FrameworkTabList>
         <ReactTabContent>
-      <SyntaxHighlighter language="typescript">{ratingCode}</SyntaxHighlighter>
+      <SyntaxHighlighter language="typescript">{reactRatingCode}</SyntaxHighlighter>
 
         </ReactTabContent>
 
         <SolidTabContent>
+        <SyntaxHighlighter language="typescript">{solidRatingCode}</SyntaxHighlighter>
 
         </SolidTabContent>
       </FrameworkTabs>
@@ -52,7 +54,7 @@ const RatingPage = () => {
         </FrameworkTabList>
         <ReactTabContent>
       <SyntaxHighlighter language="typescript">
-        {ratingExampleCode}
+        {reactRatingExampleCode}
       </SyntaxHighlighter>
 
         </ReactTabContent>
