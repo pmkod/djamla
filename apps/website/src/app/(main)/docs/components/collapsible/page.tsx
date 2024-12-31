@@ -1,6 +1,7 @@
 import { ComponentPreview } from "@/components/core/component-preview";
 import { DocText } from "@/components/core/doc-text";
 import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
+import { FrameworkTabList, FrameworkTabs, ReactTab, ReactTabContent, SolidTab, SolidTabContent } from "@/components/tabs/framework-tabs";
 import {
   collapsibleCode,
   CollapsibleExample,
@@ -25,16 +26,46 @@ const CollapsiblePage = () => {
         <CollapsibleExample />
       </ComponentPreview>
       <DocText level="titleTwo">Installation</DocText>
+
+      <FrameworkTabs>
+
+      <FrameworkTabList>
+          <ReactTab />
+          <SolidTab />
+        </FrameworkTabList>
+        <ReactTabContent>
       <SyntaxHighlighter language="typescript">
         {collapsibleCode}
       </SyntaxHighlighter>
+
+        </ReactTabContent>
+
+        <SolidTabContent>
+
+        </SolidTabContent>
+      </FrameworkTabs>
       <DocText level="titleTwo">Example</DocText>
       <ComponentPreview>
         <CollapsibleExample />
       </ComponentPreview>
+
+      <FrameworkTabs>
+
+      <FrameworkTabList>
+          <ReactTab />
+          <SolidTab />
+        </FrameworkTabList>
+        <ReactTabContent>
       <SyntaxHighlighter language="typescript">
         {collapsibleExampleCode}
       </SyntaxHighlighter>
+
+        </ReactTabContent>
+
+        <SolidTabContent>
+
+        </SolidTabContent>
+      </FrameworkTabs>
     </>
   );
 };

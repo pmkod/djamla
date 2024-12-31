@@ -1,6 +1,7 @@
 import { ComponentPreview } from "@/components/core/component-preview";
 import { DocText } from "@/components/core/doc-text";
 import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
+import { FrameworkTabList, FrameworkTabs, ReactTab, ReactTabContent, SolidTab, SolidTabContent } from "@/components/tabs/framework-tabs";
 import {
   Loader,
   loaderCode,
@@ -31,14 +32,45 @@ const LoaderPage = () => {
         <Loader />
       </ComponentPreview>
       <DocText level="titleTwo">Installation</DocText>
+
+      <FrameworkTabs>
+
+      <FrameworkTabList>
+          <ReactTab />
+          <SolidTab />
+        </FrameworkTabList>
+        <ReactTabContent>
       <SyntaxHighlighter language="typescript">{loaderCode}</SyntaxHighlighter>
+
+        </ReactTabContent>
+
+        <SolidTabContent>
+
+        </SolidTabContent>
+      </FrameworkTabs>
       <DocText level="titleTwo">Example</DocText>
       <ComponentPreview>
         <LoaderExample />
       </ComponentPreview>
+
+
+      <FrameworkTabs>
+
+      <FrameworkTabList>
+          <ReactTab />
+          <SolidTab />
+        </FrameworkTabList>
+        <ReactTabContent>
       <SyntaxHighlighter language="typescript">
         {loaderExampleCode}
       </SyntaxHighlighter>
+
+        </ReactTabContent>
+
+        <SolidTabContent>
+
+        </SolidTabContent>
+      </FrameworkTabs>
     </>
   );
 };

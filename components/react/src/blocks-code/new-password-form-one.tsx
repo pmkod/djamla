@@ -4,16 +4,16 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 
+import { Button } from "../core/button";
 import {
   Form,
   FormControl,
   FormField,
+  FormFieldErrorMessage,
   FormItem,
   FormLabel,
-  FormFieldErrorMessage,
 } from "../core/form";
 import { Input } from "../core/input";
-import { Button } from "../core/button";
 
 const passwordValidationSchema = z.string().min(12).max(100);
 const newPasswordFormSchema = z.object({
@@ -48,7 +48,9 @@ const NewPasswordFormOne = () => {
           className="border-base-300 w-[480px] max-w-full rounded-sm sm:border sm:px-10 sm:pb-12 sm:pt-8"
         >
           <div className="mb-5">
-            <div className="mb-0.5 text-3xl font-semibold">New password</div>
+            <div className="text-base-900 mb-0.5 text-3xl font-semibold">
+              New password
+            </div>
             <p className="text-base-500">Choose your new password</p>
           </div>
           <div className="space-y-3">
@@ -91,4 +93,4 @@ const NewPasswordFormOne = () => {
 };
 
 export { NewPasswordFormOne };
-`;
+`

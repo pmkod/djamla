@@ -10,6 +10,7 @@ import {
 import path from "node:path";
 
 const reactUiDirPath = path.join(process.cwd(), "../components/react/src");
+const solidUiDirPath = path.join(process.cwd(), "../components/solid/src");
 
 const toCamelCase = (str: string): string => {
   return str
@@ -29,7 +30,7 @@ const allComponentDirs = [
   blockComponentsDirName,
 ];
 
-const allUiLibDirPaths = [reactUiDirPath];
+const allUiLibDirPaths = [reactUiDirPath, solidUiDirPath];
 for (const uiDirPath of allUiLibDirPaths) {
   const componentDirs = readdirSync(uiDirPath);
   for (const componentDirName of componentDirs) {

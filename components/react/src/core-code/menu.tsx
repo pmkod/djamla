@@ -1,7 +1,7 @@
 export const menuCode = `"use client";
-import { forwardRef } from "react";
 import { Menu as MenuPrimitives, MenuRootProps, Portal } from "@ark-ui/react";
 import { IconChevronRight } from "@tabler/icons-react";
+import { forwardRef } from "react";
 
 const Menu = (props: MenuRootProps) => {
   return (
@@ -42,7 +42,7 @@ const MenuItem = forwardRef<
   return (
     <MenuPrimitives.Item
       ref={ref}
-      className="hover:bg-base-100 flex h-8 cursor-pointer items-center gap-x-2.5 rounded-sm px-2 text-sm font-medium transition-colors"
+      className="hover:bg-base-200 flex h-8 cursor-pointer items-center gap-x-2.5 rounded-sm px-2 text-sm font-medium transition-colors"
       {...props}
     >
       {children}
@@ -79,7 +79,7 @@ const MenuContent = forwardRef<
       <MenuPrimitives.Positioner>
         <MenuPrimitives.Content
           ref={ref}
-          className="border-base-200 text-base-500 w-max min-w-36 overflow-hidden rounded border bg-white p-1 shadow-md outline-none data-[placement]:right-0"
+          className="border-base-200 text-base-500 bg-base-0 block w-max min-w-36 overflow-hidden rounded border p-1 shadow-md outline-none transition-all data-[state=open]:visible data-[state=closed]:invisible data-[state=closed]:scale-95 data-[state=open]:scale-100 data-[state=closed]:opacity-0 data-[state=open]:opacity-100"
           {...props}
         >
           {children}
@@ -132,13 +132,13 @@ MenuSeparator.displayName = "MenuSeparator";
 
 export {
   Menu,
-  SubMenu,
-  MenuItem,
-  MenuTrigger,
-  MenuTriggerItem,
   MenuContent,
   MenuGroup,
   MenuGroupLabel,
+  MenuItem,
   MenuSeparator,
+  MenuTrigger,
+  MenuTriggerItem,
+  SubMenu,
 };
-`;
+`

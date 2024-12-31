@@ -1,5 +1,5 @@
 export const loaderCode = `import { cva, VariantProps } from "class-variance-authority";
-import React, { forwardRef, HTMLAttributes } from "react";
+import { forwardRef, HTMLAttributes } from "react";
 
 const loaderStyle = cva(
   "inline-block animate-spin rounded-full border-current border-t-transparent",
@@ -50,4 +50,4 @@ const Loader = forwardRef<HTMLDivElement, LoaderProps>(
 Loader.displayName = "Loader";
 
 export { Loader };
-`;
+`

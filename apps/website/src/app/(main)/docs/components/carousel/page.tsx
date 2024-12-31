@@ -1,6 +1,7 @@
 import { ComponentPreview } from "@/components/core/component-preview";
 import { DocText } from "@/components/core/doc-text";
 import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
+import { FrameworkTabList, FrameworkTabs, ReactTab, ReactTabContent, SolidTab, SolidTabContent } from "@/components/tabs/framework-tabs";
 import {
   carouselCode,
   CarouselExample,
@@ -25,16 +26,47 @@ const CarouselPage = () => {
         <CarouselExample />
       </ComponentPreview>
       <DocText level="titleTwo">Installation</DocText>
+
+      <FrameworkTabs>
+
+      <FrameworkTabList>
+          <ReactTab />
+          <SolidTab />
+        </FrameworkTabList>
+        <ReactTabContent>
       <SyntaxHighlighter language="typescript">
         {carouselCode}
       </SyntaxHighlighter>
+
+        </ReactTabContent>
+
+        <SolidTabContent>
+
+        </SolidTabContent>
+      </FrameworkTabs>
       <DocText level="titleTwo">Example</DocText>
       <ComponentPreview>
         <CarouselExample />
       </ComponentPreview>
+
+
+      <FrameworkTabs>
+
+      <FrameworkTabList>
+          <ReactTab />
+          <SolidTab />
+        </FrameworkTabList>
+        <ReactTabContent>
       <SyntaxHighlighter language="typescript">
         {carouselExampleCode}
       </SyntaxHighlighter>
+
+        </ReactTabContent>
+
+        <SolidTabContent>
+
+        </SolidTabContent>
+      </FrameworkTabs>
     </>
   );
 };

@@ -1,6 +1,7 @@
 import { ComponentPreview } from "@/components/core/component-preview";
 import { DocText } from "@/components/core/doc-text";
 import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
+import { FrameworkTabList, FrameworkTabs, ReactTab, ReactTabContent, SolidTab, SolidTabContent } from "@/components/tabs/framework-tabs";
 import {
   Alert,
   alertCode,
@@ -27,12 +28,14 @@ const AlertPage = () => {
     <>
       <DocText>{title}</DocText>
       <DocText level="paragraph">{description}</DocText>
+
+
       <ComponentPreview
         defaultColorScheme="primary"
         colorSchemes={["primary", "green", "red", "black"]}
         defaultVariant="solid"
         variants={["solid", "outline", "soft", "plain"]}
-      >
+        >
         <Alert>
           <AlertIcon>
             <IconInfoCircle size={20} />
@@ -47,15 +50,49 @@ const AlertPage = () => {
           </AlertContent>
         </Alert>
       </ComponentPreview>
+
+
       <DocText level="titleTwo">Installation</DocText>
+      <FrameworkTabs>
+
+      <FrameworkTabList>
+          <ReactTab />
+          <SolidTab />
+        </FrameworkTabList>
+        <ReactTabContent>
       <SyntaxHighlighter language="typescript">{alertCode}</SyntaxHighlighter>
+        </ReactTabContent>
+
+        <SolidTabContent>
+
+        </SolidTabContent>
+      </FrameworkTabs>
       <DocText level="titleTwo">Example</DocText>
+
+
+
       <ComponentPreview>
         <AlertExample />
       </ComponentPreview>
+
+
+      <FrameworkTabs>
+
+      <FrameworkTabList>
+          <ReactTab />
+          <SolidTab />
+        </FrameworkTabList>
+        <ReactTabContent>
       <SyntaxHighlighter language="typescript">
         {alertExampleCode}
       </SyntaxHighlighter>
+
+        </ReactTabContent>
+
+        <SolidTabContent>
+
+        </SolidTabContent>
+      </FrameworkTabs>
     </>
   );
 };

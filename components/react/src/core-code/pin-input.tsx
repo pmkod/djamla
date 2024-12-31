@@ -1,5 +1,5 @@
-export const pinInputCode = `import { forwardRef } from "react";
-import { PinInput as PinInputPrimitives } from "@ark-ui/react";
+export const pinInputCode = `import { PinInput as PinInputPrimitives } from "@ark-ui/react";
+import { forwardRef } from "react";
 
 interface PinInputProps {
   length: number;
@@ -31,4 +31,4 @@ const PinInput = forwardRef<
 PinInput.displayName = "PinInput";
 
 export { PinInput };
-`;
+`

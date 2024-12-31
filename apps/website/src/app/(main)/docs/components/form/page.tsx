@@ -1,11 +1,12 @@
 import { ComponentPreview } from "@/components/core/component-preview";
 import { DocText } from "@/components/core/doc-text";
 import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
+import { FrameworkTabList, FrameworkTabs, ReactTab, ReactTabContent, SolidTab, SolidTabContent } from "@/components/tabs/framework-tabs";
 import {
   PackageManagerTabContent,
   PackageManagerTabs,
 } from "@/components/tabs/package-manager-tabs";
-import { formCode, FormExample, formExampleCode } from "@repo/react-ui";
+import { Alert, AlertDescription, AlertTitle, formCode, FormExample, formExampleCode } from "@repo/react-ui";
 import { Metadata } from "next";
 
 const title = "Form";
@@ -17,10 +18,17 @@ export const metadata: Metadata = {
 };
 
 const FormPage = () => {
+
   return (
     <>
       <DocText>{title}</DocText>
       <DocText level="paragraph">{description}</DocText>
+
+      <div>
+        <Alert variant="soft" colorScheme="primary">
+          <AlertDescription>Solid js version will be available soon</AlertDescription>
+        </Alert>
+      </div>
       <ComponentPreview>
         <FormExample />
       </ComponentPreview>
@@ -59,9 +67,25 @@ const FormPage = () => {
       </ComponentPreview> */}
       <DocText level="titleTwo">Example code</DocText>
 
+
+
+      <FrameworkTabs>
+
+      <FrameworkTabList>
+          <ReactTab />
+          <SolidTab />
+        </FrameworkTabList>
+        <ReactTabContent>
       <SyntaxHighlighter language="typescript">
         {formExampleCode}
       </SyntaxHighlighter>
+
+        </ReactTabContent>
+
+        <SolidTabContent>
+
+        </SolidTabContent>
+      </FrameworkTabs>
     </>
   );
 };

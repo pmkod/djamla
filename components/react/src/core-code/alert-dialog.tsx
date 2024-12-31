@@ -1,7 +1,7 @@
 export const alertDialogCode = `"use client";
 
+import { Dialog as DialogPrimitives } from "@ark-ui/react";
 import * as React from "react";
-import { Dialog as DialogPrimitives, Portal } from "@ark-ui/react";
 import { Button } from "./button";
 
 const AlertDialog = DialogPrimitives.Root;
@@ -106,12 +106,12 @@ AlertDialogCancel.displayName = "AlertDialogCancel";
 
 export {
   AlertDialog,
-  AlertDialogTrigger,
-  AlertDialogContent,
-  AlertDialogHeader,
-  AlertDialogFooter,
-  AlertDialogTitle,
-  AlertDialogDescription,
   AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
 };
-`;
+`

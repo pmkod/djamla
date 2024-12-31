@@ -1,10 +1,10 @@
 export const modalCode = `"use client";
-import React, { InputHTMLAttributes } from "react";
-import { Dialog as DialogPrimitives, Portal } from "@ark-ui/react";
-import { ButtonProps } from "./button";
-import { cva, VariantProps } from "class-variance-authority";
-import { IconButton } from "./icon-button";
+import { Dialog as DialogPrimitives } from "@ark-ui/react";
 import { IconX } from "@tabler/icons-react";
+import { cva, VariantProps } from "class-variance-authority";
+import React, { InputHTMLAttributes } from "react";
+import { ButtonProps } from "./button";
+import { IconButton } from "./icon-button";
 
 const Modal = DialogPrimitives.Root;
 
@@ -105,7 +105,7 @@ const ModalCloseButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ children, ...props }, ref) => (
     <DialogPrimitives.CloseTrigger ref={ref} asChild>
       <IconButton variant="plain" colorScheme="black" size="sm" {...props}>
-        {children || <IconX className="h-5 w-5" />}
+        {children ?? <IconX className="h-5 w-5" />}
       </IconButton>
     </DialogPrimitives.CloseTrigger>
   ),
@@ -115,12 +115,12 @@ ModalCloseButton.displayName = "ModalCloseButton";
 
 export {
   Modal,
-  ModalTrigger,
-  ModalContent,
-  ModalHeader,
-  ModalFooter,
   ModalBody,
   ModalCloseButton,
+  ModalContent,
+  ModalFooter,
+  ModalHeader,
   ModalTitle,
+  ModalTrigger,
 };
-`;
+`

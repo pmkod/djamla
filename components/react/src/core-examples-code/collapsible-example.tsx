@@ -1,9 +1,9 @@
-export const collapsibleExampleCode = `import {
+export const collapsibleExampleCode = `import { Button } from "../core/button";
+import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
 } from "../core/collapsible";
-import { Button } from "../core/button";
 
 export const CollapsibleExample = () => {
   return (
@@ -21,4 +21,4 @@ export const CollapsibleExample = () => {
     </Collapsible>
   );
 };
-`;
+`

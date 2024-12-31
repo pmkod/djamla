@@ -4,6 +4,7 @@ export const contextMenuExampleCode = `import {
   IconLogout,
   IconUser,
 } from "@tabler/icons-react";
+import { ContextMenuTrigger } from "../core/context-menu";
 import {
   Menu,
   MenuContent,
@@ -12,7 +13,6 @@ import {
   MenuTriggerItem,
   SubMenu,
 } from "../core/menu";
-import { ContextMenuTrigger } from "../core/context-menu";
 
 export const ContextMenuExample = () => {
   return (
@@ -52,4 +52,4 @@ export const ContextMenuExample = () => {
     </Menu>
   );
 };
-`;
+`

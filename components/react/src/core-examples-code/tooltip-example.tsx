@@ -1,5 +1,5 @@
-export const tooltipExampleCode = `import { Tooltip, TooltipContent, TooltipTrigger } from "../core/tooltip";
-import { Button } from "../core/button";
+export const tooltipExampleCode = `import { Button } from "../core/button";
+import { Tooltip, TooltipContent, TooltipTrigger } from "../core/tooltip";
 
 export const TooltipExample = () => {
   return (
@@ -11,4 +11,4 @@ export const TooltipExample = () => {
     </Tooltip>
   );
 };
-`;
+`

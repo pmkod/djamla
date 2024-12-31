@@ -18,9 +18,25 @@ const TreeViewPage = () => {
         <TreeViewExample />
       </ComponentPreview>
       <DocText level="titleTwo">Installation</DocText>
+      
+      <FrameworkTabs>
+      
+      <FrameworkTabList>
+      <ReactTab />
+      <SolidTab />
+      </FrameworkTabList>
+      <ReactTabContent>
+      
       <SyntaxHighlighter language="typescript">
         {treeViewCode}
       </SyntaxHighlighter>
+
+      </ReactTabContent>
+
+        <SolidTabContent>
+
+        </SolidTabContent>
+      </FrameworkTabs>
       <DocText level="titleTwo">Example</DocText>
       <ComponentPreview>
         <TreeViewExample />

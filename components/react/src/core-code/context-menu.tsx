@@ -3,4 +3,4 @@ export const contextMenuCode = `import { Menu as MenuPrimitives } from "@ark-ui/
 const ContextMenuTrigger = MenuPrimitives.ContextTrigger;
 
 export { ContextMenuTrigger };
-`;
+`

@@ -1,6 +1,6 @@
-export const treeViewCode = `import React, { forwardRef } from "react";
-import { TreeView as TreeViewPrimitives } from "@ark-ui/react";
+export const treeViewCode = `import { TreeView as TreeViewPrimitives } from "@ark-ui/react";
 import { IconChevronRight } from "@tabler/icons-react";
+import React, { forwardRef } from "react";
 
 const TreeView = forwardRef<
   React.ElementRef<typeof TreeViewPrimitives.Root>,
@@ -90,8 +90,8 @@ TreeViewItem.displayName = "TreeViewItem";
 export {
   TreeView,
   TreeViewBranch,
-  TreeViewBranchControl,
   TreeViewBranchContent,
+  TreeViewBranchControl,
   TreeViewItem,
 };
-`;
+`

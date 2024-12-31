@@ -1,18 +1,18 @@
 export const formExampleCode = `"use client";
-import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
 import { z } from "zod";
+import { Button } from "../core/button";
 import {
   Form,
   FormControl,
-  FormFieldHelperText,
   FormField,
+  FormFieldErrorMessage,
+  FormFieldHelperText,
   FormItem,
   FormLabel,
-  FormFieldErrorMessage,
 } from "../core/form";
 import { Input } from "../core/input";
-import { Button } from "../core/button";
 
 const loginFormSchema = z.object({
   email: z.string().email(),
@@ -74,4 +74,4 @@ export const FormExample = () => {
     </div>
   );
 };
-`;
+`

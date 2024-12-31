@@ -1,4 +1,5 @@
-export const popoverExampleCode = `import {
+export const popoverExampleCode = `import { Button } from "../core/button";
+import {
   Popover,
   PopoverCloseButton,
   PopoverContent,
@@ -7,7 +8,6 @@ export const popoverExampleCode = `import {
   PopoverTitle,
   PopoverTrigger,
 } from "../core/popover";
-import { Button } from "../core/button";
 
 export const PopoverExample = () => {
   return (
@@ -25,4 +25,4 @@ export const PopoverExample = () => {
     </Popover>
   );
 };
-`;
+`

@@ -1,4 +1,5 @@
-export const drawerExampleCode = `import {
+export const drawerExampleCode = `import { Button } from "../core/button";
+import {
   Drawer,
   DrawerBody,
   DrawerCloseButton,
@@ -7,7 +8,6 @@ export const drawerExampleCode = `import {
   DrawerTitle,
   DrawerTrigger,
 } from "../core/drawer";
-import { Button } from "../core/button";
 
 export const DrawerExample = () => {
   return (
@@ -33,4 +33,4 @@ export const DrawerExample = () => {
     </Drawer>
   );
 };
-`;
+`

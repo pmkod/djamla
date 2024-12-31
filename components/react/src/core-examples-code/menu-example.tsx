@@ -4,6 +4,7 @@ export const menuExampleCode = `import {
   IconLogout,
   IconUser,
 } from "@tabler/icons-react";
+import { Button } from "../core/button";
 import {
   Menu,
   MenuContent,
@@ -15,7 +16,6 @@ import {
   MenuTriggerItem,
   SubMenu,
 } from "../core/menu";
-import { Button } from "../core/button";
 
 export const MenuExample = () => {
   return (
@@ -57,4 +57,4 @@ export const MenuExample = () => {
     </Menu>
   );
 };
-`;
+`

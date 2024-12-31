@@ -1,4 +1,5 @@
-export const modalExampleCode = `import {
+export const modalExampleCode = `import { Button } from "../core/button";
+import {
   Modal,
   ModalBody,
   ModalCloseButton,
@@ -7,7 +8,6 @@ export const modalExampleCode = `import {
   ModalTitle,
   ModalTrigger,
 } from "../core/modal";
-import { Button } from "../core/button";
 
 export const ModalExample = () => {
   return (
@@ -35,4 +35,4 @@ export const ModalExample = () => {
     </Modal>
   );
 };
-`;
+`

@@ -28,4 +28,4 @@ const HeroSectionOne = () => (
 );
 
 export { HeroSectionOne };
-`;
+`

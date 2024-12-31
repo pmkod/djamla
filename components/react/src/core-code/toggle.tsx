@@ -46,7 +46,6 @@ const Toggle = forwardRef<
   </ToggleGroup>
 ));
 
-Toggle.displayName = "Toggle";
 
 export { Toggle };
-`;
+`

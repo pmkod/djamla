@@ -1,8 +1,8 @@
 export const checkboxCode = `"use client";
-import React, { forwardRef } from "react";
 import { Checkbox as CheckboxPrimitives } from "@ark-ui/react";
-import { cva, VariantProps } from "class-variance-authority";
 import { IconCheck } from "@tabler/icons-react";
+import { cva, VariantProps } from "class-variance-authority";
+import React, { forwardRef } from "react";
 
 const checkboxControlStyle = cva(
   "data-[state=unchecked]:border-base-400 data-[state=unchecked]:hover:bg-base-100 inline-flex cursor-pointer rounded-sm border data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
@@ -56,4 +56,4 @@ const Checkbox = forwardRef<
 Checkbox.displayName = "Checkbox";
 
 export { Checkbox };
-`;
+`

@@ -1,6 +1,6 @@
-export const breadcrumbCode = `import * as React from "react";
+export const breadcrumbCode = `import { ark } from "@ark-ui/react";
 import { IconChevronRight, IconDots } from "@tabler/icons-react";
-import { ark } from "@ark-ui/react";
+import * as React from "react";
 
 export const Breadcrumb = React.forwardRef<
   HTMLElement,
@@ -97,4 +97,4 @@ export const BreadcrumbEllipsis = ({
 );
 
 BreadcrumbEllipsis.displayName = "BreadcrumbEllipsis";
-`;
+`

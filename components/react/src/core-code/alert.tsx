@@ -1,7 +1,7 @@
 export const alertCode = `"use client";
-import { ComponentPropsWithRef, forwardRef, HTMLAttributes } from "react";
-import { cva, type VariantProps } from "class-variance-authority";
 import { ark } from "@ark-ui/react";
+import { cva, type VariantProps } from "class-variance-authority";
+import { ComponentPropsWithRef, forwardRef, HTMLAttributes } from "react";
 
 const alertStyle = cva(
   "relative flex w-full shrink-0 gap-3 rounded-sm px-4 py-3",
@@ -165,5 +165,5 @@ const AlertDescription = forwardRef<
 ));
 AlertDescription.displayName = "AlertDescription";
 
-export { Alert, AlertIcon, AlertContent, AlertTitle, AlertDescription };
-`;
+export { Alert, AlertContent, AlertDescription, AlertIcon, AlertTitle };
+`

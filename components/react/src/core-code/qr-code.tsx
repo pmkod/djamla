@@ -1,5 +1,5 @@
-export const qrCodeCode = `import React, { forwardRef } from "react";
-import { QrCode as QrCodePrimitives } from "@ark-ui/react";
+export const qrCodeCode = `import { QrCode as QrCodePrimitives } from "@ark-ui/react";
+import React, { forwardRef } from "react";
 
 const QrCode = forwardRef<
   React.ElementRef<typeof QrCodePrimitives.Root>,
@@ -33,4 +33,4 @@ const QrCodeOverlay = forwardRef<
 QrCodeOverlay.displayName = "QrCodeOverlay";
 
 export { QrCode, QrCodeOverlay };
-`;
+`

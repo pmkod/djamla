@@ -1,10 +1,10 @@
 export const otpVerificationFormOneCode = `"use client";
-import { Form } from "../core/form";
-import { z } from "zod";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { PinInput } from "../core/pin-input";
 import { PinInputValueChangeDetails } from "@ark-ui/react";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
+import { Form } from "../core/form";
+import { PinInput } from "../core/pin-input";
 
 const otpLength = 6;
 
@@ -34,7 +34,9 @@ const OtpVerificationFormOne = () => {
           onSubmit={form.handleSubmit(onSubmit)}
           className="border-base-300 w-max max-w-full rounded-sm sm:border sm:px-10 sm:pb-12 sm:pt-8"
         >
-          <div className="mb-0.5 text-3xl font-semibold">Otp verification</div>
+          <div className="text-base-900 mb-0.5 text-3xl font-semibold">
+            Otp verification
+          </div>
           <p className="text-base-500">Enter the code you received</p>
           <div className="mt-7">
             <PinInput
@@ -55,4 +57,4 @@ const OtpVerificationFormOne = () => {
 };
 
 export { OtpVerificationFormOne };
-`;
+`

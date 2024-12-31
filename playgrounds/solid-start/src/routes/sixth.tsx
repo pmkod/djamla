@@ -24,9 +24,9 @@ const Sixth = () => {
 aaaaaaaaaaaaa
         </div>
 
-        {/* <div class="p-10">
+        <div class="p-10">
             <Rating />
-        </div> */}
+        </div>
 
         <div class="p-10"><Button>Aaa</Button>
         </div>

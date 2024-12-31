@@ -1,11 +1,11 @@
-export const alertExampleCode = `import {
+export const alertExampleCode = `import { IconInfoCircle } from "@tabler/icons-react";
+import {
   Alert,
   AlertContent,
   AlertDescription,
   AlertIcon,
   AlertTitle,
 } from "../core/alert";
-import { IconInfoCircle } from "@tabler/icons-react";
 
 export const AlertExample = () => {
   return (
@@ -24,4 +24,4 @@ export const AlertExample = () => {
     </Alert>
   );
 };
-`;
+`

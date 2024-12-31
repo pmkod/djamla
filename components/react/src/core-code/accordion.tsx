@@ -57,5 +57,5 @@ const AccordionItemDetails = forwardRef<
 
 AccordionItemDetails.displayName = "AccordionItemDetails";
 
-export { Accordion, AccordionItem, AccordionItemSummary, AccordionItemDetails };
-`;
+export { Accordion, AccordionItem, AccordionItemDetails, AccordionItemSummary };
+`

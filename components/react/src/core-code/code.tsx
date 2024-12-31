@@ -42,4 +42,4 @@ export const Code = forwardRef<HTMLElement, CodeProps>(
 );
 
 Code.displayName = "Code";
-`;
+`

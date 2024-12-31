@@ -41,4 +41,4 @@ const NativeSelect = forwardRef<
 NativeSelect.displayName = "NativeSelect";
 
 export { NativeSelect };
-`;
+`

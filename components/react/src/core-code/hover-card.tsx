@@ -1,7 +1,7 @@
 export const hoverCardCode = `"use client";
 
-import { forwardRef } from "react";
 import { HoverCard as HoverCardPrimitives, Portal } from "@ark-ui/react";
+import { forwardRef } from "react";
 
 const HoverCard = HoverCardPrimitives.Root;
 
@@ -26,5 +26,5 @@ const HoverCardContent = forwardRef<
 ));
 HoverCardContent.displayName = HoverCardPrimitives.Content.displayName;
 
-export { HoverCard, HoverCardTrigger, HoverCardContent };
-`;
+export { HoverCard, HoverCardContent, HoverCardTrigger };
+`

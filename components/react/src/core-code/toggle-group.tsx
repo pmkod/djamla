@@ -1,9 +1,4 @@
-export const toggleGroupCode = `import {
-  ToggleGroup as ToggleGroupPrimitives,
-  useToggle,
-  useToggleContext,
-  useToggleGroup,
-} from "@ark-ui/react";
+export const toggleGroupCode = `import { ToggleGroup as ToggleGroupPrimitives } from "@ark-ui/react";
 import { cva, VariantProps } from "class-variance-authority";
 import { forwardRef } from "react";
 
@@ -133,4 +128,4 @@ const ToggleItem = forwardRef<
 ToggleItem.displayName = "ToggleItem";
 
 export { ToggleGroup, ToggleItem };
-`;
+`

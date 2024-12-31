@@ -1,5 +1,5 @@
-export const toggleGroupExampleCode = `import { ToggleGroup } from "../core/toggle-group";
-import { Toggle } from "../core/toggle";
+export const toggleGroupExampleCode = `import { Toggle } from "../core/toggle";
+import { ToggleGroup } from "../core/toggle-group";
 
 export const ToggleGroupExample = () => {
   return (
@@ -16,4 +16,4 @@ export const ToggleGroupExample = () => {
     </ToggleGroup>
   );
 };
-`;
+`

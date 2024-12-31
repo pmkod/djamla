@@ -1,10 +1,10 @@
 export const radioGroupCode = `"use client";
-import React, { forwardRef } from "react";
 import {
   RadioGroup as RadioGroupPrimitives,
   useRadioGroupContext,
 } from "@ark-ui/react";
 import { cva, VariantProps } from "class-variance-authority";
+import React, { forwardRef } from "react";
 
 interface RadioGroupProps {
   orientation?: "vertical" | "horizontal";
@@ -100,4 +100,4 @@ const RadioGroupItem = forwardRef<
 RadioGroupItem.displayName = "RadioGroupItem";
 
 export { RadioGroup, RadioGroupItem };
-`;
+`
