@@ -1,5 +1,5 @@
 "use client";
-import { Menu as MenuPrimitives, MenuRootProps, Portal } from "@ark-ui/react";
+import { Menu as MenuPrimitives, MenuRootProps } from "@ark-ui/react";
 import { IconChevronRight } from "@tabler/icons-react";
 import { forwardRef } from "react";
 
@@ -75,17 +75,15 @@ const MenuContent = forwardRef<
   React.ComponentPropsWithoutRef<typeof MenuPrimitives.Content>
 >(({ children, ...props }, ref) => {
   return (
-    <Portal>
-      <MenuPrimitives.Positioner>
-        <MenuPrimitives.Content
-          ref={ref}
-          className="border-base-200 text-base-500 bg-base-0 block w-max min-w-36 overflow-hidden rounded border p-1 shadow-md outline-none transition-all data-[state=open]:visible data-[state=closed]:invisible data-[state=closed]:scale-95 data-[state=open]:scale-100 data-[state=closed]:opacity-0 data-[state=open]:opacity-100"
-          {...props}
-        >
-          {children}
-        </MenuPrimitives.Content>
-      </MenuPrimitives.Positioner>
-    </Portal>
+    <MenuPrimitives.Positioner className="pointer-events-none">
+      <MenuPrimitives.Content
+        ref={ref}
+        className="border-base-200 text-base-500 bg-base-0 block w-max min-w-36 overflow-hidden rounded border p-1 shadow-md outline-none transition-all data-[state=closed]:pointer-events-none data-[state=open]:visible data-[state=closed]:invisible data-[state=closed]:scale-95 data-[state=open]:scale-100 data-[state=closed]:opacity-0 data-[state=open]:opacity-100"
+        {...props}
+      >
+        {children}
+      </MenuPrimitives.Content>
+    </MenuPrimitives.Positioner>
   );
 });
 

@@ -1,10 +1,6 @@
 "use client";
 
-import {
-  Popover as PopoverPrimitives,
-  PopoverRootProps,
-  Portal,
-} from "@ark-ui/react";
+import { Popover as PopoverPrimitives, PopoverRootProps } from "@ark-ui/react";
 import { IconX } from "@tabler/icons-react";
 import { forwardRef } from "react";
 
@@ -20,8 +16,8 @@ const PopoverContent = forwardRef<
   React.ElementRef<typeof PopoverPrimitives.Content>,
   React.ComponentPropsWithoutRef<typeof PopoverPrimitives.Content>
 >(({ className, children, ...props }, ref) => (
-  <Portal>
-    <PopoverPrimitives.Positioner>
+  <>
+    <PopoverPrimitives.Positioner className="pointer-events-none">
       <PopoverPrimitives.Content
         ref={ref}
         className={
@@ -33,7 +29,7 @@ const PopoverContent = forwardRef<
         {children}
       </PopoverPrimitives.Content>
     </PopoverPrimitives.Positioner>
-  </Portal>
+  </>
 ));
 
 PopoverContent.displayName = "PopoverContent";
