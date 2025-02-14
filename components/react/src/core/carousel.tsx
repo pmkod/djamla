@@ -80,11 +80,9 @@ const CarouselItemGroup = forwardRef<
   React.ElementRef<typeof CarouselPrimitives.ItemGroup>,
   React.ComponentPropsWithoutRef<typeof CarouselPrimitives.ItemGroup>
 >(({ children, ...props }, ref) => (
-  <CarouselPrimitives.Viewport>
-    <CarouselPrimitives.ItemGroup ref={ref} {...props}>
-      {children}
-    </CarouselPrimitives.ItemGroup>
-  </CarouselPrimitives.Viewport>
+  <CarouselPrimitives.ItemGroup ref={ref} {...props}>
+    {children}
+  </CarouselPrimitives.ItemGroup>
 ));
 
 CarouselItemGroup.displayName = "CarouselItemGroup";
