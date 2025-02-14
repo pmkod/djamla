@@ -33,8 +33,8 @@ export default function RootLayout({ children }: PropsWithChildren) {
         </ThemeProvider>
         <Script
           async
-          src="https://umami.djamla.com/script.js"
-          data-website-id="690cac2b-2ee7-41b5-aac4-21a1be5eab51"
+          src="https://analytics.4ml3f81l4vtbdgwuldhdcqwbq7reg4oiffr3xdbi.kodossou.com/script.js"
+          data-website-id="36bf7c83-2410-4ee3-a2fe-ec6000b19fba"
         />
       </body>
     </html>

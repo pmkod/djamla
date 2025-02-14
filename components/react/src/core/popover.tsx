@@ -16,20 +16,18 @@ const PopoverContent = forwardRef<
   React.ElementRef<typeof PopoverPrimitives.Content>,
   React.ComponentPropsWithoutRef<typeof PopoverPrimitives.Content>
 >(({ className, children, ...props }, ref) => (
-  <>
-    <PopoverPrimitives.Positioner className="pointer-events-none">
-      <PopoverPrimitives.Content
-        ref={ref}
-        className={
-          "border-base-300 bg-base-0 z-50 block w-72 rounded border px-4 py-3 shadow-sm outline-none transition-all duration-200 data-[state=open]:visible data-[state=closed]:invisible data-[state=closed]:scale-95 data-[state=open]:scale-100 data-[state=closed]:opacity-0 data-[state=open]:opacity-100 " +
-          className
-        }
-        {...props}
-      >
-        {children}
-      </PopoverPrimitives.Content>
-    </PopoverPrimitives.Positioner>
-  </>
+  <PopoverPrimitives.Positioner className="pointer-events-none">
+    <PopoverPrimitives.Content
+      ref={ref}
+      className={
+        "border-base-300 bg-base-0 z-50 block w-72 rounded border px-4 py-3 shadow-sm outline-none transition-all duration-200 data-[state=open]:visible data-[state=closed]:invisible data-[state=closed]:scale-95 data-[state=open]:scale-100 data-[state=closed]:opacity-0 data-[state=open]:opacity-100 " +
+        className
+      }
+      {...props}
+    >
+      {children}
+    </PopoverPrimitives.Content>
+  </PopoverPrimitives.Positioner>
 ));
 
 PopoverContent.displayName = "PopoverContent";
