@@ -69,6 +69,7 @@ const AccordionPage = () => {
         </ReactTabContent>
         <SolidTabContent>
           <SyntaxHighlighter language="typescript">
+            ""
             {/* {reactAccordionExampleCode} */}
           </SyntaxHighlighter>
         </SolidTabContent>

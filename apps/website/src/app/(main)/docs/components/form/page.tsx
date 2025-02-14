@@ -1,12 +1,19 @@
 import { ComponentPreview } from "@/components/core/component-preview";
 import { DocText } from "@/components/core/doc-text";
 import { SyntaxHighlighter } from "@/components/core/syntax-highlighter";
-import { FrameworkTabList, FrameworkTabs, ReactTab, ReactTabContent, SolidTab, SolidTabContent } from "@/components/tabs/framework-tabs";
+import {
+  FrameworkTabList,
+  FrameworkTabs,
+  ReactTab,
+  ReactTabContent,
+  SolidTab,
+  SolidTabContent,
+} from "@/components/tabs/framework-tabs";
 import {
   PackageManagerTabContent,
   PackageManagerTabs,
 } from "@/components/tabs/package-manager-tabs";
-import { Alert, AlertDescription, AlertTitle, formCode, FormExample, formExampleCode } from "@repo/react-ui";
+import { Alert, AlertDescription, FormExample } from "@repo/react-ui";
 import { Metadata } from "next";
 
 const title = "Form";
@@ -18,7 +25,6 @@ export const metadata: Metadata = {
 };
 
 const FormPage = () => {
-
   return (
     <>
       <DocText>{title}</DocText>
@@ -26,7 +32,9 @@ const FormPage = () => {
 
       <div>
         <Alert variant="soft" colorScheme="primary">
-          <AlertDescription>Solid js version will be available soon</AlertDescription>
+          <AlertDescription>
+            Solid js version will be available soon
+          </AlertDescription>
         </Alert>
       </div>
       <ComponentPreview>
@@ -60,31 +68,23 @@ const FormPage = () => {
       </PackageManagerTabs>
       <DocText level="paragraphTwo">Copy following code</DocText>
 
-      <SyntaxHighlighter language="typescript">{formCode}</SyntaxHighlighter>
+      <SyntaxHighlighter language="typescript">""</SyntaxHighlighter>
       {/* <DocText level="titleTwo">Example</DocText>
       <ComponentPreview>
         <FormExample />
       </ComponentPreview> */}
       <DocText level="titleTwo">Example code</DocText>
 
-
-
       <FrameworkTabs>
-
-      <FrameworkTabList>
+        <FrameworkTabList>
           <ReactTab />
           <SolidTab />
         </FrameworkTabList>
         <ReactTabContent>
-      <SyntaxHighlighter language="typescript">
-        {formExampleCode}
-      </SyntaxHighlighter>
-
+          <SyntaxHighlighter language="typescript">""</SyntaxHighlighter>
         </ReactTabContent>
 
-        <SolidTabContent>
-
-        </SolidTabContent>
+        <SolidTabContent></SolidTabContent>
       </FrameworkTabs>
     </>
   );
